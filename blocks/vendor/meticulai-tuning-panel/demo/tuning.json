@@ -1,0 +1,26 @@
+{
+  "ball": {
+    "gravity": { "value": 22, "min": 4, "max": 60, "step": 0.5, "label": "Gravity", "help": "Pull on the ball, metres per second squared." },
+    "bounce": { "value": 0.72, "min": 0, "max": 0.98, "step": 0.01, "label": "Bounce", "help": "Share of speed kept at each bounce. 1 would bounce for ever." },
+    "kick": { "value": 11, "min": 2, "max": 25, "step": 0.5, "label": "Kick speed", "help": "Upward speed the ball gets when it settles (or when you press Kick)." },
+    "squash": { "value": 0.35, "min": 0, "max": 0.8, "step": 0.01, "label": "Land squash", "help": "How flat the ball goes on landing." },
+    "size": { "value": 1, "min": 0.3, "max": 2.5, "step": 0.05, "label": "Size" }
+  },
+  "ring": {
+    "count": { "value": 12, "min": 3, "max": 40, "step": 1, "label": "Pillars" },
+    "radius": { "value": 6, "min": 3, "max": 12, "step": 0.1, "label": "Radius" },
+    "spin": { "value": 0.35, "min": -2, "max": 2, "step": 0.05, "label": "Orbit speed", "help": "Turns per ten seconds. Negative goes the other way." },
+    "wave": { "value": true, "label": "Wave", "help": "Pillars rise and fall in a wave." }
+  },
+  "look": {
+    "exposure": { "value": 1.1, "min": 0.3, "max": 2.5, "step": 0.05, "label": "Exposure" },
+    "fog": { "value": 0.035, "min": 0, "max": 0.12, "step": 0.005, "label": "Fog" },
+    "ballColour": { "value": "#f2a65a", "label": "Ball colour" },
+    "mood": { "value": "dusk", "options": ["day", "dusk", "night"], "label": "Light" }
+  },
+  "camera": {
+    "distance": { "value": 15, "min": 6, "max": 30, "step": 0.5, "label": "Distance" },
+    "height": { "value": 6, "min": 1, "max": 16, "step": 0.1, "label": "Height" },
+    "fov": { "value": 50, "min": 30, "max": 85, "step": 1, "label": "Field of view" }
+  }
+}

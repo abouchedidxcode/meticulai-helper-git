@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crowd renderer: an army of thousands</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #d9d4c4; font: 14px/1.35 system-ui, sans-serif; }
+  canvas { display: block; }
+  #hud { position: fixed; left: 14px; top: 12px; color: #241d14; background: rgba(255, 250, 240, 0.78); padding: 9px 12px; border-radius: 8px; }
+  #hud b { font-variant-numeric: tabular-nums; }
+  #help { position: fixed; left: 14px; bottom: 12px; color: #241d14; background: rgba(255, 250, 240, 0.7); padding: 6px 10px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div id="hud">building the models...</div>
+<div id="help">Drag to look round, scroll to zoom. ?n=6000 for a bigger army. Every horse and rider is animated on the GPU; models are built in code.</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

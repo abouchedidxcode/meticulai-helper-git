@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2026 Meticulai
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+Third-party notices (not part of the MIT licence above)
+
+MediaPipe Tasks Vision (@mediapipe/tasks-vision), Copyright Google LLC.
+Apache License 2.0, https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE
+Used as an npm dependency; its wasm runtime is copied from node_modules into the
+game's public/wasm/ at install time. No MediaPipe source is included here.
+
+Hand Landmarker model (hand_landmarker.task), Google LLC. Downloaded by
+scripts/fetch-model.mjs from
+https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task
+and not redistributed in this folder. Google's download page and model card
+state no separate licence for the file; MediaPipe is Apache License 2.0.
+Model card:
+https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Hand%20Tracking%20(Lite_Full)%20with%20Fairness%20Oct%202021.pdf
+
+One Euro filter: algorithm from Gery Casiez, Nicolas Roussel and Daniel Vogel,
+"1 Euro Filter: A Simple Speed-based Low-pass Filter for Noisy Input in
+Interactive Systems", CHI 2012. The implementation in src/oneEuro.js was written
+from the paper.

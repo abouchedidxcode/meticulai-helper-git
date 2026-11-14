@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDF meshes: shapes and caves built in code</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #1b1d22; overflow: hidden; font: 13px/1.4 system-ui, sans-serif; color: #e8e4dc; }
+    canvas { display: block; }
+    #info { position: fixed; left: 12px; bottom: 10px; opacity: 0.8; pointer-events: none; }
+    #info a { pointer-events: auto; color: #f0c987; }
+  </style>
+</head>
+<body>
+  <div id="info">Every shape here is a signed distance field meshed with surface nets at load time. <span id="stats"></span>
+    <br />Drag to orbit. <a href="?fly">Fly through a streamed cave</a> &middot; <a href="?">Shapes</a></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

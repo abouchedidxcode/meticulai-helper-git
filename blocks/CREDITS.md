@@ -166,6 +166,198 @@ Checked 2026-11-14.
 | trompe (paint a grey level with image models) | Patch (patch.gg) | Apache-2.0; art: CC0-1.0 | https://github.com/patch-gg/trompe `ba9ef76` |
 | anymove (motion capture for any creature from one AI video) | Patch (patch.gg) | Apache-2.0; art: CC0-1.0 | https://github.com/patch-gg/anymove `8b42c48` |
 
+<!-- meticulai-blocks:start (written by tools/blocks/build-catalog.mjs from each block.json; edit those, not this) -->
+
+## Meticulai blocks (`blocks/vendor/meticulai-*`)
+
+Systems taken from games on [meticulai.com](https://meticulai.com), rewritten as standalone code and shared
+under MIT. Each one names the game it came from; play the game to see the system at its best.
+
+### Adaptive music (`meticulai-adaptive-music`)
+
+- **Meticulai**, from Last Drop (https://meticulai.com/games/last-drop/). Code MIT.
+- Full list: `blocks/vendor/meticulai-adaptive-music/` (`LICENSE`, `VENDOR.md`).
+
+### Anim springs (springs, inertialization, layers, IK) (`meticulai-anim-springs`)
+
+- **Meticulai**, from Bonesworth (https://meticulai.com/games/bonesworth/). Code MIT.
+- Closed-form spring equations and spring-based inertialization (method, no code copied): Daniel Holden, n/a (published article). https://theorangeduck.com/page/spring-roll-call
+- Inertialization transitions (method): David Bollo (GDC 2018), n/a (talk).
+- Soft IK near full extension (method): Andy Dunn, n/a (article).
+- mulberry32 PRNG: Tommy Ettinger, public domain.
+- Full list: `blocks/vendor/meticulai-anim-springs/` (`LICENSE`, `VENDOR.md`).
+
+### Arcade flight (mouse aim) (`meticulai-arcade-flight`)
+
+- **Meticulai**, from Dragon Aces (https://meticulai.com/games/dragon-aces/). Code MIT.
+- three.js (npm dependency, not copied): three.js authors, MIT. https://github.com/mrdoob/three.js
+- mulberry32 random number generator (algorithm): Tommy Ettinger, Public domain. https://gist.github.com/tommyettinger/46a874533244883189143505d203312c
+- Full list: `blocks/vendor/meticulai-arcade-flight/` (`LICENSE`, `VENDOR.md`).
+
+### Archery aim (`meticulai-archery-aim`)
+
+- **Meticulai**, from TUMEN. Code MIT.
+- three.js (npm dependency, not copied): three.js authors, MIT. https://github.com/mrdoob/three.js
+- mulberry32 random number generator (algorithm): Tommy Ettinger, Public domain. https://gist.github.com/tommyettinger/46a874533244883189143505d203312c
+- Full list: `blocks/vendor/meticulai-archery-aim/` (`LICENSE`, `VENDOR.md`).
+
+### Blink input (webcam eyes and look-away) (`meticulai-blink-input`)
+
+- **Meticulai**, from Don't Blink (https://meticulai.com/games/dont-blink/). Code MIT.
+- MediaPipe Tasks Vision (npm dependency; wasm runtime copied into public/wasm at install): Google, Apache-2.0. https://github.com/google-ai-edge/mediapipe
+- Face Landmarker model face_landmarker.task (downloaded at install, sha256-checked, not committed): Google, Apache-2.0 (stated on its model cards). https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker
+- Full list: `blocks/vendor/meticulai-blink-input/` (`LICENSE`, `VENDOR.md`).
+
+### Crowd renderer: thousands of animated riders and animals (`meticulai-crowd-renderer`)
+
+- **Meticulai**, from TUMEN. Code MIT.
+- Full list: `blocks/vendor/meticulai-crowd-renderer/` (`LICENSE`, `VENDOR.md`).
+
+### Deterministic math (`meticulai-deterministic-math`)
+
+- **Meticulai**, from Lost Marbles: Trick Shot (https://meticulai.com/games/trick-shot/). Code MIT.
+- fdlibm math library (algorithms and coefficients; notice kept): Sun Microsystems, fdlibm notice (permissive: keep the notice). https://www.netlib.org/fdlibm/
+- musl libc's C versions of fdlibm, which the port follows: Rich Felker et al., MIT. https://musl.libc.org/
+- mulberry32 random number generator: Tommy Ettinger, Public domain. https://gist.github.com/tommyettinger/46a874533244883189143505d203312c
+- Full list: `blocks/vendor/meticulai-deterministic-math/` (`LICENSE`, `VENDOR.md`).
+
+### Firefly swarm (`meticulai-firefly-swarm`)
+
+- **Meticulai**, from Fireflies (https://meticulai.com/games/show-of-hands/). Code MIT.
+- GLSL hash12 ('Hash without Sine'): Dave Hoskins, MIT. https://www.shadertoy.com/view/4djSRW
+- Full list: `blocks/vendor/meticulai-firefly-swarm/` (`LICENSE`, `VENDOR.md`).
+
+### Flock (murmuration) (`meticulai-flock`)
+
+- **Meticulai**, from Murmur. Code MIT.
+- mulberry32 random number generator: Tommy Ettinger, Public domain. https://gist.github.com/tommyettinger/46a874533244883189143505d203312c
+- three.js (npm, for src/birds.js and the demo): three.js authors, MIT. https://github.com/mrdoob/three.js
+- Full list: `blocks/vendor/meticulai-flock/` (`LICENSE`, `VENDOR.md`).
+
+### Glider flight (lift, stall, thermals) (`meticulai-glider-flight`)
+
+- **Meticulai**, from Hezarfen, Kite Race (https://meticulai.com/games/hezarfen/). Code MIT.
+- three.js (npm dependency, not copied): three.js authors, MIT. https://github.com/mrdoob/three.js
+- Full list: `blocks/vendor/meticulai-glider-flight/` (`LICENSE`, `VENDOR.md`).
+
+### Hand controls (webcam gestures) (`meticulai-hand-controls`)
+
+- **Meticulai**, from Show of Hands (the 14 hands games), GODHAND (https://meticulai.com/games/show-of-hands/). Code MIT.
+- MediaPipe Tasks Vision (npm dependency; wasm copied from node_modules at install): Google, Apache-2.0. https://github.com/google-ai-edge/mediapipe
+- hand_landmarker.task model (downloaded from Google at install, not redistributed; no separate licence stated by Google): Google, Apache-2.0 (MediaPipe). https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task
+- One Euro filter algorithm (implementation written from the paper): Casiez, Roussel and Vogel (CHI 2012), published algorithm. https://gery.casiez.net/1euro/
+- Full list: `blocks/vendor/meticulai-hand-controls/` (`LICENSE`, `VENDOR.md`).
+
+### Haze (one air for the whole world) (`meticulai-haze`)
+
+- **Meticulai**, from Hezarfen (https://meticulai.com/games/hezarfen/). Code MIT.
+- Hash without Sine (shader hash functions): Dave Hoskins, MIT. https://www.shadertoy.com/view/4djSRW
+- three.js tone mapping functions and post-processing addons (UnrealBloomPass render body adapted): three.js authors, MIT. https://github.com/mrdoob/three.js
+- Full list: `blocks/vendor/meticulai-haze/` (`LICENSE`, `VENDOR.md`).
+
+### Horse locomotion law (no sliding, real turns) with a movement checker (`meticulai-horse-locomotion`)
+
+- **Meticulai**, from TUMEN. Code MIT.
+- Full list: `blocks/vendor/meticulai-horse-locomotion/` (`LICENSE`, `VENDOR.md`).
+
+### Ink illustration (boiling pen lines, hatching, paper) (`meticulai-ink-illustration`)
+
+- **Meticulai**, from Pop Quiz (https://meticulai.com/games/pop-quiz/). Code MIT.
+- Full list: `blocks/vendor/meticulai-ink-illustration/` (`LICENSE`, `VENDOR.md`).
+
+### Marble physics (`meticulai-marble-physics`)
+
+- **Meticulai**, from Lost Marbles (https://meticulai.com/games/lost-marbles/). Code MIT.
+- mulberry32 random number generator (sample track): Tommy Ettinger, Public domain. https://gist.github.com/tommyettinger/46a874533244883189143505d203312c
+- three.js (npm, for src/view.js and the demo): three.js authors, MIT. https://github.com/mrdoob/three.js
+- Full list: `blocks/vendor/meticulai-marble-physics/` (`LICENSE`, `VENDOR.md`).
+
+### Painterly styles (gouache, ink miniature, clean toon) (`meticulai-painterly-styles`)
+
+- **Meticulai**, from Kite Race. Code MIT.
+- three.js and its addons (FullScreenQuad, UnrealBloomPass, Neutral tone mapping chunk): three.js authors, MIT. https://github.com/mrdoob/three.js
+- Fitted ACES tone curve (matrices): Stephen Hill, MIT. https://github.com/TheRealMJP/BakingLab
+- Full list: `blocks/vendor/meticulai-painterly-styles/` (`LICENSE`, `VENDOR.md`).
+
+### Photoreal camera and HDRI lighting (`meticulai-photoreal`)
+
+- **Meticulai**, from Candid (Meticulai photoreal engine) (https://meticulai.com/games/candid/). Code MIT.
+- postprocessing (effect composer, bloom, depth of field, SMAA, tone mapping), npm dependency: Raoul van Rüschen (pmndrs), Zlib. https://github.com/pmndrs/postprocessing
+- n8ao (ambient occlusion), npm dependency; package.json says ISC, its LICENSE file is CC0-1.0: N8python, ISC / CC0-1.0. https://github.com/N8python/n8ao
+- Hash without Sine (hash12), the film grain hash in effects.js: Dave Hoskins, MIT. https://www.shadertoy.com/view/4djSRW
+- Demo sky kloofendal_48d_partly_cloudy_puresky and texture asphalt_04, loaded at runtime from Poly Haven's CDN (not stored): Poly Haven, CC0-1.0. https://polyhaven.com
+- Full list: `blocks/vendor/meticulai-photoreal/` (`LICENSE`, `VENDOR.md`).
+
+### Pixel 3D (palette-exact pixel art for three.js, with sprites made in code) (`meticulai-pixel-3d`)
+
+- **Meticulai**, from Rootbound (https://meticulai.com/games/rootbound/). Code MIT.
+- hash12 / hash22 GLSL hash ("Hash without Sine"): Dave Hoskins, MIT. https://www.shadertoy.com/view/4djSRW
+- Full list: `blocks/vendor/meticulai-pixel-3d/` (`LICENSE`, `VENDOR.md`).
+
+### Procedural songs (`meticulai-procedural-songs`)
+
+- **Meticulai**, from Deadweight. Code MIT.
+- Full list: `blocks/vendor/meticulai-procedural-songs/` (`LICENSE`, `VENDOR.md`).
+
+### PS1 look (vertex snap, affine textures, low-res dither, blink and dread effects) (`meticulai-ps1-look`)
+
+- **Meticulai**, from Don't Blink (https://meticulai.com/games/dont-blink/). Code MIT.
+- hash12 'Hash without Sine' shader function: Dave Hoskins, MIT. https://www.shadertoy.com/view/4djSRW
+- Full list: `blocks/vendor/meticulai-ps1-look/` (`LICENSE`, `VENDOR.md`).
+
+### Ripple water (`meticulai-ripple-water`)
+
+- **Meticulai**, from Koi (https://meticulai.com/games/show-of-hands/). Code MIT.
+- GLSL hash12 / hash22 ('Hash without Sine') in src/glsl.js: David Hoskins, MIT. https://www.shadertoy.com/view/4djSRW
+- Full list: `blocks/vendor/meticulai-ripple-water/` (`LICENSE`, `VENDOR.md`).
+
+### Riso print look (with a live look switch) (`meticulai-riso-print`)
+
+- **Meticulai**, from Still Life 2 (https://meticulai.com/games/still-life-2/). Code MIT.
+- Full list: `blocks/vendor/meticulai-riso-print/` (`LICENSE`, `VENDOR.md`).
+
+### Rope and cloth chains (`meticulai-rope-cloth-chains`)
+
+- **Meticulai**, from Inkbound. Code MIT.
+- three.js (npm, for src/ribbon-mesh.js and the demo): three.js authors, MIT. https://github.com/mrdoob/three.js
+- Full list: `blocks/vendor/meticulai-rope-cloth-chains/` (`LICENSE`, `VENDOR.md`).
+
+### Sand trails (`meticulai-sand-trails`)
+
+- **Meticulai**, from Last Drop (https://meticulai.com/games/last-drop/). Code MIT.
+- GLSL hash12 ('Hash without Sine') in src/sand-map.js: David Hoskins, MIT. https://www.shadertoy.com/view/4djSRW
+- Full list: `blocks/vendor/meticulai-sand-trails/` (`LICENSE`, `VENDOR.md`).
+
+### SDF meshes and caves (`meticulai-sdf-meshes`)
+
+- **Meticulai**, from Dig Site, Orbitball, Abyssal. Code MIT.
+- Smooth min/max, ellipsoid and round cone distance formulas: Inigo Quilez, MIT. https://iquilezles.org/articles/distfunctions/
+- Simplex noise (follows the reference implementation): Stefan Gustavson, Public domain. https://github.com/stegu/webgl-noise
+- mulberry32 random number generator: Tommy Ettinger, Public domain. https://gist.github.com/tommyettinger/46a874533244883189143505d203312c
+- three.js (npm, for geometry.js, streamer.js and the demo): three.js authors, MIT. https://github.com/mrdoob/three.js
+- Full list: `blocks/vendor/meticulai-sdf-meshes/` (`LICENSE`, `VENDOR.md`).
+
+### Sonar sketch (`meticulai-sonar-sketch`)
+
+- **Meticulai**, from Abyssal. Code MIT.
+- mulberry32 seeded random (src/shapes.js): Tommy Ettinger, Public domain. https://gist.github.com/tommyettinger/46a874533244883189143505d203312c
+- Full list: `blocks/vendor/meticulai-sonar-sketch/` (`LICENSE`, `VENDOR.md`).
+
+### Tilt-shift macro lens (toy miniature look) (`meticulai-tilt-shift-macro`)
+
+- **Meticulai**, from Lost Marbles (https://meticulai.com/games/lost-marbles/). Code MIT.
+- Single-pass gather bokeh technique (reimplemented, no code copied): Dennis Gustafsson, technique credit. https://blog.voxagon.se/2018/05/04/bokeh-depth-of-field-in-single-pass.html
+- hash12 (Hash without Sine): Dave Hoskins, MIT. https://www.shadertoy.com/view/4djSRW
+- GTAOPass, UnrealBloomPass, FullScreenQuad, RoomEnvironment (imported from the three package): three.js authors, MIT. https://github.com/mrdoob/three.js
+- Full list: `blocks/vendor/meticulai-tilt-shift-macro/` (`LICENSE`, `VENDOR.md`).
+
+### Tuning panel (`meticulai-tuning-panel`)
+
+- **Meticulai**, from TUMEN, Hezarfen, Inkbound, Scrapfall, Still Life 2 (https://meticulai.com/games/hezarfen/). Code MIT.
+- Full list: `blocks/vendor/meticulai-tuning-panel/` (`LICENSE`, `VENDOR.md`).
+
+<!-- meticulai-blocks:end -->
+
 ## Pictures in `blocks/previews/`
 
 - Pictures of the copied blocks: screenshots of each block's own demo, taken by this kit. Same licence as the block's art.

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Procedural songs</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: #15121d; color: #eee6f5; font: 15px/1.4 system-ui, sans-serif; display: grid; place-items: center; }
+  main { width: min(880px, 94vw); padding: 24px 28px; background: #1f1a2b; border-radius: 16px; box-shadow: 0 10px 40px #0008; }
+  h1 { margin: 0 0 4px; font-size: 24px; }
+  p.sub { margin: 0 0 18px; color: #b5a8c8; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0; }
+  label { color: #b5a8c8; }
+  input[type=text] { width: 140px; padding: 8px 10px; border-radius: 8px; border: 1px solid #4a3f5f; background: #120f19; color: #fff; font: 600 16px ui-monospace, monospace; }
+  button { padding: 8px 14px; border-radius: 8px; border: 1px solid #4a3f5f; background: #2c2440; color: #eee6f5; font: 600 14px system-ui, sans-serif; cursor: pointer; }
+  button:hover { background: #3a3054; }
+  button.on { background: #ffb347; color: #1f1a2b; border-color: #ffb347; }
+  button.play { background: #5ee0a0; color: #102018; border-color: #5ee0a0; min-width: 90px; }
+  button.play.stop { background: #ff6b7a; border-color: #ff6b7a; color: #200; }
+  input[type=range] { width: 220px; accent-color: #ffb347; }
+  canvas { display: block; width: 100%; height: 170px; margin: 14px 0 10px; background: #120f19; border-radius: 10px; }
+  .info { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .info div { background: #120f19; border-radius: 8px; padding: 8px 10px; }
+  .info b { display: block; font-size: 12px; color: #9d90b3; font-weight: 600; }
+  .info span { font: 600 17px ui-monospace, monospace; }
+  #chords { font: 13px ui-monospace, monospace; color: #cfc3e0; background: #120f19; border-radius: 8px; padding: 8px 10px; margin-top: 8px; white-space: pre-wrap; min-height: 3.2em; }
+  #chords .now { color: #ffb347; }
+  .note { color: #9d90b3; font-size: 13px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Procedural songs</h1>
+  <p class="sub">Every seed is a new song: melody, chords, drums and bass, made live in the browser. No sound files.</p>
+  <div class="row">
+    <label for="seed">Seed</label>
+    <input id="seed" type="text" value="1234" spellcheck="false" />
+    <button id="random">Random</button>
+    <button id="play" class="play">Play</button>
+  </div>
+  <div class="row" id="modes">
+    <label>Mode</label>
+    <button data-mode="menu">Menu</button>
+    <button data-mode="game" class="on">Game</button>
+    <button data-mode="results">Results</button>
+    <button id="tense">Tense (sudden)</button>
+  </div>
+  <div class="row">
+    <label for="int">Intensity</label>
+    <input id="int" type="range" min="0" max="1" step="0.01" value="0.5" />
+    <span id="intv">0.50</span>
+    <label for="tempo" style="margin-left:14px">Tempo</label>
+    <input id="tempo" type="range" min="0.8" max="1.25" step="0.01" value="1" />
+    <span id="tempov">1.00x</span>
+  </div>
+  <canvas id="wave" width="1600" height="340"></canvas>
+  <div class="info">
+    <div><b>Key</b><span id="key">-</span></div>
+    <div><b>Tempo</b><span id="bpm">-</span></div>
+    <div><b>Arrangement</b><span id="kind">-</span></div>
+    <div><b>Section / bar</b><span id="pos">-</span></div>
+  </div>
+  <div id="chords"></div>
+  <p class="note">Press Play to hear it (browsers only allow sound after a click).</p>
+</main>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

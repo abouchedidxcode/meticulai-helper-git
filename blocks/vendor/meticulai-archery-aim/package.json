@@ -1,0 +1,18 @@
+{
+  "name": "meticulai-archery-aim",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Mounted archery from TUMEN by Meticulai: crosshair-true shots, closed-form ballistics, soft lock, swept hits, stuck arrows, GPU volleys.",
+  "scripts": {
+    "dev": "vite --config vite.config.js --host 127.0.0.1 --port 5436",
+    "build": "vite build --config vite.config.js",
+    "test": "node --test test/",
+    "bot": "node tools/bot.mjs"
+  },
+  "devDependencies": {
+    "three": "^0.187.0",
+    "vite": "^8.3.8"
+  }
+}

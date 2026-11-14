@@ -30,8 +30,10 @@ Every tool:
 | `node tools/assets/look.mjs <file or folder>` | Makes a picture of an asset so the agent can see it: models from four sides next to a 1.8 m person (with size, triangles, pivot, animations), textures tiled and on a ball, skies with where the sun is, sounds as a waveform with loudness, fonts, folders as contact sheets. `--in-game` uses the game's palette and light. |
 | `node tools/assets/restyle.mjs <model.glb>` | Remixes a model so it fits the game: colours to the game palette, flat colours, smaller textures, size in metres, pivot on the ground, merged, compressed. Always writes a new file; `--look` shows before and after. |
 | `node tools/assets/palette-from.mjs <picture>` | Makes `my-game/palette.json` (the game's colours and light hints) from a picture you chose for the look. |
-| `node tools/blocks/list.mjs` | Lists the blocks: ready-made effects, systems and tools (fire, cars, painted looks, tree makers...) with what renderer they need. |
+| `node tools/blocks/list.mjs` | Lists the blocks: ready-made effects, systems and tools (fire, cars, painted looks, tree makers, and systems from finished Meticulai games such as flight, horses, archery and webcam hands) with what renderer they need. `--need fly` shows one group of `blocks/BY-NEED.md`. |
+| `node tools/blocks/suggest.mjs` | Reads your game's plan (`my-game/GREAT.md`, and `ASSETS.md`) and points at the blocks and code libraries that may fit it, best first, with the words that matched. `--text "ride a horse and shoot arrows"` works without a plan. Adds nothing; it's a pointer for the agent. |
 | `node tools/blocks/add.mjs <id>` | Copies a block into `my-game/vendor/<id>/` (or downloads it from its author at the checked version), adds its credits and a `VENDOR.md`. `--install` adds the packages it needs. |
+| `node tools/blocks/build-catalog.mjs` | For people who keep the kit up to date: gathers every `blocks/vendor/*/block.json` into `blocks/catalog.json` and rewrites `blocks/BY-NEED.md` and the Meticulai part of `blocks/CREDITS.md`. Prints any problem in a block.json. `--check` changes nothing. |
 | `node tools/fal/gen.mjs <kind> ...` | Optional, paid: generates pictures, textures, sounds, music or 3D models with fal.ai. Shows the cost and waits for your yes; never goes over the cap in `helper.json`. `status` shows spending, `models` lists prices. |
 
 ## For agents

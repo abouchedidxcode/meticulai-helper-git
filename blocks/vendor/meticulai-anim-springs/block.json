@@ -1,0 +1,31 @@
+{
+  "id": "meticulai-anim-springs",
+  "name": "Anim springs (springs, inertialization, layers, IK)",
+  "kind": "character",
+  "what": "A three.js animation toolkit: exact critically damped and bouncy springs (frame-rate independent), inertialized transitions with no pops, a layer stack (base plus additive layers with masks, pose-matched crossfades), keyframe timelines on named channels with events, speed limits and arcs, analytic two-bone IK and aim for any rig, a never-repeat variation picker, seeded noise for breathing and sway, and smoothness metrics that find single-frame pops.",
+  "use_when": "characters, creatures, hands, cameras or props should move smoothly and alive (follow, reach, look, breathe, switch moves) without hand-made animation files or visible pops",
+  "tags": ["animation", "spring", "critically damped", "smooth follow", "inertialization", "blending", "crossfade", "layers", "additive", "ik", "two bone ik", "look at", "aim", "procedural animation", "timeline", "keyframes", "secondary motion", "breathing", "idle", "variation", "jerk", "smoothness"],
+  "by": "Meticulai",
+  "from_game": "Bonesworth",
+  "play_url": "https://meticulai.com/games/bonesworth/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "Closed-form spring equations and spring-based inertialization (method, no code copied)", "author": "Daniel Holden", "license": "n/a (published article)", "url": "https://theorangeduck.com/page/spring-roll-call" },
+    { "what": "Inertialization transitions (method)", "author": "David Bollo (GDC 2018)", "license": "n/a (talk)", "url": null },
+    { "what": "Soft IK near full extension (method)", "author": "Andy Dunn", "license": "n/a (article)", "url": null },
+    { "what": "mulberry32 PRNG", "author": "Tommy Ettinger", "license": "public domain", "url": null }
+  ],
+  "vendored": "blocks/vendor/meticulai-anim-springs/",
+  "upstream": null,
+  "renderer": "none",
+  "size_kb": 180,
+  "status": "ready",
+  "good_for": "Smooth follow cameras and targets; heads and eyes that watch things; arms and legs that reach (IK); switching between moves without pops; breathing, sway and idle life; bouncy squash and wobble; procedural characters built from boxes or imported glTF rigs; measuring whether motion pops.",
+  "not_for": "Physics ragdolls or collisions; skinning or rigging a model; full-body IK chains longer than two bones; authoring clips in a visual editor; a whole character controller (pair it with your movement code).",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-anim-springs, then import from my-game/vendor/meticulai-anim-springs/src/index.js in src/game/ and call .update(dt, goal) / ik.solve() / stack.update(dt) in the game's update step.",
+  "agent_docs": "blocks/vendor/meticulai-anim-springs/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-anim-springs.jpg",
+  "tuned_by_play": false,
+  "tests": 40
+}

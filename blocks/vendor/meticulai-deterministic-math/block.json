@@ -1,0 +1,30 @@
+{
+  "id": "meticulai-deterministic-math",
+  "name": "Deterministic math",
+  "kind": "dev-tool",
+  "what": "A drop-in replacement for Math whose sin, cos, tan, atan, atan2, asin, acos, exp, log, pow and hypot are fdlibm ports built only from + - * / and sqrt, so a simulation gives the same bits in Chrome, Safari, Firefox and Node. Includes a self-check of 97 recorded results and a seeded random generator.",
+  "use_when": "a simulation is re-run from its inputs somewhere else and must come out identical: replays or ghosts stored as inputs, share links, lockstep multiplayer, server-checked scores, bots or level solvers in Node, a daily puzzle from a seed",
+  "tags": ["determinism", "deterministic", "fdlibm", "musl", "cross-browser", "bit-identical", "lockstep", "replay", "share link", "ghost", "leaderboard verification", "math", "trigonometry", "safari", "v8", "javascriptcore", "desync"],
+  "by": "Meticulai",
+  "from_game": "Lost Marbles: Trick Shot",
+  "play_url": "https://meticulai.com/games/trick-shot/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "fdlibm math library (algorithms and coefficients; notice kept)", "author": "Sun Microsystems", "license": "fdlibm notice (permissive: keep the notice)", "url": "https://www.netlib.org/fdlibm/" },
+    { "what": "musl libc's C versions of fdlibm, which the port follows", "author": "Rich Felker et al.", "license": "MIT", "url": "https://musl.libc.org/" },
+    { "what": "mulberry32 random number generator", "author": "Tommy Ettinger", "license": "Public domain", "url": "https://gist.github.com/tommyettinger/46a874533244883189143505d203312c" }
+  ],
+  "vendored": "blocks/vendor/meticulai-deterministic-math/",
+  "upstream": null,
+  "renderer": "none",
+  "size_kb": 80,
+  "status": "ready",
+  "good_for": "replays and ghosts, share links that re-simulate, lockstep multiplayer, verifying scores on a server, headless bots and level solvers whose results must hold in every browser, seeded daily challenges",
+  "not_for": "rendering, shaders, cameras or anything only drawn (GPUs are not bit-exact and it does not matter there); games where only one machine ever simulates; huge angles past about 1e6 radians",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-deterministic-math, then put `import { DMath as Math } from '<path>/vendor/meticulai-deterministic-math/src/dmath.js';` at the top of each simulation file; see HOW-TO-USE.md",
+  "agent_docs": "blocks/vendor/meticulai-deterministic-math/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-deterministic-math.jpg",
+  "tuned_by_play": false,
+  "tests": 7
+}

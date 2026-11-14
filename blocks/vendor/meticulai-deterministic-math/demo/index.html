@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deterministic math (Meticulai block)</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #14161c; color: #e9e6df; font: 14px/1.45 system-ui, sans-serif; }
+      canvas { display: block; position: fixed; inset: 0; }
+      #panel { position: fixed; left: 16px; top: 14px; max-width: 460px; pointer-events: none; }
+      #panel h1 { font-size: 17px; margin: 0 0 6px; font-weight: 600; }
+      .row { margin: 3px 0; }
+      .k { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+      .ok { color: #8fd18a; } .bad { color: #f08a7a; }
+    </style>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <div id="panel"></div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

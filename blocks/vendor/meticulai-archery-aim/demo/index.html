@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archery aim: Meticulai block</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #9fb6c8; font: 14px/1.4 Georgia, 'Times New Roman', serif; color: #f3ead6; }
+    canvas { display: block; }
+    #hud { position: fixed; inset: 0; pointer-events: none; }
+    #reticle { position: absolute; left: 50%; top: 50%; width: 0; height: 0; }
+    #reticle i { position: absolute; background: #efe6d0; box-shadow: 0 0 2px rgba(0,0,0,.7); }
+    #mark { position: absolute; border: 1.5px solid rgba(233,184,96,.9); border-radius: 50%; box-shadow: 0 0 3px rgba(0,0,0,.6); display: none; transform: translate(-50%, -50%); }
+    #range { position: absolute; left: calc(50% + 18px); top: calc(50% + 14px); font-size: 12px; opacity: .85; text-shadow: 0 1px 2px #000; }
+    #info { position: absolute; left: 16px; bottom: 14px; text-shadow: 0 1px 3px rgba(0,0,0,.8); max-width: 520px; }
+    #stats { position: absolute; right: 18px; bottom: 14px; text-align: right; text-shadow: 0 1px 3px rgba(0,0,0,.8); font-size: 15px; }
+    #title { position: absolute; left: 16px; top: 12px; font-size: 13px; opacity: .9; text-shadow: 0 1px 3px rgba(0,0,0,.8); }
+    b { color: #e9b860; font-weight: normal; }
+  </style>
+</head>
+<body>
+  <div id="hud">
+    <div id="title">Archery aim: the shot goes where the crosshair was</div>
+    <div id="mark"></div>
+    <div id="reticle"><i></i><i></i><i></i><i></i></div>
+    <div id="range"></div>
+    <div id="info"></div>
+    <div id="stats"></div>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

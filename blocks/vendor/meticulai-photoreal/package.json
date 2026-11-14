@@ -1,0 +1,22 @@
+{
+  "name": "meticulai-photoreal",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A three.js camera and lighting stack that makes a scene read as a photograph (from the Meticulai photoreal engine, CANDID).",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "n8ao": "2.0.2",
+    "postprocessing": "6.39.6"
+  },
+  "devDependencies": {
+    "three": "^0.187.0",
+    "vite": "^8.3.8"
+  }
+}

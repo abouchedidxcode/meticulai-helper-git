@@ -1,0 +1,83 @@
+{
+  "id": "meticulai-photoreal",
+  "name": "Photoreal camera and HDRI lighting",
+  "kind": "look",
+  "what": "Makes a three.js scene read as a photograph. One real sky (HDRI) lights everything: the sun is found in the image and becomes a shadow-casting light with contact-hardening soft shadows (PCSS), and a probe captured in the level adds bounce light and parallax-correct reflections. Then a camera chain: N8AO ambient occlusion, puddle reflections, aerial perspective and sun glow, motion blur, adaptive auto exposure, physical depth of field, bloom, ACES, and lens and film (aberration, distortion, vignetting, grade, grain). Quality presets and dynamic resolution.",
+  "use_when": "the game should look like real photos or film footage rather than a stylised render, especially first-person or camera games built from real scanned (Poly Haven) assets under an open sky",
+  "tags": [
+    "photoreal",
+    "realistic",
+    "post-processing",
+    "HDRI",
+    "IBL",
+    "sun from HDRI",
+    "PCSS",
+    "soft shadows",
+    "auto exposure",
+    "eye adaptation",
+    "depth of field",
+    "bokeh",
+    "motion blur",
+    "film grain",
+    "vignette",
+    "chromatic aberration",
+    "ACES",
+    "tone mapping",
+    "SSAO",
+    "N8AO",
+    "screen-space reflections",
+    "puddles",
+    "wet ground",
+    "aerial perspective",
+    "reflection probe",
+    "dynamic resolution",
+    "quality presets"
+  ],
+  "by": "Meticulai",
+  "from_game": "Candid (Meticulai photoreal engine)",
+  "play_url": "https://meticulai.com/games/candid/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    {
+      "what": "postprocessing (effect composer, bloom, depth of field, SMAA, tone mapping), npm dependency",
+      "author": "Raoul van Rüschen (pmndrs)",
+      "license": "Zlib",
+      "url": "https://github.com/pmndrs/postprocessing"
+    },
+    {
+      "what": "n8ao (ambient occlusion), npm dependency; package.json says ISC, its LICENSE file is CC0-1.0",
+      "author": "N8python",
+      "license": "ISC / CC0-1.0",
+      "url": "https://github.com/N8python/n8ao"
+    },
+    {
+      "what": "Hash without Sine (hash12), the film grain hash in effects.js",
+      "author": "Dave Hoskins",
+      "license": "MIT",
+      "url": "https://www.shadertoy.com/view/4djSRW"
+    },
+    {
+      "what": "Demo sky kloofendal_48d_partly_cloudy_puresky and texture asphalt_04, loaded at runtime from Poly Haven's CDN (not stored)",
+      "author": "Poly Haven",
+      "license": "CC0-1.0",
+      "url": "https://polyhaven.com"
+    }
+  ],
+  "vendored": "blocks/vendor/meticulai-photoreal/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 144,
+  "status": "ready",
+  "good_for": "Outdoor or semi-outdoor scenes with scanned CC0 assets that should pass for photos: alleys, yards, streets, ruins, photo or camera games, walking sims, prop hunts. Different times of day are a different HDRI plus a few numbers.",
+  "not_for": "Stylised, painted, toon, pixel or low-poly looks (it fights them); WebGPU renderers; orthographic cameras; phones and weak laptops as the main target (heavy, frame rate unmeasured there). It draws the frame itself (see HOW-TO-USE.md: a drawWith hook in the starter's renderer).",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-photoreal, then in my-game: npm install postprocessing@6.39.6 n8ao@2.0.2 (and follow HOW-TO-USE.md 'Drop it into the starter')",
+  "agent_docs": "blocks/vendor/meticulai-photoreal/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-photoreal.jpg",
+  "tuned_by_play": false,
+  "tests": 20,
+  "npm": [
+    "postprocessing@6.39.6",
+    "n8ao@2.0.2"
+  ]
+}

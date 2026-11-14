@@ -1,0 +1,29 @@
+{
+  "id": "meticulai-haze",
+  "name": "Haze (one air for the whole world)",
+  "kind": "look",
+  "what": "Replaces three.js's fog shader code once so every material fades into the same sun-tinted, luminous haze: a low patchy mist that lies in valleys, a thin haze everywhere and a deep layer for aerial perspective from high up, all tunable live through one shared uniform. Comes with a sky that melts into the same haze at the horizon, a warm key + cool fill light rig, drifting cloud shadows, reflections from the sky, and a measured final grade (Khronos Neutral tone map, contrast, saturation, sharpen, vignette, grain, faint bloom, sun shafts, an edge streak for speed).",
+  "use_when": "an outdoor three.js world should feel big and atmospheric (valleys, coasts, cities, flying or open-world games), with far things fading into the sky instead of a hard fog wall or clear air.",
+  "tags": ["fog", "haze", "height fog", "mist", "aerial perspective", "atmosphere", "sky", "dawn", "sunset", "volumetric look", "colour grade", "tone mapping", "neutral", "post-processing", "cloud shadows", "sun shafts", "outdoor", "open world"],
+  "by": "Meticulai",
+  "from_game": "Hezarfen",
+  "play_url": "https://meticulai.com/games/hezarfen/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "Hash without Sine (shader hash functions)", "author": "Dave Hoskins", "license": "MIT", "url": "https://www.shadertoy.com/view/4djSRW" },
+    { "what": "three.js tone mapping functions and post-processing addons (UnrealBloomPass render body adapted)", "author": "three.js authors", "license": "MIT", "url": "https://github.com/mrdoob/three.js" }
+  ],
+  "vendored": "blocks/vendor/meticulai-haze/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 116,
+  "status": "ready",
+  "good_for": "Outdoor scenes with real depth: flying, gliding, open worlds, coasts, cities, mountain valleys, dawn or dusk moods. Works with every built-in material, instancing, skinning and MSAA; the haze itself works with the starter's renderer as is. Live tuning (one number for thickness).",
+  "not_for": "Indoor or tiny scenes (little distance to fade), WebGPURenderer games, games that need clouds in the sky without a panorama (the procedural sky is a cloudless gradient), or stylised looks that draw their own fog.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-haze",
+  "agent_docs": "blocks/vendor/meticulai-haze/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-haze.jpg",
+  "tuned_by_play": false,
+  "tests": 9
+}

@@ -33,6 +33,9 @@ another: read the role's file in `agents/`, do that job, write its output, move 
 - Prefer **big moves over dials**. Rework a whole thing (controls, camera, the first 60 seconds, an encounter, one art
   pass). If three rounds have not moved the top complaint, change something different in kind (a mechanic, the level,
   the camera), not another number.
+- Before splitting, run `node tools/blocks/suggest.mjs` and check the blocks noted in `my-game/ASSETS.md`. If a
+  block already does an area's job (flight, movement, a look, webcam input), that builder adapts the block instead of
+  writing one: put the block id in its CONTRACTS.md row.
 - Split the work by **system and file** into 3-5 builders (fewer is fine; never more than `maxAgents`). Two builders
   must never own the same file. If two jobs need the same file, give both to one builder or do them in sequence.
 - Write `my-game/CONTRACTS.md` (format: `templates/CONTRACTS.md`, example: `swarm/contracts-example.md`): each

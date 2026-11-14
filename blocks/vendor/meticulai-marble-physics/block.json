@@ -1,0 +1,29 @@
+{
+  "id": "meticulai-marble-physics",
+  "name": "Marble physics",
+  "kind": "physics",
+  "what": "Deterministic sphere physics for marbles and balls at 60 Hz with 4 substeps: oriented boxes, cylinders, lathe shells (bowls, funnels, banked turns) and helix shells (loop-the-loops, helter-skelters), moving obstacles as pure functions of time (spinners, hammers, sliders, trapdoors, orbiting tops), speed strips, launchers, marble-on-marble bumps, plus an input-to-forces controller (grip, drag, air control, jump, slick surfaces). Same inputs give the same bits every run, in Node, Workers and the browser.",
+  "use_when": "the game rolls balls or marbles over a built track or table and wants physics that feels like a toy and is deterministic enough for replays, share links, bots or multiplayer",
+  "tags": ["marble", "ball", "sphere", "rolling", "track", "marble run", "loop-the-loop", "bowl", "funnel", "banked turn", "kinematic", "spinner", "deterministic", "replay", "netcode-ready", "lockstep", "pinball", "minigolf", "racing"],
+  "by": "Meticulai",
+  "from_game": "Lost Marbles",
+  "play_url": "https://meticulai.com/games/lost-marbles/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "mulberry32 random number generator (sample track)", "author": "Tommy Ettinger", "license": "Public domain", "url": "https://gist.github.com/tommyettinger/46a874533244883189143505d203312c" },
+    { "what": "three.js (npm, for src/view.js and the demo)", "author": "three.js authors", "license": "MIT", "url": "https://github.com/mrdoob/three.js" }
+  ],
+  "vendored": "blocks/vendor/meticulai-marble-physics/",
+  "upstream": null,
+  "renderer": "none",
+  "size_kb": 124,
+  "status": "ready",
+  "good_for": "marble runs and marble races, rolling-ball platformers, minigolf, pinball-like tables, bowls and funnels, loop-the-loops; anything that needs replays, ghosts, share links or a server to re-run the same physics; bots that test levels headless in Node",
+  "not_for": "general rigid bodies (boxes tumbling, stacking, ragdolls: use Rapier); hundreds of balls at once (marble-marble is O(n^2), fine to ~60); visible ball spin (not simulated, draw it from velocity)",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-marble-physics, then import from vendor/meticulai-marble-physics/src/index.js (no npm deps) and optionally src/view.js (three.js meshes for colliders); see HOW-TO-USE.md",
+  "agent_docs": "blocks/vendor/meticulai-marble-physics/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-marble-physics.jpg",
+  "tuned_by_play": true,
+  "tests": 13
+}

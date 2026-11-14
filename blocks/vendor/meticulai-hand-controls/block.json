@@ -1,0 +1,33 @@
+{
+  "id": "meticulai-hand-controls",
+  "name": "Hand controls (webcam gestures)",
+  "kind": "input",
+  "what": "Play with bare hands in front of a webcam. One call opens the camera and runs Google's MediaPipe hand tracker in the browser (GPU with CPU fallback), mirrors it like a selfie and smooths it with a One Euro filter. Per hand you get a stable pose out of 20 (open, fist, point, pinch, OK, V, thumbs up and down, rock, gun, claw...), a score for every pose, palm position, pinch, openness, roll and depth, and events: swipes, push and pull, circles, wave, twist, pinch tap and double tap, throw, hold, and two-hand clap, zoom and steering wheel. Gestures can be switched on and off. Synthetic hands drive the same engine without a camera, for tests, bots and mouse or touch fallbacks. Includes pinch-click and open/fist helpers with hysteresis and plain-words camera error messages.",
+  "use_when": "the player controls the game with their bare hands through a webcam: pointing, pinching, making a fist, swiping, throwing or clapping",
+  "tags": ["webcam", "hand tracking", "mediapipe", "handlandmarker", "gestures", "poses", "pinch", "swipe", "clap", "throw", "fist", "one euro filter", "smoothing", "selfie", "camera input", "motion controls", "touchless", "synthetic hands", "computer vision"],
+  "by": "Meticulai",
+  "from_game": "Show of Hands (the 14 hands games), GODHAND",
+  "play_url": "https://meticulai.com/games/show-of-hands/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "MediaPipe Tasks Vision (npm dependency; wasm copied from node_modules at install)", "author": "Google", "license": "Apache-2.0", "url": "https://github.com/google-ai-edge/mediapipe" },
+    { "what": "hand_landmarker.task model (downloaded from Google at install, not redistributed; no separate licence stated by Google)", "author": "Google", "license": "Apache-2.0 (MediaPipe)", "url": "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task" },
+    { "what": "One Euro filter algorithm (implementation written from the paper)", "author": "Casiez, Roussel and Vogel (CHI 2012)", "license": "published algorithm", "url": "https://gery.casiez.net/1euro/" }
+  ],
+  "fetch": [
+    { "path": "public/models/hand_landmarker.task", "url": "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task", "bytes": 7819105, "sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1" }
+  ],
+  "vendored": "blocks/vendor/meticulai-hand-controls/",
+  "upstream": null,
+  "renderer": "none",
+  "size_kb": 163,
+  "status": "ready",
+  "good_for": "Webcam games where the hands are the controller: catching, throwing, pointing and pinching at things, steering with two fists, clapping, calm gesture games, hand-shaped puzzles. Works with any renderer.",
+  "not_for": "Games that must work without any camera and have no fallback plan; full-body or face tracking (see meticulai-blink-input for eyes); precise finger-by-finger input such as typing. Needs https or localhost for the camera.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-hand-controls, then add @mediapipe/tasks-vision 1.1.0 and the assets script to my-game/package.json (HOW-TO-USE.md, 'Drop it into the starter')",
+  "agent_docs": "blocks/vendor/meticulai-hand-controls/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-hand-controls.jpg",
+  "tuned_by_play": true,
+  "tests": 74
+}

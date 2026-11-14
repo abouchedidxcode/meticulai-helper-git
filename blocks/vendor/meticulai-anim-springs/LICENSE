@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2026 Meticulai
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+Ideas and published methods this code follows (no source files were copied)
+
+- Closed-form critically damped and damped springs (src/spring.js), and the
+  spring-based form of inertialization (src/inertialize.js): after Daniel
+  Holden's article "Spring-It-On: The Game Developer's Spring-Roll-Call"
+  (theorangeduck.com, 2021). The equations and the short variable names
+  (j0, j1, eydt) follow the article.
+- Inertialization: David Bollo's GDC 2018 talk "Inertialization:
+  High-Performance Animation Transitions".
+- Soft reach near full extension (src/ik.js): Andy Dunn's "soft IK" method.
+- Shape-preserving tangents (src/timeline.js): the Fritsch-Carlson monotone
+  cubic interpolation method (1980).
+- Easing curves (src/easing.js): the standard shapes from Robert Penner's
+  easing equations, in the one-line form commonly listed on easings.net.
+- mulberry32 (src/noise.js): public domain (Tommy Ettinger). The integer hash
+  uses the MurmurHash3 finaliser constants (public domain, Austin Appleby);
+  hashString is FNV-1a (public domain).
+
+three.js (installed by npm): MIT License.

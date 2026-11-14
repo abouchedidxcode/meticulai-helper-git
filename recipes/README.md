@@ -23,6 +23,7 @@ the numbers. Put new numbers in `src/tuning.json` so they show up in the dev pan
 | [top-down-2d](top-down-2d.md) | The game is seen from above or from the side, with no perspective. |
 | [day-night-light](day-night-light.md) | Time of day should change the light, sky and fog together. |
 | [simple-particles](simple-particles.md) | Dust, sparks, bursts and trails without slowing the game down. |
+| [fast-frames](fast-frames.md) | The game runs below 60 on sharp screens, hitches when something first appears, looks choppy on a 120 Hz screen, or slows down with many things on screen. |
 
 ## Rules every recipe follows (keep them when you adapt one)
 

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meticulai block: anim springs</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #1d2230; font: 14px/1.4 system-ui, sans-serif; color: #e8e4da; }
+    canvas { display: block; }
+    #info { position: fixed; left: 16px; top: 12px; max-width: 420px; pointer-events: none; text-shadow: 0 1px 2px #0008; }
+    #info b { color: #ffd58a; }
+    #legend { position: fixed; right: 16px; bottom: 14px; text-align: right; pointer-events: none; text-shadow: 0 1px 2px #0008; }
+    .sw { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-left: 6px; vertical-align: middle; }
+  </style>
+</head>
+<body>
+  <div id="info">
+    <b>Springs, IK and inertialized transitions</b><br />
+    Move the mouse: the right arm reaches with two-bone IK, the head follows on a spring.
+    The left arm switches between rest and wave with inertialization (click to switch now).
+    The chest breathes on seeded noise.
+  </div>
+  <div id="legend"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

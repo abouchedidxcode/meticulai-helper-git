@@ -1,0 +1,31 @@
+{
+  "id": "meticulai-sdf-meshes",
+  "name": "SDF meshes and caves",
+  "kind": "procgen",
+  "what": "Model smooth organic shapes in code as signed distance fields (spheres, ellipsoids, round cones, tubes along curves, boxes, cylinders; smooth union, subtract, intersect, shells, relief) and mesh them at load time with surface nets: vertices projected onto the exact surface, analytic normals, baked cavity occlusion. Plus seeded 3D caves (tubes of open space, domain-warped and roughened) meshed in 24 m chunks by a Web Worker pool and streamed around the player, with collision against the same field.",
+  "use_when": "the game needs organic or rounded 3D shapes (creatures, bones, helmets, rocks, blobby props) built in code instead of modelled, or true 3D caves and tunnels that the player moves through",
+  "tags": ["sdf", "signed distance field", "surface nets", "marching cubes alternative", "isosurface", "smooth union", "smin", "procedural modelling", "organic shapes", "no models", "code assets", "caves", "tunnels", "density field", "voxel", "chunks", "web worker", "streaming", "ambient occlusion bake"],
+  "by": "Meticulai",
+  "from_game": "Dig Site, Orbitball, Abyssal",
+  "play_url": null,
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "Smooth min/max, ellipsoid and round cone distance formulas", "author": "Inigo Quilez", "license": "MIT", "url": "https://iquilezles.org/articles/distfunctions/" },
+    { "what": "Simplex noise (follows the reference implementation)", "author": "Stefan Gustavson", "license": "Public domain", "url": "https://github.com/stegu/webgl-noise" },
+    { "what": "mulberry32 random number generator", "author": "Tommy Ettinger", "license": "Public domain", "url": "https://gist.github.com/tommyettinger/46a874533244883189143505d203312c" },
+    { "what": "three.js (npm, for geometry.js, streamer.js and the demo)", "author": "three.js authors", "license": "MIT", "url": "https://github.com/mrdoob/three.js" }
+  ],
+  "vendored": "blocks/vendor/meticulai-sdf-meshes/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 152,
+  "status": "ready",
+  "good_for": "creatures, characters, bones, helmets and props made of blended primitives; rocks and boulders; one-off sculpted pieces; cut-away dioramas; underwater or underground games with real 3D caves, overhangs and shafts; anything that must look smooth without any model files",
+  "not_for": "meshing every frame (it is a load-time tool: 0.1-1 s per shape); hard-edged architecture (use boxes); big open landscapes seen from the air (use a heightmap); skinned animation (it makes static meshes; skin them yourself)",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-sdf-meshes, then import from vendor/meticulai-sdf-meshes/src/index.js (no three.js needed) and geometry.js / streamer.js (three.js); see HOW-TO-USE.md",
+  "agent_docs": "blocks/vendor/meticulai-sdf-meshes/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-sdf-meshes.jpg",
+  "tuned_by_play": false,
+  "tests": 8
+}

@@ -44,8 +44,11 @@ Write the reason in ASSETS.md whenever you break a default.
 
 For each need, check in this order and stop at the first option that fits well:
 
-1. **A block**: a ready-made effect or system as code (fire, ocean, sky, trees, crowds, pixel effects).
-   `node tools/blocks/list.mjs [--kind effect|system|tool] [--renderer webgl2|webgpu|2d]`.
+1. **A block**: a ready-made effect or system as code (fire, ocean, sky, trees, crowds, pixel effects), including
+   systems from finished Meticulai games (flight, horses, archery, looks, webcam hands, music). Start with
+   `node tools/blocks/suggest.mjs` (reads GREAT.md and ASSETS.md; `--text "<the need>"` for one need), or browse
+   [blocks/BY-NEED.md](../../blocks/BY-NEED.md), or `node tools/blocks/list.mjs [--need fly] [--kind ...]
+   [--renderer webgl2|webgpu|2d]`.
 2. **A free CC0 asset**: no conditions at all. `node tools/assets/find.mjs "<query>" --license cc0`.
 3. **A credit-required asset** (CC-BY and similar): free, but the author must be named in CREDITS.md and on the game's
    credits screen.
@@ -82,7 +85,8 @@ camera), the ladder choice you expect, and notes ("seen from 20 m above, silhoue
 **Open the sheet and look at it.** Names lie; pictures don't.
 - Search the family's sources first (`--source kenney`). Try two or three wordings ("boulder", "rock", "stone").
 - Shortlist 2-5. Fewer if one is clearly right.
-- For blocks: read `blocks/vendor/<id>/HOW-TO-USE.md` and look at `blocks/previews/<id>.jpg`.
+- For blocks: read `blocks/vendor/<id>/HOW-TO-USE.md` and look at `blocks/previews/<id>.jpg`. A Meticulai block
+  links the game it came from (`play_url`): its "What made it good" section says what to keep.
 
 ### 4. Pull candidates
 

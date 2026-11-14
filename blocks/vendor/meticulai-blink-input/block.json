@@ -1,0 +1,63 @@
+{
+  "id": "meticulai-blink-input",
+  "name": "Blink input (webcam eyes and look-away)",
+  "kind": "input",
+  "what": "Turns the webcam into a controller: eyes closed (both eyes to close, either eye to open, so squints and winks never count), looking away (head turned, face out of frame, tab hidden, each with a grace time so slow trackers don't flicker) and a coarse left/centre/right gaze, as clean events (blindStart/blindEnd, eyesClosed/eyesOpened, lookAwayStart/End). An 8-second calibration fits the thresholds to each player's own eyes. Falls back to holding Space or an on-screen button, with simulated blinks when there is no camera, and drops to that fallback if the camera dies mid-game. Includes a scripted synthetic face for bots and tests. MediaPipe runs locally; no video leaves the device.",
+  "use_when": "the game is played with the player's eyes or face: blinking, closing the eyes, looking away from the screen or turning the head (for example 'it only moves when you can't see it').",
+  "tags": [
+    "webcam",
+    "face tracking",
+    "blink detection",
+    "eyes closed",
+    "eye tracking",
+    "look away",
+    "head pose",
+    "gaze",
+    "mediapipe",
+    "face landmarker",
+    "calibration",
+    "hysteresis",
+    "camera input",
+    "horror",
+    "accessibility fallback"
+  ],
+  "by": "Meticulai",
+  "from_game": "Don't Blink",
+  "play_url": "https://meticulai.com/games/dont-blink/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    {
+      "what": "MediaPipe Tasks Vision (npm dependency; wasm runtime copied into public/wasm at install)",
+      "author": "Google",
+      "license": "Apache-2.0",
+      "url": "https://github.com/google-ai-edge/mediapipe"
+    },
+    {
+      "what": "Face Landmarker model face_landmarker.task (downloaded at install, sha256-checked, not committed)",
+      "author": "Google",
+      "license": "Apache-2.0 (stated on its model cards)",
+      "url": "https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker"
+    }
+  ],
+  "vendored": "blocks/vendor/meticulai-blink-input/",
+  "upstream": null,
+  "renderer": "none",
+  "size_kb": 144,
+  "fetch": [
+    {
+      "path": "public/models/face_landmarker.task",
+      "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+      "bytes": 3758596,
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+    }
+  ],
+  "status": "ready",
+  "good_for": "Games built around 'can the player see the screen?': horror where things move while you blink, stealth with closed eyes, staring contests, meditation or rest timers, look-away pauses, head-turn choices. Any renderer.",
+  "not_for": "Precise eye-gaze aiming (the gaze is three coarse zones); games that must work without a fallback; phones in poor light. Never verified with a real face by a person yet: plan a human test early.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-blink-input, then in my-game: npm install @mediapipe/tasks-vision@1.1.0 and node vendor/meticulai-blink-input/scripts/fetch-model.mjs --out public (see HOW-TO-USE.md)",
+  "agent_docs": "blocks/vendor/meticulai-blink-input/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-blink-input.jpg",
+  "tuned_by_play": false,
+  "tests": 25
+}

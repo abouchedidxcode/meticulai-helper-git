@@ -1,0 +1,28 @@
+{
+  "id": "meticulai-sonar-sketch",
+  "name": "Sonar sketch",
+  "kind": "effect",
+  "what": "A sonar ping that draws the world: 900 rays march outward with the expanding front through any distance/density field and leave glowing points on the walls the moment the front reaches them; the points flash, then cool from teal to deep blue to black over 4 s. Targets in range come back as amber knots, and a hidden big body can be sketched beyond the walls in dim drifting points, faint even through rock. Time-budgeted (2 ms a frame), one THREE.Points ring buffer, fade in the shader.",
+  "use_when": "the player navigates darkness, fog or an unseen space by echolocation, radar, scanner pulses or a reveal wave, and the level can be described by a distance or density function",
+  "tags": ["sonar", "echolocation", "scanner", "radar", "reveal", "pulse", "point cloud", "sphere tracing", "sdf", "density field", "darkness", "horror", "underwater", "cave", "ring buffer"],
+  "by": "Meticulai",
+  "from_game": "Abyssal",
+  "play_url": null,
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "mulberry32 seeded random (src/shapes.js)", "author": "Tommy Ettinger", "license": "Public domain", "url": "https://gist.github.com/tommyettinger/46a874533244883189143505d203312c" }
+  ],
+  "vendored": "blocks/vendor/meticulai-sonar-sketch/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 92,
+  "status": "ready",
+  "good_for": "Dark caves, deep sea, haunted houses, blind or bat characters, sci-fi scanner pulses: any game where seeing the space is a resource the player spends.",
+  "not_for": "Lit, daytime scenes (the points are the reveal and vanish against a bright frame); levels with no field at all (you need at least a rough SDF of the walls); WebGPU renderers.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-sonar-sketch",
+  "agent_docs": "blocks/vendor/meticulai-sonar-sketch/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-sonar-sketch.jpg",
+  "tuned_by_play": false,
+  "tests": 15
+}

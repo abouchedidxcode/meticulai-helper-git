@@ -44,7 +44,11 @@ export default {
     }
     for (const b of loadBlocks() || []) {
       if (kind && !['shader', 'vfx', 'animation', 'model'].includes(kind) && b.kind !== kind) continue;
-      const score = matchScore(query, [{ text: b.name, weight: 3 }, { text: b.id, weight: 2.5 }, { text: b.what || '', weight: 2 }, { text: b.good_for || '', weight: 1.5 }, { text: b.kind || '', weight: 1 }]);
+      // Meticulai blocks also carry use_when (the situation they fit), tags (synonyms) and from_game (the game they came from)
+      const score = matchScore(query, [
+        { text: b.name, weight: 3 }, { text: b.id, weight: 2.5 }, { text: arr(b.tags), weight: 2.5 }, { text: b.use_when || '', weight: 2.5 },
+        { text: b.what || '', weight: 2 }, { text: b.from_game || '', weight: 2 }, { text: b.good_for || '', weight: 1.5 }, { text: b.kind || '', weight: 1 },
+      ]);
       if (score <= 0.25) continue;
       let thumb = null;
       if (b.preview) {
@@ -53,8 +57,9 @@ export default {
       }
       out.push({
         id: `block:${b.id}`, source: 'catalog', sourceName: 'Block', title: b.name, kind: b.kind || 'block', style: '',
-        license: b.license, creditNeeded: !isCc0(b.license), thumb, page: b.upstream?.repo || null,
-        info: `drop-in ${b.kind || 'block'} by ${b.by || 'unknown'}: ${b.what || ''}`.slice(0, 140), isBlock: true, score: score * 0.9,
+        license: b.license, creditNeeded: !isCc0(b.license), thumb, page: b.upstream?.repo || b.play_url || null,
+        info: `drop-in ${b.kind || 'block'} ${b.from_game ? `from ${b.from_game} (Meticulai)` : `by ${b.by || 'unknown'}`}: ${b.use_when ? `use when ${b.use_when}` : b.what || ''}`.slice(0, 140),
+        isBlock: true, score: score * (b.tuned_by_play ? 0.95 : 0.9),
       });
     }
     return out;

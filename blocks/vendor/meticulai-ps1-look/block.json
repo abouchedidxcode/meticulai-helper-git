@@ -1,0 +1,28 @@
+{
+  "id": "meticulai-ps1-look",
+  "name": "PS1 look (vertex snap, affine textures, low-res dither, blink and dread effects)",
+  "kind": "look",
+  "what": "Draws a three.js scene like a PlayStation 1 game: 320 x 240 with a 4:3 letterbox, vertices snapped to the pixel grid, affine (warping) textures on normal lit materials, 20 colour levels with 4x4 Bayer dither, a green-sepia horror grade, grain and vignette. Also has eyes-closed blackout with a fading afterimage, eyelids, flash, chunky shake, a vignette punch and 'dread' (swimming rows, colour split). Includes eight tiny procedural textures.",
+  "use_when": "the game wants a retro PS1 / PSX, low-poly 90s 3D or lo-fi horror look, or blink / eyes-closed / jump-scare screen effects",
+  "tags": ["ps1", "psx", "retro", "low-res", "low poly", "dither", "bayer", "vertex snapping", "jitter", "affine texture", "horror", "lo-fi", "90s", "post-processing", "eyelids", "blink", "afterimage", "vignette", "film grain", "letterbox", "screen shake"],
+  "by": "Meticulai",
+  "from_game": "Don't Blink",
+  "play_url": "https://meticulai.com/games/dont-blink/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "hash12 'Hash without Sine' shader function", "author": "Dave Hoskins", "license": "MIT", "url": "https://www.shadertoy.com/view/4djSRW" }
+  ],
+  "vendored": "blocks/vendor/meticulai-ps1-look/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 104,
+  "status": "ready",
+  "good_for": "Retro 3D and horror games, first-person exploration, anything built from simple low-poly shapes and tiny textures; converting the starter's meshes in one line with patchPS1Material. Cheap: the scene is drawn at 320 x 240.",
+  "not_for": "Smooth modern or painterly looks, 2D pixel art (use pixelfx or meticulai-pixel-3d), WebGPU games, or scenes with huge unsubdivided floors (affine warp tears them).",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-ps1-look, then replace renderer.render with PS1Pipeline.render and patch materials (HOW-TO-USE.md)",
+  "agent_docs": "blocks/vendor/meticulai-ps1-look/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-ps1-look.jpg",
+  "tuned_by_play": false,
+  "tests": 8
+}

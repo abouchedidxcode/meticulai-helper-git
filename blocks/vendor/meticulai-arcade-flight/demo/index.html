@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arcade flight (from Dragon Aces)</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #8fb4d6; font-family: system-ui, sans-serif; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #hud { position: fixed; left: 24px; bottom: 22px; color: #fff; text-shadow: 0 1px 3px #0008; font-size: 14px; pointer-events: none; }
+    #hud .big { font-size: 34px; font-weight: 700; letter-spacing: 0.02em; }
+    .bar { width: 180px; height: 6px; background: #0004; border-radius: 3px; margin: 4px 0 8px; overflow: hidden; }
+    .bar i { display: block; height: 100%; background: #fff; }
+    #stall { position: fixed; left: 50%; top: 30%; transform: translateX(-50%); color: #ffd04a; font-weight: 800; font-size: 22px;
+      letter-spacing: 0.2em; text-shadow: 0 1px 4px #000a; opacity: 0; pointer-events: none; }
+    #help { position: fixed; right: 20px; top: 16px; color: #fff; text-shadow: 0 1px 3px #0008; font-size: 13px; text-align: right; line-height: 1.5; pointer-events: none; }
+    #aim { position: fixed; width: 14px; height: 14px; margin: -7px 0 0 -7px; border: 2px solid #fffc; border-radius: 50%; pointer-events: none; }
+    #nose { position: fixed; width: 6px; height: 6px; margin: -3px 0 0 -3px; background: #fffa; border-radius: 50%; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <div id="hud">
+    <div class="big" id="speed">0</div>
+    <div>km/h &nbsp; <span id="alt"></span></div>
+    <div>throttle</div><div class="bar"><i id="thr"></i></div>
+    <div>stamina (boost, roll)</div><div class="bar"><i id="sta"></i></div>
+  </div>
+  <div id="stall">STALL</div>
+  <div id="aim"></div><div id="nose"></div>
+  <div id="help">Click to fly (the demo flies itself until then)<br />Mouse: aim &middot; A/D: roll &middot; W/S: throttle / brake<br />Shift or Space: boost &middot; Q/E: barrel roll &middot; 1-4: flyer preset</div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

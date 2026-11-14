@@ -1,0 +1,28 @@
+{
+  "id": "meticulai-rope-cloth-chains",
+  "name": "Rope and cloth chains",
+  "kind": "physics",
+  "what": "Short verlet chains pinned at one end to a moving point and simulated in world space, so scarves, ribbons, hair, sashes, tails, banners and short ropes trail every motion, swing past, flutter in wind and drag on the floor. 2D (with a Canvas brush-stroke outline) and 3D (with a three.js tapered ribbon mesh), plus the tuned presets a 2D fighting game's characters wear.",
+  "use_when": "a character, creature, vehicle or prop needs follow-through (scarf, cape tails, hair, ribbons, tail, antennae, banner, a dangling rope) that trails its movement without hand animation",
+  "tags": ["verlet", "rope", "cloth", "secondary motion", "follow-through", "hair", "ponytail", "ribbon", "scarf", "sash", "tail", "banner", "physics chain", "jiggle", "trail"],
+  "by": "Meticulai",
+  "from_game": "Inkbound",
+  "play_url": null,
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "three.js (npm, for src/ribbon-mesh.js and the demo)", "author": "three.js authors", "license": "MIT", "url": "https://github.com/mrdoob/three.js" }
+  ],
+  "vendored": "blocks/vendor/meticulai-rope-cloth-chains/",
+  "upstream": null,
+  "renderer": "none",
+  "size_kb": 84,
+  "status": "ready",
+  "good_for": "scarves, ribbons, hair, ponytails, sashes and tails on players and creatures (2D or 3D); kite and balloon strings; banners on vehicles; a dangling rope or chain with a weight; cheap follow-through on many characters at once",
+  "not_for": "full cloth sheets (capes, flags, curtains that fold: use a cloth grid); ropes the player swings on or that hold weight against the world; anything that must collide with the body or level (only a flat floor is handled)",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-rope-cloth-chains, then import Chain3/PRESETS/scaled from vendor/meticulai-rope-cloth-chains/src/index.js and RibbonMesh from src/ribbon-mesh.js; step each chain every frame with its world pin; see HOW-TO-USE.md",
+  "agent_docs": "blocks/vendor/meticulai-rope-cloth-chains/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-rope-cloth-chains.jpg",
+  "tuned_by_play": false,
+  "tests": 11
+}

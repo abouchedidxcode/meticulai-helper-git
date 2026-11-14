@@ -1,0 +1,28 @@
+{
+  "id": "meticulai-sand-trails",
+  "name": "Sand trails",
+  "kind": "effect",
+  "what": "Soft ground that remembers, simulated on the GPU in a small square that follows a moving body: a groove with berms and a bow wave, craters with rims on landing, water wicking sideways into dry grains with a ragged front, dry sand slumping back past its angle of repose in seconds while wet sand holds for most of a minute, plus a long coarse damp trail. A patch for any MeshStandardMaterial draws it as normal detail with self-shadowing in a low sun and wet darkening. Visual only: physics and ground mesh untouched.",
+  "use_when": "something moves over a soft surface (sand, snow, mud, wet ground) and should leave a trail, groove, crater or footprints that fade",
+  "tags": ["deformation", "trail", "tracks", "snow tracks", "footprints", "sand", "mud", "snow", "wetness", "groove", "crater", "render target", "ping-pong", "gpu simulation", "ground"],
+  "by": "Meticulai",
+  "from_game": "Last Drop",
+  "play_url": "https://meticulai.com/games/last-drop/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "GLSL hash12 ('Hash without Sine') in src/sand-map.js", "author": "David Hoskins", "license": "MIT", "url": "https://www.shadertoy.com/view/4djSRW" }
+  ],
+  "vendored": "blocks/vendor/meticulai-sand-trails/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 88,
+  "status": "ready",
+  "good_for": "A ball, drop, sled, animal or player crossing a desert, beach, snowfield or mud flat, seen from a chase or top-down camera; anything where the path you took should show on the ground.",
+  "not_for": "Steep or overhanging ground (it is a square in x/z); trails that must last for the whole level (the fine map is 12 m and scrolls; the long map is 44 m); gameplay that needs the dents to be solid (it is visual only); WebGPU renderers.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-sand-trails",
+  "agent_docs": "blocks/vendor/meticulai-sand-trails/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-sand-trails.jpg",
+  "tuned_by_play": true,
+  "tests": 9
+}

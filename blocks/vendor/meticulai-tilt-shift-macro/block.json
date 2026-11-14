@@ -1,0 +1,30 @@
+{
+  "id": "meticulai-tilt-shift-macro",
+  "name": "Tilt-shift macro lens (toy miniature look)",
+  "kind": "look",
+  "what": "A post pipeline that makes a three.js scene look like a macro photograph of a toy: MSAA HDR scene with depth, ground-truth ambient occlusion, a one-pass gather bokeh depth of field whose plane of focus is tilted into a thin sharp band through your subject (occlusion-aware, cat's-eye bokeh), restrained bloom and an AgX filmic grade with warm white balance, grain, vignette and lens fringing. Quality presets and automatic resolution and preset step-down keep it running on phones.",
+  "use_when": "the game should look like a photographed miniature, toy, tabletop model or diorama, or needs a filmic depth of field and grade with phone-friendly quality presets",
+  "tags": ["tilt-shift", "miniature", "toy", "diorama", "macro", "tabletop", "depth of field", "dof", "bokeh", "GTAO", "ambient occlusion", "bloom", "AgX", "tone mapping", "film grain", "vignette", "chromatic aberration", "photographic", "post-processing", "dynamic resolution", "quality presets"],
+  "by": "Meticulai",
+  "from_game": "Lost Marbles",
+  "play_url": "https://meticulai.com/games/lost-marbles/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "Single-pass gather bokeh technique (reimplemented, no code copied)", "author": "Dennis Gustafsson", "license": "technique credit", "url": "https://blog.voxagon.se/2018/05/04/bokeh-depth-of-field-in-single-pass.html" },
+    { "what": "hash12 (Hash without Sine)", "author": "Dave Hoskins", "license": "MIT", "url": "https://www.shadertoy.com/view/4djSRW" },
+    { "what": "GTAOPass, UnrealBloomPass, FullScreenQuad, RoomEnvironment (imported from the three package)", "author": "three.js authors", "license": "MIT", "url": "https://github.com/mrdoob/three.js" }
+  ],
+  "vendored": "blocks/vendor/meticulai-tilt-shift-macro/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 96,
+  "status": "ready",
+  "good_for": "Toy, marble, tabletop, miniature-city, diorama and model-railway games; any third-person or orbit-camera 3D game that wants a photographic, filmic finish; menus and flyovers that should look like a product shot.",
+  "not_for": "Pixel, flat or painted looks; fast first-person games where blur hides threats; orthographic cameras; WebGPU renderers.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-tilt-shift-macro, then replace renderer.render with lens.render(dt) through a drawWith hook in my-game/src/render/renderer.js and call lens.focusOn(player.position, 'play') each frame (see HOW-TO-USE.md).",
+  "agent_docs": "blocks/vendor/meticulai-tilt-shift-macro/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-tilt-shift-macro.jpg",
+  "tuned_by_play": true,
+  "tests": 11
+}

@@ -6,12 +6,32 @@ asking the agent to invent these from nothing, it can start from a block, look a
 
 Blocks are plain code. Nothing is hidden or locked. You can read them, change them and keep them.
 
+**Finding the right one.** You don't have to remember what's here. Once your game's plan (`my-game/GREAT.md`) is
+written, the agent runs `node tools/blocks/suggest.mjs`, which reads the plan and points at the blocks that fit it
+("you ride a horse and shoot arrows" finds the horse and archery blocks), with the words that matched. To browse,
+open **`BY-NEED.md`**: every block grouped by what the player does or what the game needs.
+
 - **`catalog.json`**: every block, one entry each (what it is, who made it, licence, renderer, how to add it).
+- **`BY-NEED.md`**: the same blocks grouped by need ("You fly or glide", "Crowds, herds, flocks", "The look of the
+  whole game"...). Generated; don't edit it by hand.
 - **`vendor/<id>/`**: blocks copied into this kit, tested, with `HOW-TO-USE.md` (for the agent) and `VENDOR.md`
   (where the copy came from and what we changed).
 - **`previews/<id>.jpg`**: one picture of each block.
 - **`CREDITS.md`**: who made what. Thank you to Patch ([patch.gg](https://patch.gg)) for the blocks they made and
   published openly, and to every author listed there.
+
+## Meticulai blocks
+
+Blocks whose id starts with `meticulai-` are systems taken from games on [meticulai.com](https://meticulai.com),
+made by the same person who wrote this kit: a glider's flight, a horse that moves like a horse, mounted archery,
+a riso print look, webcam hand controls, music written in code, a live tuning panel, and more. Each was rewritten as
+standalone code with a small demo and tests, and keeps the game's numbers exactly: those numbers were tuned by
+someone playing until it felt right, so start from them before changing anything.
+
+Each one says which game it came from (`from_game`) and links to it (`play_url`) when the game is on the site:
+**play it to see what the system feels like at its best.** Its `HOW-TO-USE.md` has a section "What made it good in
+<the game>". `use_when` is one sentence about the situation it fits; that's what `suggest.mjs` matches your plan
+against. Code is MIT; anything inside made by someone else is credited in the block's `LICENSE` and in `CREDITS.md`.
 
 ## Two kinds of entry
 
@@ -27,7 +47,9 @@ game-ready version, as an option, not the main pointer.
 ## How the agent chooses one
 
 1. **Start from the game, not the block.** Read `my-game/GREAT.md` (the feeling, the verb, the look in words) and
-   `my-game/ASSETS.md`. Only reach for a block when the game needs that thing.
+   `my-game/ASSETS.md`. Only reach for a block when the game needs that thing. `node tools/blocks/suggest.mjs`
+   lists the candidates and why each matched; it is a pointer, not a decision. `node tools/blocks/list.mjs --need
+   <need>` shows one group of `BY-NEED.md`.
 2. **Match the look.** A painterly game wants `oil-paint`, `watercolour`, `painted-valley` or `coloured-pencil`, not
    photoreal Poly Haven textures. A pixel game wants `pixelfx` or `pixel-plays`. Mixed styles look cheap.
 3. **Check the renderer** (`renderer` in the catalog). This matters more than anything else:
@@ -76,6 +98,8 @@ and keep its `LICENSE` and credits files. Write what you changed in `my-game/ven
 "What we changed", so the next agent knows. If the change is big, record it in `my-game/DECISIONS.md` too.
 
 ## All blocks
+
+The Meticulai blocks are listed in `BY-NEED.md` (with the game each came from) and in `catalog.json`.
 
 Ready (copied here, tested; sizes are this kit's copy):
 
@@ -152,7 +176,19 @@ wrote; point to the original author when Patch's version is mostly someone else'
 
 ## For the agent: catalog fields
 
-`id, name, kind (effect|system|tool), what, by, license, art_license, upstream {repo, commit, also?}, vendored
-(path or null), status (ready|reference-only), renderer (webgl2|webgpu|both|2d|none), size_kb, fetch? [{path, url,
-bytes, sha256}], good_for, not_for, how_to_add, agent_docs, preview, stars, last_push, npm, built_on?, also_see?,
-notes?`. Stars are GitHub stars (null for patch.gg repos, which have none).
+`id, name, kind (effect|system|tool|look|input|audio|ai|physics|procgen|vehicle|character|combat|ui|dev-tool), what,
+by, license, art_license, upstream {repo, commit, also?}, vendored (path or null), status (ready|reference-only),
+renderer (webgl2|webgpu|both|2d|none), size_kb, fetch? [{path, url, bytes, sha256}], good_for, not_for, how_to_add,
+agent_docs, preview, stars, last_push, npm, built_on?, also_see?, notes?`. Stars are GitHub stars (null for patch.gg
+repos, which have none).
+
+Meticulai blocks add: `use_when` (one sentence: the situation it fits), `tags` (words and synonyms people use for
+it), `from_game`, `play_url` (or null if the game isn't on the site), `third_party` [{what, author, license, url}],
+`tuned_by_play` (true when the numbers were tuned by a person playing), `tests` (how many tests pass), and optionally
+`needs` (which `BY-NEED.md` groups to list it under: fly, ride, shoot, crowd, world, look, hands, sound, physics,
+build, tuning, other; otherwise it is worked out from its words).
+
+**Keeping the catalogue current.** Each Meticulai block's entry lives in its own `vendor/<id>/block.json`. Don't
+edit those entries in `catalog.json` by hand: run `node tools/blocks/build-catalog.mjs`. It merges every
+`block.json` into `catalog.json` (hand-written entries stay as they are), rewrites `BY-NEED.md` and the Meticulai
+section of `CREDITS.md`, and prints any problem in plain words. Running it twice changes nothing.

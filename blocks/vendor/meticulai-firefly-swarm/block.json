@@ -1,0 +1,51 @@
+{
+  "id": "meticulai-firefly-swarm",
+  "name": "Firefly swarm",
+  "kind": "effect",
+  "what": "Catchable fireflies that wander in a loose flock, blink on their own rhythms, drift toward a still open hand, scatter from a fast snatch, glow inside a closed fist and drop into a fake-glass jar that fills with light. The glow is drawn in the point shader (hot core, inner glow, wide halo) with no bloom and warms the scene through 20 fake point lights; a few hundred distant fireflies are animated on the GPU. Input-agnostic: any hand, mouse or touch that reports a position and how open it is.",
+  "use_when": "a calm game needs glowing creatures or particles that react to the player (fireflies, wisps, spirits, sparks, plankton) and must glow softly without blown-out bloom, especially a catch-gently mechanic",
+  "tags": [
+    "fireflies",
+    "particles",
+    "glow",
+    "halo",
+    "no bloom",
+    "flocking",
+    "wander",
+    "catch",
+    "jar",
+    "night",
+    "dusk",
+    "gpu particles",
+    "calm game",
+    "points",
+    "fake lights",
+    "wisps",
+    "spirits"
+  ],
+  "by": "Meticulai",
+  "from_game": "Fireflies",
+  "play_url": "https://meticulai.com/games/show-of-hands/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    {
+      "what": "GLSL hash12 ('Hash without Sine')",
+      "author": "Dave Hoskins",
+      "license": "MIT",
+      "url": "https://www.shadertoy.com/view/4djSRW"
+    }
+  ],
+  "vendored": "blocks/vendor/meticulai-firefly-swarm/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 148,
+  "status": "ready",
+  "good_for": "Calm night or dusk scenes with a handful of living lights the player can lure, catch and collect; ambient glowing life over a meadow, pond or forest.",
+  "not_for": "Thousands of interactive particles (separation is O(n^2); use the GPU swarm part for crowds), bright daylight scenes (the glow adds light and washes out), WebGPU renderers.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-firefly-swarm",
+  "agent_docs": "blocks/vendor/meticulai-firefly-swarm/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-firefly-swarm.jpg",
+  "tuned_by_play": true,
+  "tests": 25
+}

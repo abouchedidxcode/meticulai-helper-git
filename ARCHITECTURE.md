@@ -63,6 +63,12 @@ The ladder for every need in `my-game/ASSETS.md`: block (`blocks/catalog.json`) 
 copies `blocks/vendor/<id>/` into `my-game/vendor/<id>/`. Game code loads assets with relative paths
 (`./assets/models/x.glb`).
 
+Finding blocks: `tools/blocks/suggest.mjs` reads `my-game/GREAT.md` (and `ASSETS.md`) and ranks blocks and code
+libraries by their `use_when`, `tags` and `what`. `blocks/BY-NEED.md` lists them by what the player does.
+`tools/blocks/build-catalog.mjs` merges every `blocks/vendor/*/block.json` into `blocks/catalog.json` and regenerates
+`BY-NEED.md` and the Meticulai section of `blocks/CREDITS.md`; run it after adding or changing a block.
+Blocks named `meticulai-*` are systems taken from the games at meticulai.com; each `block.json` names the game it came from.
+
 `my-game/palette.json`:
 
 ```json

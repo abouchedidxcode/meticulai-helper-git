@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonar sketch</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #01060a; overflow: hidden; font: 14px/1.4 system-ui, sans-serif; color: #9fd8d0; }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+    #hud { position: fixed; left: 16px; bottom: 14px; pointer-events: none; opacity: 0.8; }
+    #hud b { color: #d8fff8; font-weight: 600; }
+    #stats { position: fixed; right: 16px; bottom: 14px; pointer-events: none; opacity: 0.55; font: 12px ui-monospace, monospace; }
+  </style>
+</head>
+<body>
+  <div id="hud"><b>Click</b> or <b>Space</b>: ping &nbsp; <b>Drag</b>: look &nbsp; <b>W A S D</b>: swim &nbsp; <b>G</b>: ping with a ghost beyond the walls</div>
+  <div id="stats"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "id": "meticulai-pixel-3d",
+  "name": "Pixel 3D (palette-exact pixel art for three.js, with sprites made in code)",
+  "kind": "look",
+  "what": "Draws a three.js scene as real pixel art: 12 art pixels per world unit in a small render target, an orthographic camera (side-on or 2:1 dimetric) snapped to whole art pixels, nearest-neighbour blow-up at a whole-number zoom with a sub-pixel offset so panning stays smooth, and no tone mapping, so every screen pixel is an exact colour from one hand-tuned, hue-shifted palette. Meshes are lit through palette ramps (normal lights and shadow maps still work), with optional 1 px depth outlines, world-locked dither and a dithered palette sky. Includes a sprite generator that builds shaded, outlined pixel sprites from shapes (beetles in 16 headings, grubs, crystals, mushrooms, 13 curios, butterflies, birds, leaves) and a rasteriser to draw your own, plus pixel billboards and blink-out pixel particles.",
+  "use_when": "the game should look like crisp hand-made pixel art (isometric/dimetric 3D or side-on 2D) built in three.js, with an exact limited palette and sprites generated in code instead of drawn by hand",
+  "tags": ["pixel art", "retro", "16-bit", "isometric", "dimetric", "palette", "limited palette", "dither", "bayer", "orthographic", "integer scaling", "low resolution", "sprites", "procedural sprites", "sprite generator", "outline", "billboard", "particles", "renderer", "2d", "3d"],
+  "by": "Meticulai",
+  "from_game": "Rootbound",
+  "play_url": "https://meticulai.com/games/rootbound/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "hash12 / hash22 GLSL hash (\"Hash without Sine\")", "author": "Dave Hoskins", "license": "MIT", "url": "https://www.shadertoy.com/view/4djSRW" }
+  ],
+  "vendored": "blocks/vendor/meticulai-pixel-3d/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 168,
+  "status": "ready",
+  "good_for": "Pixel-art games in three.js: isometric/dimetric tactics, farming, dungeon or town scenes from simple meshes; side-on 2D games drawn with shaders; any game that needs many small sprites (creatures, items, pickups) without an artist; games that want one strict palette.",
+  "not_for": "Perspective or free-look 3D cameras (pixels can't stay stable), photoreal or painterly games, pixel effects on top of a smooth 3D look (use pixelfx or the PS1 look instead).",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-pixel-3d",
+  "agent_docs": "blocks/vendor/meticulai-pixel-3d/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-pixel-3d.jpg",
+  "tuned_by_play": true,
+  "tests": 16
+}

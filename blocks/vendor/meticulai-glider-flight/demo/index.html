@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glider flight (from Hezarfen)</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #b9cfe0; font-family: system-ui, sans-serif; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #hud { position: fixed; left: 22px; bottom: 20px; color: #fff; text-shadow: 0 1px 3px #0009; pointer-events: none; display: flex; gap: 26px; align-items: flex-end; }
+    #hud .n { font-size: 32px; font-weight: 700; line-height: 1; }
+    #hud .u { font-size: 12px; opacity: 0.85; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px; }
+    #vario.up { color: #b8ffb0; } #vario.down { color: #ffc4a8; }
+    #warn { position: fixed; left: 50%; top: 26%; transform: translateX(-50%); color: #ffd04a; font-weight: 800; font-size: 24px;
+      letter-spacing: 0.24em; text-shadow: 0 1px 4px #000a; pointer-events: none; }
+    #tag { position: fixed; left: 50%; top: 33%; transform: translateX(-50%); color: #fff; font-size: 15px; text-shadow: 0 1px 3px #0009; pointer-events: none; }
+    #help { position: fixed; right: 18px; top: 14px; color: #fff; text-shadow: 0 1px 3px #0009; font-size: 13px; text-align: right; line-height: 1.5; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <div id="hud">
+    <div><div class="n" id="speed">0</div><div class="u">airspeed km/h</div></div>
+    <div><div class="n" id="vario">0</div><div class="u">vario m/s</div></div>
+    <div><div class="n" id="agl">0</div><div class="u">height m</div></div>
+    <div><div class="n" id="ld">-</div><div class="u">glide L/D</div></div>
+    <div><div class="n" id="gl">1.0</div><div class="u">g</div></div>
+  </div>
+  <div id="warn"></div>
+  <div id="tag"></div>
+  <div id="help">The autopilot flies the route until you touch a key or click<br />W/S: push / pull &middot; A/D: bank &middot; Shift or right mouse: flare<br />Click: mouse stick &middot; R: relaunch &middot; K: kite mode (arcade)</div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

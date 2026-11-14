@@ -1,0 +1,28 @@
+{
+  "id": "meticulai-ripple-water",
+  "name": "Ripple water",
+  "kind": "effect",
+  "what": "Water you can touch: a GPU wave simulation (half-float ping-pong, 9-point stencil for round rings, reflective shore) disturbed by one-off drops and by bodies held in the surface, which dimple it when still and leave a real V-shaped wake when moved. The surface refracts the scene under it through the ripple slopes with slight dispersion, catches sky sheen and sun glints on ripple flanks, lights crests and shades troughs, and the bed gets caustics focused by the live ripples plus depth absorption. Splash foam rings and touch/hover markers included. Quality presets keep wave speed constant.",
+  "use_when": "the player touches, stirs, drags or drops something into water and the water must answer physically (ponds, puddles, fountains, bathtubs, magic pools, a cursor over water)",
+  "tags": ["water", "ripples", "wave equation", "height field", "ping-pong", "gpu simulation", "wake", "refraction", "caustics", "pond", "interactive water", "splash", "pool", "glsl"],
+  "by": "Meticulai",
+  "from_game": "Koi",
+  "play_url": "https://meticulai.com/games/show-of-hands/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "GLSL hash12 / hash22 ('Hash without Sine') in src/glsl.js", "author": "David Hoskins", "license": "MIT", "url": "https://www.shadertoy.com/view/4djSRW" }
+  ],
+  "vendored": "blocks/vendor/meticulai-ripple-water/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 104,
+  "status": "ready",
+  "good_for": "Ponds, fountains, bathtubs, puddles and pools seen from above or at an angle, where touching or dropping things in is part of the play; calm games; anything with a cursor or finger over water.",
+  "not_for": "Open sea, big waves or boats at speed (use an FFT ocean such as ultra-water); water seen from below; scenes with several water levels; WebGPU renderers. It needs a second render pass of the scene (the under-water view), so it draws the frame itself (see HOW-TO-USE.md).",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-ripple-water",
+  "agent_docs": "blocks/vendor/meticulai-ripple-water/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-ripple-water.jpg",
+  "tuned_by_play": false,
+  "tests": 10
+}

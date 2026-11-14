@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horse locomotion: the movement law</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #c9d6dc; font: 14px/1.35 system-ui, sans-serif; }
+  canvas { display: block; }
+  #hud { position: fixed; left: 14px; top: 12px; color: #1f1a14; background: rgba(255, 250, 240, 0.78); padding: 10px 12px; border-radius: 8px; min-width: 250px; }
+  #hud b { font-variant-numeric: tabular-nums; }
+  #hud .ok { color: #2d6a2d; } #hud .bad { color: #a01d1d; }
+  #help { position: fixed; left: 14px; bottom: 12px; color: #1f1a14; background: rgba(255, 250, 240, 0.7); padding: 6px 10px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div id="hud"></div>
+<div id="help">A / D turn &middot; W / S pace (halt, walk, canter, gallop) &middot; Shift flat out &middot; drag to look round &middot; hands off for 3 s: autopilot. Dark marks are hoofprints: they stay under the hooves.</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

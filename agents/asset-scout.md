@@ -31,8 +31,10 @@ Also read "Rejected and why" in ASSETS.md: never recommend something already rej
 
 ## How you work, for each need
 
-1. **Blocks first**: `node tools/blocks/list.mjs [--kind ...] [--renderer ...]`. If one fits, read its
-   `blocks/vendor/<id>/HOW-TO-USE.md` and look at `blocks/previews/<id>.jpg`.
+1. **Blocks first**: `node tools/blocks/suggest.mjs --text "<the need, in plain words>"`, and the matching group
+   in `blocks/BY-NEED.md` (or `node tools/blocks/list.mjs --need <need>`). If one fits, read its
+   `blocks/vendor/<id>/HOW-TO-USE.md` and look at `blocks/previews/<id>.jpg`. Blocks from Meticulai games say which
+   game they came from; their tuned numbers are part of what you're recommending.
 2. **Search**: `node tools/assets/find.mjs "<query>" --kind <kind> [--style ...] [--source <id>] [--license cc0]
    [--limit 12]`. Search the chosen families first. Try two or three wordings. **Open the contact sheet and look.**
 3. **Pull 2-5 candidates**: `node tools/assets/get.mjs <id|number> --candidate [--res 1k]`.

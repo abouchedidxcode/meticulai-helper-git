@@ -26,8 +26,10 @@ Before you start: you must be in the kit's workspace (it has `START.md` and `too
       "I felt like I wasn't doing anything" is the worst review a game can get.
 - [ ] **Shapes only.** Boxes, spheres, flat colours, one light. Colour codes meaning (player, danger, goal), nothing else.
       Assets come after the loop is fun ([find-assets](../find-assets/SKILL.md)). One exception: a ready-made block
-      that IS the core mechanic (a drivable car, an ocean you sail on, things that break apart) comes in now, because
-      the loop can't be judged without it. Add it with `node tools/blocks/add.mjs <block-id>`.
+      that IS the core mechanic (a flight model, horse movement, a drivable car, an ocean you sail on, things that
+      break apart) comes in now, because the loop can't be judged without it. **Start from it instead of writing
+      your own**: its numbers were tuned by someone playing. Check the blocks noted in `my-game/ASSETS.md` (or run
+      `node tools/blocks/suggest.mjs`), then `node tools/blocks/add.mjs <block-id>` and follow its `HOW-TO-USE.md`.
 - [ ] **Tuning numbers live in `src/tuning.json`** (speed, gravity, timers), so the user can change them in the dev
       panel and press "Save for my agent".
 - [ ] **Test hooks work** (see ARCHITECTURE.md): `window.__game.ready`, `state`, `events`, `skipTo`, and `?bot=1` makes a
@@ -37,7 +39,8 @@ Before you start: you must be in the kit's workspace (it has `START.md` and `too
 
 ## Steps
 
-1. Re-read GREAT.md: the verb, the loop, the three moments. Pick the one moment you can show in grey boxes.
+1. Re-read GREAT.md: the verb, the loop, the three moments. Pick the one moment you can show in grey boxes. Check
+   ASSETS.md for a block that is the verb itself (see the checklist).
 2. Plan with [plan-swarm](../plan-swarm/SKILL.md). For a first playable, usually 2-3 builders: core (rules, verb,
    win/lose), feel-lite (controls and camera, just good enough), bot + test hooks. Keep look and audio for later.
 3. Merge, then record: `node tools/play/record.mjs --bot --seconds 60`. Look at the sheets in order.
@@ -62,6 +65,8 @@ and [playbook/when-to-start-over.md](../../playbook/when-to-start-over.md).
 ## Common mistakes
 
 - Adding menus, art, or a story before the verb is fun. (Writing the asset plan is fine; pulling assets waits.)
+- Writing a flight model, vehicle or movement system from scratch when a block already does it. Those took many
+  rounds of play to tune; start from the block and change it.
 - A bot that only walks forward. It must use the verb the way a player would.
 - Hiding the loop behind setup ("first, choose your class"). Drop the player straight into the verb.
 - Tuning numbers for hours. If the loop isn't fun at any reasonable number, the loop is the problem.

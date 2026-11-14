@@ -120,6 +120,16 @@ set `falCapUSD` (their budget, default 0) and `maxAgents` (default 4; lower it t
 if they mention running out of usage) in `my-game/helper.json`. Rename `gameName` if they gave a name. Log the main
 choices in `DECISIONS.md`. Commit.
 
+## Look for ready-made blocks
+
+Right after the yes, run `node tools/blocks/suggest.mjs`. It reads GREAT.md and points at blocks (systems from
+finished games, effects, whole looks) and code libraries that may fit, with the words that matched. It's a pointer,
+not a decision: read the `use_when` of the "Probably useful" ones and look at their pictures. Write the promising
+ones into `my-game/ASSETS.md` (ladder choice "block", status `planned`, one line on why). **Don't add any yet.** If
+one IS the core mechanic (a flight model, horse movement, a car), note that the first playable starts from it.
+Tell the user in one plain line only if something big fits ("there's a ready-made glider from another game; I'll
+start from that").
+
 ## Next
 
 Ask once: "Do you have pictures or videos of the look you want? Drop them in the `refs` folder in `my-game` and tell
@@ -128,7 +138,8 @@ me. Or say 'skip'." (Tell them where the folder is, click by click.) Then [refer
 
 ## Done means
 
-GREAT.md is written, the user said yes, `helper.json` is set, committed, and the turn ended with the card.
+GREAT.md is written, the user said yes, `helper.json` is set, `suggest.mjs` was run and the promising blocks are in
+ASSETS.md, committed, and the turn ended with the card.
 
 ## Common mistakes
 

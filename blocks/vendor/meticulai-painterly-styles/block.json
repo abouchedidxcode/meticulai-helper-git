@@ -1,0 +1,29 @@
+{
+  "id": "meticulai-painterly-styles",
+  "name": "Painterly styles (gouache, ink miniature, clean toon)",
+  "kind": "look",
+  "what": "Turns an ordinary three.js scene into one of three art styles that switch live and are remembered: a painterly gouache (Kuwahara brush sized by distance, pigment at stroke edges, world-space strokes, paper tooth, warm light and cool shade, painted cumulus sky), an ink-outlined miniature painting (flat jewel palette, ink from depth silhouettes and creases, paper, ruled border, curling contour clouds) and a clean toon (two-step light, pastel layered fog, soft outlines). Materials are patched to flat palette-snapped colour with the style's light ramp; one post pass paints the rest.",
+  "use_when": "the game wants a painted, illustrated, ink or toon look, or a player-selectable art style, on an existing three.js scene without remaking its materials",
+  "tags": ["painterly", "gouache", "kuwahara", "brush", "illustrated", "picture book", "miniature painting", "ink outlines", "toon", "cel", "npr", "stylised", "art style setting", "post-processing", "painted sky"],
+  "by": "Meticulai",
+  "from_game": "Kite Race",
+  "play_url": null,
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "three.js and its addons (FullScreenQuad, UnrealBloomPass, Neutral tone mapping chunk)", "author": "three.js authors", "license": "MIT", "url": "https://github.com/mrdoob/three.js" },
+    { "what": "Fitted ACES tone curve (matrices)", "author": "Stephen Hill", "license": "MIT", "url": "https://github.com/TheRealMJP/BakingLab" }
+  ],
+  "vendored": "blocks/vendor/meticulai-painterly-styles/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 148,
+  "status": "ready",
+  "good_for": "Outdoor or indoor three.js scenes built from MeshStandardMaterial that should look painted or illustrated; games that want a Look setting (Painterly / Miniature / Clean / Classic) switched live with no recompile; flying, exploring and racing games with long views (the haze and sky are a big part of it).",
+  "not_for": "Orthographic or 2D games (needs a perspective depth buffer); custom ShaderMaterial worlds (they are not repainted); very weak phones (gouache adds ~1.7 ms at 720p on a Mac, several times that on low-end GPUs); pixel-art or photoreal looks.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-painterly-styles",
+  "agent_docs": "blocks/vendor/meticulai-painterly-styles/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-painterly-styles.jpg",
+  "tuned_by_play": false,
+  "tests": 9
+}

@@ -1,0 +1,17 @@
+{
+  "name": "meticulai-arcade-flight",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Arcade flight with mouse-aim autopilot and chase camera, from Dragon Aces by Meticulai.",
+  "scripts": {
+    "dev": "vite --config vite.config.js --host 127.0.0.1 --port 5472 --strictPort",
+    "build": "vite build --config vite.config.js",
+    "test": "node --test test/"
+  },
+  "devDependencies": {
+    "three": "^0.187.0",
+    "vite": "^8.3.8"
+  }
+}

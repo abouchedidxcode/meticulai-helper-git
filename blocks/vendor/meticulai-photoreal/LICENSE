@@ -1,0 +1,50 @@
+MIT License
+
+Copyright (c) 2026 Meticulai
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+Third-party notices
+-------------------------------------------------------------------------------
+
+Code inside src/:
+
+- The grain hash in src/photoreal/effects.js (prHash) is Dave Hoskins' "Hash without
+  Sine" (hash12), MIT License, Copyright (c) 2014 David Hoskins.
+  https://www.shadertoy.com/view/4djSRW
+
+Libraries this block imports (installed by npm, not copied here; each keeps its own licence):
+
+- postprocessing by Raoul van Rüschen (pmndrs), zlib License.
+  https://github.com/pmndrs/postprocessing
+- n8ao by N8python. Its package.json says ISC; the LICENSE file in the package is
+  CC0 1.0 Universal. Both are permissive; we record both.
+  https://github.com/N8python/n8ao
+- three.js, MIT License, Copyright (c) 2010-2026 three.js authors. https://threejs.org
+
+Assets the demo loads at runtime (not stored in this folder):
+
+- Poly Haven HDRI "kloofendal_48d_partly_cloudy_puresky" and texture "asphalt_04",
+  CC0 1.0 (public domain). https://polyhaven.com
+
+Techniques described in published papers, written from scratch: percentage-closer soft
+shadows (Fernando, NVIDIA 2005), interleaved gradient noise (Jimenez 2014), Vogel disk
+sampling, box-projected (parallax-corrected) cube maps, Henyey-Greenstein scattering,
+the thin-lens depth-of-field formulas.

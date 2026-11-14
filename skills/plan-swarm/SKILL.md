@@ -35,6 +35,10 @@ Before you start: you must be in the kit's workspace (it has `START.md` and `too
 
 Fill `my-game/CONTRACTS.md` (from the template). Split **by system and by file**, never by "half the work each".
 
+Before you split, run `node tools/blocks/suggest.mjs` and read the blocks noted in `my-game/ASSETS.md`. A block
+that covers an area changes that builder's job from "write X" to "adapt block X": it owns `my-game/vendor/<id>/`
+and the glue file, and starts from the block's `HOW-TO-USE.md`. Write the block id in its row.
+
 Typical areas for a first game (pick the 3-5 that matter now):
 
 | Area | Owns (example files) | Done when |

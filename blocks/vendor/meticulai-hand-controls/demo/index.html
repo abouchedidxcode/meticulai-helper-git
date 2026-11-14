@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hand controls</title>
+  <style>
+    :root { color-scheme: dark; --ink: #efe6d8; --dim: #a59c8e; --warm: #f2b25c; --cool: #8cc7c9; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: #16130f; color: var(--ink); font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; overflow: hidden; }
+    main { display: grid; grid-template-columns: 1fr 300px; height: 100%; gap: 0; }
+    #stage { position: relative; margin: 16px; align-self: center; aspect-ratio: 16 / 9; max-height: calc(100vh - 32px); border-radius: 10px; overflow: hidden;
+      background: radial-gradient(120% 90% at 50% 20%, #3a2f24 0%, #1d1813 60%, #120f0c 100%); box-shadow: 0 10px 40px #0008; }
+    #cam { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; transform: scaleX(-1); opacity: 0; transition: opacity .4s; }
+    #cam.on { opacity: .55; }
+    #overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+    #big { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; font-size: 15px; color: var(--dim); letter-spacing: .02em; pointer-events: none; }
+    #big b { color: var(--ink); font-weight: 600; }
+    aside { background: #1d1914; border-left: 1px solid #ffffff10; padding: 16px; overflow: auto; }
+    h1 { font-size: 16px; margin: 0 0 4px; font-weight: 650; }
+    .sub { color: var(--dim); margin: 0 0 12px; font-size: 12.5px; }
+    button { font: inherit; color: #1b150e; background: var(--warm); border: 0; border-radius: 7px; padding: 8px 12px; cursor: pointer; font-weight: 600; }
+    button.ghost { background: #ffffff14; color: var(--ink); font-weight: 500; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+    .fine { color: var(--dim); font-size: 12px; margin: 4px 0 12px; }
+    #err { color: #f0a080; font-size: 12.5px; }
+    h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--dim); margin: 14px 0 6px; font-weight: 600; }
+    #poses { display: grid; grid-template-columns: 1fr; gap: 3px; }
+    .pose { display: grid; grid-template-columns: 112px 1fr; align-items: center; gap: 8px; font-size: 12.5px; color: var(--dim); }
+    .pose .bar { height: 6px; background: #ffffff10; border-radius: 3px; overflow: hidden; }
+    .pose .bar i { display: block; height: 100%; width: 0; background: #ffffff40; }
+    .pose.on { color: var(--ink); }
+    .pose.on .bar i { background: var(--warm); }
+    #log { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
+    #log li { padding: 3px 0; border-bottom: 1px solid #ffffff0a; display: flex; justify-content: space-between; }
+    #log li span { color: var(--dim); }
+    #log li.two b { color: var(--cool); }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="stage">
+      <video id="cam" muted playsinline></video>
+      <canvas id="overlay"></canvas>
+      <div id="big"></div>
+    </div>
+    <aside>
+      <h1>Hand controls</h1>
+      <p class="sub">Show your hands to the camera. No camera? Move the mouse: hold the button to pinch.</p>
+      <div class="row">
+        <button id="start">Use my camera</button>
+        <button id="synth" class="ghost">Synthetic hands</button>
+      </div>
+      <p class="fine">Your camera video never leaves this device. The camera works on https or localhost.</p>
+      <p id="err"></p>
+      <h2>Poses (first hand)</h2>
+      <div id="poses"></div>
+      <h2>Events</h2>
+      <ul id="log"></ul>
+    </aside>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

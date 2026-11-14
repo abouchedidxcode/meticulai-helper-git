@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Firefly swarm (Meticulai block)</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #05070f; overflow: hidden; font: 14px/1.4 system-ui, sans-serif; color: #e8dcc8; }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: none; }
+    #panel { position: fixed; left: 14px; top: 12px; padding: 10px 12px; background: rgba(10, 12, 24, 0.55); border-radius: 8px; max-width: 330px; }
+    #panel b { color: #ffd38a; font-weight: 600; }
+    #panel label { display: flex; gap: 8px; align-items: center; margin-top: 6px; }
+    #panel input { flex: 1; }
+    #msg { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); padding: 6px 12px; border-radius: 6px; background: rgba(10, 12, 24, 0.5); opacity: 0; transition: opacity 0.4s; }
+    #msg.on { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div id="panel">
+    <div><b>Firefly swarm</b>: hold the mouse button to close your hand slowly around a firefly. A quick click snatches and scares them. Let go over the jar to keep them. Keep the pointer still with the button up and they come closer.</div>
+    <label>Dusk <input id="dusk" type="range" min="0" max="1" step="0.01" value="0.8" /></label>
+    <div id="stats">In the jar: 0</div>
+  </div>
+  <div id="msg"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

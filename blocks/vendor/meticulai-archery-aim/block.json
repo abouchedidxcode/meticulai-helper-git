@@ -1,0 +1,29 @@
+{
+  "id": "meticulai-archery-aim",
+  "name": "Archery aim",
+  "kind": "combat",
+  "what": "Bow shooting that feels fair from a moving mount: hold to draw, let go, and the arrow goes where the crosshair was. The launch is solved through gravity and drag (a closed form) counting the shooter's and the target's speed; near an enemy the shot locks on and the arrow is steered in flight at a capped rate; arrows test their whole path against moving targets, stick in what they hit and ride it as it falls; thousands of volley arrows fly on the GPU with the same maths; every arrow leaves a short bright streak.",
+  "use_when": "the player shoots arrows, spears, thrown objects or other slow projectiles, especially from a moving horse, vehicle or boat at moving targets, and aiming should feel immediate and fair, or the scene needs huge arrow volleys",
+  "tags": ["archery", "bow", "arrows", "ballistics", "projectile", "aim assist", "lock-on", "homing", "drag", "moving target", "continuous collision", "swept test", "volley", "mounted combat", "horse archer", "trail", "streak", "stuck arrows", "crosshair"],
+  "by": "Meticulai",
+  "from_game": "TUMEN",
+  "play_url": null,
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "three.js (npm dependency, not copied)", "author": "three.js authors", "license": "MIT", "url": "https://github.com/mrdoob/three.js" },
+    { "what": "mulberry32 random number generator (algorithm)", "author": "Tommy Ettinger", "license": "Public domain", "url": "https://gist.github.com/tommyettinger/46a874533244883189143505d203312c" }
+  ],
+  "vendored": "blocks/vendor/meticulai-archery-aim/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 166,
+  "status": "ready",
+  "good_for": "Mounted or vehicle archery, hunting games, siege defence, any shooter with arrows or thrown weapons; aim help that locks onto the target the crosshair is on or within about a degree of; projectiles that must never tunnel through fast thin targets; arrows that stay stuck in moving bodies; battle scenes with thousands of arrows in the air. The aim, ballistics, bow and flight code has no three.js and runs in Node (tests, bots, a server).",
+  "not_for": "Hitscan guns or lasers (no flight time needed), physics-engine projectiles that must bounce and roll on real colliders, games that want a hard sim with manual leading and holdover (turn the help off or use only ballistics.js), WebGPU renderers (arrows.js is WebGL2).",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-archery-aim, then import createTargets, createAim, createBow, aimShot and createArrows from vendor/meticulai-archery-aim/src/index.js; see HOW-TO-USE.md",
+  "agent_docs": "blocks/vendor/meticulai-archery-aim/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-archery-aim.jpg",
+  "tuned_by_play": true,
+  "tests": 28
+}

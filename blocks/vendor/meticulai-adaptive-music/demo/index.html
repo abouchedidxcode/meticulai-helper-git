@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adaptive music: a live synth score that follows the game</title>
+<style>
+  :root { --bg: #14110f; --panel: #1f1a17; --ink: #f3e6d4; --dim: #a8957e; --hot: #f0a64a; --cool: #5fc9c0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: radial-gradient(circle at 30% 0%, #2a211b, var(--bg) 70%); color: var(--ink);
+    font: 15px/1.4 system-ui, -apple-system, Segoe UI, sans-serif; min-height: 100vh; }
+  main { max-width: 1180px; margin: 0 auto; padding: 22px 26px; display: grid; grid-template-columns: 1fr 360px; gap: 22px; }
+  h1 { font-size: 22px; margin: 0 0 4px; font-weight: 650; letter-spacing: 0.2px; }
+  p.sub { margin: 0 0 14px; color: var(--dim); }
+  .scope { background: #0d0b0a; border-radius: 14px; border: 1px solid #3a2f27; overflow: hidden; position: relative; }
+  canvas { display: block; width: 100%; height: 430px; }
+  .panel { background: var(--panel); border: 1px solid #3a2f27; border-radius: 14px; padding: 16px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--dim); margin: 6px 0 6px; }
+  button { background: #2c241f; color: var(--ink); border: 1px solid #4a3c31; border-radius: 9px; padding: 8px 12px;
+    font: inherit; cursor: pointer; }
+  button:hover { border-color: var(--hot); }
+  button.on { background: var(--hot); color: #1a120b; border-color: var(--hot); font-weight: 600; }
+  button.big { width: 100%; padding: 14px; font-size: 17px; background: var(--hot); color: #1a120b; font-weight: 650; border: 0; }
+  label.slider { display: grid; grid-template-columns: 92px 1fr 44px; align-items: center; gap: 8px; margin: 6px 0; }
+  input[type=range] { accent-color: var(--hot); width: 100%; }
+  .val { text-align: right; color: var(--dim); font-variant-numeric: tabular-nums; }
+  .note { color: var(--dim); font-size: 13px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>Adaptive music</h1>
+    <p class="sub">A whole jazz-fusion score played live by synths in the browser. No audio files. Move the sliders and it changes with the game.</p>
+    <div class="scope"><canvas id="scope" width="1560" height="860"></canvas></div>
+    <p class="note">Nobody has listened to this inside the kit: the waveform proves sound is made, not that it sounds good. Listen before you ship it.</p>
+  </section>
+  <aside class="panel">
+    <button id="go" class="big">Start the music</button>
+    <div class="lbl">Game mode</div>
+    <div class="row" id="modes">
+      <button data-mode="menu" class="on">Menu</button>
+      <button data-mode="play">Playing</button>
+      <button data-mode="end">End screen</button>
+    </div>
+    <div class="lbl">How the game feels right now</div>
+    <label class="slider">Intensity <input id="intensity" type="range" min="0" max="1" step="0.01" value="0.5"><span class="val" id="intensityV">0.50</span></label>
+    <label class="slider">Danger <input id="danger" type="range" min="0" max="1" step="0.01" value="0"><span class="val" id="dangerV">0.00</span></label>
+    <label class="slider">Progress <input id="progress" type="range" min="0" max="1" step="0.01" value="0"><span class="val" id="progressV">0.00</span></label>
+    <div class="row">
+      <button data-toggle="lift">In the air</button>
+      <button data-toggle="shimmer">Sparkle zone</button>
+      <button data-toggle="paused">Paused</button>
+    </div>
+    <div class="lbl">Moments</div>
+    <div class="row">
+      <button data-hit="start">New run</button>
+      <button data-hit="checkpoint">Checkpoint</button>
+      <button data-hit="pickup">Pickup</button>
+      <button data-hit="pickup-last">Last pickup</button>
+      <button data-hit="win">Win</button>
+      <button data-hit="lose">Lose</button>
+    </div>
+    <div class="row"><button id="mute">Mute</button></div>
+  </aside>
+</main>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

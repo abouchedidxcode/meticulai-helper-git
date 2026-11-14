@@ -1,0 +1,29 @@
+{
+  "id": "meticulai-flock",
+  "name": "Flock (murmuration)",
+  "kind": "ai",
+  "what": "Thousands of boids on the CPU with a counting-sort spatial hash, steered as one cloud: attraction to a player-set target around a hollow core, a coherent swirl field so whole regions fold together, gather (tight ball) and scatter (burst) modes, obstacle and ground avoidance with optional deaths, predators the birds flee in a ripple, wind, and travel along a moving flyway. Drawn as instanced procedural starlings that flap and bank in the vertex shader straight from the simulation's arrays.",
+  "use_when": "the game has flocks, swarms or schools (birds, bats, fish, insects), or the player controls a crowd as one body",
+  "tags": ["boids", "flocking", "murmuration", "swarm", "birds", "starlings", "fish school", "bats", "insects", "crowd", "spatial hash", "instancing", "player-steered", "predator", "gpu instancing"],
+  "by": "Meticulai",
+  "from_game": "Murmur",
+  "play_url": null,
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    { "what": "mulberry32 random number generator", "author": "Tommy Ettinger", "license": "Public domain", "url": "https://gist.github.com/tommyettinger/46a874533244883189143505d203312c" },
+    { "what": "three.js (npm, for src/birds.js and the demo)", "author": "three.js authors", "license": "MIT", "url": "https://github.com/mrdoob/three.js" }
+  ],
+  "vendored": "blocks/vendor/meticulai-flock/",
+  "upstream": null,
+  "renderer": "webgl2",
+  "size_kb": 88,
+  "status": "ready",
+  "good_for": "playing as a flock or swarm, ambient birds over a level, fish schools, bat clouds from a cave, insect swarms, a living title screen; up to about 7,000 birds on a laptop",
+  "not_for": "individual animals with their own goals (use crowds or navmesh agents); walking crowds on the ground; more than ~20,000 boids (move it to the GPU)",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-flock, then import Flock (and colliders) from vendor/meticulai-flock/src/index.js and Birds from src/birds.js; set flock.target from the pointer every frame; see HOW-TO-USE.md",
+  "agent_docs": "blocks/vendor/meticulai-flock/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-flock.jpg",
+  "tuned_by_play": false,
+  "tests": 12
+}

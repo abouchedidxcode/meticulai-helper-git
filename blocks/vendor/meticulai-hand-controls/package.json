@@ -1,0 +1,24 @@
+{
+  "name": "meticulai-hand-controls",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Webcam hand tracking and gestures for browser games: 20 poses, swipes, throws, claps, pinch clicks, and synthetic hands for tests.",
+  "license": "MIT",
+  "scripts": {
+    "assets": "node scripts/fetch-model.mjs",
+    "predev": "node scripts/fetch-model.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/fetch-model.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.1.0"
+  },
+  "devDependencies": {
+    "three": "^0.187.0",
+    "vite": "^8.3.8"
+  }
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sand trails</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #d9b48a; overflow: hidden; font: 14px/1.4 system-ui, sans-serif; color: #3a2614; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #hud { position: fixed; left: 16px; bottom: 14px; pointer-events: none; opacity: 0.85; text-shadow: 0 1px 0 #f3dcc0; }
+    #hud b { font-weight: 650; }
+  </style>
+</head>
+<body>
+  <div id="hud"><b>W A S D</b>: roll &nbsp; <b>Space</b>: jump (a crater on landing) &nbsp; <b>F</b>: wet / dry ball &nbsp; <b>C</b>: high camera &nbsp; (it drives itself until you touch a key)</div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

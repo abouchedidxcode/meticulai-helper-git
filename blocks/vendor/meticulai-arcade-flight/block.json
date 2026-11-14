@@ -1,0 +1,57 @@
+{
+  "id": "meticulai-arcade-flight",
+  "name": "Arcade flight (mouse aim)",
+  "kind": "vehicle",
+  "what": "The flight model, mouse-aim piloting and chase camera of a live dogfighting game. The flyer goes where its nose points with a little slip, dives for speed and pays for climbs, stalls with a nose drop when slow, flaps harder with the throttle, boosts on stamina and throws a barrel roll. The player points the mouse and an autopilot banks and pulls toward it; bots use the same autopilot. The camera looks along the aim, with loose sideways springs, a third of the bank and a FOV that punches on boost.",
+  "use_when": "the player flies a creature, plane or glider in third person and should steer by pointing the mouse, with speed, energy, boost and stall mattering, or bots must fly the same way as players",
+  "tags": [
+    "flight",
+    "flying",
+    "arcade flight",
+    "mouse aim",
+    "dogfight",
+    "plane",
+    "dragon",
+    "bird",
+    "energy",
+    "stall",
+    "boost",
+    "barrel roll",
+    "autopilot",
+    "chase camera",
+    "third person",
+    "bots",
+    "quaternion"
+  ],
+  "by": "Meticulai",
+  "from_game": "Dragon Aces",
+  "play_url": "https://meticulai.com/games/dragon-aces/",
+  "license": "MIT",
+  "art_license": null,
+  "third_party": [
+    {
+      "what": "three.js (npm dependency, not copied)",
+      "author": "three.js authors",
+      "license": "MIT",
+      "url": "https://github.com/mrdoob/three.js"
+    },
+    {
+      "what": "mulberry32 random number generator (algorithm)",
+      "author": "Tommy Ettinger",
+      "license": "Public domain",
+      "url": "https://gist.github.com/tommyettinger/46a874533244883189143505d203312c"
+    }
+  ],
+  "vendored": "blocks/vendor/meticulai-arcade-flight/",
+  "upstream": null,
+  "renderer": "none",
+  "size_kb": 64,
+  "status": "ready",
+  "good_for": "Dragon, bird, plane and spaceship-in-atmosphere games flown in third person; dogfights; flying races through rings; anything where a newcomer should fly well in seconds by pointing the mouse. The model is pure JavaScript (no three.js), so it runs on a server or in a worker for multiplayer or bots.",
+  "not_for": "Realistic gliding and soaring with lift, sink and thermals (use meticulai-glider-flight), helicopters or hovering, first-person cockpit sims with a real stick, ground vehicles.",
+  "how_to_add": "node tools/blocks/add.mjs meticulai-arcade-flight, then import createFlightState and createPilot from vendor/meticulai-arcade-flight/src/ and call pilot.fly(dt, controls) each step; see HOW-TO-USE.md",
+  "agent_docs": "blocks/vendor/meticulai-arcade-flight/HOW-TO-USE.md",
+  "preview": "blocks/previews/meticulai-arcade-flight.jpg",
+  "tuned_by_play": true,
+  "tests": 11
+}
