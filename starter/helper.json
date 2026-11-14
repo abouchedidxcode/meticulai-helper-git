@@ -1,0 +1,7 @@
+{
+  "gameName": "My Game",
+  "port": 5173,
+  "falCapUSD": 0,
+  "maxAgents": 4,
+  "autopilot": { "hours": 0, "mayDecideAlone": [], "askMeFirst": [] }
+}

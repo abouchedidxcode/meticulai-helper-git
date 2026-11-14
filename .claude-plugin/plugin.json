@@ -1,0 +1,10 @@
+{
+  "name": "meticulai-helper-git",
+  "description": "Make your own browser game with AI agents, even if you've never coded: an interview, a step-by-step process, parallel builders, fresh critics and autopilot.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Meticulai"
+  },
+  "homepage": "https://github.com/OWNER/meticulai-helper-git",
+  "license": "MIT"
+}

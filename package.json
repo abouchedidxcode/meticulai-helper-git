@@ -1,0 +1,23 @@
+{
+  "name": "meticulai-helper-git",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A kit that helps anyone make browser games with AI coding agents.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "doctor": "node tools/doctor.mjs",
+    "setup": "node tools/doctor.mjs --fix",
+    "init-game": "node tools/init.mjs",
+    "play": "node tools/serve.mjs --check",
+    "stop": "node tools/serve.mjs --stop",
+    "record": "node tools/play/record.mjs",
+    "ship": "node tools/ship.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.65.1"
+  }
+}

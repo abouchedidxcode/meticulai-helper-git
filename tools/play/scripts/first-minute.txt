@@ -1,0 +1,40 @@
+# The first minute, played the way a new player would try it.
+# Times are in game milliseconds. The screen is 1280 x 720. Run --help for every command.
+# Copy this file and change it to fit your game's controls.
+
+note opening screen
+wait 1500
+shot opening
+press Enter
+wait 1000
+
+note look around and move
+move 640 360
+hold KeyD 1500
+hold KeyA 1500
+hold KeyW 1500
+hold KeyS 1000
+shot after-moving
+
+note jump, then jump while moving
+press Space
+wait 800
+down KeyD
+press Space
+wait 800
+up KeyD
+shot after-jump
+
+note try the mouse
+click 640 360
+wait 500
+move 900 300
+click 900 300
+wait 1000
+
+note keep playing with arrow keys
+hold ArrowRight 2000
+press Space
+hold ArrowLeft 2000
+wait 2000
+shot one-minute-in

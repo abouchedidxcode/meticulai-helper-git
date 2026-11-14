@@ -1,0 +1,100 @@
+{
+  "_about": "Which fal model each kind of generation uses, what gets sent, where the result is in the answer, and the estimated price. Prices change: before a big batch, check the model's page on fal.ai/models. Input values starting with $ are filled in by gen.mjs: $prompt, $image (an uploaded picture), $aspect, $seconds, $ms (seconds x 1000), $loop. A key whose $value is not set is left out. 'output' lists where to look in fal's answer, first match wins; gen.mjs also searches the whole answer for a file link if none match.",
+  "kinds": {
+    "style": {
+      "label": "style picture",
+      "endpoint": "fal-ai/nano-banana-pro",
+      "input": { "prompt": "$prompt", "aspect_ratio": "$aspect", "resolution": "2K", "output_format": "png", "num_images": 1 },
+      "output": ["images.0.url", "image.url"],
+      "ext": "png",
+      "price": 0.15, "unit": "picture", "checked": "2026-11",
+      "notes": "Text to image. Strong at painted and stylised game looks. One request per picture so each file has one cost."
+    },
+    "frames": {
+      "label": "keyframe in the chosen style",
+      "endpoint": "fal-ai/nano-banana-pro/edit",
+      "input": { "prompt": "$prompt", "image_urls": ["$image"], "aspect_ratio": "$aspect", "resolution": "2K", "output_format": "png", "num_images": 1 },
+      "output": ["images.0.url", "image.url"],
+      "ext": "png",
+      "price": 0.15, "unit": "picture", "checked": "2026-11",
+      "notes": "Image edit anchored on the chosen style frame (--from). The anchor holds the look far better than words."
+    },
+    "image": {
+      "label": "picture",
+      "endpoint": "fal-ai/nano-banana-pro",
+      "input": { "prompt": "$prompt", "aspect_ratio": "$aspect", "resolution": "2K", "output_format": "png", "num_images": 1 },
+      "output": ["images.0.url", "image.url"],
+      "ext": "png",
+      "price": 0.15, "unit": "picture", "checked": "2026-11",
+      "notes": "Plain text to image, your prompt as written."
+    },
+    "edit": {
+      "label": "edited picture",
+      "endpoint": "fal-ai/nano-banana-pro/edit",
+      "input": { "prompt": "$prompt", "image_urls": ["$image"], "aspect_ratio": "$aspect", "resolution": "2K", "output_format": "png", "num_images": 1 },
+      "output": ["images.0.url", "image.url"],
+      "ext": "png",
+      "price": 0.15, "unit": "picture", "checked": "2026-11",
+      "notes": "Change one picture with an instruction (\"make it night\", \"remove the tree\")."
+    },
+    "texture": {
+      "label": "tileable texture",
+      "endpoint": "fal-ai/nano-banana-pro",
+      "input": { "prompt": "$prompt", "aspect_ratio": "1:1", "resolution": "2K", "output_format": "png", "num_images": 1 },
+      "output": ["images.0.url", "image.url"],
+      "ext": "png",
+      "price": 0.15, "unit": "picture", "checked": "2026-11",
+      "notes": "Square, flat light, seen from above. Check the edges tile before using it; fix seams in code (mirror or blend) if needed."
+    },
+    "video": {
+      "label": "video clip (for mood only)",
+      "endpoint": "kling/v4/image-to-video",
+      "input": { "prompt": "$prompt", "start_image_url": "$image", "duration": "$seconds", "resolution": "1080p" },
+      "output": ["video.url", "videos.0.url"],
+      "ext": "mp4",
+      "price": 0.157, "unit": "second", "checked": "2026-11",
+      "min_seconds": 3, "max_seconds": 10, "default_seconds": 5,
+      "notes": "Image to video. For mood and pacing only: the motion it invents is often wrong for your game. 5 s is about $0.79."
+    },
+    "sfx": {
+      "label": "sound effect",
+      "endpoint": "fal-ai/elevenlabs/sound-effects/v2",
+      "input": { "text": "$prompt", "duration_seconds": "$seconds", "prompt_influence": 0.5, "loop": "$loop", "output_format": "mp3_44100_128" },
+      "output": ["audio.url", "audio_file.url"],
+      "ext": "mp3",
+      "price": 0.002, "unit": "second", "checked": "2026-11",
+      "min_seconds": 0.5, "max_seconds": 22, "default_seconds": 2,
+      "notes": "ElevenLabs sound effects through fal. Add --loop for ambience that repeats."
+    },
+    "music": {
+      "label": "music track",
+      "endpoint": "fal-ai/elevenlabs/music",
+      "input": { "prompt": "$prompt", "music_length_ms": "$ms", "force_instrumental": true, "output_format": "mp3_44100_128" },
+      "output": ["audio.url", "audio_file.url"],
+      "ext": "mp3",
+      "price": 0.01, "unit": "second", "checked": "2026-11",
+      "min_seconds": 10, "max_seconds": 300, "default_seconds": 30,
+      "notes": "ElevenLabs music through fal, instrumental. About $0.60 a minute."
+    },
+    "model3d": {
+      "label": "3D model (.glb)",
+      "endpoint": "fal-ai/trellis-2",
+      "input": { "image_url": "$image" },
+      "output": ["model_glb.url", "model_mesh.url", "glb.url", "mesh.url", "model.url"],
+      "ext": "glb",
+      "price": 0.3, "unit": "model", "checked": "2026-11",
+      "price_note": "Not confirmed: fal lists $0.05 per unit and what a unit is was not checked. This estimate is on the safe side.",
+      "notes": "Image to 3D. Use a picture of ONE object on a plain background (--cutout removes the background first). Other options on fal: fal-ai/hunyuan-3d/v3.1/rapid/image-to-3d, tripo3d/p2/image-to-3d."
+    },
+    "cutout": {
+      "label": "background removal",
+      "endpoint": "fal-ai/bria/background/remove",
+      "input": { "image_url": "$image" },
+      "output": ["image.url", "images.0.url"],
+      "ext": "png",
+      "price": 0.02, "unit": "picture", "checked": "2026-11",
+      "price_note": "Not confirmed against fal's price list.",
+      "notes": "Used by model3d --cutout. Alternatives: fal-ai/imageutils/rembg, pixelcut/background-removal."
+    }
+  }
+}

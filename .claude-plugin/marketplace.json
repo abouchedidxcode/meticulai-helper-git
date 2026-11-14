@@ -1,0 +1,14 @@
+{
+  "name": "meticulai-helper-git",
+  "description": "A step-by-step kit for making browser games with AI agents, even if you've never coded.",
+  "owner": {
+    "name": "Meticulai"
+  },
+  "plugins": [
+    {
+      "name": "meticulai-helper-git",
+      "source": "./",
+      "description": "Make your own browser game with AI agents, even if you've never coded."
+    }
+  ]
+}

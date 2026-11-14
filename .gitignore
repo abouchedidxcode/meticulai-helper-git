@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.helper/
+.DS_Store
+my-game/.helper/
+my-game/node_modules/
+my-game/dist/
