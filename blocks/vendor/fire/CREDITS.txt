@@ -1,0 +1,7 @@
+Fire (a block demo on Patch)
+
+The fire, embers, light and every dressing in the demo: Patch, MIT. Made in code, with no textures, models or sounds.
+The pictures in thumbs/ are stills of this demo.
+Inspired by a post by @majidmanzarpour showing volumetric fire in pure three.js. No code came from it.
+three.js: MIT, the three.js authors. https://github.com/mrdoob/three.js
+Licence: licenses/LICENSE-three.txt

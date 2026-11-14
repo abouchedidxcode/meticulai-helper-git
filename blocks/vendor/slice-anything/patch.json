@@ -1,0 +1,169 @@
+{
+	"project": "blendi/slice-anything",
+	"version": "1.0.1",
+	"channel": "private",
+	"files": "dist",
+	"recipe": {
+		"mode": "browser",
+		"block": {
+			"controls": [
+				{
+					"id": "blade",
+					"label": "Blade",
+					"hint": "Which sword is in hand: the katana is quick and light, the longsword slower, longer and heavier.",
+					"type": "choice",
+					"options": [
+						{
+							"value": "katana",
+							"label": "Katana"
+						},
+						{
+							"value": "longsword",
+							"label": "Longsword"
+						}
+					],
+					"default": "katana",
+					"essential": true
+				},
+				{
+					"id": "speed",
+					"label": "Speed",
+					"hint": "How fast time runs: below 1 is slow motion.",
+					"type": "number",
+					"min": 0.1,
+					"max": 1,
+					"step": 0.05,
+					"default": 1,
+					"unit": "×",
+					"essential": true
+				},
+				{
+					"id": "line",
+					"label": "Cut line",
+					"hint": "Draws, on everything in reach, the line the blade would cut along. Holding the right mouse button shows it too.",
+					"type": "toggle",
+					"default": false,
+					"essential": true
+				},
+				{
+					"id": "gravity",
+					"label": "Gravity",
+					"hint": "How hard cut pieces fall.",
+					"type": "number",
+					"min": 1,
+					"max": 20,
+					"step": 0.1,
+					"default": 9.8,
+					"unit": "m/s²"
+				},
+				{
+					"id": "budget",
+					"label": "Cutting per frame",
+					"hint": "Milliseconds of cutting a frame. A swing through a heap of pieces is worked off within this, over as many frames as it takes.",
+					"type": "number",
+					"min": 1,
+					"max": 12,
+					"step": 0.5,
+					"default": 5,
+					"unit": "ms"
+				},
+				{
+					"id": "hold",
+					"label": "Blade bites",
+					"hint": "Whether the blade is held for an instant in the first thing it meets.",
+					"type": "toggle",
+					"default": true
+				},
+				{
+					"id": "shake",
+					"label": "Camera shake",
+					"hint": "Whether the view shakes when the blade bites.",
+					"type": "toggle",
+					"default": true
+				}
+			],
+			"presets": [],
+			"triggers": [
+				{
+					"id": "reset",
+					"label": "Reset",
+					"hint": "Puts everything back whole, and you back where you started."
+				}
+			]
+		},
+		"test": {
+			"move_keys": [
+				"KeyW",
+				"ArrowUp"
+			]
+		},
+		"credits": [
+			{
+				"files": "assets/models/marbleBust01.glb",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/marble_bust_01",
+				"author": "Rico Cilliers (Marble Bust 01)"
+			},
+			{
+				"files": "assets/swords/katana/",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/antique_katana_01",
+				"author": "Tal Swicegood (Antique Katana 01)"
+			},
+			{
+				"files": "assets/swords/estoc/",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/antique_estoc",
+				"author": "James Ray Cock and Ulan Cabanilla (Antique Estoc; textures scaled to 1K by Patch)"
+			},
+			{
+				"files": "assets/hdri/",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/syferfontein_6d_clear_puresky",
+				"author": "Greg Zaal and Jarod Guest (Syferfontein 6d Clear, Pure Sky)"
+			},
+			{
+				"files": "assets/materials/patternedPaving02/",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/patterned_paving_02",
+				"author": "Dimitrios Savva (Patterned Paving 02)"
+			},
+			{
+				"files": "assets/materials/plasteredWall02/",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/plastered_wall_02",
+				"author": "Charlotte Baglioni (Plastered Wall 02)"
+			},
+			{
+				"files": "assets/materials/darkPlanks/",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/dark_planks",
+				"author": "Rob Tuytel (Dark Planks)"
+			},
+			{
+				"files": "assets/materials/gravelFloor/",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/gravel_floor",
+				"author": "Jenelle van Heerden and Matterfield (Gravel Floor; recompressed by Patch)"
+			},
+			{
+				"files": "assets/materials/greyRoofTiles/",
+				"license": "CC0-1.0",
+				"source": "https://polyhaven.com/a/grey_roof_tiles",
+				"author": "Rob Tuytel (Grey Roof Tiles)"
+			},
+			{
+				"files": "assets/",
+				"license": "MIT",
+				"source": "https://github.com/mrdoob/three.js",
+				"author": "three.js authors"
+			},
+			{
+				"files": "assets/",
+				"license": "Apache-2.0",
+				"source": "https://github.com/dimforge/rapier.js",
+				"author": "Dimforge (Rapier 0.19.3)"
+			}
+		]
+	}
+}

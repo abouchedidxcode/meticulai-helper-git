@@ -46,13 +46,13 @@ await runTool(async () => {
   say(`Creating "${name}" in ${pretty(dir)}...`);
   fs.cpSync(starter, dir, { recursive: true, filter: (src) => !SKIP.has(path.basename(src)) });
 
-  // planning templates (REFS.md goes into refs/); any that are missing are skipped quietly
+  // planning templates and palette.json (REFS.md goes into refs/); any that are missing are skipped quietly
   const port = await findFreePort(...PORT_RANGE);
   if (!port) throw new HelperError(`every port from ${PORT_RANGE[0]} to ${PORT_RANGE[1]} is busy.`, 'Restart your computer, then try again.');
   const fill = (text) => text.replaceAll('{{GAME_NAME}}', name).replaceAll('{{PORT}}', String(port)).replaceAll('{{CAP}}', '0');
   for (const d of ['refs', 'refs/sheets', 'refs/generated', 'recordings', 'playtest-notes']) fs.mkdirSync(path.join(dir, d), { recursive: true });
   if (fs.existsSync(templates)) {
-    for (const f of fs.readdirSync(templates).filter((x) => x.endsWith('.md'))) {
+    for (const f of fs.readdirSync(templates).filter((x) => x.endsWith('.md') || x === 'palette.json')) {
       const dest = f === 'REFS.md' ? path.join(dir, 'refs', 'REFS.md') : path.join(dir, f);
       if (fs.existsSync(dest)) continue;
       fs.writeFileSync(dest, fill(fs.readFileSync(path.join(templates, f), 'utf8')));

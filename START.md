@@ -53,7 +53,13 @@ each one is FOR and what to ignore, play the look back in words, and lock it int
 the game is never scored on matching them. [skills/references/SKILL.md](skills/references/SKILL.md)
 
 **3. Generate assets (optional, costs money).** Only with a fal key in `.env`, a budget above $0, and a yes before each
-batch. [skills/generate-assets/SKILL.md](skills/generate-assets/SKILL.md)
+batch. Style frames to anchor the look can come early; everything else is the last option, after free assets and
+code (step 3b). [skills/generate-assets/SKILL.md](skills/generate-assets/SKILL.md)
+
+**3b. Asset plan.** From GREAT.md, list everything the game needs in `my-game/ASSETS.md`, pick one or two style
+families and a palette (`my-game/palette.json`). For each need, check ready-made blocks and free assets before code or
+fal. Look at every asset before it goes in; credits are written for you. The plan is written now; most assets come in
+after the core loop is fun. [skills/find-assets/SKILL.md](skills/find-assets/SKILL.md)
 
 **4. Plan the swarm.** Split the work by system and file into `my-game/CONTRACTS.md` so several agents can build at
 once without editing the same files. [skills/plan-swarm/SKILL.md](skills/plan-swarm/SKILL.md)
@@ -64,7 +70,8 @@ once without editing the same files. [skills/plan-swarm/SKILL.md](skills/plan-sw
 **6. Feel.** Controls, camera, impact, sound that answers every action.
 [skills/feel/SKILL.md](skills/feel/SKILL.md)
 
-**7. Look.** Lock the look on one small scene, then roll it out. Free CC0 assets first, generated ones second.
+**7. Look.** Lock the look on one small scene, then roll it out. Free assets and blocks first
+([find-assets](skills/find-assets/SKILL.md)), generated ones last.
 [skills/look/SKILL.md](skills/look/SKILL.md)
 
 **8. Playtest loop.** Record a play-through, fresh critics watch it, triage, fix the top issue with a big move,
@@ -126,6 +133,13 @@ guardrails, ending in a `my-game/MORNING.md` report. [skills/autopilot/SKILL.md]
 - Don't use other people's art, music, characters or game names in the game. Free assets must have a licence that
   allows it (CC0 is easiest); credit them in `my-game/CREDITS.md`.
 
+**Assets**
+- Check free assets and ready-made blocks before generating or hand-coding: `node tools/blocks/list.mjs`,
+  `node tools/assets/find.mjs "<what>"`. Code next, fal last.
+- Look at every asset before it goes in (`node tools/assets/look.mjs`), judge it against the game's families and
+  palette, and record the decision in `my-game/ASSETS.md`. Bring files in only with `node tools/assets/get.mjs`, so the
+  credit line is written for you.
+
 ## If your tool can't run subagents
 
 The skills ask you to spawn roles (director, builder, critics, triage). If you can't, play each role yourself, in turn:
@@ -143,11 +157,13 @@ from the recording and GREAT.md, as if you'd never seen the code. It's slower, b
 | `commands/` | Slash commands for Claude Code (thin wrappers around the skills). |
 | `swarm/` | Running several builders at once (one git worktree each). |
 | `autopilot/` | Running unattended for hours, with guardrails. |
-| `templates/` | Starting versions of GREAT, HANDOVER, DECISIONS, DEVLOG, CREDITS, paid-ledger, CONTRACTS, REFS. |
+| `templates/` | Starting versions of GREAT, HANDOVER, DECISIONS, DEVLOG, CREDITS, paid-ledger, CONTRACTS, REFS, ASSETS, palette.json. |
+| `sources/` | The free asset libraries: what each has, its licence duties, how to search it. [sources/README.md](sources/README.md) |
+| `blocks/` | Ready-made effects and systems as code (fire, ocean, sky, trees...), with credits. [blocks/README.md](blocks/README.md) |
 | `playbook/` | What makes games good, learned the hard way. Read [playbook/README.md](playbook/README.md) when unsure. |
 | `case-studies/` | Real games that worked and failed, and why. |
 | `recipes/` | Tested code snippets for common game pieces. |
 | `guides/` | Short guides for the human: testing, costs, autopilot, a glossary. |
-| `tools/` | Node scripts: doctor, init, serve, ship, play (record, notes, fps, loud), refs, fal. |
+| `tools/` | Node scripts: doctor, init, serve, ship, play (record, notes, fps, loud), refs, assets (find, get, look, restyle), blocks, fal. |
 | `starter/` | The starter game. `init` copies it into `my-game/`. |
 | `my-game/` | Everything the user makes. Created by `node tools/init.mjs`. |

@@ -1,0 +1,20 @@
+{
+  "name": "touch-grass",
+  "version": "1.0.1",
+  "description": "A meadow for three.js that reacts and remembers: bend it, mow it, burn it, read it back.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "vite --config vite.config.mjs --host 127.0.0.1 --port 5376 --strictPort",
+    "serve": "node tools/serve.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "playwright-core": "1.64.1",
+    "vite": "8.3.5"
+  }
+}

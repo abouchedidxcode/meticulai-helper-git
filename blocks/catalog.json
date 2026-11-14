@@ -1,0 +1,1454 @@
+{
+  "checked": "2026-11-14",
+  "about": "Drop-in effects, systems and tools for three.js games. status: ready = copied into blocks/vendor/ and tested; reference-only = we point to the original author's repo at a pinned commit. renderer: webgl2 works with the starter; webgpu and both need three/webgpu (WebGPURenderer); 2d = plain canvas; none = not a renderer thing. See blocks/README.md.",
+  "blocks": [
+    {
+      "id": "oil-paint",
+      "name": "Oil paint",
+      "kind": "effect",
+      "what": "Draws a three.js world as thick oil paint, dab by dab; every stroke is pinned to the world so the paint stays on things as the camera moves. Demo: a snowy ridge under an aurora, and an autumn wood, with a walking character.",
+      "by": "blendi for Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/oil-paint.git",
+        "commit": "804c65fa3a6c6fcdc732ed1bde450fd140cfb4e9",
+        "date": "2026-11-11"
+      },
+      "vendored": "blocks/vendor/oil-paint/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 628,
+      "fetch": [
+        {
+          "path": "src/figure/rapier/rapier.mjs",
+          "url": "https://git.patch.gg/blendi/oil-paint/raw/804c65fa3a6c6fcdc732ed1bde450fd140cfb4e9/src/figure/rapier/rapier.mjs",
+          "bytes": 4340292,
+          "sha256": "02dc6a4e2fffc013bab08fbb44fa68f501d8303615e9afe4c7d89ad4eedda0d0"
+        },
+        {
+          "path": "public/figure/starter-man.glb",
+          "url": "https://git.patch.gg/blendi/oil-paint/raw/804c65fa3a6c6fcdc732ed1bde450fd140cfb4e9/public/figure/starter-man.glb",
+          "bytes": 1255588,
+          "sha256": "450089ce3fd70c1a30e775cb1454a987cbaf3ff71ca53cf8581e74f9163e637e"
+        },
+        {
+          "path": "public/figure/starter-man-clips.glb",
+          "url": "https://git.patch.gg/blendi/oil-paint/raw/804c65fa3a6c6fcdc732ed1bde450fd140cfb4e9/public/figure/starter-man-clips.glb",
+          "bytes": 2378416,
+          "sha256": "c8ff99c52785e1e1d12f3d3687726a0b300e9bada7a7517ff83471ee2125ae78"
+        }
+      ],
+      "good_for": "A painterly third-person or first-person walking game where the look is the point; slow, calm, exploratory games.",
+      "not_for": "Fast action with lots of small moving things, phones and weak laptops (heavy), or a look you want to add to an existing scene like a filter: you start from its scene.",
+      "how_to_add": "node tools/blocks/add.mjs oil-paint",
+      "agent_docs": "blocks/vendor/oil-paint/HOW-TO-USE.md",
+      "preview": "blocks/previews/oil-paint.jpg",
+      "stars": null,
+      "last_push": "2026-11-11",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Rapier 0.21 (copy in src/figure/rapier)",
+          "by": "Dimforge",
+          "license": "Apache-2.0",
+          "url": "https://github.com/dimforge/rapier.js"
+        },
+        {
+          "name": "Universal Animation Library 1 and 2 (clips)",
+          "by": "Quaternius",
+          "license": "CC0-1.0",
+          "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+        },
+        {
+          "name": "MakeHuman system assets (starter man body)",
+          "by": "MakeHuman",
+          "license": "CC0-1.0",
+          "url": "http://www.makehumancommunity.org"
+        }
+      ]
+    },
+    {
+      "id": "watercolour",
+      "name": "Watercolour",
+      "kind": "effect",
+      "what": "A world that starts as a pencil drawing and is painted in watercolour as you walk through it: the wash spreads from your feet, climbs the trees and stays. Demo: a wood, a stream and a meadow.",
+      "by": "blendi for Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/watercolour.git",
+        "commit": "713908667b250c35598a737503e68b72cb9a2192",
+        "date": "2026-11-13"
+      },
+      "vendored": "blocks/vendor/watercolour/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 432,
+      "fetch": [
+        {
+          "path": "src/figure/rapier/rapier.mjs",
+          "url": "https://git.patch.gg/blendi/watercolour/raw/713908667b250c35598a737503e68b72cb9a2192/src/figure/rapier/rapier.mjs",
+          "bytes": 4340292,
+          "sha256": "02dc6a4e2fffc013bab08fbb44fa68f501d8303615e9afe4c7d89ad4eedda0d0"
+        },
+        {
+          "path": "public/figure/starter-man.glb",
+          "url": "https://git.patch.gg/blendi/watercolour/raw/713908667b250c35598a737503e68b72cb9a2192/public/figure/starter-man.glb",
+          "bytes": 1255588,
+          "sha256": "450089ce3fd70c1a30e775cb1454a987cbaf3ff71ca53cf8581e74f9163e637e"
+        },
+        {
+          "path": "public/figure/starter-man-clips.glb",
+          "url": "https://git.patch.gg/blendi/watercolour/raw/713908667b250c35598a737503e68b72cb9a2192/public/figure/starter-man-clips.glb",
+          "bytes": 2378416,
+          "sha256": "c8ff99c52785e1e1d12f3d3687726a0b300e9bada7a7517ff83471ee2125ae78"
+        }
+      ],
+      "good_for": "Gentle exploration games where the player \"colours in\" the world; storybook looks; a reveal mechanic built into the look.",
+      "not_for": "Combat-heavy or fast games; games that need a hard, readable silhouette at a glance; weak hardware.",
+      "how_to_add": "node tools/blocks/add.mjs watercolour",
+      "agent_docs": "blocks/vendor/watercolour/HOW-TO-USE.md",
+      "preview": "blocks/previews/watercolour.jpg",
+      "stars": null,
+      "last_push": "2026-11-13",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Rapier 0.21 (copy in src/figure/rapier)",
+          "by": "Dimforge",
+          "license": "Apache-2.0",
+          "url": "https://github.com/dimforge/rapier.js"
+        },
+        {
+          "name": "Universal Animation Library 1 and 2 (clips)",
+          "by": "Quaternius",
+          "license": "CC0-1.0",
+          "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+        }
+      ]
+    },
+    {
+      "id": "coloured-pencil",
+      "name": "Coloured pencil",
+      "kind": "effect",
+      "what": "A world drawn in coloured pencil on a sketchbook page: strokes that follow each form, a second pencil for shade, a graphite outline round everything. Demo: a harbour town.",
+      "by": "blendi for Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/coloured-pencil.git",
+        "commit": "0400f90d08ca97aae11edb41e3ff3af830acc8c7",
+        "date": "2026-11-13"
+      },
+      "vendored": "blocks/vendor/coloured-pencil/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 452,
+      "fetch": [
+        {
+          "path": "src/figure/rapier/rapier.mjs",
+          "url": "https://git.patch.gg/blendi/coloured-pencil/raw/0400f90d08ca97aae11edb41e3ff3af830acc8c7/src/figure/rapier/rapier.mjs",
+          "bytes": 4340292,
+          "sha256": "02dc6a4e2fffc013bab08fbb44fa68f501d8303615e9afe4c7d89ad4eedda0d0"
+        },
+        {
+          "path": "public/figure/starter-man.glb",
+          "url": "https://git.patch.gg/blendi/coloured-pencil/raw/0400f90d08ca97aae11edb41e3ff3af830acc8c7/public/figure/starter-man.glb",
+          "bytes": 1255588,
+          "sha256": "450089ce3fd70c1a30e775cb1454a987cbaf3ff71ca53cf8581e74f9163e637e"
+        },
+        {
+          "path": "public/figure/starter-man-clips.glb",
+          "url": "https://git.patch.gg/blendi/coloured-pencil/raw/0400f90d08ca97aae11edb41e3ff3af830acc8c7/public/figure/starter-man-clips.glb",
+          "bytes": 2378416,
+          "sha256": "c8ff99c52785e1e1d12f3d3687726a0b300e9bada7a7517ff83471ee2125ae78"
+        }
+      ],
+      "good_for": "Cosy, illustrated, hand-drawn looks; town or village walking games; anything that should feel like a sketchbook.",
+      "not_for": "Dark, gritty or realistic games; very fast games; weak hardware.",
+      "how_to_add": "node tools/blocks/add.mjs coloured-pencil",
+      "agent_docs": "blocks/vendor/coloured-pencil/HOW-TO-USE.md",
+      "preview": "blocks/previews/coloured-pencil.jpg",
+      "stars": null,
+      "last_push": "2026-11-13",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Rapier 0.21 (copy in src/figure/rapier)",
+          "by": "Dimforge",
+          "license": "Apache-2.0",
+          "url": "https://github.com/dimforge/rapier.js"
+        },
+        {
+          "name": "Universal Animation Library 1 and 2 (clips)",
+          "by": "Quaternius",
+          "license": "CC0-1.0",
+          "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+        }
+      ]
+    },
+    {
+      "id": "patchwork-quilt",
+      "name": "Patchwork quilt",
+      "kind": "effect",
+      "what": "Makes a world out of cloth: a quilt of puffed patches with real seams and stitches, fuzzy felt, and a tilt-shift camera that sees it as a small thing on a table. Demo: a country sewn into one quilt with a rag doll.",
+      "by": "blendi for Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/patchwork-quilt.git",
+        "commit": "2a1dad474025c7326e4366e3cf162a88e020936f",
+        "date": "2026-11-12"
+      },
+      "vendored": "blocks/vendor/patchwork-quilt/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 620,
+      "fetch": [
+        {
+          "path": "src/figure/rapier/rapier.mjs",
+          "url": "https://git.patch.gg/blendi/patchwork-quilt/raw/2a1dad474025c7326e4366e3cf162a88e020936f/src/figure/rapier/rapier.mjs",
+          "bytes": 4340292,
+          "sha256": "02dc6a4e2fffc013bab08fbb44fa68f501d8303615e9afe4c7d89ad4eedda0d0"
+        },
+        {
+          "path": "public/figure/starter-man.glb",
+          "url": "https://git.patch.gg/blendi/patchwork-quilt/raw/2a1dad474025c7326e4366e3cf162a88e020936f/public/figure/starter-man.glb",
+          "bytes": 1255588,
+          "sha256": "450089ce3fd70c1a30e775cb1454a987cbaf3ff71ca53cf8581e74f9163e637e"
+        },
+        {
+          "path": "public/figure/starter-man-clips.glb",
+          "url": "https://git.patch.gg/blendi/patchwork-quilt/raw/2a1dad474025c7326e4366e3cf162a88e020936f/public/figure/starter-man-clips.glb",
+          "bytes": 2378416,
+          "sha256": "c8ff99c52785e1e1d12f3d3687726a0b300e9bada7a7517ff83471ee2125ae78"
+        }
+      ],
+      "good_for": "Toy-like, handmade, miniature looks; cosy and family games; stop-motion feel.",
+      "not_for": "Realistic or dark games; huge open worlds; weak hardware.",
+      "how_to_add": "node tools/blocks/add.mjs patchwork-quilt",
+      "agent_docs": "blocks/vendor/patchwork-quilt/HOW-TO-USE.md",
+      "preview": "blocks/previews/patchwork-quilt.jpg",
+      "stars": null,
+      "last_push": "2026-11-12",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Rapier 0.21 (copy in src/figure/rapier)",
+          "by": "Dimforge",
+          "license": "Apache-2.0",
+          "url": "https://github.com/dimforge/rapier.js"
+        },
+        {
+          "name": "Universal Animation Library 1 and 2 (clips)",
+          "by": "Quaternius",
+          "license": "CC0-1.0",
+          "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+        }
+      ]
+    },
+    {
+      "id": "painted-valley",
+      "name": "Painted valley",
+      "kind": "effect",
+      "what": "A summer valley in the look of hand-painted animated-film backgrounds: flat clean colour, heaped clouds, painted mountains, brush-mark meadow, and a flat-shaded inked character. Four times of day.",
+      "by": "blendi for Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/painted-valley.git",
+        "commit": "e523a37e6c86df433a960a46702b09776e73a0e2",
+        "date": "2026-11-12"
+      },
+      "vendored": "blocks/vendor/painted-valley/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 2488,
+      "fetch": [
+        {
+          "path": "src/figure/rapier/rapier.mjs",
+          "url": "https://git.patch.gg/blendi/painted-valley/raw/e523a37e6c86df433a960a46702b09776e73a0e2/src/figure/rapier/rapier.mjs",
+          "bytes": 4340292,
+          "sha256": "02dc6a4e2fffc013bab08fbb44fa68f501d8303615e9afe4c7d89ad4eedda0d0"
+        },
+        {
+          "path": "public/figure/starter-man.glb",
+          "url": "https://git.patch.gg/blendi/painted-valley/raw/e523a37e6c86df433a960a46702b09776e73a0e2/public/figure/starter-man.glb",
+          "bytes": 1255588,
+          "sha256": "450089ce3fd70c1a30e775cb1454a987cbaf3ff71ca53cf8581e74f9163e637e"
+        },
+        {
+          "path": "public/figure/starter-man-clips.glb",
+          "url": "https://git.patch.gg/blendi/painted-valley/raw/e523a37e6c86df433a960a46702b09776e73a0e2/public/figure/starter-man-clips.glb",
+          "bytes": 2378416,
+          "sha256": "c8ff99c52785e1e1d12f3d3687726a0b300e9bada7a7517ff83471ee2125ae78"
+        }
+      ],
+      "good_for": "Bright, hopeful, hand-painted outdoor games; walking, gliding, farming or adventure games set outdoors.",
+      "not_for": "Indoor, dark or realistic games; weak hardware.",
+      "how_to_add": "node tools/blocks/add.mjs painted-valley",
+      "agent_docs": "blocks/vendor/painted-valley/HOW-TO-USE.md",
+      "preview": "blocks/previews/painted-valley.jpg",
+      "stars": null,
+      "last_push": "2026-11-12",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Rapier 0.21 (copy in src/figure/rapier)",
+          "by": "Dimforge",
+          "license": "Apache-2.0",
+          "url": "https://github.com/dimforge/rapier.js"
+        },
+        {
+          "name": "Universal Animation Library 1 and 2 (clips)",
+          "by": "Quaternius",
+          "license": "CC0-1.0",
+          "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+        },
+        {
+          "name": "Ground textures",
+          "by": "ambientCG",
+          "license": "CC0-1.0",
+          "url": "https://ambientcg.com"
+        }
+      ]
+    },
+    {
+      "id": "slice-anything",
+      "name": "Slice anything",
+      "kind": "system",
+      "what": "Cut any mesh along any plane, as many times as you like: every piece becomes a closed solid with its own Rapier body, and the cut face shows what the thing is made of (wood rings, melon seeds, marble veins).",
+      "by": "blendi for Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/slice-anything.git",
+        "commit": "7f7a4035bd0421c0855c4ea9b10c7fcde5328cd0",
+        "date": "2026-11-10"
+      },
+      "vendored": "blocks/vendor/slice-anything/",
+      "status": "ready",
+      "renderer": "both",
+      "size_kb": 6960,
+      "good_for": "Sword, knife and slicing games; satisfying destruction of props; physics toys.",
+      "not_for": "Games that do not need cutting; huge numbers of cuts per second on weak hardware.",
+      "how_to_add": "node tools/blocks/add.mjs slice-anything",
+      "agent_docs": "blocks/vendor/slice-anything/HOW-TO-USE.md",
+      "preview": "blocks/previews/slice-anything.jpg",
+      "stars": null,
+      "last_push": "2026-11-10",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Rapier 0.19.3 (npm @dimforge/rapier3d-compat)",
+          "by": "Dimforge",
+          "license": "Apache-2.0",
+          "url": "https://github.com/dimforge/rapier.js"
+        },
+        {
+          "name": "Bust, blades, sky and surfaces",
+          "by": "Poly Haven artists (see public/CREDITS.md)",
+          "license": "CC0-1.0",
+          "url": "https://polyhaven.com"
+        }
+      ],
+      "notes": "Uses three/webgpu (WebGPURenderer). Add ?webgl to the URL to force its WebGL2 path. Pins Rapier 0.19.3 on purpose (0.21 hulls never settle), so it cannot share one Rapier version with impossible-spaces as is."
+    },
+    {
+      "id": "impossible-spaces",
+      "name": "Impossible spaces (portals)",
+      "kind": "system",
+      "what": "Portals: join any two rectangular openings and look, walk and throw through them. Rooms bigger inside than out, loops, a door onto a wall, a door that shrinks you to a tenth. The system is one file, src/lib/portals.ts.",
+      "by": "blendi for Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/impossible-spaces.git",
+        "commit": "a9db30c95ad7bf7805848c85c362d9ecf0c9133a",
+        "date": "2026-11-10"
+      },
+      "vendored": "blocks/vendor/impossible-spaces/",
+      "status": "ready",
+      "renderer": "webgpu",
+      "size_kb": 10364,
+      "good_for": "Puzzle and exploration games built on impossible architecture; non-Euclidean levels; surprise moments.",
+      "not_for": "Browsers without WebGPU; games that only need a simple teleport (a fade and a position change is enough).",
+      "how_to_add": "node tools/blocks/add.mjs impossible-spaces",
+      "agent_docs": "blocks/vendor/impossible-spaces/HOW-TO-USE.md",
+      "preview": "blocks/previews/impossible-spaces.jpg",
+      "stars": null,
+      "last_push": "2026-11-10",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Rapier 0.21 (npm @dimforge/rapier3d-compat)",
+          "by": "Dimforge",
+          "license": "Apache-2.0",
+          "url": "https://github.com/dimforge/rapier.js"
+        },
+        {
+          "name": "Wood Floor, Brushed Concrete 04, Marble 01, Black Painted Planks",
+          "by": "Dimitrios Savva, Amal Kumar, Rob Tuytel (Poly Haven)",
+          "license": "CC0-1.0",
+          "url": "https://polyhaven.com"
+        }
+      ],
+      "notes": "Needs WebGPU (recent Chrome or Edge). Rendered fine in headless Chromium with WebGPU on."
+    },
+    {
+      "id": "touch-grass",
+      "name": "Grass you can touch",
+      "kind": "system",
+      "what": "A meadow to the horizon that reacts and remembers: grass bends under feet and anything rolling on it, a scythe mows it and lays the stems in rows, fire spreads with the wind and leaves black ground. A map under it records every touch for your game to read.",
+      "by": "blendi for Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/touch-grass.git",
+        "commit": "3bd4f39d9185689efad9dc1c9d4d1f5a89ac708b",
+        "date": "2026-11-10"
+      },
+      "vendored": "blocks/vendor/touch-grass/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 3712,
+      "good_for": "Outdoor games where the ground matters: mowing, farming, wildfire, tracking, hiding in grass.",
+      "not_for": "Indoor games; top-down or high cameras; WebGPU renderers; stylised flat looks without grass; very weak hardware.",
+      "how_to_add": "node tools/blocks/add.mjs touch-grass",
+      "agent_docs": "blocks/vendor/touch-grass/HOW-TO-USE.md",
+      "preview": "blocks/previews/touch-grass.jpg",
+      "stars": null,
+      "last_push": "2026-11-10",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Blade arc model (maths followed, no file copied)",
+          "by": "mohamedachrefelouafi (Chiro Visuals), GrassSystemThreeJS",
+          "license": "MIT",
+          "url": "https://github.com/achrefelouafi/GrassSystemThreeJS"
+        },
+        {
+          "name": "Ground textures",
+          "by": "ambientCG",
+          "license": "CC0-1.0",
+          "url": "https://ambientcg.com"
+        },
+        {
+          "name": "Fine Grained Wood",
+          "by": "Rob Tuytel (Poly Haven)",
+          "license": "CC0-1.0",
+          "url": "https://polyhaven.com/a/fine_grained_wood"
+        },
+        {
+          "name": "Impact Sounds (footsteps)",
+          "by": "Kenney",
+          "license": "CC0-1.0",
+          "url": "https://kenney.nl/assets/impact-sounds"
+        },
+        {
+          "name": "Red Hat Mono font",
+          "by": "The Red Hat Project Authors",
+          "license": "OFL-1.1",
+          "url": "https://github.com/RedHatOfficial/RedHatFont"
+        }
+      ]
+    },
+    {
+      "id": "realistic-procedural-dungeons",
+      "name": "Realistic procedural dungeons",
+      "kind": "system",
+      "what": "Seeded crypts to walk in first person: vaulted halls, carved columns, sunken basins, worn paving, stairs through arches, candlelight and deep shadow. The layout comes as plain data with room roles and a path grid.",
+      "by": "blendi (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/blendi/realistic-procedural-dungeons.git",
+        "commit": "42ce7dfa60e4d8d9142a2ef08113158720ca5091",
+        "date": "2026-11-05"
+      },
+      "vendored": "blocks/vendor/realistic-procedural-dungeons/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 7120,
+      "good_for": "Dark first-person dungeon crawlers, horror, stealth; any game that needs many different dark interiors from a seed.",
+      "not_for": "Bright or stylised looks; weak laptops and phones (tested on a fast graphics card only); rooms come empty, you fill them.",
+      "how_to_add": "node tools/blocks/add.mjs realistic-procedural-dungeons",
+      "agent_docs": "blocks/vendor/realistic-procedural-dungeons/HOW-TO-USE.md",
+      "preview": "blocks/previews/realistic-procedural-dungeons.jpg",
+      "stars": null,
+      "last_push": "2026-11-05",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Dirt floor, medieval blocks, medieval wall textures",
+          "by": "Poly Haven artists (see public/CREDITS.md)",
+          "license": "CC0-1.0",
+          "url": "https://polyhaven.com"
+        }
+      ]
+    },
+    {
+      "id": "fire",
+      "name": "Fire",
+      "kind": "effect",
+      "what": "Real 3D flames made only in shader math (a ray-marched volume): candle, torch, gas jet, campfire, brazier, fireplace, bonfire, burning crate, fire line, with sparks, smoke and a flickering light in sync. No image files.",
+      "by": "Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/patch/fire.git",
+        "commit": "4d6ee79b7bce072bc0515cfa1e787536e8b0eaf2",
+        "date": "2026-11-04"
+      },
+      "vendored": "blocks/vendor/fire/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 272,
+      "good_for": "Any game with fire you can walk around and lean into: camps, torches, braziers, burning props.",
+      "not_for": "Huge wildfires across a landscape (use many cheap sprites instead); flat 2D or pixel games; WebGPU renderers or orthographic cameras. Note: it draws the frame itself through its FireLayer (see HOW-TO-USE.md).",
+      "how_to_add": "node tools/blocks/add.mjs fire",
+      "agent_docs": "blocks/vendor/fire/HOW-TO-USE.md",
+      "preview": "blocks/previews/fire.jpg",
+      "stars": null,
+      "last_push": "2026-11-04",
+      "npm": null,
+      "built_on": [],
+      "notes": "Inspired by a post by @majidmanzarpour showing volumetric fire in pure three.js; no code came from it."
+    },
+    {
+      "id": "car",
+      "name": "Realistic car",
+      "kind": "system",
+      "what": "A car on Rapier at real scale and gravity: tyres that build grip, peak and let go, visible suspension, engine and gearbox, handbrake, and tarmac, gravel and grass. Give it any model with separate wheels.",
+      "by": "Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/patch/car.git",
+        "commit": "96d732c21f3c084b806d93334b5d872a8986d9dc",
+        "date": "2026-11-04"
+      },
+      "vendored": "blocks/vendor/car/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 11388,
+      "good_for": "Driving, rally and delivery games that should feel physical; a car to drop into an open world.",
+      "not_for": "Arcade kart feel (it is a simulation; tune it down or use a simpler model), 2D games.",
+      "how_to_add": "node tools/blocks/add.mjs car",
+      "agent_docs": "blocks/vendor/car/HOW-TO-USE.md",
+      "preview": "blocks/previews/car.jpg",
+      "stars": null,
+      "last_push": "2026-11-04",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Godot Advanced Vehicle (tyre model, ported)",
+          "by": "Dechode",
+          "license": "MIT",
+          "url": "https://github.com/Dechode/Godot-Advanced-Vehicle"
+        },
+        {
+          "name": "Godot Easy Vehicle Physics (gearbox, suspension, assists, ported)",
+          "by": "David Shoemaker, Dechode and Baron Wittman",
+          "license": "MIT",
+          "url": "https://github.com/DAShoe1/Godot-Easy-Vehicle-Physics"
+        },
+        {
+          "name": "folio-2025 (righting the car, ported)",
+          "by": "Bruno Simon",
+          "license": "MIT",
+          "url": "https://github.com/brunosimon/folio-2025"
+        },
+        {
+          "name": "Rapier 0.17.3 (npm)",
+          "by": "Dimforge",
+          "license": "Apache-2.0",
+          "url": "https://github.com/dimforge/rapier.js"
+        },
+        {
+          "name": "ez-tree (stage trees)",
+          "by": "Daniel Greenheck",
+          "license": "MIT",
+          "url": "https://github.com/dgreenheck/ez-tree"
+        },
+        {
+          "name": "Stage textures, sky, boulders",
+          "by": "Poly Haven artists (see CREDITS.txt)",
+          "license": "CC0-1.0",
+          "url": "https://polyhaven.com"
+        },
+        {
+          "name": "Bark textures",
+          "by": "ambientCG",
+          "license": "CC0-1.0",
+          "url": "https://ambientcg.com"
+        },
+        {
+          "name": "Engine and surface sounds",
+          "by": "Freesound authors (each in public/audio/CREDITS.txt)",
+          "license": "CC0-1.0",
+          "url": "https://freesound.org"
+        },
+        {
+          "name": "Universal Animation Library (mannequin clips)",
+          "by": "Quaternius",
+          "license": "CC0-1.0",
+          "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+        }
+      ]
+    },
+    {
+      "id": "destruction",
+      "name": "Destruction physics",
+      "kind": "system",
+      "what": "Breakable structures on the GPU: a timber barn, a steel water tower, a brick wall and a chimney, each hundreds of rigid pieces welded together, knocked down piece by piece by cannonballs. Welds break by load, so things fall the way they should.",
+      "by": "Patch (patch.gg), on three-avbd by Steven Bobyn",
+      "license": "MIT",
+      "art_license": "CC-BY-4.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/patch/destruction.git",
+        "commit": "496c06c96968922c982a47b6c01934cf83b0bb94",
+        "date": "2026-11-04"
+      },
+      "vendored": "blocks/vendor/destruction/",
+      "status": "ready",
+      "renderer": "webgpu",
+      "size_kb": 12904,
+      "good_for": "Demolition, siege and catapult games; physics sandboxes; big satisfying collapses.",
+      "not_for": "Browsers without WebGPU; phones; games that only need a few boxes to fall (use Rapier). Its physics is z-up; the starter is y-up.",
+      "how_to_add": "node tools/blocks/add.mjs destruction",
+      "agent_docs": "blocks/vendor/destruction/HOW-TO-USE.md",
+      "preview": "blocks/previews/destruction.jpg",
+      "stars": null,
+      "last_push": "2026-11-04",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "three-avbd (GPU rigid bodies, copy in vendor/three-avbd)",
+          "by": "Steven Bobyn",
+          "license": "MIT",
+          "url": "https://github.com/sbobyn/three-avbd"
+        },
+        {
+          "name": "three-voxel-destruction (sky and particles)",
+          "by": "Steven Bobyn",
+          "license": "MIT",
+          "url": "https://github.com/sbobyn/three-voxel-destruction"
+        },
+        {
+          "name": "avbd-demo2d/3d, box2d-lite (ported inside three-avbd)",
+          "by": "Chris Giles; Erin Catto",
+          "license": "MIT",
+          "url": "https://github.com/sbobyn/three-avbd"
+        },
+        {
+          "name": "Sounds: Freesound, Wikimedia Commons and Kenney recordings (some CC-BY-4.0: credit each one)",
+          "by": "listed one by one in CREDITS.txt",
+          "license": "CC0-1.0 / public domain / CC-BY-4.0",
+          "url": "https://freesound.org"
+        },
+        {
+          "name": "Textures and sky",
+          "by": "Poly Haven, ambientCG",
+          "license": "CC0-1.0",
+          "url": "https://polyhaven.com"
+        }
+      ],
+      "notes": "art_license is CC-BY-4.0 because some sounds need a credit line: copy the matching lines from CREDITS.txt into my-game/CREDITS.md if those sounds ship."
+    },
+    {
+      "id": "crowds",
+      "name": "Crowds and navigation",
+      "kind": "system",
+      "what": "Make enemies and crowds walk around any three.js level: build a navmesh from its meshes, spawn people, give them a goal; they flow around walls and each other and re-route when something lands in the way. Small API in metres, groups that arrive and stand, milling, walk/run blending, instanced mannequins.",
+      "by": "Patch (patch.gg), on recast-navigation-js by Isaac Mason",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://git.patch.gg/patch/crowds.git",
+        "commit": "35ca0a412c8b96024517124db6cbce7d90393ecc",
+        "date": "2026-11-04"
+      },
+      "vendored": "blocks/vendor/crowds/",
+      "status": "ready",
+      "renderer": "webgl2",
+      "size_kb": 1832,
+      "good_for": "Enemies that chase, townsfolk, armies, herds, tower-defence paths; any game where many characters must find their way.",
+      "not_for": "One or two characters on open flat ground (simple steering is enough); thousands of agents; 2D grid games (use a grid A*).",
+      "how_to_add": "node tools/blocks/add.mjs crowds",
+      "agent_docs": "blocks/vendor/crowds/HOW-TO-USE.md",
+      "preview": "blocks/previews/crowds.jpg",
+      "stars": null,
+      "last_push": "2026-11-04",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "recast-navigation-js (npm recast-navigation, @recast-navigation/three)",
+          "by": "Isaac Mason",
+          "license": "MIT",
+          "url": "https://github.com/isaac-mason/recast-navigation-js"
+        },
+        {
+          "name": "Recast and Detour",
+          "by": "Mikko Mononen",
+          "license": "Zlib",
+          "url": "https://github.com/recastnavigation/recastnavigation"
+        },
+        {
+          "name": "Universal Animation Library (mannequin clips)",
+          "by": "Quaternius",
+          "license": "CC0-1.0",
+          "url": "https://quaternius.com/packs/universalanimationlibrary.html"
+        },
+        {
+          "name": "postprocessing, n8ao (npm)",
+          "by": "pmndrs; N8python",
+          "license": "Zlib / ISC",
+          "url": "https://github.com/pmndrs/postprocessing"
+        }
+      ],
+      "notes": "Its upstream package-lock.json was out of sync with package.json (npm ci failed); we regenerated it with npm install. Nothing else changed."
+    },
+    {
+      "id": "pixelfx",
+      "name": "pixelfx (pixel art effects)",
+      "kind": "effect",
+      "what": "244 pixel art effects, each a small piece of code drawing into a low-resolution frame: fire, explosions, magic, hits, weather, pickups, UI, critters, and 12 whole acted-out moves. Recolour with palettes, mirror, reseed, export sprite sheets. Includes a Claude Code skill for making new ones.",
+      "by": "Patch (patch.gg)",
+      "license": "MIT",
+      "art_license": "MIT",
+      "upstream": {
+        "repo": "https://github.com/patch-gg/pixelfx",
+        "commit": "5294518ce7c72e48b6100a744596e0acf57f2826",
+        "date": "2026-11-12"
+      },
+      "vendored": "blocks/vendor/pixelfx/",
+      "status": "ready",
+      "renderer": "2d",
+      "size_kb": 3056,
+      "good_for": "Pixel art and retro games (canvas, Phaser, PixiJS, Kaplay); pixel-style effects on a three.js game via a CanvasTexture or an overlay canvas.",
+      "not_for": "Smooth realistic 3D effects (use fire, Effekseer or Ultra Elements).",
+      "how_to_add": "node tools/blocks/add.mjs pixelfx",
+      "agent_docs": "blocks/vendor/pixelfx/HOW-TO-USE.md",
+      "preview": "blocks/previews/pixelfx.jpg",
+      "stars": 7448,
+      "last_push": "2026-11-12",
+      "npm": null,
+      "built_on": [
+        {
+          "name": "Pixel art VFX method and some effects (adapted)",
+          "by": "Hugo Duprez (Sprite Fusion)",
+          "license": "MIT",
+          "url": "https://www.spritefusion.com/pixel-art-vfx"
+        },
+        {
+          "name": "Fonts in gallery/",
+          "by": "Red Hat Project Authors; Funnel Project Authors",
+          "license": "OFL-1.1",
+          "url": "https://github.com/patch-gg/pixelfx"
+        }
+      ]
+    },
+    {
+      "id": "ez-tree",
+      "name": "EZ-Tree (procedural trees)",
+      "kind": "tool",
+      "what": "Grows a procedural tree in three.js: oak, ash, aspen, pine or bush, from a preset, a seed and about 50 options, swaying in the wind.",
+      "by": "Daniel Greenheck",
+      "license": "MIT",
+      "art_license": "MIT (leaf textures); bark in Patch's copy is ambientCG CC0",
+      "upstream": {
+        "repo": "https://github.com/dgreenheck/ez-tree",
+        "commit": "dcf309bd86bd521083d9c70f01f2de45fdc7c457"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Natural-looking trees for outdoor games; making a few tree variants to bake into models.",
+      "not_for": "Low-poly or flat looks (see lowpoly-tree-generator); thousands of unique trees at runtime (bake a few, instance them).",
+      "how_to_add": "node tools/blocks/add.mjs ez-tree  (clones https://github.com/dgreenheck/ez-tree at the pinned commit into my-game/vendor/ez-tree/; read its README first)",
+      "agent_docs": "https://github.com/dgreenheck/ez-tree/blob/dcf309bd86bd521083d9c70f01f2de45fdc7c457/README.md",
+      "preview": null,
+      "stars": 1772,
+      "last_push": "2026-07-16",
+      "npm": "@dgreenheck/ez-tree",
+      "also_see": {
+        "label": "Patch's Tree generator demo (block controls around ez-tree)",
+        "url": "https://git.patch.gg/patch/tree-generator.git"
+      }
+    },
+    {
+      "id": "lowpoly-tree-generator",
+      "name": "Lowpoly Tree Generator",
+      "kind": "tool",
+      "what": "Faceted low-poly trees from six archetypes (about 1,500 triangles, vertex colours, no textures), rigged so a tree can walk, jump, stomp and swing.",
+      "by": "Pajama Studio (Rand Monster contributors)",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/pajama-studio/lowpoly-tree-generator",
+        "commit": "4377dd602717e04705e73943cd8f0ed8d21bba91"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Low-poly stylised worlds; a tree character; quick forests that match Kenney-style assets.",
+      "not_for": "Realistic looks (see ez-tree).",
+      "how_to_add": "node tools/blocks/add.mjs lowpoly-tree-generator  (clones https://github.com/pajama-studio/lowpoly-tree-generator at the pinned commit into my-game/vendor/lowpoly-tree-generator/; read its README first)",
+      "agent_docs": "https://github.com/pajama-studio/lowpoly-tree-generator/blob/4377dd602717e04705e73943cd8f0ed8d21bba91/README.md",
+      "preview": "blocks/previews/lowpoly-tree-generator.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 15,
+      "last_push": "2026-07-10",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Low-poly trees demo (an island and a walking tree)",
+        "url": "https://git.patch.gg/patch/lowpoly-trees.git"
+      }
+    },
+    {
+      "id": "nanite-forests",
+      "name": "threejs-nanites (forests at scale)",
+      "kind": "system",
+      "what": "A WebGPU renderer that draws any tree a million times: culling, impostors, wind, shadows, temporal upscaling and an auto-quality budget, with forest floor, grass, sky and terrain around it.",
+      "by": "Victor Zakharov",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/VictorZakharov/threejs-nanites",
+        "commit": "cde2f4d4bb3414553b9e39fd317186c97b3154ad"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgpu",
+      "size_kb": null,
+      "good_for": "Huge forests and open worlds in a WebGPU game.",
+      "not_for": "The starter's WebGL renderer; phones; small scenes where plain instancing is enough.",
+      "how_to_add": "node tools/blocks/add.mjs nanite-forests  (clones https://github.com/VictorZakharov/threejs-nanites at the pinned commit into my-game/vendor/nanite-forests/; read its README first)",
+      "agent_docs": "https://github.com/VictorZakharov/threejs-nanites/blob/cde2f4d4bb3414553b9e39fd317186c97b3154ad/README.md",
+      "preview": "blocks/previews/nanite-forests.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 114,
+      "last_push": "2026-11-07",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Forests at scale (baked ez-tree and low-poly trees, planting, trunk collision, a walker)",
+        "url": "https://git.patch.gg/patch/forests.git"
+      }
+    },
+    {
+      "id": "particle-fluids",
+      "name": "Three.js Particle Fluids",
+      "kind": "system",
+      "what": "Liquid, jelly, cloth and smoke as GPU particles (position-based fluids in WebGPU compute shaders); liquid, jelly and cloth push on each other.",
+      "by": "Daniel Greenheck",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/dgreenheck/threejs-particle-fluids",
+        "commit": "26ebfd2985ddd5156c932c97697980cfda92ffdf"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgpu",
+      "size_kb": null,
+      "good_for": "Pouring, sloshing, gooey or cloth toys; a liquid puzzle; a showpiece effect.",
+      "not_for": "The starter's WebGL renderer; phones; big oceans (see ultra-water).",
+      "how_to_add": "node tools/blocks/add.mjs particle-fluids  (clones https://github.com/dgreenheck/threejs-particle-fluids at the pinned commit into my-game/vendor/particle-fluids/; read its README first)",
+      "agent_docs": "https://github.com/dgreenheck/threejs-particle-fluids/blob/26ebfd2985ddd5156c932c97697980cfda92ffdf/README.md",
+      "preview": "blocks/previews/particle-fluids.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 356,
+      "last_push": "2026-09-28",
+      "npm": "threejs-particle-fluids",
+      "also_see": {
+        "label": "Patch's Particle physics demo (scenes and pointer interaction)",
+        "url": "https://git.patch.gg/patch/particle-physics.git"
+      }
+    },
+    {
+      "id": "procedural-animals",
+      "name": "procedural-animals",
+      "kind": "system",
+      "what": "24 real animals built, rigged and furred entirely in code: createAnimal('wolf'), add it to the scene and steer it. Gaits, actions (attack, sleep, eat, die) and footstep/hit events. Has an llms.txt written for agents.",
+      "by": "Majid Manzarpour and contributors",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/majidmanzarpour/threejs-procedural-animals",
+        "commit": "c95ae49346aa8e140a924376cec6cf0073d99512"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Wildlife, hunting, herding, safari or farm games; creatures without any model files.",
+      "not_for": "Cartoon or low-poly looks without restyling; hundreds of animals at once on weak hardware.",
+      "how_to_add": "node tools/blocks/add.mjs procedural-animals  (clones https://github.com/majidmanzarpour/threejs-procedural-animals at the pinned commit into my-game/vendor/procedural-animals/; read its README first)",
+      "agent_docs": "https://github.com/majidmanzarpour/threejs-procedural-animals/blob/c95ae49346aa8e140a924376cec6cf0073d99512/llms.txt",
+      "preview": "blocks/previews/procedural-animals.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 64,
+      "last_push": "2026-10-02",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Animals demo (a wolf pack on a hill, with a faster worker build)",
+        "url": "https://git.patch.gg/patch/animals.git"
+      }
+    },
+    {
+      "id": "ultra-water",
+      "name": "Ultra-Water (ocean)",
+      "kind": "effect",
+      "what": "A real-time FFT ocean: shore breakers, foam, caustics, an underwater view with sun shafts, a sky with clouds.",
+      "by": "Humpalumps",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/Humpalumps/Ultra-Water",
+        "commit": "30ea65ecb0a66b137aa200d099965634bdd84d51"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Sailing, fishing, island and beach games; anything with a lot of water on screen.",
+      "not_for": "Stylised flat water (a simple shader is cheaper); phones.",
+      "how_to_add": "node tools/blocks/add.mjs ultra-water  (clones https://github.com/Humpalumps/Ultra-Water at the pinned commit into my-game/vendor/ultra-water/; read its README first)",
+      "agent_docs": "https://github.com/Humpalumps/Ultra-Water/blob/30ea65ecb0a66b137aa200d099965634bdd84d51/README.md",
+      "preview": "blocks/previews/ultra-water.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 671,
+      "last_push": "2026-11-02",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Ocean demo (eight scenes, buoyancy read from the GPU waves, a drivable boat)",
+        "url": "https://git.patch.gg/patch/ocean.git"
+      }
+    },
+    {
+      "id": "ultra-elements",
+      "name": "Ultra Elements (spell VFX)",
+      "kind": "effect",
+      "what": "39 real-time elemental spells (fire, ice, lightning, wind, water, earth, void, light, acid, arcane), each simulated on the GPU and tunable.",
+      "by": "Humpalumps",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/Humpalumps/ultra-elements",
+        "commit": "698b720c81d8f1f282bae53633d72413b5c4408d"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Magic, wizard and action games that need big readable spells.",
+      "not_for": "Pixel or flat looks (see pixelfx).",
+      "how_to_add": "node tools/blocks/add.mjs ultra-elements  (clones https://github.com/Humpalumps/ultra-elements at the pinned commit into my-game/vendor/ultra-elements/; read its README first)",
+      "agent_docs": "https://github.com/Humpalumps/ultra-elements/blob/698b720c81d8f1f282bae53633d72413b5c4408d/README.md",
+      "preview": "blocks/previews/ultra-elements.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 116,
+      "last_push": "2026-10-30",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Elements demo (a smaller page and a library around it)",
+        "url": "https://git.patch.gg/patch/elements.git"
+      }
+    },
+    {
+      "id": "effekseer",
+      "name": "Effekseer for WebGL (+ CC0 sample effects)",
+      "kind": "effect",
+      "what": "Plays particle effects made in the free Effekseer editor inside three.js. The editor ships stylised fantasy sample effects (fire, water, lightning, slashes, heals, shields, hits) under CC0.",
+      "by": "Effekseer Project (sample effects: Pierre, NextSoft, AndrewFM, Suzuki, tktk and contributors)",
+      "license": "MIT",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://github.com/effekseer/EffekseerForWebGL",
+        "commit": "accb827e32e60d3986fe9924237ebe81d98b55f0",
+        "also": [
+          {
+            "repo": "https://github.com/effekseer/Effekseer",
+            "commit": "b5700082b49bc5f919610880dafddc90211a9a4e",
+            "what": "the editor; its Sample folder (in the editor release) has the CC0 sample effects"
+          }
+        ]
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Stylised fantasy combat effects made by effect artists; teams that want to author effects in an editor.",
+      "not_for": "Realistic fire or smoke; pixel games.",
+      "how_to_add": "node tools/blocks/add.mjs effekseer  (clones https://github.com/effekseer/EffekseerForWebGL at the pinned commit into my-game/vendor/effekseer/; read its README first)",
+      "agent_docs": "https://github.com/effekseer/EffekseerForWebGL/blob/accb827e32e60d3986fe9924237ebe81d98b55f0/README.md",
+      "preview": "blocks/previews/effekseer.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 137,
+      "last_push": "2026-10-30",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Effekseer effects demo (33 sample effects wired into three.js)",
+        "url": "https://git.patch.gg/patch/effekseer.git"
+      }
+    },
+    {
+      "id": "eanpa-sky",
+      "name": "Eanpa Sky (stylised sky)",
+      "kind": "effect",
+      "what": "A volumetric sky and weather engine for three.js WebGPU (TSL): soft painted-looking cumulus, time of day, morphing weather, cloud shadows.",
+      "by": "SkyeShark",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/SkyeShark/Eanpa-Sky",
+        "commit": "a197d3dc42577e9b870b471a39d6b1710c5b5633"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgpu",
+      "size_kb": null,
+      "good_for": "Outdoor games with a soft, painterly sky and changing weather.",
+      "not_for": "The starter's WebGL renderer as-is (Patch's one-file rewrite also runs on WebGL 2, see also_see).",
+      "how_to_add": "node tools/blocks/add.mjs eanpa-sky  (clones https://github.com/SkyeShark/Eanpa-Sky at the pinned commit into my-game/vendor/eanpa-sky/; read its README first)",
+      "agent_docs": "https://github.com/SkyeShark/Eanpa-Sky/blob/a197d3dc42577e9b870b471a39d6b1710c5b5633/README.md",
+      "preview": "blocks/previews/eanpa-sky.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 58,
+      "last_push": "2026-11-12",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Stylised sky: the sky lifted into one file (src/stylised-sky.js) that also runs on the WebGL 2 fallback and loads in about 2 s",
+        "url": "https://git.patch.gg/patch/stylised-sky.git"
+      }
+    },
+    {
+      "id": "skyscape-clouds",
+      "name": "webgpu-skyscape (volumetric clouds and atmosphere)",
+      "kind": "effect",
+      "what": "Real volumetric clouds with cloud shadows and light shafts, a day-night cycle with sun, moon and stars, and aerial haze.",
+      "by": "nagoya0, porting takram's three-clouds and three-atmosphere (Shota Matsuda)",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/nagoya0/webgpu-skyscape",
+        "commit": "322e9feac962d4f47f7edfa7a7804b0531172115",
+        "also": [
+          {
+            "repo": "https://github.com/takram-design-engineering/three-geospatial",
+            "commit": "b012ad06d858fc035d88aacfd73f092f93c994e4",
+            "what": "the original clouds and atmosphere (npm @takram/three-clouds, @takram/three-atmosphere) by Shota Matsuda and takram"
+          }
+        ]
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgpu",
+      "size_kb": null,
+      "good_for": "Flight games and big realistic outdoor skies.",
+      "not_for": "Stylised looks; weak hardware; the starter's WebGL renderer.",
+      "how_to_add": "node tools/blocks/add.mjs skyscape-clouds  (clones https://github.com/nagoya0/webgpu-skyscape at the pinned commit into my-game/vendor/skyscape-clouds/; read its README first)",
+      "agent_docs": "https://github.com/nagoya0/webgpu-skyscape/blob/322e9feac962d4f47f7edfa7a7804b0531172115/README.md",
+      "preview": "blocks/previews/skyscape-clouds.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 4,
+      "last_push": "2026-10-17",
+      "npm": "@takram/three-clouds",
+      "also_see": {
+        "label": "Patch's Clouds and sky (flattened from a planet flight demo to a game world you stand in)",
+        "url": "https://git.patch.gg/patch/clouds.git"
+      }
+    },
+    {
+      "id": "geometry-painter",
+      "name": "GeometryPainterThreeJS",
+      "kind": "tool",
+      "what": "Drag across any mesh and geometry grows along the stroke: quartz crystals, molten cracks, aurora silk, a glowing reef. Instanced and animated in shaders.",
+      "by": "mohamedachrefelouafi (Chiro Visuals)",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/achrefelouafi/GeometryPainterThreeJS",
+        "commit": "79c7556ab8c5d7bcf92fa92d7fc8063db298b5e1"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "both",
+      "size_kb": null,
+      "good_for": "Magic \"painting\" mechanics, crystal growth, corruption spreading over a surface; level dressing.",
+      "not_for": "The starter's WebGL renderer as-is (it uses three/webgpu with a WebGL 2 fallback).",
+      "how_to_add": "node tools/blocks/add.mjs geometry-painter  (clones https://github.com/achrefelouafi/GeometryPainterThreeJS at the pinned commit into my-game/vendor/geometry-painter/; read its README first)",
+      "agent_docs": "https://github.com/achrefelouafi/GeometryPainterThreeJS/blob/79c7556ab8c5d7bcf92fa92d7fc8063db298b5e1/README.md",
+      "preview": "blocks/previews/geometry-painter.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 82,
+      "last_push": "2026-08-08",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Geometry painter (even strokes at any speed, shared instance pools, painting from code)",
+        "url": "https://git.patch.gg/patch/geometry-painter.git"
+      }
+    },
+    {
+      "id": "elemental-abilities",
+      "name": "Elemental Sandbox abilities (August and September)",
+      "kind": "effect",
+      "what": "Character abilities with ground aim indicators, decals, lights, particles and camera shake: Frost Lance, Storm Lance, Cinder Fall, Nova Beam, Voltaic Snare, Glacial Crown (September), plus the August set.",
+      "by": "mohamedachrefelouafi (Chiro Visuals)",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/achrefelouafi/LinearAbiltyCastingThreeJS",
+        "commit": "97f1de19617e9a2e3af3c8021c8c21c8f58b40f3",
+        "also": [
+          {
+            "repo": "https://github.com/achrefelouafi/LinearAbilityExtThreeJS",
+            "commit": "bf58757ab9b6057515470aa074cdb4026bc54ed7",
+            "what": "the August sandbox: Pyre Crown, Kraken Crown, Electrical Sphere, Earthen Spire, Verdant Gate, Tidewrought Ring, Fire Portal, three boosts"
+          }
+        ]
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Action RPGs, MOBA-style or top-down casters that need aimed abilities.",
+      "not_for": "Pixel or flat looks.",
+      "how_to_add": "node tools/blocks/add.mjs elemental-abilities  (clones https://github.com/achrefelouafi/LinearAbiltyCastingThreeJS at the pinned commit into my-game/vendor/elemental-abilities/; read its README first)",
+      "agent_docs": "https://github.com/achrefelouafi/LinearAbiltyCastingThreeJS/blob/97f1de19617e9a2e3af3c8021c8c21c8f58b40f3/README.md",
+      "preview": "blocks/previews/elemental-abilities.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 1225,
+      "last_push": "2026-09-23",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Elemental abilities (both sandboxes in one scene, code unedited)",
+        "url": "https://git.patch.gg/patch/abilities.git"
+      }
+    },
+    {
+      "id": "cinematic-spells",
+      "name": "Elemental Sandbox (October): cinematic spells and ragdolls",
+      "kind": "effect",
+      "what": "Five 6 to 12 second spell set pieces that act on real bodies: chains, lightning, roots, crystals and falling planets pin, tear and slice ragdolls (its own position-based solver, no physics engine).",
+      "by": "mohamedachrefelouafi (Chiro Visuals)",
+      "license": "MIT",
+      "art_license": "MIT; one model (\"Magical gyroscope\" by reddification) is CC-BY-4.0",
+      "upstream": {
+        "repo": "https://github.com/achrefelouafi/AbilityCastingThreeJS",
+        "commit": "e856fac570a219df2f41ef204396a7cb97edff20"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Finishers, boss moves, spectacle moments in a magic game.",
+      "not_for": "Quick everyday attacks (too long); games without humanoid targets.",
+      "how_to_add": "node tools/blocks/add.mjs cinematic-spells  (clones https://github.com/achrefelouafi/AbilityCastingThreeJS at the pinned commit into my-game/vendor/cinematic-spells/; read its README first)",
+      "agent_docs": "https://github.com/achrefelouafi/AbilityCastingThreeJS/blob/e856fac570a219df2f41ef204396a7cb97edff20/README.md",
+      "preview": "blocks/previews/cinematic-spells.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 24,
+      "last_push": "2026-10-03",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Cinematic spells (on Patch's CC0 mannequin)",
+        "url": "https://git.patch.gg/patch/spells.git"
+      }
+    },
+    {
+      "id": "soil-and-grass",
+      "name": "Soil Studio (GrassSystemThreeJS)",
+      "kind": "effect",
+      "what": "Shader soil with mounds, moss, cracks and damp patches under about 200,000 wind-blown grass blades in one draw, with volumetric mist.",
+      "by": "mohamedachrefelouafi (Chiro Visuals)",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/achrefelouafi/GrassSystemThreeJS",
+        "commit": "b236b2a38d9f35daa2ddc7b0152544b10e635d0c"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "A beautiful patch of ground: gardens, farms, small outdoor arenas.",
+      "not_for": "Ground that reacts to the player (see touch-grass); huge terrains.",
+      "how_to_add": "node tools/blocks/add.mjs soil-and-grass  (clones https://github.com/achrefelouafi/GrassSystemThreeJS at the pinned commit into my-game/vendor/soil-and-grass/; read its README first)",
+      "agent_docs": "https://github.com/achrefelouafi/GrassSystemThreeJS/blob/b236b2a38d9f35daa2ddc7b0152544b10e635d0c/README.md",
+      "preview": "blocks/previews/soil-and-grass.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 68,
+      "last_push": "2026-07-03",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Soil and grass (a painted field for where grass grows, an earth slab, a CPU height copy so things stand on it)",
+        "url": "https://git.patch.gg/patch/soil-and-grass.git"
+      }
+    },
+    {
+      "id": "pixel-plays",
+      "name": "Pixel Plays (isometric pixel dioramas)",
+      "kind": "system",
+      "what": "Small browser games as isometric pixel dioramas: describe a ground, place boxes, spheres, trees and people, and get hue-shifted light, dither, hard shadows and wind. No build step, no dependencies. Five small games included.",
+      "by": "Amir Mushich (concept by abhi)",
+      "license": "MIT",
+      "art_license": "MIT (code-drawn); its music tracks are not licensed for reuse",
+      "upstream": {
+        "repo": "https://github.com/amirmushichge/pixel-plays",
+        "commit": "0c2a70f6809478772ac0b3976496a5147e60a43e"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "2d",
+      "size_kb": null,
+      "good_for": "Cosy isometric pixel games; tiny sports or puzzle games; a distinct pixel look without sprites.",
+      "not_for": "Full 3D games; reusing its music (generated, not licensed for reuse).",
+      "how_to_add": "node tools/blocks/add.mjs pixel-plays  (clones https://github.com/amirmushichge/pixel-plays at the pinned commit into my-game/vendor/pixel-plays/; read its README first)",
+      "agent_docs": "https://github.com/amirmushichge/pixel-plays/blob/0c2a70f6809478772ac0b3976496a5147e60a43e/README.md",
+      "preview": "blocks/previews/pixel-plays.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 504,
+      "last_push": "2026-10-31",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Pixel dioramas (the engine tidied into one function, a turnable sun, wind strength, times of day)",
+        "url": "https://git.patch.gg/patch/pixel-dioramas.git"
+      }
+    },
+    {
+      "id": "voxel-destruction",
+      "name": "three-voxel-destruction",
+      "kind": "system",
+      "what": "Teardown-style voxel destruction on the GPU: buildings of thousands of voxel bodies that really fall when what holds them up is knocked out; a chunk graph finds what no longer stands.",
+      "by": "Steven Bobyn",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/sbobyn/three-voxel-destruction",
+        "commit": "8c4b058866d78f161181fd1404aca76d9051457b"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgpu",
+      "size_kb": null,
+      "good_for": "Voxel demolition and siege games.",
+      "not_for": "Browsers without WebGPU; phones; smooth-mesh destruction (see destruction).",
+      "how_to_add": "node tools/blocks/add.mjs voxel-destruction  (clones https://github.com/sbobyn/three-voxel-destruction at the pinned commit into my-game/vendor/voxel-destruction/; read its README first)",
+      "agent_docs": "https://github.com/sbobyn/three-voxel-destruction/blob/8c4b058866d78f161181fd1404aca76d9051457b/README.md",
+      "preview": "blocks/previews/voxel-destruction.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 26,
+      "last_push": "2026-09-28",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Voxel destruction (a town block, a stone bridge and a house; fixes and look from its game Brickfall)",
+        "url": "https://git.patch.gg/patch/voxel-destruction.git"
+      }
+    },
+    {
+      "id": "three-avbd",
+      "name": "three-avbd (GPU rigid-body physics)",
+      "kind": "system",
+      "what": "Augmented Vertex Block Descent (SIGGRAPH 2025) rigid bodies solved in WebGPU compute shaders, with breakable joints. The physics under the destruction block.",
+      "by": "Steven Bobyn",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/sbobyn/three-avbd",
+        "commit": "f3d8c48cc640b8f29899e43c5655a90cebfbb4d8"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgpu",
+      "size_kb": null,
+      "good_for": "Thousands of stacked or jointed bodies on the GPU.",
+      "not_for": "Ordinary game physics (Rapier is simpler and runs everywhere).",
+      "how_to_add": "node tools/blocks/add.mjs three-avbd  (clones https://github.com/sbobyn/three-avbd at the pinned commit into my-game/vendor/three-avbd/; read its README first)",
+      "agent_docs": "https://github.com/sbobyn/three-avbd/blob/f3d8c48cc640b8f29899e43c5655a90cebfbb4d8/README.md",
+      "preview": null,
+      "stars": 161,
+      "last_push": "2026-11-11",
+      "npm": "three-avbd",
+      "also_see": {
+        "label": "Our vendored destruction block uses it",
+        "url": "blocks/vendor/destruction/"
+      }
+    },
+    {
+      "id": "recast-navigation",
+      "name": "recast-navigation-js (navmesh and crowds)",
+      "kind": "system",
+      "what": "Navmesh building, pathfinding and crowd simulation in the browser, with three.js helpers (@recast-navigation/three).",
+      "by": "Isaac Mason (WebAssembly port of Recast and Detour by Mikko Mononen, Zlib)",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/isaac-mason/recast-navigation-js",
+        "commit": "8a2ece9f8b4947fcb328e17c7ac76c41744021b3"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "none",
+      "size_kb": null,
+      "good_for": "Any game where characters must find their way around a 3D level.",
+      "not_for": "Grid-based 2D games (a grid A* is simpler).",
+      "how_to_add": "node tools/blocks/add.mjs recast-navigation  (clones https://github.com/isaac-mason/recast-navigation-js at the pinned commit into my-game/vendor/recast-navigation/; read its README first)",
+      "agent_docs": "https://github.com/isaac-mason/recast-navigation-js/blob/8a2ece9f8b4947fcb328e17c7ac76c41744021b3/README.md",
+      "preview": null,
+      "stars": 440,
+      "last_push": "2026-10-30",
+      "npm": "recast-navigation",
+      "also_see": {
+        "label": "Our vendored crowds block wraps it in a small game API",
+        "url": "blocks/vendor/crowds/"
+      }
+    },
+    {
+      "id": "procedural-terrains",
+      "name": "ProceduralTerrains",
+      "kind": "system",
+      "what": "Whole worlds from a seed: volcanic coasts, islands, snowy peaks, canyons, dunes, with water, clouds, erosion and an infinite or planet mode.",
+      "by": "ZyFou",
+      "license": "MIT",
+      "art_license": "optional texture pack: Poly Haven and ambientCG, CC0",
+      "upstream": {
+        "repo": "https://github.com/ZyFou/ProceduralTerrains",
+        "commit": "8349b2c8c8637f355bfe17e01c76807d41994407"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Flying, strategy, island and far-away land seen from the air.",
+      "not_for": "First-person ground: up close it is smooth and blurry, with no grass, rocks or trees. Skip its GPL-3 Blender plugin if you copy the repo.",
+      "how_to_add": "node tools/blocks/add.mjs procedural-terrains  (clones https://github.com/ZyFou/ProceduralTerrains at the pinned commit into my-game/vendor/procedural-terrains/; read its README first)",
+      "agent_docs": "https://github.com/ZyFou/ProceduralTerrains/blob/8349b2c8c8637f355bfe17e01c76807d41994407/README.md",
+      "preview": "blocks/previews/procedural-terrains.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 673,
+      "last_push": "2026-11-04",
+      "npm": "procedural-terrains",
+      "also_see": {
+        "label": "Patch's Terrain (a wrapper with a sky, haze, preset worlds, height reading and a faster load)",
+        "url": "https://git.patch.gg/patch/terrain.git"
+      }
+    },
+    {
+      "id": "dungeon-forge",
+      "name": "Dungeon Forge (procedural dungeons)",
+      "kind": "system",
+      "what": "Deterministic seeded dungeons: rooms with roles (entrance, combat, elite, treasure, shrine, boss), corridors that connect them, five themes, a geometry kit, liquids, particles and post-processing.",
+      "by": "Majid Manzarpour",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://github.com/majidmanzarpour/threejs-procedural-dungeon",
+        "commit": "0a2aa0980028cbbc77af6642b4232b45713dc5de"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Roguelikes and dungeon crawlers; any game that needs a new level layout per run.",
+      "not_for": "Realistic stone crypts (see realistic-procedural-dungeons); outdoor levels.",
+      "how_to_add": "node tools/blocks/add.mjs dungeon-forge  (clones https://github.com/majidmanzarpour/threejs-procedural-dungeon at the pinned commit into my-game/vendor/dungeon-forge/; read its README first)",
+      "agent_docs": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/README.md",
+      "preview": "blocks/previews/dungeon-forge.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 526,
+      "last_push": "2026-07-05",
+      "npm": null,
+      "also_see": {
+        "label": "Patch's Dungeons (generator split from the view so you get plain data and a grid for any game, plus a first-person walk)",
+        "url": "https://git.patch.gg/patch/dungeons.git"
+      }
+    },
+    {
+      "id": "00gamedevs-vfx",
+      "name": "00GameDevs magic VFX starter pack",
+      "kind": "effect",
+      "what": "Five magic effects by their author (Darkchain Sigil Rupture, Rift-Shattering Slashes, Luminous Vortex Black Hole, Golden Chain Rain, Sacred Relic Descent), one ES module each with createVFX(options), update(dt), stop(), dispose(). Needs three 0.187 and WebGL2.",
+      "by": "00GameDevs (00vchannel)",
+      "license": "MIT",
+      "art_license": null,
+      "upstream": {
+        "repo": "https://git.patch.gg/00vchannel/00gamedevs-vfx-starter.git",
+        "commit": "c73cf5140b04a23bcab9f01a81e2f6d82425d706"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "webgl2",
+      "size_kb": null,
+      "good_for": "Big flashy magic moments in a three.js game; the author's site has a larger free catalog with an agent integration guide.",
+      "not_for": "Pixel or flat looks; many effects on screen at once on weak hardware.",
+      "how_to_add": "node tools/blocks/add.mjs 00gamedevs-vfx  (clones https://git.patch.gg/00vchannel/00gamedevs-vfx-starter.git at the pinned commit into my-game/vendor/00gamedevs-vfx/; read its README first)",
+      "agent_docs": "https://00gamedevs.com/ai/catalog.v2.json",
+      "preview": "blocks/previews/00gamedevs-vfx.jpg",
+      "preview_note": "the author's own effect previews",
+      "stars": null,
+      "last_push": "2026-11-10",
+      "npm": null,
+      "homepage": "https://00gamedevs.com",
+      "notes": "This repo is the author's own release (not a Patch remake). The author's site guide asks agents to report downloads to their API; that is optional and not needed when you take the files from this repo."
+    },
+    {
+      "id": "trompe",
+      "name": "trompe (paint a grey level with image models)",
+      "kind": "tool",
+      "what": "Textures a whole grey blockout level with image models: plans cameras where a player can stand, paints what each sees, projects and bakes one texture lit by a real sun, glTF out. Paid image calls on your own key.",
+      "by": "Patch (patch.gg)",
+      "license": "Apache-2.0",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://github.com/patch-gg/trompe",
+        "commit": "ba9ef76687f57eef157057c7592d26e59c805992"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "none",
+      "size_kb": null,
+      "good_for": "Realistic buildings seen from a few metres or more; trailers; a first look at a level before real art.",
+      "not_for": "Stylised looks; ground at a first-person player's feet; anyone with a $0 generation budget (it makes paid calls: ask the user first).",
+      "how_to_add": "node tools/blocks/add.mjs trompe  (clones https://github.com/patch-gg/trompe at the pinned commit into my-game/vendor/trompe/; read its README first)",
+      "agent_docs": "https://github.com/patch-gg/trompe/blob/ba9ef76687f57eef157057c7592d26e59c805992/README.md",
+      "preview": "blocks/previews/trompe.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 218,
+      "last_push": "2026-11-13",
+      "npm": null,
+      "notes": "A big tool (about 50 MB repo), not vendored. Clone it at the pinned commit if the user wants it and has agreed to the cost."
+    },
+    {
+      "id": "anymove",
+      "name": "anymove (motion capture for any creature from one AI video)",
+      "kind": "tool",
+      "what": "Turns one AI video into a real animation on a creature's own skeleton (wings, tails, eight legs): two cameras in one frame, a DINOv2 joint reader, the rig fitted in both views, a GLB out. Python and ML; uses paid video generation.",
+      "by": "Patch (patch.gg)",
+      "license": "Apache-2.0",
+      "art_license": "CC0-1.0",
+      "upstream": {
+        "repo": "https://github.com/patch-gg/anymove",
+        "commit": "8b42c4818ea702de90edd7f2cb22195b6a34dbf0"
+      },
+      "vendored": null,
+      "status": "reference-only",
+      "renderer": "none",
+      "size_kb": null,
+      "good_for": "Custom animations for odd creatures that no animation pack covers.",
+      "not_for": "Humanoids (free Mixamo-style or Quaternius CC0 clips are easier); a $0 budget; machines without a capable GPU or Python setup.",
+      "how_to_add": "node tools/blocks/add.mjs anymove  (clones https://github.com/patch-gg/anymove at the pinned commit into my-game/vendor/anymove/; read its README first)",
+      "agent_docs": "https://github.com/patch-gg/anymove/blob/8b42c4818ea702de90edd7f2cb22195b6a34dbf0/README.md",
+      "preview": "blocks/previews/anymove.jpg",
+      "preview_note": "still from Patch's game-ready demo of this project",
+      "stars": 592,
+      "last_push": "2026-11-13",
+      "npm": null,
+      "notes": "A big Python tool (about 14 MB repo plus model weights), not vendored. Ask the user before any paid video generation."
+    }
+  ]
+}

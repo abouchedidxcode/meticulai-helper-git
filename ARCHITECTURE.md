@@ -18,11 +18,16 @@ meticulai-helper-git/          <- the kit (workspace root)
   commands/<name>.md           Claude Code slash commands (thin wrappers around skills)
   autopilot/                   running unattended for hours
   swarm/                       running several agents at once
-  templates/                   GREAT, HANDOVER, DECISIONS, DEVLOG, CREDITS, paid-ledger, CONTRACTS
+  templates/                   GREAT, HANDOVER, DECISIONS, DEVLOG, CREDITS, paid-ledger, CONTRACTS, REFS, ASSETS,
+                               palette.json
+  sources/                     free asset libraries: catalog.json, libraries.json (code libraries), <id>.md, packs/
+  blocks/                      ready-made effects/systems as code: catalog.json, vendor/<id>/, previews/, CREDITS.md
   playbook/, case-studies/     what makes games good, learned the hard way
   recipes/                     tested code snippets for the starter
   guides/                      for humans with zero technical background
   tools/                       Node scripts (no build step)
+    assets/                    find, get (and promote), look, restyle, palette-from
+    blocks/                    list, add
   starter/                     the starter game (copied to my-game/ by tools/init.mjs)
 
   my-game/                     <- created by `node tools/init.mjs`; EVERYTHING the user makes
@@ -30,6 +35,10 @@ meticulai-helper-git/          <- the kit (workspace root)
     index.html, src/, public/  the game (a Vite + three.js project)
     package.json
     GREAT.md HANDOVER.md DECISIONS.md DEVLOG.md CREDITS.md paid-ledger.md CONTRACTS.md
+    ASSETS.md                  the asset plan: every need, the ladder choice, the chosen asset, rejections and why
+    palette.json               the game's colours and light (read by restyle.mjs --palette and look.mjs --in-game)
+    public/assets/<kind>/      assets brought in by tools/assets/get.mjs (credit line added to CREDITS.md)
+    vendor/<block-id>/         blocks copied in by tools/blocks/add.mjs (with their licence and credit)
     refs/                      the user's pictures and videos (they drag files in here)
       REFS.md                  what each reference is FOR and what to ignore
       sheets/                  contact sheets made from videos (by tools/refs/intake.mjs)
@@ -37,9 +46,33 @@ meticulai-helper-git/          <- the kit (workspace root)
     recordings/<stamp>/        play-through recordings: video.mp4, sheet-*.jpg, shots/, log.txt
     playtest-notes/            notes the user left in-game (NOTES.md + shots/)
     .helper/                   runtime files: server.json, server.log, fal-ledger.jsonl (git-ignored)
+      candidates/              assets pulled for a look (get.mjs --candidate); not part of the game
+      scout/<category>/        asset-scout shortlists (SHORTLIST.md) and look images
+
+~/.cache/meticulai-helper/     downloaded assets, shared by every project on the machine (safe to delete)
 ```
 
 Tools default to `my-game/`. Every tool accepts `--dir <path>` (or env `HELPER_GAME_DIR`) to point elsewhere.
+
+## Assets (`skills/find-assets/SKILL.md`)
+
+The ladder for every need in `my-game/ASSETS.md`: block (`blocks/catalog.json`) -> CC0 asset -> credit-required asset
+(`sources/catalog.json`) -> made in code -> fal. Assets move: `find.mjs` (search, contact sheet) -> `get.mjs --candidate`
+(`.helper/candidates/`) -> `look.mjs` (render to judge) -> optional `restyle.mjs` -> `get.mjs <id>` or
+`get.mjs promote <path>` (`public/assets/<kind>/` + a line in `CREDITS.md`). Blocks: `tools/blocks/add.mjs <id>`
+copies `blocks/vendor/<id>/` into `my-game/vendor/<id>/`. Game code loads assets with relative paths
+(`./assets/models/x.glb`).
+
+`my-game/palette.json`:
+
+```json
+{
+  "name": "warm dusk",
+  "colors": { "base": ["#93ad5e", "#b9957a"], "accent": ["#ffc46b"], "shadow": "#4a3f5e", "light": "#ffc08a" },
+  "light": { "sun": "#ffc08a", "ambient": "#b4c0e6", "fog": "#7d6a86", "exposure": 1.1 },
+  "notes": "..."
+}
+```
 
 ## `my-game/helper.json`
 

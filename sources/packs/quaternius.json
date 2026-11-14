@@ -1,0 +1,2381 @@
+{
+ "checked": "2026-11-14",
+ "source": "quaternius",
+ "notes": "Built from the quaternius.com home page (one request) and each pack page (84 requests, 2 s apart; quaternius.com has no robots.txt). page_license_label is what the pack page shows (82 say CC0, 2 newest say QAL). The site licence page (QAL v1.0, updated 2026-08-28) says it covers assets \"regardless of the specific site or platform through which they were obtained\": treat every pack as QAL to be safe (free in games, no credit, never re-share the files as assets). Downloads are Google Drive folders (older packs) or itch.io free tiers (newer): the user downloads by hand. Prefer packs whose formats include gltf/glb.",
+ "packs": [
+  {
+   "id": "charactersfantasyraces",
+   "name": "Characters - Fantasy Races",
+   "url": "https://quaternius.com/packs/charactersfantasyraces.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/characters-fantasy-races",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "rigged",
+    "retargetable",
+    "characters",
+    "fantasy",
+    "races"
+   ],
+   "count": 12,
+   "preview": "https://quaternius.com/assets/images/thumbnails/charactersfantasyraces.jpg",
+   "license": "LicenseRef-Quaternius-QAL-1.0",
+   "page_license_label": "QAL",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "bestiarydungeonmonsterskit",
+   "name": "Bestiary - Dungeon Monsters Kit",
+   "url": "https://quaternius.com/packs/bestiarydungeonmonsterskit.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/bestiary-dungeon-monsters-kit",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "rigged",
+    "retargetable",
+    "bestiary",
+    "dungeon",
+    "monsters"
+   ],
+   "count": 7,
+   "preview": "https://quaternius.com/assets/images/thumbnails/bestiarydungeonmonsterskit.jpg",
+   "license": "LicenseRef-Quaternius-QAL-1.0",
+   "page_license_label": "QAL",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "downtowncitymegakit",
+   "name": "Downtown City MegaKit",
+   "url": "https://quaternius.com/packs/downtowncitymegakit.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/downtown-city-megakit",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "environment",
+    "modular",
+    "downtown",
+    "city",
+    "megakit"
+   ],
+   "count": 315,
+   "preview": "https://quaternius.com/assets/images/thumbnails/downtowncitymegakit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "universalanimationlibrary2",
+   "name": "Universal Animation Library 2",
+   "url": "https://quaternius.com/packs/universalanimationlibrary2.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/universal-animation-library-2",
+   "kinds": [
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "retarget",
+    "humanoid rig",
+    "universal",
+    "animation",
+    "library"
+   ],
+   "count": 1,
+   "preview": "https://quaternius.com/assets/images/thumbnails/universalanimationlibrary2.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "glb",
+    "blend"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "modularcharacteroutfitsfantasy",
+   "name": "Modular Character Outfits - Fantasy",
+   "url": "https://quaternius.com/packs/modularcharacteroutfitsfantasy.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "rigged",
+    "retargetable",
+    "modular",
+    "character",
+    "outfits",
+    "fantasy"
+   ],
+   "count": 74,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modularcharacteroutfitsfantasy.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "universalbasecharacters",
+   "name": "Universal Base Characters",
+   "url": "https://quaternius.com/packs/universalbasecharacters.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/universal-base-characters",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "rigged",
+    "retargetable",
+    "universal",
+    "base",
+    "characters"
+   ],
+   "count": 26,
+   "preview": "https://quaternius.com/assets/images/thumbnails/universalbasecharacters.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "fantasypropsmegakit",
+   "name": "Fantasy Props MegaKit",
+   "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/fantasy-props-megakit",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "furniture",
+    "weapons",
+    "fantasy",
+    "props",
+    "megakit"
+   ],
+   "count": 211,
+   "preview": "https://quaternius.com/assets/images/thumbnails/fantasypropsmegakit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "universalanimationlibrary",
+   "name": "Universal Animation Library",
+   "url": "https://quaternius.com/packs/universalanimationlibrary.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/universal-animation-library",
+   "kinds": [
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "retarget",
+    "humanoid rig",
+    "universal",
+    "animation",
+    "library"
+   ],
+   "count": 1,
+   "preview": "https://quaternius.com/assets/images/thumbnails/universalanimationlibrary.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "glb",
+    "blend"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "medievalvillagemegakit",
+   "name": "Medieval Village MegaKit",
+   "url": "https://quaternius.com/packs/medievalvillagemegakit.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/medieval-village-megakit",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "modular",
+    "environment",
+    "medieval",
+    "village",
+    "megakit"
+   ],
+   "count": 304,
+   "preview": "https://quaternius.com/assets/images/thumbnails/medievalvillagemegakit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "scifiessentialskit",
+   "name": "Sci-Fi Essentials Kit",
+   "url": "https://quaternius.com/packs/scifiessentialskit.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/sci-fi-essentials-kit",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "guns",
+    "enemies",
+    "sci",
+    "essentials"
+   ],
+   "count": 65,
+   "preview": "https://quaternius.com/assets/images/thumbnails/scifiessentialskit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "modularscifimegakit",
+   "name": "Modular Sci-Fi Megakit",
+   "url": "https://quaternius.com/packs/modularscifimegakit.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/modular-sci-fi-megakit",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "alien",
+    "environment",
+    "modular",
+    "sci",
+    "megakit"
+   ],
+   "count": 277,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modularscifimegakit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "stylizednaturemegakit",
+   "name": "Stylized Nature MegaKit",
+   "url": "https://quaternius.com/packs/stylizednaturemegakit.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/stylized-nature-megakit",
+   "kinds": [
+    "model"
+   ],
+   "style": "stylized",
+   "tags": [
+    "ghibli",
+    "game kit",
+    "stylized",
+    "nature",
+    "megakit"
+   ],
+   "count": 116,
+   "preview": "https://quaternius.com/assets/images/thumbnails/stylizednaturemegakit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "3dcardkitfantasy",
+   "name": "3D Card Kit - Fantasy",
+   "url": "https://quaternius.com/packs/3dcardkitfantasy.html",
+   "download": null,
+   "download_page": "https://quaternius.itch.io/3d-card-kit-fantasy",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "tabletop",
+    "board games",
+    "card",
+    "fantasy"
+   ],
+   "count": 50,
+   "preview": "https://quaternius.com/assets/images/thumbnails/3dcardkitfantasy.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": null,
+   "what": null
+  },
+  {
+   "id": "zombieapocalypsekit",
+   "name": "Zombie Apocalypse Kit",
+   "url": "https://quaternius.com/packs/zombieapocalypsekit.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1mWP6sCHun7OUMHQeDNZLrXTteXlzWg_t?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "zombie",
+    "game kit",
+    "apocalypse"
+   ],
+   "count": 60,
+   "preview": "https://quaternius.com/assets/images/thumbnails/zombieapocalypse.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "March 2024",
+   "what": "The Zombie Apocalypse kit is here! 4 Playable characters, 20 animations each, 4 enemies, and best of all 2 DOGS. Plenty of environmental and vehicle models as well. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "piratekit",
+   "name": "Pirate Kit",
+   "url": "https://quaternius.com/packs/piratekit.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1KjMzhVsDcyvYMWeVjZcRfuu8auBLpNi2?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "pirate",
+    "game kit"
+   ],
+   "count": 71,
+   "preview": "https://quaternius.com/assets/images/thumbnails/piratekit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "November 2023",
+   "what": "A pirate game kit with a diverse cast of animated characters and environmental models. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "cubeworldkit",
+   "name": "Cube World Kit",
+   "url": "https://quaternius.com/packs/cubeworldkit.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1Yyag0ibcOX6lOBY9a3m6iPnz8HwjwLFJ?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "cube",
+    "game kit",
+    "world"
+   ],
+   "count": 108,
+   "preview": "https://quaternius.com/assets/images/thumbnails/cubeworld.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "August 2023",
+   "what": "Create your own cube world with animated characters, animals, enemies and environmental models. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "sushirestaurantkit",
+   "name": "Sushi Restaurant Kit",
+   "url": "https://quaternius.com/packs/sushirestaurantkit.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1srOaThdSqYBtmrqq9couZShM5r0cw_bH?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "restaurant",
+    "game kit",
+    "sushi"
+   ],
+   "count": 108,
+   "preview": "https://quaternius.com/assets/images/thumbnails/sushirestaurantkit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "May 2023",
+   "what": "Create your own cooking game! With Food ingredients and dishes, animated characters with 30 animations, and modular interior models. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatespacekit",
+   "name": "Ultimate Space Kit",
+   "url": "https://quaternius.com/packs/ultimatespacekit.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/17F8HlI2zPTlo32aieW5YPPwOk78xo-2m?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "space",
+    "game kit"
+   ],
+   "count": 92,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatespacekit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "March 2023",
+   "what": "A huge pack with everything you need to make a space game, animated characters, enemies, vegetation, planets and a lot more. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "toonshootergamekit",
+   "name": "Toon Shooter Game Kit",
+   "url": "https://quaternius.com/packs/toonshootergamekit.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1-BDs_EIyd6uiF2XuoyiZEcqnMQIJrE0C?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "shooter",
+    "game kit",
+    "toon",
+    "game"
+   ],
+   "count": 74,
+   "preview": "https://quaternius.com/assets/images/thumbnails/toonshootergamekit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "December 2022",
+   "what": "A huge pack with everything you need to make a toon shooter, characters with 17 animations, enemies, environmental assets and more!. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatemonsters",
+   "name": "Ultimate Monsters",
+   "url": "https://quaternius.com/packs/ultimatemonsters.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/18m4KpzpEzhC9wl7jzr6dUc0N8Jozr79C?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "ultimate",
+    "monsters"
+   ],
+   "count": 50,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatemonsters.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "October 2022",
+   "what": "This pack includes 50 fully animated monsters. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatefantasyrts",
+   "name": "Ultimate Fantasy RTS",
+   "url": "https://quaternius.com/packs/ultimatefantasyrts.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1h7sztlZyavWla-JDk3jp6KiWDdMh08yd?usp=sharing ",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "medieval",
+    "isometric",
+    "fantasy",
+    "rts"
+   ],
+   "count": 128,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatefantasyrts.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "August 2022",
+   "what": "This pack includes a collection of buildings in different evolution stages, along with nature assets. All in FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "cyberpunkgamekit",
+   "name": "Cyberpunk Game Kit",
+   "url": "https://quaternius.com/packs/cyberpunkgamekit.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1GyKLypoBxrpLN6GERF9U610Wiub48v9y?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "cyberpunk",
+    "game kit",
+    "game"
+   ],
+   "count": 71,
+   "preview": "https://quaternius.com/assets/images/thumbnails/cyberpunkgamekit.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "July 2022",
+   "what": "A huge pack with everything you need to make a game, animated character, enemies, platforms with modular parts, turrets, and a lot more. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatestylizednature",
+   "name": "Ultimate Stylized Nature Pack",
+   "url": "https://quaternius.com/packs/ultimatestylizednature.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1IV3bXHzkNvuNWFHPi4KPx-G4ghuxIuT-?usp=sharing ",
+   "kinds": [
+    "model"
+   ],
+   "style": "stylized",
+   "tags": [
+    "nature",
+    "textured",
+    "stylized"
+   ],
+   "count": 63,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatestylizednature.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "May 2022",
+   "what": "This pack includes 60+ nature assets, with seamless textures and normal maps. All in FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatemodularwomen",
+   "name": "Ultimate Modular Women Pack",
+   "url": "https://quaternius.com/packs/ultimatemodularwomen.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1720N9IGyQHXYvtvZJzazhxtTTlz-y2Vf?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "women",
+    "modular"
+   ],
+   "count": 10,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modularwomen.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "February 2022",
+   "what": "10 Different characters with 24 animations! Each character is divided into 4 models that can be swapped to create new combinations, humanoid rig version also included. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatemodularcharacters",
+   "name": "Ultimate Modular Men Pack",
+   "url": "https://quaternius.com/packs/ultimatemodularcharacters.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1USAAquX2JJWuA2m6zol0KUkFe3UkZ8zX?usp=sharing ",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "men",
+    "modular"
+   ],
+   "count": 11,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modularcharacters.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "February 2022",
+   "what": "11 Different characters with 24 animations! Each character is divided into 4 models that can be swapped to create new combinations. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimateplatformer",
+   "name": "Platformer Game Kit",
+   "url": "https://quaternius.com/packs/ultimateplatformer.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1NDZn_aGnn0vfFV3M22Y8GPcDjO8BVcLs?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "platformer",
+    "game kit",
+    "game"
+   ],
+   "count": 112,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimateplatformer.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "December 2021",
+   "what": "A huge pack with everything you need to make a platformer, character with 18 animations, enemies, platforms, we got it all!. In FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "scifimodularguns",
+   "name": "Sci-Fi Modular Gun Pack",
+   "url": "https://quaternius.com/packs/scifimodularguns.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1P5j8xZyIEmZGHjGYmIgYCev9SVmB-IHC?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "sci-fi",
+    "modular",
+    "guns",
+    "sci",
+    "gun"
+   ],
+   "count": 78,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modularscifiguns.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "November 2021",
+   "what": "A set of modular parts and assembled Sci-Fi Guns. All in FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatemodularruins",
+   "name": "Ultimate Modular Ruins Pack",
+   "url": "https://quaternius.com/packs/ultimatemodularruins.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1ETp2ldaHaP0BkS4FBmkT-g9Yf88T_cIX?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "modular",
+    "medieval",
+    "ruins"
+   ],
+   "count": 90,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatemodularruins.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "August 2021",
+   "what": "This pack includes a huge set of modular ruins and dungeons, an animated character and a set of props. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimateanimatedanimals",
+   "name": "Ultimate Animated Animal Pack",
+   "url": "https://quaternius.com/packs/ultimateanimatedanimals.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1uJ3N5HfB7jKTseJUNQr3N4YaN0UuEtHk?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "animals",
+    "animal"
+   ],
+   "count": 12,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimateanimatedanimal.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "July 2021",
+   "what": "This pack includes 12 different animals, each with more than 12 unique animations (Attack, Death, Kicks, Gallops, Walk, Jump and many more!). All in FBX, OBJ, glTF and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatespaceships",
+   "name": "Ultimate Spaceships Pack",
+   "url": "https://quaternius.com/packs/ultimatespaceships.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1NpfT3wqe2k3Jwue2xryi7tzxP4bWzETu?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "sci-fi",
+    "futuristic",
+    "spaceships"
+   ],
+   "count": 10,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatespaceships.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "May 2021",
+   "what": "This pack includes 10 different spaceships In FBX, OBJ, glTF and Blend formats, with 5 color variations each, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedmech",
+   "name": "Animated Mech Pack",
+   "url": "https://quaternius.com/packs/animatedmech.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1sueV_4CGMpZC8y30mWfgKK9UaT3mkHBX?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "mech",
+    "sci-fi"
+   ],
+   "count": 4,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedmech.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "March 2021",
+   "what": "This pack includes 4 different mechs, each with their own set of animations. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatemodularscifi",
+   "name": "Ultimate Modular Sci-Fi Pack",
+   "url": "https://quaternius.com/packs/ultimatemodularscifi.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1zpr6HxVa-sCV93IHubN3A1d8HhF2wGbM?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "modular",
+    "sci-fi",
+    "sci"
+   ],
+   "count": 46,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatemodularscifi.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "February 2021",
+   "what": "This pack contains a huge set of modular sci-fi interior assets and props. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "medievalvillage",
+   "name": "Medieval Village Pack",
+   "url": "https://quaternius.com/packs/medievalvillage.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/18T92VcNldHG0ugWo1u0hSJGDLua-n7o5?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "medieval",
+    "buildings",
+    "village"
+   ],
+   "count": 44,
+   "preview": "https://quaternius.com/assets/images/thumbnails/medievalvillage.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "December 2020",
+   "what": "This pack includes a set of medieval buildings and props. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "rpgcharacters",
+   "name": "RPG Character Pack",
+   "url": "https://quaternius.com/packs/rpgcharacters.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1MIRQXLfTd21HMI5rwOb6Xy0rv0xv1m8b?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "rpg",
+    "characters",
+    "character"
+   ],
+   "count": 6,
+   "preview": "https://quaternius.com/assets/images/thumbnails/rpgcharacter.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "November 2020",
+   "what": "This pack contains 6 different rigged, animated and textured fantasy characters, in .FBX, .OBJ and .Blend formats, free to use in both personal and commercial projects."
+  },
+  {
+   "id": "survival",
+   "name": "Survival Pack",
+   "url": "https://quaternius.com/packs/survival.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1NKfC95GMWWJquy6rRzwFVkVDoZ_QP7K_?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "first aid",
+    "survival"
+   ],
+   "count": 53,
+   "preview": "https://quaternius.com/assets/images/thumbnails/survival.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "September 2020",
+   "what": "A set of 50+ survival assets, in .FBX, .OBJ and .Blend formats, free to use in both personal and commercial projects."
+  },
+  {
+   "id": "cutemonsters",
+   "name": "Cute Animated Monsters Pack",
+   "url": "https://quaternius.com/packs/cutemonsters.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1zLLO_7ZoWgUsS4uooYnVSErQYRu1VdS0?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "monsters",
+    "enemy",
+    "cute"
+   ],
+   "count": 21,
+   "preview": "https://quaternius.com/assets/images/thumbnails/cutemonsters.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf"
+   ],
+   "released": "August 2020",
+   "what": "This pack includes 21 cute animated monsters, each with their own animations and textures. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatehomeinterior",
+   "name": "Ultimate House Interior Pack",
+   "url": "https://quaternius.com/packs/ultimatehomeinterior.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1SNK9PwPi8xqqxmpU5xEZeiQjB26C1oX6?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "house",
+    "interior",
+    "furniture"
+   ],
+   "count": 123,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatehouseinterior.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "June 2020",
+   "what": "The ultimate house interior pack, with 120+ models, everything from doors and windows to kitchen and bathroom furniture! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "stylizedtree",
+   "name": "Stylized Tree Pack",
+   "url": "https://quaternius.com/packs/stylizedtree.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1GlrFUFcNj6KIuc4-QpVEiRcXVUzSClP2?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "stylized",
+   "tags": [
+    "stylized",
+    "textured",
+    "trees",
+    "tree"
+   ],
+   "count": 45,
+   "preview": "https://quaternius.com/assets/images/thumbnails/stylizedtree.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "May 2020",
+   "what": "A set of stylized animal crossing style trees! in FBX, OBJ and Blend formats."
+  },
+  {
+   "id": "turretpack",
+   "name": "Steampunk Turret Pack",
+   "url": "https://quaternius.com/packs/turretpack.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1HenXNzxU2HJMDOGQj9LKRHk9eHrBgoya?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "steampunk",
+    "turrets",
+    "turret"
+   ],
+   "count": 37,
+   "preview": "https://quaternius.com/assets/images/thumbnails/turrets.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "March 2020",
+   "what": "A set of 37 different Steampunk Turrets. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "cutefish",
+   "name": "Animated Cute Fish Pack",
+   "url": "https://quaternius.com/packs/cutefish.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1QK5NCgIxUZ1cYGzVwaNfcfEiQhvczqUB?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "fish",
+    "animals",
+    "cute"
+   ],
+   "count": 52,
+   "preview": "https://quaternius.com/assets/images/thumbnails/cutefish.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "February 2020",
+   "what": "This pack includes more than 50 animated cute fish models, along with fishing rods, lures and more. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatecrops",
+   "name": "Ultimate Crops Pack",
+   "url": "https://quaternius.com/packs/ultimatecrops.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1uhbi-NWp7pwqOGtraBZurbphyxAvoABZ?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "nature",
+    "crops",
+    "ultimate"
+   ],
+   "count": 102,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatecrops.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "January 2020",
+   "what": "The ultimate crops pack, 100+ models of different crops in 5 stages of growth! FBX, OBJ and Blend formats."
+  },
+  {
+   "id": "ultimatetexturedbuildings",
+   "name": "Ultimate Buildings Pack",
+   "url": "https://quaternius.com/packs/ultimatetexturedbuildings.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1RE3qXhbE5yGS3t-xGFJ8GmOtTgCUF3LQ?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "stylized",
+   "tags": [
+    "textured",
+    "buildings"
+   ],
+   "count": 76,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatebuildings.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "December 2019",
+   "what": "This pack includes a set of modular buildings, with different atlas textures to change the palette. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatedanimatedcharacter",
+   "name": "Ultimate Animated Character Pack",
+   "url": "https://quaternius.com/packs/ultimatedanimatedcharacter.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1sNi1AfenfPRrvRt5yfaj5QMMd6KKcUJ5?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "characters",
+    "character"
+   ],
+   "count": 52,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimateanimatedcharacter.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "November 2019",
+   "what": "50+ different animated characters, with many animations! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatefood",
+   "name": "Ultimate Food Pack",
+   "url": "https://quaternius.com/packs/ultimatefood.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1zMfN7q9VU80M7mLAbBBJyY2OdoXslbl1?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "food",
+    "consumables",
+    "ultimate"
+   ],
+   "count": 103,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatefood.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "October 2019",
+   "what": "This pack contains 100+ different food and consumable models! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimaterpg",
+   "name": "Ultimate RPG Pack",
+   "url": "https://quaternius.com/packs/ultimaterpg.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1IhdL3W5XdJrjf_axqAnKvEybMaC3FwF-?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "rpg",
+    "medieval",
+    "fantasy"
+   ],
+   "count": 106,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimaterpg.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "August 2019",
+   "what": "A set with 100+ RPG Models, PNG renders of each model also included! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimategun",
+   "name": "Ultimate Guns Pack",
+   "url": "https://quaternius.com/packs/ultimategun.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/12V-mHNB6bnW2WzgpJfRBQd-TG4pOO3yx?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "guns",
+    "fps",
+    "ultimate"
+   ],
+   "count": 40,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimategun.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "July 2019",
+   "what": "This pack contains 40 different gun models . All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatenature",
+   "name": "Ultimate Nature Pack",
+   "url": "https://quaternius.com/packs/ultimatenature.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1-Kl0L_Jg8awbh0S5T-z3zxh4mVlnxTpa?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "nature",
+    "trees",
+    "ultimate"
+   ],
+   "count": 150,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatenature.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "June 2019",
+   "what": "The ultimate nature pack, 150 models with everything you need! in FBX, OBJ and Blend formats."
+  },
+  {
+   "id": "animatedtanks",
+   "name": "Animated Tanks Pack",
+   "url": "https://quaternius.com/packs/animatedtanks.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1tHX0RF9l4Nw4EZwxH6xWta0HsICU2h-G?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "vehicles",
+    "tanks",
+    "war",
+    "animated"
+   ],
+   "count": 4,
+   "preview": "https://quaternius.com/assets/images/thumbnails/tanks.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "June 2019",
+   "what": "This pack contains 4 different animated tank models! All in .FBX, .OBJ and .Blend formats, free to use in both personal and commercial projects."
+  },
+  {
+   "id": "modulardungeon",
+   "name": "Modular Dungeons Pack",
+   "url": "https://quaternius.com/packs/modulardungeon.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1CvofJVYHf00StUTsIWtOuyVxeV0CN3UI",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "modular",
+    "dungeon",
+    "dungeons"
+   ],
+   "count": 48,
+   "preview": "https://quaternius.com/assets/images/thumbnails/updatedmodulardungeon.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "April 2019",
+   "what": "This pack includes a set of modular dungeon assets. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "modulartrain",
+   "name": "Modular Train Pack",
+   "url": "https://quaternius.com/packs/modulartrain.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/15UgTB4JZgsSxdBDTTk0Qv1iiCbH9bdMk?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "vehicles",
+    "train",
+    "transport",
+    "modular"
+   ],
+   "count": 15,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modulartrain.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "April 2019",
+   "what": "This pack contains a variety of trains! All in .FBX, .OBJ and .Blend formats, free to use in both personal and commercial projects."
+  },
+  {
+   "id": "animatedalien",
+   "name": "Animated Alien Pack",
+   "url": "https://quaternius.com/packs/animatedalien.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1ADdETHqjSIEUhjKjhLB9hQjeppXEqcvL?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "alien",
+    "characters"
+   ],
+   "count": 2,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedalien.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "April 2019",
+   "what": "This pack contains a cute animated alien in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ultimatefurniture",
+   "name": "Ultimate Furniture Pack",
+   "url": "https://quaternius.com/packs/ultimatefurniture.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1n85oUi0RN5ZUXEIMKA-AnBsPErVXWcma?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "furniture",
+    "interior"
+   ],
+   "count": 20,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ultimatefurniture.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "March 2019",
+   "what": "This pack includes all the furniture essentials to decorate your homes! Beds, chairs, tables, you got it all! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedwomen",
+   "name": "Animated Women Pack",
+   "url": "https://quaternius.com/packs/animatedwomen.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1c13R--fMqdR6r2MRlcKKsbPky0__T-yJ?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "human",
+    "animated",
+    "characters",
+    "women"
+   ],
+   "count": 4,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedwomen.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "February 2019",
+   "what": "This pack contains a set of 4 different human models with many animations. In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedmen",
+   "name": "Animated Men Pack",
+   "url": "https://quaternius.com/packs/animatedmen.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/17LibivOaUidsQhSkcxP3YYvDr0n7wIwu?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "human",
+    "animated",
+    "characters",
+    "men"
+   ],
+   "count": 4,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedmen.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "February 2019",
+   "what": "This pack contains a set of 4 different human models with many animations. In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "easyenemy",
+   "name": "Easy Enemy Pack",
+   "url": "https://quaternius.com/packs/easyenemy.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1VbJIslXPWK-1KybQN6yezZrfJcw608qe?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "monsters",
+    "enemy",
+    "easy"
+   ],
+   "count": 5,
+   "preview": "https://quaternius.com/assets/images/thumbnails/easyenemy.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "January 2019",
+   "what": "This pack includes 5 different animated enemies, each with their own animations. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "buildings",
+   "name": "Buildings Pack",
+   "url": "https://quaternius.com/packs/buildings.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1uWCsV9QfnAu8u_QbwkYwOfuU3McME7CA?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "exterior",
+    "buildings"
+   ],
+   "count": 9,
+   "preview": "https://quaternius.com/assets/images/thumbnails/buildings.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "January 2019",
+   "what": "This pack includes a set of 9 different buildings. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animateddinosaurs",
+   "name": "Animated Dinosaur Pack",
+   "url": "https://quaternius.com/packs/animateddinosaurs.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1u5Fhu3ziuRlGonW6bUI7uClqBGoSNeF6?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "dinosaurs",
+    "enemy",
+    "dinosaur"
+   ],
+   "count": 6,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animateddinosaurs.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "December 2018",
+   "what": "This pack includes 6 different animated dinosaurs, each with their own animations. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "cars",
+   "name": "Cars Pack",
+   "url": "https://quaternius.com/packs/cars.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1fKlbDry77iY8KlEoxzUxIAZQL_XhzWlA?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "vehicles",
+    "cars",
+    "transport"
+   ],
+   "count": 8,
+   "preview": "https://quaternius.com/assets/images/thumbnails/cars.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "November 2018",
+   "what": "This pack contains 8 different car models! All in .FBX, .OBJ and .Blend formats, free to use in both personal and commercial projects."
+  },
+  {
+   "id": "modularplatformer",
+   "name": "Modular Platformer Pack",
+   "url": "https://quaternius.com/packs/modularplatformer.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1ku_XmbHOZ5ypgKCAjpzX6hlXaOJT7Uoq?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "modular",
+    "platformer"
+   ],
+   "count": 53,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modularplatformer.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "November 2018",
+   "what": "This pack includes an array of modular platformer assets, such as clouds, a simple set of trees, stairs, crates, collectibles and many more! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedrobot",
+   "name": "Animated Robot Pack",
+   "url": "https://quaternius.com/packs/animatedrobot.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/18MU0RtRu9G6SU6uSZ_zMQFmVkRlB4zH5?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "robot",
+    "characters"
+   ],
+   "count": 1,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedrobot.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "October 2018",
+   "what": "This pack contains a cute animated robot in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "farmbuildings",
+   "name": "Farm Buildings Pack",
+   "url": "https://quaternius.com/packs/farmbuildings.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1gdZ39vcLML_ULU5sHirkKQ-gEkk458Ak?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "farm",
+    "buildings"
+   ],
+   "count": 13,
+   "preview": "https://quaternius.com/assets/images/thumbnails/farmbuildings.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "September 2018",
+   "what": "This pack includes a set of farm buildings. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "medievalweapons",
+   "name": "Modular Weapons Pack",
+   "url": "https://quaternius.com/packs/medievalweapons.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1Z6vYiQxY8W73FXuMWzaTQAg9rzbumnOr?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "weapons",
+    "medieval",
+    "fantasy",
+    "modular"
+   ],
+   "count": 24,
+   "preview": "https://quaternius.com/assets/images/thumbnails/medievalweapons.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "September 2018",
+   "what": "This pack includes an array of medieval weapons such as swords, daggers, bows, shields, hammers and many more! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "backgroundposedhumans",
+   "name": "Background Posed Humans Pack",
+   "url": "https://quaternius.com/packs/backgroundposedhumans.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/18dWyZlA53euzsc1WobITqFYLcT5sFULz?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "background",
+    "humans",
+    "crowd",
+    "posed"
+   ],
+   "count": 28,
+   "preview": "https://quaternius.com/assets/images/thumbnails/backgroundposedhumans.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "August 2018",
+   "what": "A set of 20 different posed humans, with 8 different hairstyles. In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedmonster",
+   "name": "Animated Monster Pack",
+   "url": "https://quaternius.com/packs/animatedmonster.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/102H-oyUM8SGYi1mW0GOgkjEu7xSdaORA?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "monsters",
+    "enemy",
+    "monster"
+   ],
+   "count": 4,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedmonster.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "August 2018",
+   "what": "This pack includes 4 animated monsters, each with their own animations. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "knightcharacter",
+   "name": "Animated Knight Pack",
+   "url": "https://quaternius.com/packs/knightcharacter.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1QVyfCJkq70mAwMIh1cGq1xfHp2LN5GmK?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "characters",
+    "animated",
+    "knight"
+   ],
+   "count": 10,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedknight.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "July 2018",
+   "what": "This pack contains a Knight character with many animations and accessories such as swords and helmets. In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "farmanimal",
+   "name": "Farm Animal Pack",
+   "url": "https://quaternius.com/packs/farmanimal.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1is1ax2V0mIEDS7BbbzBV_x2Pabya1dVJ?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "farm",
+    "animals",
+    "animal"
+   ],
+   "count": 7,
+   "preview": "https://quaternius.com/assets/images/thumbnails/farmanimal.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "June 2018",
+   "what": "This pack includes 7 farm animals, each with their own animations. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedguns",
+   "name": "Animated Guns Pack",
+   "url": "https://quaternius.com/packs/animatedguns.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1ICYTdMXQqhkhrh8Fzjx9D0ozJuONwtC4?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "fps",
+    "guns"
+   ],
+   "count": 6,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedguns.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "June 2018",
+   "what": "This pack includes 6 different animated guns, such as a P90, revolver, pistol, shotgun and sniper rifle. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "scifigun",
+   "name": "Sci-Fi Gun Pack",
+   "url": "https://quaternius.com/packs/scifigun.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1jaszGQ7QN2KIWFFoOVYy8y8qFe27yVL2?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "sci-fi",
+    "futuristic",
+    "guns",
+    "sci",
+    "gun"
+   ],
+   "count": 7,
+   "preview": "https://quaternius.com/assets/images/thumbnails/scifigun.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "May 2018",
+   "what": "A set of 7 different Sci-Fi Guns. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedfish",
+   "name": "Animated Fish Pack",
+   "url": "https://quaternius.com/packs/animatedfish.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1SvlOveJJjmhSn-FgCRyojc1T5QHjjGkF?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animated",
+    "fish",
+    "animals"
+   ],
+   "count": 7,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedfish.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "April 2018",
+   "what": "This pack includes 7 different aquatic species, each with their own animations. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "modularstreets",
+   "name": "Modular Streets Pack",
+   "url": "https://quaternius.com/packs/modularstreets.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1-YvMpLDYBIy-0Ms7ZlFmUpChTbHku8IJ?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "streets",
+    "modular",
+    "city"
+   ],
+   "count": 25,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modularstreets.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "March 2018",
+   "what": "This pack contains a set of modular street assets, such as different roads you can combine to make a city! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "ships",
+   "name": "Ships Pack",
+   "url": "https://quaternius.com/packs/ships.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1Qf31QTnGfxRzYxx8dHmlVGDT4KmIa0Vy?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "ships",
+    "vehicles",
+    "boats"
+   ],
+   "count": 6,
+   "preview": "https://quaternius.com/assets/images/thumbnails/ships.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "February 2018",
+   "what": "This pack contains a set of simple ships! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "medievaldungeon",
+   "name": "Modular Dungeon Pack",
+   "url": "https://quaternius.com/packs/medievaldungeon.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/13MoeF0Uy9PHqXXi6gh63tV2PLRD6YXJv?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "modular",
+    "medieval",
+    "fantasy",
+    "dungeon"
+   ],
+   "count": 41,
+   "preview": "https://quaternius.com/assets/images/thumbnails/modulardungeon.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "January 2018",
+   "what": "This pack includes an array of dungeon assets such as barrels, torches, potions and modular wall pieces! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "spaceships",
+   "name": "Spaceships Pack",
+   "url": "https://quaternius.com/packs/spaceships.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1ZxWZ-KuSOA-9s53PA1B1-O0txRJvne2i?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "sci-fi",
+    "futuristic",
+    "spaceships"
+   ],
+   "count": 5,
+   "preview": "https://quaternius.com/assets/images/thumbnails/spaceships.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "January 2018",
+   "what": "A simple set of low poly spaceships! In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedzombie",
+   "name": "Animated Zombie Pack",
+   "url": "https://quaternius.com/packs/animatedzombie.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1AfOPRgr5Gl8gll9KfGDEUSYq_Ag7yPJG?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "zombie",
+    "animated",
+    "characters"
+   ],
+   "count": 2,
+   "preview": "https://quaternius.com/assets/images/thumbnails/zombie.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "January 2018",
+   "what": "This pack contains an atlas textured zombie with many animations. In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedwoman",
+   "name": "Animated Woman Pack",
+   "url": "https://quaternius.com/packs/animatedwoman.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1M2jkG2WLiteK81Pj_v0QjCJoUTf2gCjp?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "human",
+    "animated",
+    "characters",
+    "woman"
+   ],
+   "count": 2,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedwoman.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "December 2017",
+   "what": "This pack contains an atlas textured female with many animations. In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "animatedman",
+   "name": "Animated Man Pack",
+   "url": "https://quaternius.com/packs/animatedman.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1XQ3UpQezkOFDdazv6KK16qp3mBXhO9uO?usp=sharing",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "human",
+    "animated",
+    "characters",
+    "man"
+   ],
+   "count": 2,
+   "preview": "https://quaternius.com/assets/images/thumbnails/animatedman.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "October 2017",
+   "what": "This pack contains an atlas textured male with many animations. In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "furniture",
+   "name": "Furniture Pack",
+   "url": "https://quaternius.com/packs/furniture.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1CLWStkb7cipC1ZdTunYJXKVqEVwtXWXK?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "furniture",
+    "interior"
+   ],
+   "count": 23,
+   "preview": "https://quaternius.com/assets/images/thumbnails/furniture.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "October 2017",
+   "what": "This pack includes all the furniture essentials to decorate your homes! Beds, chairs, tables, you got it all! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "simplebuildings",
+   "name": "Simple Buildings Pack",
+   "url": "https://quaternius.com/packs/simplebuildings.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1r-FcNFxC6ziN0oI3GqZJdEkdzglFQHQH?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "buildings",
+    "houses",
+    "simple"
+   ],
+   "count": 10,
+   "preview": "https://quaternius.com/assets/images/thumbnails/simplebuildings.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "August 2017",
+   "what": "A simple set of atlas textured buildings, including a hospital, houses and shop! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "modularmedievalbuildings",
+   "name": "Modular Medieval Building Pack",
+   "url": "https://quaternius.com/packs/modularmedievalbuildings.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1WCmnrS1fYQLYfRwztVErgAOyWXdJiVIo?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "modular",
+    "medieval",
+    "fantasy",
+    "building"
+   ],
+   "count": 30,
+   "preview": "https://quaternius.com/assets/images/thumbnails/medievalbuildings.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "July 2017",
+   "what": "This pack includes an array of medieval building pieces. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "rpg",
+   "name": "RPG Essentials Pack",
+   "url": "https://quaternius.com/packs/rpg.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1BSyWiPypvgTl32qd5bZjP_iMeG_XsImT?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "rpg",
+    "medieval",
+    "fantasy",
+    "essentials"
+   ],
+   "count": 13,
+   "preview": "https://quaternius.com/assets/images/thumbnails/rpg.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "May 2017",
+   "what": "A simple set of RPG Essentials! All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "junkfood",
+   "name": "Junk Food Pack",
+   "url": "https://quaternius.com/packs/junkfood.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/127xt6nsl4Z-YRy-FZru38Sf6ElBWc8IU?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "fast food",
+    "consumables",
+    "junk",
+    "food"
+   ],
+   "count": 16,
+   "preview": "https://quaternius.com/assets/images/thumbnails/junkfood.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "April 2017",
+   "what": "This pack contains 16 different textured fast food items such as pizza, ice cream, hotdogs, cookies and many more. All in FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "texturedfantasynature",
+   "name": "Texture Fantasy Nature Pack",
+   "url": "https://quaternius.com/packs/texturedfantasynature.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1WKJe-QxkPs_zb8CVhxPhYT57EsY5tGD3?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "nature",
+    "trees",
+    "fantasy",
+    "texture"
+   ],
+   "count": 11,
+   "preview": "https://quaternius.com/assets/images/thumbnails/texturedfantasynature.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "March 2017",
+   "what": "A set of fantasy themed nature assets, including trees, flowers, bushes and mushrooms, all textured using gradients! In FBX, OBJ and Blend formats, free to use in personal and commercial projects."
+  },
+  {
+   "id": "publictransport",
+   "name": "Public Transport Pack",
+   "url": "https://quaternius.com/packs/publictransport.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/1GUIE138uPVNraiQEf33dIx9wENhttZ15?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "vehicles",
+    "cars",
+    "transport",
+    "public"
+   ],
+   "count": 12,
+   "preview": "https://quaternius.com/assets/images/thumbnails/publictransport.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "February 2017",
+   "what": "This pack contains 12 different public transport vehicles such as an ambulance, school bus, train, and more! All in .FBX, .OBJ and .Blend formats, free to use in both personal and commercial projects."
+  },
+  {
+   "id": "simplenature",
+   "name": "Simple Nature Pack",
+   "url": "https://quaternius.com/packs/simplenature.html",
+   "download": null,
+   "download_page": "https://drive.google.com/drive/folders/18hb-5HGCLL9BS8jmxkE4h31wmHGeqfts?usp=sharing",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "nature",
+    "trees",
+    "simple"
+   ],
+   "count": 13,
+   "preview": "https://quaternius.com/assets/images/thumbnails/simplenature.jpg",
+   "license": "CC0-1.0 (page label; site licence page now says QAL)",
+   "page_license_label": "CC0",
+   "formats": [
+    "fbx",
+    "obj",
+    "blend"
+   ],
+   "released": "December 2016",
+   "what": "The nature essentials, including trees, grass, rocks and bushes! in FBX, OBJ and Blend formats."
+  }
+ ],
+ "agent_fetch": "manual"
+}

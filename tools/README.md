@@ -25,6 +25,13 @@ Every tool:
 | `node tools/play/notes.mjs` | Shows the notes you left in the game (press **N** while playing) since the agent last read them, with their screenshots. `--all` shows every note. |
 | `node tools/refs/intake.mjs` | Processes new pictures and videos you put in `my-game/refs/`: contact sheets for videos, a stub entry in `refs/REFS.md` for each file. |
 | `node tools/refs/palette.mjs <img> [img2]` | The main colours of a picture, how bright and how colourful it is; compares two pictures. |
+| `node tools/assets/find.mjs "<what>"` | Searches free asset libraries (Poly Haven, ambientCG, Polyfork live; Kenney, KayKit, Quaternius packs and the kit's lists of libraries and blocks) and shows the best matches as a numbered list plus one picture of numbered thumbnails to compare. `--kind`, `--style`, `--source`, `--license cc0`. Nothing goes into the game. |
+| `node tools/assets/get.mjs <id or number>` | Downloads an asset from the site that made it. `--candidate` keeps it aside in `my-game/.helper/candidates/` to look at first; without it, it goes into `my-game/public/assets/` and its credit line into `CREDITS.md`. A pack id lists what's inside the pack with a picture. `promote <file>` brings in a candidate (or your remix of it). |
+| `node tools/assets/look.mjs <file or folder>` | Makes a picture of an asset so the agent can see it: models from four sides next to a 1.8 m person (with size, triangles, pivot, animations), textures tiled and on a ball, skies with where the sun is, sounds as a waveform with loudness, fonts, folders as contact sheets. `--in-game` uses the game's palette and light. |
+| `node tools/assets/restyle.mjs <model.glb>` | Remixes a model so it fits the game: colours to the game palette, flat colours, smaller textures, size in metres, pivot on the ground, merged, compressed. Always writes a new file; `--look` shows before and after. |
+| `node tools/assets/palette-from.mjs <picture>` | Makes `my-game/palette.json` (the game's colours and light hints) from a picture you chose for the look. |
+| `node tools/blocks/list.mjs` | Lists the blocks: ready-made effects, systems and tools (fire, cars, painted looks, tree makers...) with what renderer they need. |
+| `node tools/blocks/add.mjs <id>` | Copies a block into `my-game/vendor/<id>/` (or downloads it from its author at the checked version), adds its credits and a `VENDOR.md`. `--install` adds the packages it needs. |
 | `node tools/fal/gen.mjs <kind> ...` | Optional, paid: generates pictures, textures, sounds, music or 3D models with fal.ai. Shows the cost and waits for your yes; never goes over the cap in `helper.json`. `status` shows spending, `models` lists prices. |
 
 ## For agents

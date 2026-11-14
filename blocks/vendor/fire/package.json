@@ -1,0 +1,17 @@
+{
+  "name": "fire",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "vite --config vite.config.mjs --host 127.0.0.1 --port 5391 --strictPort"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1",
+    "vite": "8.3.5"
+  }
+}

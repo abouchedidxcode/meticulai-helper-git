@@ -1,0 +1,2494 @@
+{
+ "checked": "2026-11-14",
+ "notes": "Free, openly licensed material for browser games, each checked on its original site on the date in \"checked\". agent_fetch: api = use the documented API; direct = fetch single files by URL; allowed = small polite fetches of public pages; local = a generator that runs in the browser or in code, nothing to download; manual = the user downloads by hand (login, bot check, or the site asks AI agents not to fetch). Things never to use are in avoid; tools to make or remix assets are in tools. See sources/README.md.",
+ "sources": [
+  {
+   "id": "polyhaven",
+   "name": "Poly Haven",
+   "url": "https://polyhaven.com",
+   "kinds": [
+    "model",
+    "material",
+    "hdri"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 2388,
+   "formats": [
+    "gltf",
+    "blend",
+    "fbx",
+    "usd",
+    "hdr",
+    "exr",
+    "jpg",
+    "png"
+   ],
+   "access": {
+    "type": "api",
+    "docs": "https://api.polyhaven.com/api-docs/swagger.json",
+    "notes": "No key. Send a User-Agent that names the tool (their API terms require it). /assets?type=hdris|textures|models, /search?q=&t=, /info/{id}, /files/{id}. Counts on 2026-11-14: 997 HDRIs, 869 textures, 522 models."
+   },
+   "agent_fetch": "api",
+   "good_for": "Realistic skies and lighting (HDRIs), ground and wall materials, realistic props (rocks, furniture, plants) at real-world scale.",
+   "not_for": "Low-poly, toon or pixel games (looks out of place); characters or animals (almost none); anything animated.",
+   "gotchas": [
+    "Files are big: pick 1k textures and 1k/2k HDRIs for the web; 4k+ HDRIs are 20-100 MB.",
+    "Models are photoscanned: 5k-100k+ triangles each; check triangles before using many.",
+    "glTF downloads are a .gltf + .bin + separate texture files listed under files.gltf.<res>.gltf.include; fetch them all, keep relative paths, or pack to .glb.",
+    "The website forbids scraping; use the API only. If the game shows a live Poly Haven browser to players, say \"Powered by Poly Haven\".",
+    "Logos, renders and site text are not CC0; only the assets are."
+   ],
+   "credit_template": "\"{title}\" by {author}, Poly Haven (https://polyhaven.com/a/{id}), CC0 (credit optional)",
+   "license_quote": "Our assets are all licensed as CC0 ... You can use our assets for any purpose, including commercial work. You do not need to give credit.",
+   "license_url": "https://polyhaven.com/license",
+   "verified": "live API test 2026-11-14 (types, assets, search, files)"
+  },
+  {
+   "id": "ambientcg",
+   "name": "ambientCG",
+   "url": "https://ambientcg.com",
+   "kinds": [
+    "material",
+    "hdri"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 2936,
+   "formats": [
+    "jpg",
+    "png",
+    "exr",
+    "hdr",
+    "mtlx",
+    "usdc",
+    "blend"
+   ],
+   "access": {
+    "type": "api",
+    "docs": "https://docs.ambientcg.com/api/",
+    "notes": "No key. GET https://ambientcg.com/api/v2/full_json?q=grass&type=Material&sort=Popular&limit=10&include=downloadData,previewData . Downloads: https://ambientcg.com/get?file=<AssetId>_1K-JPG.zip . Counts on 2026-11-14: 2041 materials, 439 HDRIs, 211 substances, 127 decals, 61 atlases."
+   },
+   "agent_fetch": "api",
+   "good_for": "Tiling PBR materials (ground, rock, wood, metal, fabric, tiles), decals and leaf/grass atlases.",
+   "not_for": "Stylized or low-poly looks without heavy remixing; models and characters.",
+   "gotchas": [
+    "Even the 1K-JPG zip is big (about 10 MB for Grass004): it holds Color, NormalGL, NormalDX, Roughness, AmbientOcclusion, Displacement, plus .blend/.usdc/.mtlx/.tres. Keep only Color, NormalGL, Roughness (and AO) and compress them.",
+    "three.js wants the NormalGL map, not NormalDX.",
+    "Displacement maps need a dense mesh; skip them on the web unless you need them."
+   ],
+   "credit_template": "\"{title}\" from ambientCG (https://ambientcg.com/a/{id}), CC0 (credit optional)",
+   "license_quote": "All ambientCG assets are provided under the Creative Commons CC0 1.0 Universal License. ... You can include the raw files in your project, for example a video game.",
+   "license_url": "https://docs.ambientcg.com/license/",
+   "verified": "live API test and one 1K download 2026-11-14"
+  },
+  {
+   "id": "kenney",
+   "name": "Kenney",
+   "url": "https://kenney.nl/assets",
+   "kinds": [
+    "model",
+    "sprite",
+    "tileset",
+    "icon",
+    "audio",
+    "music",
+    "font",
+    "material",
+    "vfx",
+    "animation"
+   ],
+   "styles": [
+    "lowpoly",
+    "cartoon",
+    "pixel"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 217,
+   "formats": [
+    "glb",
+    "fbx",
+    "obj",
+    "png",
+    "svg",
+    "ogg",
+    "ttf"
+   ],
+   "access": {
+    "type": "pack",
+    "docs": "sources/packs/kenney.json",
+    "notes": "217 packs on 2026-11-14 (50 3D, 146 2D, 10 audio, 10 textures, 1 other); count_approx counts packs, not files. The user downloads each pack from its page (Download button, a donation prompt can be skipped). No account."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Clean, consistent low-poly 3D kits (city, nature, dungeon, space, cars, food, furniture, mini characters with animations), 2D platformer/top-down/roguelike tilesets, UI packs, input prompts, game icons, UI and impact sounds, fonts. One family across many genres.",
+   "not_for": "Realistic games; detailed hero characters.",
+   "gotchas": [
+    "kenney.nl/robots.txt blocks AI agents by name and disallows automated access to /assets/ and /downloads/: tools must not crawl or download from kenney.nl. Ask the user to download the pack and drop the zip into the game folder.",
+    "Downloads are short-lived signed links made by the page; there is no stable direct zip URL.",
+    "GLBs in at least some 3D packs point to an external Textures/colormap.png beside them: keep that folder or embed the texture.",
+    "Scale differs between kits: measure each model (tools/assets/look.mjs) and rescale to metres.",
+    "A paid \"All-in-1\" bundle exists on itch.io; it is a convenience, not needed."
+   ],
+   "credit_template": "\"{title}\" by Kenney (https://kenney.nl), CC0 (credit optional)",
+   "license_quote": "License: (Creative Commons Zero, CC0) ... You can use this content for personal, educational, and commercial purposes. Support by crediting 'Kenney' or 'www.kenney.nl' (this is not a requirement)",
+   "license_url": "https://kenney.nl/assets (License row on every pack page; same text in each zip's License.txt)",
+   "verified": "licence text read on pack pages and in one zip 2026-11-14"
+  },
+  {
+   "id": "kaykit",
+   "name": "KayKit (Kay Lousberg)",
+   "url": "https://kaylousberg.com/game-assets",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "styles": [
+    "lowpoly",
+    "stylized"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 17,
+   "formats": [
+    "gltf",
+    "fbx",
+    "obj"
+   ],
+   "access": {
+    "type": "pack",
+    "docs": "sources/packs/kaykit.json",
+    "notes": "17 free packs (count_approx counts packs). 10 have a direct zip from the KayKit-Game-Assets GitHub org (1.0 releases). The rest: free tier on itch.io (name your own price, $0 allowed), downloaded by the user."
+   },
+   "agent_fetch": "direct",
+   "good_for": "Cute stylized low-poly worlds that match each other: dungeons, medieval hex maps, forests, platformer blocks, furniture, food, space bases, rigged adventurer and skeleton characters with a big shared animation library.",
+   "not_for": "Realistic or gritty looks.",
+   "gotchas": [
+    "Every model uses one shared 1024x1024 gradient atlas texture: very cheap to draw, easy to recolour by editing the atlas.",
+    "GitHub copies are .gltf + .bin + a texture folder; keep paths or pack to .glb.",
+    "Characters need the separate KayKit Character Animations pack for most moves (Rig_Medium / Rig_Large).",
+    "EXTRA and SOURCE tiers on itch.io are paid; only the free tier is CC0-for-free."
+   ],
+   "credit_template": "\"{title}\" by Kay Lousberg (KayKit, https://kaylousberg.com), CC0 (credit optional)",
+   "license_quote": "Free for personal and commercial use, no attribution required. (CC0 Licensed)",
+   "license_url": "https://kaylousberg.com/game-assets/forest-nature-pack",
+   "verified": "every pack page read 2026-11-14; GitHub zip URL checked"
+  },
+  {
+   "id": "quaternius",
+   "name": "Quaternius",
+   "url": "https://quaternius.com",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "styles": [
+    "lowpoly",
+    "stylized"
+   ],
+   "license": "LicenseRef-Quaternius-QAL-1.0 (older packs say CC0 on their page)",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 84,
+   "formats": [
+    "fbx",
+    "obj",
+    "blend",
+    "gltf",
+    "glb"
+   ],
+   "access": {
+    "type": "pack",
+    "docs": "sources/packs/quaternius.json",
+    "notes": "84 packs listed on the home page on 2026-11-14 (count_approx counts packs). Older packs download from a Google Drive folder, newer ones from itch.io (free tier, name your own price). The user downloads by hand."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Big themed low-poly kits (medieval village, sci-fi, nature, city, pirates, zombies, space), many rigged and animated characters and animals, and the Universal Animation Library (120+ humanoid clips that retarget).",
+   "not_for": "Realistic games; putting the raw files in a public asset pack or template.",
+   "gotchas": [
+    "Licence changed: the site licence page (QAL v1.0, updated 2026-08-28) covers assets \"regardless of the specific site\"; older pack pages still say CC0. Treat everything as QAL: fine in a game, no credit, but never re-share the files on their own (no asset packs, no templates, no \"free models\" repos).",
+    "Older packs are FBX/OBJ/Blend only (no glTF): convert in Blender, or pick packs whose formats list glTF/GLB.",
+    "Downloads are Google Drive folders or itch.io pages: no stable direct zip for tools.",
+    "Several packs ship atlas-textured models; check texture paths after converting."
+   ],
+   "credit_template": "\"{title}\" by Quaternius (https://quaternius.com), QAL (credit optional)",
+   "license_quote": "You can use these assets, free of charge, in personal, educational, and commercial games and other projects, with no credit required. You just can't resell or redistribute the assets themselves as assets.",
+   "license_url": "https://quaternius.com/license.html",
+   "verified": "licence page and pack pages read 2026-11-14"
+  },
+  {
+   "id": "polyfork",
+   "name": "Polyfork",
+   "url": "https://polyfork.dev",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "styles": [
+    "lowpoly"
+   ],
+   "license": "CC-BY-4.0 (free mesh files) or Polyfork licence",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": true,
+   "count_approx": 3326,
+   "formats": [
+    "glb",
+    "mjs",
+    "fbx",
+    "usdz",
+    "obj"
+   ],
+   "access": {
+    "type": "api",
+    "docs": "https://polyfork.dev/llms.txt",
+    "notes": "No key to browse or to fetch free models. GET https://polyfork.dev/api/assets?q=barrel&per_page=10 (filters: kit, class, max_triangles, ik, sort). Each row has download.glb (https://polyfork.dev/cdn/<id>.glb), size_m, triangles, kit, thumbnail. Also /api/assets/<id>/matching (same kit, palette, scale). MCP server at https://polyfork.dev/mcp."
+   },
+   "agent_fetch": "api",
+   "good_for": "Low-poly props, buildings, vehicles, animals and rigged characters in themed kits that share one palette and real-world scale; a quick agent-friendly API with sizes in metres.",
+   "not_for": "Hand-made or realistic looks; training or building any asset generator (forbidden by its licence).",
+   "gotchas": [
+    "Pick one of two licences per use: (a) Polyfork licence: no credit, but the files may not be re-shared outside your game; (b) CC BY 4.0 (free mesh files only): credit \"<Model> by Polyfork (<page url>), CC BY 4.0\" and you may re-share. Inside a shipped game either works; in a public repo use CC BY and credit.",
+    "The .mjs source modules and HD editions are never CC BY: do not re-share them. HD editions need a paid plan.",
+    "Made with code by an AI-driven \"factory\" (site footer: \"AI-native 3D assets made with code\").",
+    "Send a User-Agent that names the tool, fetch one model when needed (not the catalogue in bulk), back off on HTTP 429. robots.txt disallows /dl/: use the /cdn/ URLs from the API.",
+    "Characters share a Mixamo-named skeleton; Idle/Walk/Run clips are Quaternius UAL (CC0)."
+   ],
+   "credit_template": "\"{title}\" by Polyfork ({url}), CC BY 4.0",
+   "license_quote": "The mesh files of the free low poly models are yours under CC BY 4.0 or under the Polyfork licence, whichever suits you. ... The Polyfork licence: no credit at all, but no redistributing the files themselves.",
+   "license_url": "https://polyfork.dev/licensing",
+   "verified": "licensing page read and live API test 2026-11-14"
+  },
+  {
+   "id": "poly-pizza",
+   "name": "Poly Pizza",
+   "url": "https://poly.pizza",
+   "kinds": [
+    "model"
+   ],
+   "styles": [
+    "lowpoly",
+    "cartoon"
+   ],
+   "license": "mixed",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 10000,
+   "formats": [
+    "glb",
+    "fbx",
+    "obj"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://poly.pizza",
+    "notes": "API at https://api.poly.pizza/v1/ needs a free account key (unauthenticated request returns 401). The site refuses automated readers (HTTP 403). The user searches and downloads by hand."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Single low-poly props by many artists (lots from Google Poly and Quaternius); quick placeholders.",
+   "not_for": "A consistent look across many models (many different artists).",
+   "gotchas": [
+    "Check the licence on each model page; CC BY models need a credit line.",
+    "Partly verified only (site and API answer 403/401 to tools); count is approximate from third-party guides.",
+    "Many models are Quaternius or Kenney re-uploads: prefer the original source."
+   ],
+   "credit_template": "\"{title}\" by {author} ({url}), {license}",
+   "license_quote": "Not verified on the original site: it blocks automated readers. Each model page shows its own licence (mostly CC BY, some CC0).",
+   "license_url": "https://poly.pizza",
+   "verified": "partial: API answered 401 without key 2026-11-14; site 403"
+  },
+  {
+   "id": "amazon-berkeley-objects",
+   "name": "Amazon Berkeley Objects (ABO)",
+   "url": "https://amazon-berkeley-objects.s3.amazonaws.com/index.html",
+   "kinds": [
+    "model"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "CC-BY-4.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 7953,
+   "formats": [
+    "glb"
+   ],
+   "access": {
+    "type": "dataset",
+    "docs": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/README.md",
+    "notes": "Public S3, no key. Model list: https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/metadata/3dmodels.csv.gz (id, path, faces, extent). Product names/types are in listings/metadata/*.json.gz (field 3dmodel_id). One model: https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/original/<path>. Never fetch the 165 GB tar."
+   },
+   "agent_fetch": "direct",
+   "good_for": "Realistic household products and furniture (chairs, sofas, lamps, tables, rugs, decor) with 4K PBR textures, for room or shop scenes.",
+   "not_for": "Stylized games; small downloads (models are about 5-45 MB each).",
+   "gotchas": [
+    "Heavy: 4K textures; shrink textures and simplify (tools/assets/restyle.mjs) before use.",
+    "These are real Amazon products: brand names in the metadata; do not use brand names or logos in the game.",
+    "Searching needs the listings metadata (about 68 MB of json.gz): download once, then filter locally."
+   ],
+   "credit_template": "\"{title}\" from Amazon Berkeley Objects, (c) Amazon.com, CC BY 4.0 (https://amazon-berkeley-objects.s3.amazonaws.com/index.html)",
+   "license_quote": "This work is licensed under the Creative Commons Attribution 4.0 International Public License. ... Credit for the data, including all images and 3d models, must be given to: Amazon.com",
+   "license_url": "https://amazon-berkeley-objects.s3.amazonaws.com/3dmodels/README.md",
+   "verified": "README and S3 listing read 2026-11-14"
+  },
+  {
+   "id": "nvidia-simready",
+   "name": "NVIDIA SimReady Assets",
+   "url": "https://huggingface.co/datasets/nvidia/simready-assets",
+   "kinds": [
+    "model"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "CC-BY-4.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 1000,
+   "formats": [
+    "usd"
+   ],
+   "access": {
+    "type": "dataset",
+    "docs": "https://huggingface.co/datasets/nvidia/simready-assets",
+    "notes": "Hugging Face dataset, not gated, no key. List folders: GET https://huggingface.co/api/datasets/nvidia/simready-assets/tree/main . One file: https://huggingface.co/datasets/nvidia/simready-assets/resolve/main/<path> . Each asset folder has simready_usd/ with .usd files and .thumbs/256x256/*.png previews, and .metadata/LICENSE.txt."
+   },
+   "agent_fetch": "direct",
+   "good_for": "Realistic industrial, warehouse, hospital, office and everyday objects with physics-ready data.",
+   "not_for": "Quick web use without conversion; stylized games.",
+   "gotchas": [
+    "USD only: convert to glTF in Blender (File > Import > USD, then Export glTF) before three.js can load it.",
+    "Built for simulation (Omniverse): materials (MDL) may not carry over; expect to re-assign simple PBR materials.",
+    "Over 1,000 asset folders (the first tree page lists 1,000); clone nothing in bulk."
+   ],
+   "credit_template": "\"{title}\" from NVIDIA SimReady Assets (https://huggingface.co/datasets/nvidia/simready-assets), CC BY 4.0",
+   "license_quote": "license: cc-by-4.0 (dataset card); each asset folder carries .metadata/LICENSE.txt with the full CC BY 4.0 text.",
+   "license_url": "https://huggingface.co/datasets/nvidia/simready-assets",
+   "verified": "dataset API and card read 2026-11-14"
+  },
+  {
+   "id": "scenario-3d",
+   "name": "Scenario 3D Collection",
+   "url": "https://huggingface.co/datasets/scenario-labs/3d-collection",
+   "kinds": [
+    "model"
+   ],
+   "styles": [
+    "stylized",
+    "realistic",
+    "cartoon",
+    "voxel"
+   ],
+   "license": "CC-BY-4.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": true,
+   "count_approx": 1342,
+   "formats": [
+    "glb",
+    "blend",
+    "ply",
+    "vox",
+    "fbx",
+    "spz"
+   ],
+   "access": {
+    "type": "dataset",
+    "docs": "https://huggingface.co/datasets/scenario-labs/3d-collection",
+    "notes": "Hugging Face dataset, not gated, no key. Metadata (prompt, outputs, preview) in data/train-00000-of-00001.parquet. Files: assets/<example>/<file>.glb and preview.jpg, via https://huggingface.co/datasets/scenario-labs/3d-collection/resolve/main/<path>. About 39 GB total: fetch single files only."
+   },
+   "agent_fetch": "direct",
+   "good_for": "Odd one-off props and creatures to try quickly, each with the prompt that made it (useful to see what a prompt gives).",
+   "not_for": "A consistent family of assets; clean topology or animation.",
+   "gotchas": [
+    "All AI-generated: quality and style vary a lot; look at every model before use.",
+    "A companion Hunyuan set is gated and under other licences: do not use it.",
+    "Typical AI meshes: dense, messy triangles, baked lighting in textures; simplify and check scale."
+   ],
+   "credit_template": "\"{title}\" by Scenario (https://huggingface.co/datasets/scenario-labs/3d-collection), CC BY 4.0, AI-generated",
+   "license_quote": "CC BY 4.0. Credit \"Scenario\". All assets are AI-generated.",
+   "license_url": "https://huggingface.co/datasets/scenario-labs/3d-collection",
+   "verified": "dataset card and LICENSE read 2026-11-14"
+  },
+  {
+   "id": "opengameart",
+   "name": "OpenGameArt.org",
+   "url": "https://opengameart.org",
+   "kinds": [
+    "sprite",
+    "tileset",
+    "model",
+    "material",
+    "audio",
+    "music",
+    "icon",
+    "font"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "mixed",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 30000,
+   "formats": [
+    "png",
+    "ogg",
+    "wav",
+    "mp3",
+    "blend",
+    "obj",
+    "glb"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://opengameart.org/content/faq",
+    "notes": "No API. The person searches by hand: https://opengameart.org/art-search-advanced, filter \"License\" to CC0 (tid 4) or CC-BY (3.0 = 2, 4.0 = 17981), \"Art Type\" (2D 9, 3D 10, Texture 14, Music 12, Sound 13). Example: https://opengameart.org/art-search-advanced?keys=tree&field_art_type_tid%5B%5D=10&field_art_licenses_tid%5B%5D=4"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Pixel art, tilesets, music and sound packs from many artists; finding a specific odd thing.",
+   "not_for": "A consistent look without care; anything where you cannot track the licence of each file.",
+   "gotchas": [
+    "robots.txt blocks AI agents by name (Claude-User, Claude-Code, ChatGPT-User and others): agents must not browse or download from OGA; the user does it and drops files in.",
+    "Licences per item: CC0, CC-BY 3.0/4.0, OGA-BY 3.0/4.0, CC-BY-SA 3.0/4.0, GPL 2.0/3.0. Prefer CC0 and CC-BY. CC-BY-SA and GPL are share-alike: avoid unless you know the duties.",
+    "Many items list several licences; you may pick any one of them. Credit as the FAQ says: \"[asset name]\" by [author] licensed [licence]: [url].",
+    "Some uploads are re-uploads of other people's work; check the Copyright/Attribution Notice."
+   ],
+   "credit_template": "\"{title}\" by {author} licensed {license}: {url}",
+   "license_quote": "I'm a commercial (closed-source) game developer. Can I use this art? Short answer: Yes, you can use this art. Even in commercial projects. Be sure to follow the terms of the license, though.",
+   "license_url": "https://opengameart.org/content/faq",
+   "verified": "FAQ and search form read 2026-11-14 (before robots.txt was checked; not fetched since)"
+  },
+  {
+   "id": "itch-io-cc0",
+   "name": "itch.io free CC0 game assets",
+   "url": "https://itch.io/game-assets/assets-cc0",
+   "kinds": [
+    "sprite",
+    "tileset",
+    "model",
+    "audio",
+    "music",
+    "font",
+    "icon",
+    "vfx"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "mixed",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "png",
+    "glb",
+    "fbx",
+    "ogg",
+    "wav"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://itch.io/game-assets/assets-cc0",
+    "notes": "Filter by the licence the creator set: https://itch.io/game-assets/assets-cc0 (RSS: add .xml). By tag only: https://itch.io/game-assets/free/tag-cc0 . Combined filters (free + tag-3d + cc0) hit a bot check: let the user browse. Downloads: user clicks \"Download\" (name-your-price: enter 0 or \"No thanks, just take me to the downloads\")."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Pixel-art packs, tilesets, character sprites, small 3D packs, music packs from indie artists.",
+   "not_for": "Anything without a clear licence line on its page.",
+   "gotchas": [
+    "Read the page: \"free\" on itch does not mean CC0. Some say \"free for commercial use, no redistribution\" or \"credit required\"; some are NC.",
+    "The tag \"cc0\" is set by uploaders and is sometimes wrong; prefer the licence field (assets-cc0 listing) and the text on the page.",
+    "Mixed artists: pick one artist or one pack family to keep the look coherent."
+   ],
+   "credit_template": "\"{title}\" by {author} ({url}), {license}",
+   "license_quote": "Each page states its own licence; the assets-cc0 listing is titled \"Top game assets with assets under Creative Commons Zero v1.0 Universal\".",
+   "license_url": "https://itch.io/game-assets/assets-cc0",
+   "verified": "listing URLs checked 2026-11-14"
+  },
+  {
+   "id": "sketchfab",
+   "name": "Sketchfab (CC0 and CC BY downloadable models only)",
+   "url": "https://sketchfab.com/search?features=downloadable&type=models",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "mixed",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "glb",
+    "gltf",
+    "fbx",
+    "usdz"
+   ],
+   "access": {
+    "type": "api",
+    "docs": "https://sketchfab.com/developers/data-api/v3",
+    "notes": "Search is keyless: GET https://api.sketchfab.com/v3/search?type=models&q=barrel&downloadable=true&license=cc0&count=24 (license: cc0 or by). Downloading needs a Sketchfab account and token (GET /v3/models/<uid>/download answers 401 without one): the user downloads by hand."
+   },
+   "agent_fetch": "api",
+   "good_for": "A specific realistic or stylized object, creature or scan you cannot find elsewhere.",
+   "not_for": "NC, ND, SA, Standard, Editorial models (see sources/README.md: never use).",
+   "gotchas": [
+    "Always filter license=cc0 or license=by. Never use by-nc, by-nc-sa, by-nc-nd, by-nd (\"Modified versions can not be distributed\"), by-sa, or \"ed\" (editorial).",
+    "\"Free Standard\" / \"Standard\" are store licences with their own terms: skip them.",
+    "Many models are huge (100k-1M triangles); check faceCount in search results.",
+    "Fan art of games, films and brands is common: even CC BY does not make a trademarked character safe to use."
+   ],
+   "credit_template": "\"{title}\" by {author} ({url}), {license}",
+   "license_quote": "Sketchfab licence list (GET /v3/licenses): \"cc0: Credit is not mandatory. Commercial use is allowed.\" \"by: Author must be credited. Commercial use is allowed.\" \"by-nc: Author must be credited. No commercial use.\"",
+   "license_url": "https://api.sketchfab.com/v3/licenses",
+   "verified": "keyless search and licence list tested 2026-11-14"
+  },
+  {
+   "id": "cgbookcase",
+   "name": "cgbookcase",
+   "url": "https://www.cgbookcase.com/textures",
+   "kinds": [
+    "material"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 582,
+   "formats": [
+    "png",
+    "jpg"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://www.cgbookcase.com/textures",
+    "notes": "No public API. Browse with filters (category, minimum resolution, type: photogrammetry, approximated, procedural, cutout objects)."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Photoscanned bark, rock, brick, manhole covers, paving; cutout leaves and plants.",
+   "not_for": "Stylized looks.",
+   "gotchas": [
+    "Most sets are 4K-8K: shrink to 1K for the web.",
+    "No API; download by hand."
+   ],
+   "credit_template": "\"{title}\" from cgbookcase (https://www.cgbookcase.com), CC0 (credit optional)",
+   "license_quote": "The textures are published under the CC0 1.0 license, which means means you can use them for free without giving credit.",
+   "license_url": "https://www.cgbookcase.com/textures",
+   "verified": "textures page read 2026-11-14"
+  },
+  {
+   "id": "sharetextures",
+   "name": "ShareTextures",
+   "url": "https://www.sharetextures.com",
+   "kinds": [
+    "material",
+    "model"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "LicenseRef-ShareTextures-custom-CC0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 1700,
+   "formats": [
+    "jpg",
+    "png"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://www.sharetextures.com/p/license",
+    "notes": "No API. Their licence forbids automated downloads: the user downloads by hand."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Realistic tiling materials for calm games (architecture, interiors, nature walks).",
+   "not_for": "Violent games (their terms forbid violent content), automated pipelines, re-sharing the files.",
+   "gotchas": [
+    "Not real CC0: it adds rules. No redistribution of the files, no automated downloads, no violent content. Combat or shooter games: use Poly Haven or ambientCG instead."
+   ],
+   "credit_template": "\"{title}\" from ShareTextures (https://www.sharetextures.com), custom CC0 (credit optional)",
+   "license_quote": "All of our content is copyright-free and licensed under the Custom CC0 (Creative Commons Zero) license with specific restrictions. ... No automated downloads, hotlinking, or embedding direct downloads in third-party apps ... No use in hateful, violent, or illegal content.",
+   "license_url": "https://www.sharetextures.com/p/license",
+   "verified": "licence page read 2026-11-14"
+  },
+  {
+   "id": "3dtextures-me",
+   "name": "3DTextures.me",
+   "url": "https://3dtextures.me",
+   "kinds": [
+    "material"
+   ],
+   "styles": [
+    "realistic",
+    "stylized"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 1300,
+   "formats": [
+    "jpg",
+    "png",
+    "sbsar"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://3dtextures.me/about/",
+    "notes": "No API. \"All the textures are free but you will have to download them one by one.\" (Google Drive links per texture). Paid bundles exist; the singles are free."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Sci-fi panels, stylized and hand-painted-looking tiling materials, plus realistic ones.",
+   "not_for": "Automated pipelines.",
+   "gotchas": [
+    "Downloads go through third-party file hosts per texture; the user fetches them.",
+    "Some downloads are .sbsar (Substance) only: needs Substance or Material Maker to bake."
+   ],
+   "credit_template": "\"{title}\" by 3DTextures (https://3dtextures.me), CC0 (credit optional)",
+   "license_quote": "All textures on this site are licensed as CC0.",
+   "license_url": "https://3dtextures.me/about/",
+   "verified": "about page read 2026-11-14"
+  },
+  {
+   "id": "cc0shaders",
+   "name": "CC0 Shaders (Daniel Ilett)",
+   "url": "https://cc0shaders.com",
+   "kinds": [
+    "shader"
+   ],
+   "styles": [
+    "stylized",
+    "any"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 9,
+   "formats": [
+    "shader",
+    "hlsl",
+    "gdshader",
+    "uasset"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://cc0shaders.com",
+    "notes": "Each shader post has small downloads for Unity (code and Shader Graph), Godot 4 (code) and Unreal 5. No three.js versions: port the Godot code to GLSL / three.js onBeforeCompile or TSL."
+   },
+   "agent_fetch": "allowed",
+   "good_for": "Reference code for outlines, dissolve, hologram, energy shield, snow layers, dither transparency, Gooch shading.",
+   "not_for": "Drop-in three.js use (needs porting).",
+   "gotchas": [
+    "Only 9 shaders on 2026-11-14 (new site, growing).",
+    "robots.txt says ai-train=no: fine to read and port for a game, not to train models."
+   ],
+   "credit_template": "\"{title}\" by Daniel Ilett (https://cc0shaders.com), CC0 (credit optional)",
+   "license_quote": "All shaders on this website use the CC0 license, freely allowing copying, redistribution, or modification.",
+   "license_url": "https://cc0shaders.com/why-cc0",
+   "verified": "home page and one shader page read 2026-11-14"
+  },
+  {
+   "id": "smithsonian-3d",
+   "name": "Smithsonian Open Access 3D (CC0 items)",
+   "url": "https://3d.si.edu/cc0",
+   "kinds": [
+    "model"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 2000,
+   "formats": [
+    "glb",
+    "gltf",
+    "obj"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://github.com/Smithsonian/OpenAccess",
+    "notes": "The site refuses automated readers (HTTP 403). The Open Access API (api.si.edu) needs a free api.data.gov key (unauthenticated: API_KEY_MISSING). The user browses 3d.si.edu, opens a CC0 item and downloads the glb."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Real museum objects: fossils, skulls, tools, sculptures, aircraft and space artefacts, for museum, dig or history games.",
+   "not_for": "Game-ready low-poly assets; anything not marked CC0 on its page.",
+   "gotchas": [
+    "Only items marked CC0 are free; some 3D items are \"usage conditions apply\". Check each item page.",
+    "Scans are heavy; simplify and shrink textures.",
+    "Partly verified: the Smithsonian site blocks tools; licence confirmed via its GitHub repo and search results."
+   ],
+   "credit_template": "\"{title}\", Smithsonian Institution (https://3d.si.edu), CC0 (credit optional)",
+   "license_quote": "Metadata repository licence: CC0-1.0 (GitHub Smithsonian/OpenAccess). The Open Access FAQ says CC0 items can be used commercially without attribution, permission or fee (not read directly: site returned 403).",
+   "license_url": "https://www.si.edu/openaccess/faq",
+   "verified": "partial 2026-11-14"
+  },
+  {
+   "id": "nasa-3d",
+   "name": "NASA 3D Resources",
+   "url": "https://science.nasa.gov/3d-resources/",
+   "kinds": [
+    "model",
+    "material"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "LicenseRef-NASA-media-guidelines (US public domain in general)",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 500,
+   "formats": [
+    "glb",
+    "blend",
+    "fbx",
+    "3ds",
+    "stl",
+    "obj",
+    "tif",
+    "jpg"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/nasa/NASA-3D-Resources",
+    "notes": "Browse https://science.nasa.gov/3d-resources/ (filter by format glb). The GitHub repo is about 5 GB: never clone it; fetch single files via https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/<path>."
+   },
+   "agent_fetch": "direct",
+   "good_for": "Spacecraft, rovers, rockets, asteroids, planets and Moon/Mars terrain textures.",
+   "not_for": "Games that show the NASA logo or imply NASA endorses them.",
+   "gotchas": [
+    "Remove or never show NASA logos (meatball, worm) on models; do not suggest endorsement.",
+    "Formats vary a lot (many are 3ds/blend/fbx only); pick glb where offered.",
+    "Credit is requested: \"NASA should be acknowledged as the source of the material.\""
+   ],
+   "credit_template": "\"{title}\", courtesy of NASA ({url})",
+   "license_quote": "All of these assets are free to download and use. Refer to the NASA Images and Media Usage Guidelines. (Guidelines: NASA material is \"generally not subject to copyright in the United States\"; \"The NASA Insignia, Logotype, identifiers, and imagery are not in the public domain.\")",
+   "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+   "verified": "3D resources page and usage guidelines read 2026-11-14"
+  },
+  {
+   "id": "solar-system-scope",
+   "name": "Solar System Scope planet textures",
+   "url": "https://www.solarsystemscope.com/textures/",
+   "kinds": [
+    "material"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "CC-BY-4.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 30,
+   "formats": [
+    "jpg",
+    "tif"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://www.solarsystemscope.com/textures/",
+    "notes": "One page with direct download links (2K and 8K) per planet map."
+   },
+   "agent_fetch": "allowed",
+   "good_for": "Planets, Moon, Sun, Earth day/night/clouds, star and Milky Way backgrounds (equirectangular).",
+   "not_for": "Stylized planets (use as a base and restyle).",
+   "gotchas": [
+    "Use 2K versions for the web.",
+    "Equirectangular maps: map onto a sphere (default three.js SphereGeometry UVs work)."
+   ],
+   "credit_template": "\"{title}\" by Solar System Scope (https://www.solarsystemscope.com/textures/), CC BY 4.0",
+   "license_quote": "Distributed under Attribution 4.0 International license: You may use, adapt, and share these textures for any purpose, even commercially.",
+   "license_url": "https://www.solarsystemscope.com/textures/",
+   "verified": "textures page read 2026-11-14"
+  },
+  {
+   "id": "cmu-mocap",
+   "name": "CMU Graphics Lab Motion Capture Database",
+   "url": "http://mocap.cs.cmu.edu",
+   "kinds": [
+    "animation"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "LicenseRef-CMU-mocap (free for all uses; no resale of the data)",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 2600,
+   "formats": [
+    "asf",
+    "amc",
+    "c3d",
+    "bvh"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "http://mocap.cs.cmu.edu/faqs.php",
+    "notes": "Search by motion keyword on the site; download single motions. \"Please don't crawl this database for all motions.\" BVH conversions exist elsewhere; use the original data or a conversion whose source is clearly this database."
+   },
+   "agent_fetch": "manual",
+   "good_for": "Realistic human motion (walks, runs, dances, sports, climbing) to retarget onto a character.",
+   "not_for": "Beginners: needs retargeting in Blender; stylized characters (motion looks too real).",
+   "gotchas": [
+    "ASF/AMC units are inches-based: scale per their FAQ.",
+    "Raw mocap has noise and no root-motion cleanup; expect Blender work.",
+    "Never crawl the database."
+   ],
+   "credit_template": "Motion data from the CMU Graphics Lab Motion Capture Database (http://mocap.cs.cmu.edu)",
+   "license_quote": "This dataset of motions is free for all uses. ... You may include this data in commercially-sold products, but you may not resell this data directly, even in converted form.",
+   "license_url": "http://mocap.cs.cmu.edu",
+   "verified": "home page and FAQ read 2026-11-14"
+  },
+  {
+   "id": "100avatars",
+   "name": "100Avatars (Polygonal Mind)",
+   "url": "https://github.com/PolygonalMind/100Avatars",
+   "kinds": [
+    "model"
+   ],
+   "styles": [
+    "lowpoly",
+    "cartoon",
+    "voxel"
+   ],
+   "license": "CC-BY-4.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 200,
+   "formats": [
+    "vrm",
+    "fbx",
+    "png"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/PolygonalMind/100Avatars",
+    "notes": "One folder and one zip per avatar (100Avatars_001 ... _200). Fetch a single zip: https://github.com/PolygonalMind/100Avatars/raw/master/100Avatars_001.zip (do not clone the whole repo)."
+   },
+   "agent_fetch": "direct",
+   "good_for": "Quirky rigged low-poly humanoid characters (Mixamo-rigged), NPC crowds, party games.",
+   "not_for": "Realistic characters.",
+   "gotchas": [
+    "VRM loads with @pixiv/three-vrm; the FBX needs converting to glb.",
+    "No animations included: add Mixamo or Quaternius UAL clips.",
+    "Check the default branch name before building raw URLs."
+   ],
+   "credit_template": "\"{title}\" by Polygonal Mind (100Avatars, https://github.com/PolygonalMind/100Avatars), CC BY 4.0",
+   "license_quote": "You are free to: Share ... Adapt ... for any purpose, even commercially. Under the following terms: Attribution (CCLicense.md, CC BY 4.0). README: \"you can use them as a base for your own creations and make money out of it, but you can't sell them directly.\"",
+   "license_url": "https://github.com/PolygonalMind/100Avatars/blob/master/CCLicense.md",
+   "verified": "GitHub licence file and README read 2026-11-14"
+  },
+  {
+   "id": "incompetech",
+   "name": "Kevin MacLeod / incompetech.com",
+   "url": "https://incompetech.com/music/royalty-free/music.html",
+   "kinds": [
+    "music"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "CC-BY-4.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 2000,
+   "formats": [
+    "mp3"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://incompetech.com/music/royalty-free/faq.html",
+    "notes": "no key, no account; one mp3 download link per track page; no API"
+   },
+   "agent_fetch": "allowed",
+   "good_for": "Background music in any genre (orchestral, chiptune-ish, jazz, horror, comedy) when you can show a credits line.",
+   "not_for": "Games with no credits screen; a unique sonic identity (these tracks are heard in thousands of videos).",
+   "gotchas": [
+    "Credit is mandatory and must be in the game itself; the FAQ says a \"Credits\" screen in the settings menu is the usual place.",
+    "Use his exact three-line credit format (title + \"Kevin MacLeod (incompetech.com)\", licence name, licence URL).",
+    "Very widely used: players and streamers will recognise many tracks.",
+    "If the game will be streamed, the FAQ asks you to email him so he can whitelist the title (avoids Content ID noise).",
+    "Paid Standard License exists only for cases where you cannot credit; you do not need it for a game with a credits screen."
+   ],
+   "credit_template": "\"{title}\" Kevin MacLeod (incompetech.com) / Licensed under Creative Commons: By Attribution 4.0 / https://creativecommons.org/licenses/by/4.0/",
+   "license_quote": "No charge. Requires that you credit the music.",
+   "license_url": "https://incompetech.com/music/royalty-free/licenses/"
+  },
+  {
+   "id": "freesound",
+   "name": "Freesound",
+   "url": "https://freesound.org",
+   "kinds": [
+    "audio"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "mixed",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 600000,
+   "formats": [
+    "wav",
+    "flac",
+    "ogg",
+    "mp3",
+    "aiff"
+   ],
+   "access": {
+    "type": "api",
+    "docs": "https://freesound.org/docs/api/resources_apiv2.html",
+    "notes": "free account + free API key (token) needed even for search; unauthenticated search returns 401 (tested 2026-11-14). Search and previews work with the token; original-file download needs OAuth2."
+   },
+   "agent_fetch": "api",
+   "good_for": "Any specific real-world sound effect (footsteps, doors, impacts, ambience, UI clicks) and field recordings.",
+   "not_for": "Projects that cannot track per-sound licences; bulk scraping (use their Data Packs portal instead).",
+   "gotchas": [
+    "Licence is per sound: CC0, CC BY (Attribution) or CC BY-NC (Attribution NonCommercial). Always filter: NC sounds are not allowed in a commercial game.",
+    "API filter for CC0 only: filter=license:\"Creative Commons 0\". Attribution sounds: filter=license:\"Attribution\". Never use \"Attribution NonCommercial\".",
+    "CC BY sounds need a credit line per sound (title, author, link, licence). CC0 needs none, but crediting is polite.",
+    "The API key belongs to the user: the user must create a free account and apply at https://freesound.org/apiv2/apply, then put the key in .env. The agent must never create accounts.",
+    "Original files need OAuth2 (Download Sound is \"OAuth2 required\"); the token gives HQ previews (preview-hq-ogg ~192 kbps, preview-hq-mp3 ~128 kbps), which are fine for browser games.",
+    "Record the sound id, author and licence in the credits file at download time; licences can differ between sounds in the same pack."
+   ],
+   "credit_template": "\"{title}\" by {author} ({url}), licensed under {license}",
+   "license_quote": "Some sounds you cannot use commercially, and many of the sounds you need to credit the author.",
+   "license_url": "https://freesound.org/help/faq/"
+  },
+  {
+   "id": "sonniss-gdc",
+   "name": "Sonniss GDC Game Audio Bundles",
+   "url": "https://sonniss.com/gameaudiogdc",
+   "kinds": [
+    "audio"
+   ],
+   "styles": [
+    "realistic",
+    "any"
+   ],
+   "license": "LicenseRef-Sonniss-GDC-Bundle",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "wav"
+   ],
+   "access": {
+    "type": "pack",
+    "docs": "https://sonniss.com/gdc-bundle-license/",
+    "notes": "no account; multi-GB zip parts per year (GDC 2024 bundle: 9 parts, 23.5 GB); 2026 bundle on gdc.sonniss.com"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Professional-grade sound effects (weapons, foley, ambience, UI, creatures, vehicles) when you want quality without credits.",
+   "not_for": "Quick agent downloads (parts are several GB each); any AI training; re-sharing the raw sounds.",
+   "gotchas": [
+    "Huge downloads: have the user download one bundle part by hand, then copy only the few files you need into the game. Do not mass-download.",
+    "Not a CC licence. Allowed: use and modify in commercial games, no attribution. Forbidden: distributing the files \"as sound effects\" (no sound packs, no public asset repo of the raw files).",
+    "AI/ML training with these sounds is explicitly prohibited.",
+    "Files are large 24-bit/96 kHz wavs: trim and convert to ogg/mp3 before shipping.",
+    "Keep the bundle licence PDF/text with your project records."
+   ],
+   "credit_template": "No credit required. Optional: \"Sound effects from the Sonniss GDC Game Audio Bundle (sonniss.com)\"",
+   "license_quote": "Licensee may use and modify the licensed sound effects for personal and commercial projects",
+   "license_url": "https://sonniss.com/gdc-bundle-license/"
+  },
+  {
+   "id": "99sounds",
+   "name": "99Sounds",
+   "url": "https://99sounds.org",
+   "kinds": [
+    "audio"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "LicenseRef-99Sounds",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 60,
+   "formats": [
+    "wav"
+   ],
+   "access": {
+    "type": "pack",
+    "docs": "https://99sounds.org/license/",
+    "notes": "no key; free sound packs (count is packs, not files); some packs ask for an email before the download link"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Cinematic hits, whooshes, drones, ambiences, synth one-shots and glitch sounds in polished packs.",
+   "not_for": "Fine-grained search for one specific sound (it is pack-based); re-sharing the raw files.",
+   "gotchas": [
+    "Same licence for all packs on the site (not CC): commercial use OK, credit optional, but no redistribution of the raw files, even for free.",
+    "If a pack download asks for an email, the user does it; the agent must not sign up.",
+    "Some packs include plugins/instruments (not needed for games); use only the audio files."
+   ],
+   "credit_template": "No credit required. Optional: \"Sounds from {pack} by 99Sounds (99sounds.org)\"",
+   "license_quote": "You may use the audio files and plugins downloaded from 99Sounds in any number of personal and commercial projects for yourself or a client.",
+   "license_url": "https://99sounds.org/license/"
+  },
+  {
+   "id": "soundimage",
+   "name": "Soundimage.org (Eric Matyas)",
+   "url": "https://soundimage.org",
+   "kinds": [
+    "music",
+    "audio"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "LicenseRef-Soundimage-International-Public-License",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "mp3",
+    "wav"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://soundimage.org/attribution-info/",
+    "notes": "no account; per-track mp3 download on genre pages; no API; site blocks plain curl (use a browser)"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Looping game music by genre (fantasy, sci-fi, puzzle, chiptune, horror, action) plus sound effects, with a simple one-line credit.",
+   "not_for": "Games that cannot show credits in-game; adult content (prohibited by the licence).",
+   "gotchas": [
+    "Own licence (\"Soundimage International Public License\", modelled on CC BY 4.0). The grant is royalty-free and not limited to non-commercial use, but it is not literally CC BY: link the licence page in your credits.",
+    "Credit must be inside the game itself (credits screen), not only on a store page.",
+    "Credit format for music: \"Music by Eric Matyas\" and \"www.soundimage.org\"; name the track when you mix in other artists.",
+    "Use in obscene or pornographic media is prohibited.",
+    "Paid non-attribution option exists ($30 per track, $5 per sound effect) if credit is impossible."
+   ],
+   "credit_template": "\"{title}\" Music by Eric Matyas, www.soundimage.org",
+   "license_quote": "Subject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free",
+   "license_url": "https://soundimage.org/sample-page/"
+  },
+  {
+   "id": "free-music-archive",
+   "name": "Free Music Archive (FMA)",
+   "url": "https://freemusicarchive.org",
+   "kinds": [
+    "music"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "mixed",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "mp3"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://freemusicarchive.org/License_Guide",
+    "notes": "per-track licence chosen by the artist; downloads may need a free account (user does it)"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Songs with vocals or a distinct artist style (rock, electronic, hip-hop, ambient) when you can credit.",
+   "not_for": "Fast agent-driven sourcing: most tracks are NonCommercial or NoDerivatives, so every pick needs a manual licence check.",
+   "gotchas": [
+    "Licence is per track. Only CC0, CC BY and CC BY-SA are usable in a commercial game. Skip anything with NC or ND.",
+    "Retired \"FMA-Limited License: Download Only\" tracks are personal-listening only: never use them.",
+    "FMA itself does not grant licences; the artist does. Screenshot or save the track page licence at download time.",
+    "Credit must include title, artist, source and licence."
+   ],
+   "credit_template": "\"{title}\" by {author} ({url}), {license}",
+   "license_quote": "Find the specific CC licence conditions on the song page of the FMA artist.",
+   "license_url": "https://freemusicarchive.org/License_Guide"
+  },
+  {
+   "id": "ccmixter",
+   "name": "ccMixter (dig.ccmixter.org)",
+   "url": "https://dig.ccmixter.org",
+   "kinds": [
+    "music"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "mixed",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "mp3"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://ccmixter.org/",
+    "notes": "no key; dig.ccmixter.org has a \"free for commercial use\" filter, an \"instrumental only\" checkbox and a \"music for games\" featured list"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Instrumental remixes and loops (electronic, hip-hop, ambient, cinematic) where you can credit the artist.",
+   "not_for": "Anything you did not filter with \"free for commercial use\"; the site default mixes in NonCommercial tracks.",
+   "gotchas": [
+    "Licence is per track and many are CC BY-NC: always switch on the \"free for commercial use\" filter and re-check the licence on the track page.",
+    "Credit is required (CC BY family). Remixes may also list the sources they sample: credit what the track page asks for.",
+    "The ccMixter site text itself is CC BY-NC; that applies to the website, not to the music licence of each track."
+   ],
+   "credit_template": "\"{title}\" by {author} ({url}), {license}",
+   "license_quote": "It’s free to use if you give us credit",
+   "license_url": "https://ccmixter.org/"
+  },
+  {
+   "id": "sfxr-me",
+   "name": "jsfxr (sfxr.me)",
+   "url": "https://sfxr.me",
+   "kinds": [
+    "audio"
+   ],
+   "styles": [
+    "pixel",
+    "cartoon"
+   ],
+   "license": "output: yours, unrestricted commercial use (tool: Unlicense)",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "wav",
+    "json"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://github.com/chr15m/jsfxr",
+    "notes": "browser tool, no account for the free tier; npm package \"jsfxr\" can also generate sounds at runtime from saved parameters"
+   },
+   "agent_fetch": "local",
+   "good_for": "Retro blips: jump, coin, laser, hit, explosion, power-up, UI clicks, made in seconds.",
+   "not_for": "Realistic sounds, music.",
+   "gotchas": [
+    "Free tier exports wav and the settings as json; mp3/ogg export and zip packs are a paid \"Pro\" option (not needed: convert wav with ffmpeg).",
+    "Keep the json parameters in the repo so a sound can be tweaked later, or play them at runtime with the jsfxr library (Unlicense).",
+    "Sounds are generated from random seeds: tell the user to audition several and keep the best."
+   ],
+   "credit_template": "No credit required. Optional: \"Sound effects made with jsfxr (sfxr.me)\"",
+   "license_quote": "Unrestricted commercial use.",
+   "license_url": "https://sfxr.me/"
+  },
+  {
+   "id": "chiptone",
+   "name": "ChipTone (SFB Games)",
+   "url": "https://sfbgames.itch.io/chiptone",
+   "kinds": [
+    "audio"
+   ],
+   "styles": [
+    "pixel",
+    "cartoon"
+   ],
+   "license": "CC0-1.0 (output)",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "wav"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://sfbgames.itch.io/chiptone",
+    "notes": "free browser version on the itch page (HTML5), plus Windows/macOS downloads (name your own price)"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Chiptune sound effects with more control than sfxr (multiple notes, envelopes, arpeggios).",
+   "not_for": "Realistic or orchestral sound.",
+   "gotchas": [
+    "The author states every sound you make is CC0: no credit, any use.",
+    "No Linux build (browser version works everywhere).",
+    "Export is wav; convert to ogg/mp3 for the web."
+   ],
+   "credit_template": "No credit required. Optional: \"Sound effects made with ChipTone by SFB Games\"",
+   "license_quote": "All sounds created using ChipTone are FREE to use for any purpose, commercial or otherwise, under the CC0 licence.",
+   "license_url": "https://sfbgames.itch.io/chiptone"
+  },
+  {
+   "id": "zzfx-sounds",
+   "name": "ZzFX (Zuper Zmall Zound Zynth)",
+   "url": "https://killedbyapixel.github.io/ZzFX",
+   "kinds": [
+    "audio"
+   ],
+   "styles": [
+    "pixel",
+    "cartoon"
+   ],
+   "license": "MIT",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "js",
+    "wav"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/KilledByAPixel/ZzFX",
+    "notes": "no key; <1 KB JS library; the sound designer page outputs a parameter array you paste into code"
+   },
+   "agent_fetch": "local",
+   "good_for": "Tiny browser games: sound effects as one line of code each, no audio files at all. Ideal for agents (they can write and tune the parameter arrays).",
+   "not_for": "Realistic audio, long music (see ZzFXM for tracker music).",
+   "gotchas": [
+    "The library is MIT: keep its licence header in the file you ship. The sounds are just numbers you choose, so there is nothing else to license.",
+    "Browsers block audio until the first user click/tap: trigger the first zzfx() from an input handler.",
+    "The designer page can also export a wav if you prefer files."
+   ],
+   "credit_template": "No on-screen credit required; keep the MIT notice in ZzFX.js.",
+   "license_quote": "Open Source: MIT licensed, use it anywhere!",
+   "license_url": "https://github.com/KilledByAPixel/ZzFX"
+  },
+  {
+   "id": "beepbox",
+   "name": "BeepBox (and its fork JummBox)",
+   "url": "https://www.beepbox.co",
+   "kinds": [
+    "music"
+   ],
+   "styles": [
+    "pixel",
+    "cartoon",
+    "any"
+   ],
+   "license": "output: yours (tool: MIT)",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "wav",
+    "mp3",
+    "mid",
+    "json"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://github.com/johnnesky/beepbox",
+    "notes": "browser app, no account; the whole song is stored in the page URL; JummBox (https://jummb.us) is a fork with more features and the same ownership statement"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Short chiptune/synth loops and jingles made by the user (or written by an agent as a song URL, then exported).",
+   "not_for": "Realistic instruments or vocals; very long scores.",
+   "gotchas": [
+    "Only your ORIGINAL songs are yours. Songs other people shared as BeepBox links belong to them: do not use someone else's URL without their licence.",
+    "Save the song URL in the repo (e.g. assets/music/SOURCE.md) so it can be edited later.",
+    "Export from the File menu; prefer ogg/mp3 for the web (convert the wav with ffmpeg if needed)."
+   ],
+   "credit_template": "No credit required. Optional: \"Music made with BeepBox (beepbox.co)\"",
+   "license_quote": "BeepBox does not claim ownership over songs created with it, so original songs belong to their authors.",
+   "license_url": "https://www.beepbox.co/"
+  },
+  {
+   "id": "bosca-ceoil-blue",
+   "name": "Bosca Ceoil Blue",
+   "url": "https://github.com/YuriSizov/boscaceoil-blue",
+   "kinds": [
+    "music"
+   ],
+   "styles": [
+    "pixel",
+    "cartoon",
+    "any"
+   ],
+   "license": "output: yours (tool: MIT)",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "wav",
+    "mid"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://github.com/YuriSizov/boscaceoil-blue",
+    "notes": "free desktop app (Windows/macOS/Linux) and a browser beta; remake of Terry Cavanagh's Bosca Ceoil, which is archived"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Beginner-friendly pattern-based music for games; the user makes loops without music theory.",
+   "not_for": "Agent-only workflows (it is a GUI app; no text song format an agent can write easily).",
+   "gotchas": [
+    "The project says songs can be used \"for your next game\"; no ownership claim over your songs.",
+    "Exports wav and midi only; convert to ogg/mp3 for the web.",
+    "The original Bosca Ceoil (boscaceoil.net) is archived; use Blue."
+   ],
+   "credit_template": "No credit required. Optional: \"Music made with Bosca Ceoil Blue\"",
+   "license_quote": "Share them with the world, or use them for your next game or video!",
+   "license_url": "https://github.com/YuriSizov/boscaceoil-blue"
+  },
+  {
+   "id": "google-fonts",
+   "name": "Google Fonts",
+   "url": "https://fonts.google.com",
+   "kinds": [
+    "font"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "mixed",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 1900,
+   "formats": [
+    "ttf",
+    "woff2"
+   ],
+   "access": {
+    "type": "api",
+    "docs": "https://github.com/google/fonts",
+    "notes": "no key for the CSS API (fonts.googleapis.com/css2) or the GitHub repo; per-family licence file (OFL-1.1, Apache-2.0 or UFL-1.0)"
+   },
+   "agent_fetch": "api",
+   "good_for": "Every UI and title font need: pixel fonts (Press Start 2P, Silkscreen, VT323), display, handwriting, body text in many scripts.",
+   "not_for": "Selling the font files on their own.",
+   "gotchas": [
+    "Licence is per family: most are SIL OFL 1.1, some Apache 2.0, Ubuntu fonts use UFL 1.0. All allow use in commercial games.",
+    "OFL rules: embed/bundle freely in a game; do not sell the font by itself; ship OFL.txt (copyright + licence) next to the font files; if you modify a font with a Reserved Font Name, rename it.",
+    "Self-host the woff2 files instead of linking fonts.googleapis.com: works offline, no third-party request (privacy, GDPR).",
+    "The CSS API returns woff2 only when the request looks like a modern browser; with plain curl you may get ttf. Fine either way."
+   ],
+   "credit_template": "No on-screen credit required. Ship the family's OFL.txt with the font files.",
+   "license_quote": "Most of the fonts in the collection use the SIL Open Font License, v1.1.",
+   "license_url": "https://github.com/google/fonts"
+  },
+  {
+   "id": "fontsource",
+   "name": "Fontsource",
+   "url": "https://fontsource.org",
+   "kinds": [
+    "font"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "mixed",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 2100,
+   "formats": [
+    "woff2",
+    "woff",
+    "ttf"
+   ],
+   "access": {
+    "type": "api",
+    "docs": "https://fontsource.org/docs/getting-started/install",
+    "notes": "no key; one npm package per font (@fontsource/<id>); metadata API https://api.fontsource.org/v1/fonts/<id> returns the SPDX licence"
+   },
+   "agent_fetch": "api",
+   "good_for": "Self-hosting Google Fonts (and some other open fonts) in a Vite/npm game with one import line.",
+   "not_for": "Projects without a bundler (use the Google Fonts woff2 files directly).",
+   "gotchas": [
+    "Licence per font, returned by the API. Of 2,103 fonts on 2026-11-14: 2,059 OFL-1.1, 36 Apache-2.0, 5 UFL-1.0, and one each CC0, MIT, Unlicense.",
+    "Same OFL rules as Google Fonts (bundle OK, no standalone sale, keep the licence; the npm package includes it).",
+    "Use the variable package (@fontsource-variable/<id>) when the font has one: one file for all weights."
+   ],
+   "credit_template": "No on-screen credit required. The npm package carries the font licence.",
+   "license_quote": "Always make sure to read the license for each font you use. Most of the fonts in the collection use the SIL Open Font License, v1.1.",
+   "license_url": "https://github.com/fontsource/fontsource"
+  },
+  {
+   "id": "league-of-moveable-type",
+   "name": "The League of Moveable Type",
+   "url": "https://www.theleagueofmoveabletype.com",
+   "kinds": [
+    "font"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "OFL-1.1",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 18,
+   "formats": [
+    "otf",
+    "ttf",
+    "woff",
+    "woff2"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/theleagueof",
+    "notes": "no key; each family has a GitHub repo with release zips (count is families, 77 styles)"
+   },
+   "agent_fetch": "direct",
+   "good_for": "Strong display/title fonts (League Gothic, League Spartan, Orbitron, Ostrich Sans, Knewave) for logos and menus.",
+   "not_for": "Large multilingual body text (limited language coverage on some families).",
+   "gotchas": [
+    "OFL: bundle in the game, keep OFL.txt with the files, do not sell the font alone.",
+    "Some families declare Reserved Font Names: if you modify the font (not just subset it), rename it."
+   ],
+   "credit_template": "No on-screen credit required. Ship OFL.txt with the font files.",
+   "license_quote": "available to use commercially and subject to the Open Font License.",
+   "license_url": "https://www.theleagueofmoveabletype.com/league-gothic"
+  },
+  {
+   "id": "iconify",
+   "name": "Iconify API (index of 270+ open icon sets)",
+   "url": "https://icon-sets.iconify.design",
+   "kinds": [
+    "icon"
+   ],
+   "styles": [
+    "any",
+    "pixel"
+   ],
+   "license": "mixed",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 480000,
+   "formats": [
+    "svg",
+    "json"
+   ],
+   "access": {
+    "type": "api",
+    "docs": "https://iconify.design/docs/api/",
+    "notes": "no key; search https://api.iconify.design/search?query=...; per-set licence in the \"collections\" block of every response; SVG at https://api.iconify.design/<prefix>/<name>.svg"
+   },
+   "agent_fetch": "api",
+   "good_for": "Agents finding an icon by keyword across hundreds of sets and reading the licence from the same response (game-icons, Lucide, Tabler, Phosphor, Material, pixelarticons, Twemoji, Noto emoji...).",
+   "not_for": "Trusting the licence field blindly for sets that changed licence recently (see gotchas).",
+   "gotchas": [
+    "Licence is per icon set: read collections[prefix].license.spdx. On 2026-11-14 the 276 sets were mostly MIT (144), CC-BY-4.0 (53), Apache-2.0 (31), OFL-1.1 (13), CC0 (10), but also CC-BY-SA (9), GPL (6) and CC-BY-NC (2). Allow-list SPDX ids; reject NC, and avoid SA/GPL unless the user accepts share-alike.",
+    "Restrict searches with prefixes= to sets you already approved, e.g. prefixes=game-icons,lucide,tabler,ph,pixelarticons.",
+    "The licence field can lag upstream: Iconify still listed Remix Icon as Apache 2.0, but upstream switched to its own \"Remix Icon License v1.0\" in Jan 2026. Check the set's own repo for anything you ship.",
+    "CC BY sets (game-icons, Font Awesome, Twemoji) need credit; record the author per icon.",
+    "Public API is a shared free service: fetch the few icons you need and save the SVGs into the repo; do not call it at game runtime or in bulk.",
+    "api.iconify.design robots.txt disallows crawlers (and says ai-train=no): make single lookups and cache them, never crawl. For offline use install @iconify-json/<prefix> (one npm package per set, with licence metadata)."
+   ],
+   "credit_template": "Depends on the set: e.g. \"Icons made by {author}. Available on https://game-icons.net\" for game-icons (CC BY 3.0); none needed for MIT/ISC/Apache sets beyond keeping the licence text.",
+   "license_quote": "\"game-icons\":{\"name\":\"Game Icons\",...,\"license\":{\"title\":\"CC BY 3.0\",\"spdx\":\"CC-BY-3.0\",\"url\":\"https://github.com/game-icons/icons/blob/master/license.txt\"}",
+   "license_url": "https://api.iconify.design/collections"
+  },
+  {
+   "id": "game-icons",
+   "name": "game-icons.net",
+   "url": "https://game-icons.net",
+   "kinds": [
+    "icon"
+   ],
+   "styles": [
+    "stylized",
+    "any"
+   ],
+   "license": "CC-BY-3.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 4100,
+   "formats": [
+    "svg",
+    "png"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/game-icons/icons",
+    "notes": "no key; SVGs in the GitHub repo, one folder per author; also via Iconify (prefix game-icons); site has an editor for colour/background and PNG export"
+   },
+   "agent_fetch": "direct",
+   "good_for": "Fantasy/RPG/strategy icons: weapons, spells, items, resources, status effects, skills, cards, map markers.",
+   "not_for": "Games that cannot show a credits line; pixel-art styles (these are flat silhouettes).",
+   "gotchas": [
+    "Credit the AUTHOR of each icon (Lorc, Delapouite, ...), not just the site. The author is the GitHub folder name.",
+    "A few contributors (e.g. Viscious Speed, Zeromancer) are CC0; the rest are CC BY 3.0.",
+    "Silhouettes are single-colour on 512x512: recolour with CSS fill or the site editor."
+   ],
+   "credit_template": "Icons made by {author}. Available on https://game-icons.net (CC BY 3.0)",
+   "license_quote": "Icons provided under the Creative Commons 3.0 BY or CC0 if mentioned below.",
+   "license_url": "https://github.com/game-icons/icons/blob/master/license.txt"
+  },
+  {
+   "id": "lucide",
+   "name": "Lucide",
+   "url": "https://lucide.dev",
+   "kinds": [
+    "icon"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "ISC",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 2000,
+   "formats": [
+    "svg"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://lucide.dev/guide/",
+    "notes": "no key; npm \"lucide\" / \"lucide-static\", GitHub SVGs, or Iconify prefix \"lucide\""
+   },
+   "agent_fetch": "direct",
+   "good_for": "Clean line icons for menus, HUD buttons, settings, pause/mute/fullscreen.",
+   "not_for": "In-world game art or themed fantasy items.",
+   "gotchas": [
+    "ISC needs the copyright and permission notice kept \"in all copies\": include Lucide's LICENSE in your third-party notices file. No on-screen credit.",
+    "Icons derived from Feather are listed on the licence page under a separate MIT notice: keep that too."
+   ],
+   "credit_template": "No on-screen credit required. Keep the Lucide ISC licence text in THIRD_PARTY_NOTICES.",
+   "license_quote": "Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.",
+   "license_url": "https://lucide.dev/license"
+  },
+  {
+   "id": "tabler-icons",
+   "name": "Tabler Icons",
+   "url": "https://tabler.io/icons",
+   "kinds": [
+    "icon"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "MIT",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 6500,
+   "formats": [
+    "svg",
+    "png",
+    "woff2"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/tabler/tabler-icons",
+    "notes": "no key; npm \"@tabler/icons\", GitHub SVGs, or Iconify prefix \"tabler\""
+   },
+   "agent_fetch": "direct",
+   "good_for": "Large set of outline and filled UI icons, including some game-ish ones (sword, shield, dice, trophy).",
+   "not_for": "Detailed themed item art.",
+   "gotchas": [
+    "MIT: keep the licence text in your notices file; no on-screen credit."
+   ],
+   "credit_template": "No on-screen credit required. Keep the MIT licence text in THIRD_PARTY_NOTICES.",
+   "license_quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software",
+   "license_url": "https://github.com/tabler/tabler-icons/blob/main/LICENSE"
+  },
+  {
+   "id": "phosphor-icons",
+   "name": "Phosphor Icons",
+   "url": "https://phosphoricons.com",
+   "kinds": [
+    "icon"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "MIT",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 9000,
+   "formats": [
+    "svg",
+    "png"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/phosphor-icons/core",
+    "notes": "no key; 6 weights (thin, light, regular, bold, fill, duotone); npm \"@phosphor-icons/core\" or Iconify prefix \"ph\""
+   },
+   "agent_fetch": "direct",
+   "good_for": "Friendly UI icons in several weights so the HUD can match the game's line thickness.",
+   "not_for": "Themed fantasy items.",
+   "gotchas": [
+    "MIT: keep the licence text in your notices file; no on-screen credit."
+   ],
+   "credit_template": "No on-screen credit required. Keep the MIT licence text in THIRD_PARTY_NOTICES.",
+   "license_quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software",
+   "license_url": "https://github.com/phosphor-icons/core/blob/main/LICENSE"
+  },
+  {
+   "id": "heroicons",
+   "name": "Heroicons",
+   "url": "https://heroicons.com",
+   "kinds": [
+    "icon"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "MIT",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 1300,
+   "formats": [
+    "svg"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/tailwindlabs/heroicons",
+    "notes": "no key; npm \"heroicons\" or Iconify prefix \"heroicons\""
+   },
+   "agent_fetch": "direct",
+   "good_for": "Small, consistent UI set (menus, settings, arrows) that pairs with Tailwind-style web UI.",
+   "not_for": "Game-themed icons (very few).",
+   "gotchas": [
+    "MIT: keep the licence text in your notices file; no on-screen credit."
+   ],
+   "credit_template": "No on-screen credit required. Keep the MIT licence text in THIRD_PARTY_NOTICES.",
+   "license_quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software",
+   "license_url": "https://github.com/tailwindlabs/heroicons/blob/master/LICENSE"
+  },
+  {
+   "id": "material-symbols",
+   "name": "Material Symbols / Material Design Icons (Google)",
+   "url": "https://fonts.google.com/icons",
+   "kinds": [
+    "icon",
+    "font"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "Apache-2.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 15800,
+   "formats": [
+    "svg",
+    "png",
+    "woff2"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/google/material-design-icons",
+    "notes": "no key; SVGs in the GitHub repo, icon font via fonts.googleapis.com, or Iconify prefix \"material-symbols\""
+   },
+   "agent_fetch": "direct",
+   "good_for": "Very large, familiar UI icon set (outlined/rounded/sharp, fill and weight axes).",
+   "not_for": "A distinctive game look (instantly reads as Android/Google UI).",
+   "gotchas": [
+    "Apache 2.0: keep a copy of the licence (and any NOTICE) in your notices file when you ship the files; no on-screen credit.",
+    "Prefer individual SVGs over the full variable icon font (the font is several MB)."
+   ],
+   "credit_template": "No on-screen credit required. Keep the Apache-2.0 licence text in THIRD_PARTY_NOTICES.",
+   "license_quote": "Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.",
+   "license_url": "https://github.com/google/material-design-icons/blob/master/LICENSE"
+  },
+  {
+   "id": "iconoir",
+   "name": "Iconoir",
+   "url": "https://iconoir.com",
+   "kinds": [
+    "icon"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "MIT",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 1700,
+   "formats": [
+    "svg"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/iconoir-icons/iconoir",
+    "notes": "no key; npm \"iconoir\" or Iconify prefix \"iconoir\""
+   },
+   "agent_fetch": "direct",
+   "good_for": "Light outline UI icons with a slightly softer style.",
+   "not_for": "Themed game items.",
+   "gotchas": [
+    "MIT: keep the licence text in your notices file; no on-screen credit."
+   ],
+   "credit_template": "No on-screen credit required. Keep the MIT licence text in THIRD_PARTY_NOTICES.",
+   "license_quote": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software",
+   "license_url": "https://github.com/iconoir-icons/iconoir/blob/main/LICENSE"
+  },
+  {
+   "id": "remix-icon",
+   "name": "Remix Icon",
+   "url": "https://remixicon.com",
+   "kinds": [
+    "icon"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "LicenseRef-Remix-Icon-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 3200,
+   "formats": [
+    "svg",
+    "woff2"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/Remix-Design/RemixIcon",
+    "notes": "no key; npm \"remixicon\" or Iconify prefix \"ri\" (Iconify still labels it Apache 2.0; upstream changed licence in Jan 2026)"
+   },
+   "agent_fetch": "direct",
+   "good_for": "Neutral line + fill UI icons inside a game's menus and HUD.",
+   "not_for": "Your game's logo or app icon; reselling icons.",
+   "gotchas": [
+    "Since January 2026 it uses its own \"Remix Icon License v1.0\", no longer Apache 2.0. Commercial use in a game is allowed; attribution optional.",
+    "Forbidden: using an icon (even modified) as a logo, brand mark or app icon; selling icons as a pack; making a competing icon set.",
+    "Brand icons (GitHub, Discord...) only to link to that brand.",
+    "Version mismatch on 2026-11-14: the npm package remixicon 4.9.1 and Iconify still say Apache-2.0, the GitHub License file says Remix Icon License v1.0. Follow the stricter custom licence (no logo/app-icon use) to be safe."
+   ],
+   "credit_template": "No credit required. Optional: \"Icons by Remix Icon (https://remixicon.com)\"",
+   "license_quote": "Use the Icons in personal, commercial, and client projects, including but not limited to:",
+   "license_url": "https://github.com/Remix-Design/RemixIcon/blob/master/License"
+  },
+  {
+   "id": "font-awesome-free",
+   "name": "Font Awesome Free",
+   "url": "https://fontawesome.com/search?ic=free",
+   "kinds": [
+    "icon",
+    "font"
+   ],
+   "styles": [
+    "any"
+   ],
+   "license": "CC-BY-4.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 2800,
+   "formats": [
+    "svg",
+    "woff2"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/FortAwesome/Font-Awesome",
+    "notes": "no key; Free download/npm \"@fortawesome/fontawesome-free\"; Iconify prefixes fa7-solid, fa7-regular, fa7-brands"
+   },
+   "agent_fetch": "direct",
+   "good_for": "Familiar UI and brand icons (social links, controller, volume, gear).",
+   "not_for": "Pro icons (paid; not in the Free set).",
+   "gotchas": [
+    "Three licences in one download: icons (SVG/JS) CC BY 4.0, font files OFL 1.1, code MIT.",
+    "Attribution is required, but Font Awesome says the comments already embedded in the downloaded files are enough; keep those comments (do not strip them in minified SVGs) or add a credit line.",
+    "Only the Free set; icons marked Pro need a paid plan. Brand icons are trademarks: use only to refer to the brand."
+   ],
+   "credit_template": "Icons: Font Awesome Free by Fonticons, Inc. (https://fontawesome.com), CC BY 4.0",
+   "license_quote": "The Font Awesome Free download is licensed under a Creative Commons Attribution 4.0 International License and applies to all icons packaged as SVG and JS file types.",
+   "license_url": "https://github.com/FortAwesome/Font-Awesome/blob/7.x/LICENSE.txt"
+  },
+  {
+   "id": "twemoji",
+   "name": "Twemoji (jdecked fork)",
+   "url": "https://github.com/jdecked/twemoji",
+   "kinds": [
+    "icon",
+    "sprite"
+   ],
+   "styles": [
+    "cartoon"
+   ],
+   "license": "CC-BY-4.0",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 4000,
+   "formats": [
+    "svg",
+    "png"
+   ],
+   "access": {
+    "type": "github",
+    "docs": "https://github.com/jdecked/twemoji",
+    "notes": "no key; SVG and 72x72 PNG per emoji code point; Iconify prefix \"twemoji\""
+   },
+   "agent_fetch": "direct",
+   "good_for": "Cheerful flat placeholder or final art for items, food, animals, faces, weather, UI reactions.",
+   "not_for": "Games without a credits/about line.",
+   "gotchas": [
+    "Graphics are CC BY 4.0 (code MIT). The project accepts credit in an About screen, footer or README.",
+    "Files are named by Unicode code point (e.g. 1f344.svg = mushroom).",
+    "Alternatives via Iconify: Noto Emoji (Apache-2.0, no credit), Fluent Emoji (MIT). OpenMoji is CC BY-SA (share-alike): avoid unless the user accepts SA."
+   ],
+   "credit_template": "Emoji graphics by Twemoji (https://github.com/jdecked/twemoji), CC BY 4.0",
+   "license_quote": "Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+   "license_url": "https://github.com/jdecked/twemoji"
+  },
+  {
+   "id": "0x72-dungeontileset-ii",
+   "name": "0x72 DungeonTileset II",
+   "url": "https://0x72.itch.io/dungeontileset-ii",
+   "kinds": [
+    "sprite",
+    "tileset",
+    "animation"
+   ],
+   "styles": [
+    "pixel"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": 1,
+   "formats": [
+    "png"
+   ],
+   "access": {
+    "type": "pack",
+    "docs": "https://0x72.itch.io/dungeontileset-ii",
+    "notes": "one 406 kB zip (name your own price, $0 allowed); 16x16 tiles with animated heroes, monsters, items, traps"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Top-down dungeon crawlers and roguelikes in 16x16 pixel art with animated characters.",
+   "not_for": "Side-view platformers, high-resolution art.",
+   "gotchas": [
+    "itch.io download page asks for an optional payment: the user clicks \"No thanks, just take me to the downloads\".",
+    "Count is one pack (hundreds of frames). Frame list file in the zip gives sprite names and rectangles.",
+    "Scale with nearest-neighbour (CSS image-rendering: pixelated; Phaser pixelArt: true)."
+   ],
+   "credit_template": "No credit required. Optional: \"DungeonTileset II by 0x72 (CC0)\"",
+   "license_quote": "You can use this tileset for whatever you like",
+   "license_url": "https://0x72.itch.io/dungeontileset-ii"
+  },
+  {
+   "id": "pixel-frog",
+   "name": "Pixel Frog (Pixel Adventure and other packs)",
+   "url": "https://pixelfrog-assets.itch.io",
+   "kinds": [
+    "sprite",
+    "tileset",
+    "animation"
+   ],
+   "styles": [
+    "pixel"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "png"
+   ],
+   "access": {
+    "type": "pack",
+    "docs": "https://pixelfrog-assets.itch.io/pixel-adventure-1",
+    "notes": "itch.io packs (count is packs); Pixel Adventure 1 is free CC0; check each pack page, some are paid"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Side-view platformers: animated characters, enemies, fruits, traps, terrain tiles in a bright 32x32 style.",
+   "not_for": "Top-down RPGs; realistic styles.",
+   "gotchas": [
+    "Licence stated per pack page: Pixel Adventure 1 is CC0. Verify the page of any other Pixel Frog pack before use (some are paid, with their own terms).",
+    "Very popular in game jams: recognisable look."
+   ],
+   "credit_template": "No credit required. Optional: \"Art by Pixel Frog (CC0)\"",
+   "license_quote": "These assets are released under a Creative Commons Zero (CC0) license.",
+   "license_url": "https://pixelfrog-assets.itch.io/pixel-adventure-1"
+  },
+  {
+   "id": "grafxkid",
+   "name": "GrafxKid (Sprite Pack series)",
+   "url": "https://grafxkid.itch.io",
+   "kinds": [
+    "sprite",
+    "tileset",
+    "animation"
+   ],
+   "styles": [
+    "pixel",
+    "cartoon"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "png"
+   ],
+   "access": {
+    "type": "pack",
+    "docs": "https://grafxkid.itch.io/sprite-pack-1",
+    "notes": "itch.io packs (count is packs); Sprite Pack 1 is CC0; check each pack page"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Cute small pixel characters, enemies and objects for platformers and arcade games.",
+   "not_for": "Large detailed sprites.",
+   "gotchas": [
+    "Licence is stated per pack: Sprite Pack 1 is CC0 (\"Crediting is optional\"). Check other packs individually."
+   ],
+   "credit_template": "No credit required. Optional: \"Sprites by GrafxKid (CC0)\"",
+   "license_quote": "You can freely use these assets for personal and commercial use.",
+   "license_url": "https://grafxkid.itch.io/sprite-pack-1"
+  },
+  {
+   "id": "lpc-character-generator",
+   "name": "Universal LPC Spritesheet Character Generator",
+   "url": "https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/",
+   "kinds": [
+    "sprite",
+    "animation"
+   ],
+   "styles": [
+    "pixel"
+   ],
+   "license": "mixed",
+   "credit_required": true,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "png",
+    "csv",
+    "txt"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator",
+    "notes": "browser tool, no account; builds a 64x64 top-down character sheet (walk, slash, cast, shoot, hurt...) and a credits file for the chosen layers"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Top-down RPG characters with many outfits and full animation sets, made without drawing.",
+   "not_for": "Games that cannot ship a credits list, or that want closed/DRM-protected assets.",
+   "gotchas": [
+    "Each layer has its own licence: CC0, CC BY, OGA-BY, CC BY-SA 4.0 or GPL 3. The README says the most restrictive is CC BY-SA and that commercial games are allowed.",
+    "SHARE-ALIKE: if the sheet includes CC BY-SA or GPL layers, any modified version of that art must be released under the same licence. The game code is not affected, but the sprite sheet is.",
+    "CC BY / CC BY-SA layers forbid DRM/\"technical measures\" on the art; fine for a plain browser game, a problem for some app stores.",
+    "Credit every author: download the credits (csv/txt) from the generator for your exact layers and ship it, visible from the credits screen.",
+    "Tick only CC0 / OGA-BY layers in the licence filter if you want the least obligations."
+   ],
+   "credit_template": "Character sprites made with the Universal LPC Spritesheet Character Generator; authors and licences in credits/lpc-credits.txt",
+   "license_quote": "If you generate a sprite using this tool, or use individual images taken directly from the `spritesheets` subdirectory from this repo, you must at least credit all the authors (except for CC0 licensed artwork).",
+   "license_url": "https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator"
+  },
+  {
+   "id": "makehuman",
+   "name": "MakeHuman (exported characters)",
+   "url": "https://static.makehumancommunity.org/makehuman.html",
+   "kinds": [
+    "model"
+   ],
+   "styles": [
+    "realistic"
+   ],
+   "license": "CC0-1.0",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "fbx",
+    "obj",
+    "dae",
+    "mhx2"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://static.makehumancommunity.org/makehuman/faq/can_i_sell_models_created_with_makehuman.html",
+    "notes": "free desktop app (AGPL); also the MPFB add-on for Blender; output with bundled assets is CC0"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Realistic human base meshes with a skeleton, to rig/animate (e.g. with Mixamo) and export to glTF via Blender.",
+   "not_for": "Stylised/cartoon characters; agent-only workflows (GUI app).",
+   "gotchas": [
+    "Only the assets bundled with MakeHuman are CC0. Community assets (clothes, hair) downloaded separately can be CC BY: check each one.",
+    "Exports are high-poly: decimate in Blender and export glb for the browser.",
+    "The app itself is AGPL; that does not affect your exported models."
+   ],
+   "credit_template": "No credit required. Optional: \"Base character made with MakeHuman\"",
+   "license_quote": "The exported models end up being licensed CC0 (Creative Commons Zero).",
+   "license_url": "https://static.makehumancommunity.org/makehuman/faq/can_i_sell_models_created_with_makehuman.html"
+  },
+  {
+   "id": "mixamo",
+   "name": "Mixamo (Adobe)",
+   "url": "https://www.mixamo.com",
+   "kinds": [
+    "animation",
+    "model"
+   ],
+   "styles": [
+    "realistic",
+    "stylized"
+   ],
+   "license": "LicenseRef-Adobe-Mixamo",
+   "credit_required": false,
+   "commercial_ok": true,
+   "ai_generated": false,
+   "count_approx": null,
+   "formats": [
+    "fbx",
+    "dae"
+   ],
+   "access": {
+    "type": "site",
+    "docs": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+    "notes": "free, but needs an Adobe account login; no public API; user downloads by hand"
+   },
+   "agent_fetch": "manual",
+   "good_for": "Auto-rigging a humanoid and adding walk/run/jump/attack/idle animations for a 3D browser game.",
+   "not_for": "Non-humanoid characters (biped humanoids only); redistributing animation files as an asset pack.",
+   "gotchas": [
+    "Needs an Adobe account. The agent cannot log in or download for the user: the user uploads/downloads by hand and puts the FBX files in the project.",
+    "Royalty-free in commercial games, no credit, but raw character/animation files must not be redistributed on their own (no \"animation pack\" or template that ships the raw files as the product).",
+    "Export FBX, then convert to glb in Blender (merge animations into one file, check scale and root motion).",
+    "Licence page blocks scripted fetching; the quote was confirmed through Adobe's help page text in search results on 2026-11-14."
+   ],
+   "credit_template": "No credit required.",
+   "license_quote": "You can use both characters and animations royalty free for personal, commercial, and non-profit projects",
+   "license_url": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html"
+  }
+ ],
+ "tools": [
+  {
+   "id": "blender",
+   "name": "Blender",
+   "url": "https://www.blender.org",
+   "what": "3D modelling, sculpting, rigging, animation, rendering; converts FBX/OBJ to glTF/glb; scriptable headless with Python.",
+   "license": "GPL-3.0-or-later",
+   "output_license": "yours (the GPL covers the program, not the files you make)",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Converting and cleaning any 3D asset to .glb, decimating, baking textures, merging Mixamo clips.",
+   "notes": "Runs on mac, win and linux. Agents can drive it headless: `blender -b -P script.py`."
+  },
+  {
+   "id": "krita",
+   "name": "Krita",
+   "url": "https://krita.org",
+   "what": "Painting and 2D animation app.",
+   "license": "GPL-3.0",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Painted sprites, backgrounds, UI art, frame-by-frame animation.",
+   "notes": "mac, win, linux. The store versions (Steam, Microsoft Store) cost money; the krita.org download is free."
+  },
+  {
+   "id": "gimp",
+   "name": "GIMP",
+   "url": "https://www.gimp.org",
+   "what": "Raster image editor.",
+   "license": "GPL-3.0-or-later",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Cropping, recolouring, making texture atlases, batch edits (Script-Fu/Python).",
+   "notes": "mac, win, linux. For quick scripted edits ImageMagick or sharp is easier for agents."
+  },
+  {
+   "id": "inkscape",
+   "name": "Inkscape",
+   "url": "https://inkscape.org",
+   "what": "Vector (SVG) editor with a command line exporter.",
+   "license": "GPL-2.0-or-later",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Editing SVG icons and UI, exporting PNGs at any size: `inkscape in.svg --export-type=png --export-width=256`.",
+   "notes": "mac, win, linux. Development moved to GitLab (gitlab.com/inkscape/inkscape)."
+  },
+  {
+   "id": "blockbench",
+   "name": "Blockbench",
+   "url": "https://www.blockbench.net",
+   "what": "Low-poly / blocky 3D model and animation editor with a web app (web.blockbench.net).",
+   "license": "GPL-3.0",
+   "output_license": "yours; site says it is \"free to use for any type of project, forever, no strings attached\"",
+   "cost": "free",
+   "platform": "web",
+   "good_for": "Low-poly and voxel-like characters and props with simple animations; exports glTF via its exporters.",
+   "notes": "Also desktop for mac, win, linux. Pixel-art textures painted inside the app."
+  },
+  {
+   "id": "magicavoxel",
+   "name": "MagicaVoxel",
+   "url": "https://ephtracy.github.io",
+   "what": "Voxel model editor and path-traced renderer.",
+   "license": "freeware (closed source)",
+   "output_license": "yours; site says \"Free to use for any project.\" (redistributing the app itself is not allowed)",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Voxel characters, props and scenes; exports .vox, .obj, .ply, PNG renders.",
+   "notes": "mac and win only. Convert .obj to .glb in Blender. Last release 0.99.7.x (2023)."
+  },
+  {
+   "id": "goxel",
+   "name": "Goxel",
+   "url": "https://goxel.xyz",
+   "what": "Open-source voxel editor.",
+   "license": "GPL-3.0",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "linux",
+   "good_for": "Voxel modelling on Linux or when an open-source tool is required; exports .vox, .obj, .gltf, .ply, PNG.",
+   "notes": "Also mac, win, and a web build. Paid store versions exist on some app stores; the source build is free."
+  },
+  {
+   "id": "ldtk",
+   "name": "LDtk (Level Designer Toolkit)",
+   "url": "https://ldtk.io",
+   "what": "2D level editor from the director of Dead Cells.",
+   "license": "MIT",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Tile/entity levels for 2D games; exports documented JSON, \"Super Simple Export\" PNG layers + JSON, optional Tiled TMX.",
+   "notes": "mac, win, linux. Site: \"LDtk can be used for free without any limitation.\""
+  },
+  {
+   "id": "tiled",
+   "name": "Tiled Map Editor",
+   "url": "https://www.mapeditor.org",
+   "what": "General 2D tile map editor.",
+   "license": "GPL-2.0 (editor), BSD-2-Clause (libtiled, tmx tools)",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Tile maps for Phaser, PixiJS, Excalibur, etc. (export JSON, TMX).",
+   "notes": "mac, win, linux. itch.io page lets users pay optionally; download is free. Phaser loads Tiled JSON natively."
+  },
+  {
+   "id": "aseprite",
+   "name": "Aseprite",
+   "url": "https://www.aseprite.org",
+   "what": "Pixel-art sprite editor and animator.",
+   "license": "proprietary EULA (source-available)",
+   "output_license": "yours (EULA does not claim your artwork)",
+   "cost": "paid",
+   "platform": "mac",
+   "good_for": "Best-in-class pixel sprite animation, sprite sheet + JSON export, CLI batch export (`aseprite -b in.aseprite --sheet out.png --data out.json`).",
+   "notes": "mac, win, linux. Paid binaries ($19.99 on site/Steam). Source is on GitHub; the EULA allows compiling for \"your own personal purpose\" only and forbids distributing copies. Free alternative: LibreSprite (fork of the old GPL version) or Pixelorama."
+  },
+  {
+   "id": "libresprite",
+   "name": "LibreSprite",
+   "url": "https://libresprite.github.io",
+   "what": "Free fork of Aseprite from before its licence change.",
+   "license": "GPL-2.0",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Aseprite-like pixel animation for free.",
+   "notes": "mac, win, linux. Fewer features than current Aseprite."
+  },
+  {
+   "id": "pixelorama",
+   "name": "Pixelorama",
+   "url": "https://orama-interactive.itch.io/pixelorama",
+   "what": "Pixel-art editor and animator built with Godot; desktop and web.",
+   "license": "MIT",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "web",
+   "good_for": "Pixel sprites, tilesets and animations; exports PNG, sprite sheets, GIF.",
+   "notes": "Also mac, win, linux builds. MIT means it can even be embedded."
+  },
+  {
+   "id": "piskel",
+   "name": "Piskel",
+   "url": "https://www.piskelapp.com",
+   "what": "Simple browser pixel sprite editor.",
+   "license": "Apache-2.0",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "web",
+   "good_for": "Quick pixel sprites and small animations, export PNG sprite sheet or GIF; easiest for absolute beginners.",
+   "notes": "Offline desktop builds exist. No account needed to draw and export."
+  },
+  {
+   "id": "material-maker",
+   "name": "Material Maker",
+   "url": "https://www.materialmaker.org",
+   "what": "Node-based procedural texture/material generator (Godot).",
+   "license": "MIT",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "win",
+   "good_for": "Tileable PBR textures (base colour, normal, roughness) for 3D games.",
+   "notes": "win, linux, mac builds on GitHub/itch. Export PNG maps, load in three.js MeshStandardMaterial."
+  },
+  {
+   "id": "armorpaint",
+   "name": "ArmorPaint",
+   "url": "https://armorpaint.org",
+   "what": "3D texture painting (Substance Painter-like).",
+   "license": "zlib",
+   "output_license": "yours",
+   "cost": "paid",
+   "platform": "win",
+   "good_for": "Painting textures directly on a 3D model.",
+   "notes": "Ready-made builds cost $19 (download page, refund policy). The source (github.com/armory3d/armorpaint, zlib licence) is free to build yourself, which is not beginner-friendly. mac, win, linux."
+  },
+  {
+   "id": "makehuman-app",
+   "name": "MakeHuman (app)",
+   "url": "https://static.makehumancommunity.org/makehuman.html",
+   "what": "Parametric realistic human character generator.",
+   "license": "AGPL-3.0 (code), CC0 (bundled assets)",
+   "output_license": "CC0 for exports made with the bundled assets",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Rigged realistic human bases; see the makehuman source entry.",
+   "notes": "mac, win, linux; MPFB add-on for Blender. Community add-on assets may be CC BY."
+  },
+  {
+   "id": "vroid-studio",
+   "name": "VRoid Studio (pixiv)",
+   "url": "https://vroid.com/en/studio",
+   "what": "Anime-style 3D character creator exporting VRM.",
+   "license": "proprietary freeware",
+   "output_license": "yours; official guidelines allow commercial use of models made from VRoid Studio's own meshes, textures and presets \"provided that no special clauses are indicated in the license\"",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Anime/stylised humanoid characters for three.js (load VRM with @pixiv/three-vrm).",
+   "notes": "mac and win (Steam too). Third-party presets/textures from BOOTH etc. carry their own terms, often with credit or no-commercial rules: check each. The guidelines page blocked scripted fetching; verified via search excerpt of vroid.com/en/studio/guidelines on 2026-11-14. Set the VRM export permission fields yourself."
+  },
+  {
+   "id": "audacity",
+   "name": "Audacity",
+   "url": "https://www.audacityteam.org",
+   "what": "Audio recorder and editor.",
+   "license": "GPL-3.0 (most of the code GPL-2.0-or-later)",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Trimming, normalising, looping and converting sound effects and music to ogg/mp3.",
+   "notes": "mac, win, linux. For scripted batch conversion use ffmpeg instead."
+  },
+  {
+   "id": "lmms",
+   "name": "LMMS",
+   "url": "https://lmms.io",
+   "what": "Free digital audio workstation (pattern/piano-roll music maker with built-in synths).",
+   "license": "GPL-2.0",
+   "output_license": "yours (check licences of any third-party sample packs or plugins you add)",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Full game soundtracks by a user who wants more than BeepBox; exports wav/ogg/mp3.",
+   "notes": "mac, win, linux."
+  },
+  {
+   "id": "bfxr",
+   "name": "Bfxr / Bfxr2",
+   "url": "https://www.bfxr.net",
+   "what": "sfxr-style retro sound effect generator in the browser with extra synth options.",
+   "license": "MIT (bfxr2 code)",
+   "output_license": "not stated on the site; generally treated as yours (sounds are synthesised from your settings)",
+   "cost": "free",
+   "platform": "web",
+   "good_for": "Retro jump/coin/laser/explosion sounds with more control than jsfxr; exports wav.",
+   "notes": "Kept in tools, not sources, because neither bfxr.net nor the bfxr2 README states the licence of generated sounds (checked 2026-11-14). jsfxr or ChipTone have explicit statements."
+  },
+  {
+   "id": "labchirp",
+   "name": "LabChirp",
+   "url": "https://www.labbed.net/software/labchirp/",
+   "what": "Sound effect generator (Windows .NET; Mono on mac/linux).",
+   "license": "freeware",
+   "output_license": "not stated on the site",
+   "cost": "free",
+   "platform": "win",
+   "good_for": "Synth/retro sound effects with more parameters than sfxr.",
+   "notes": "No output licence statement (checked 2026-11-14), so prefer jsfxr/ChipTone/ZzFX in the kit."
+  },
+  {
+   "id": "ffmpeg",
+   "name": "FFmpeg",
+   "url": "https://ffmpeg.org",
+   "what": "Command-line audio/video converter.",
+   "license": "LGPL-2.1-or-later (GPL with some options)",
+   "output_license": "yours",
+   "cost": "free",
+   "platform": "mac",
+   "good_for": "Agent-friendly conversion of wav/mp3 to ogg/mp3/m4a, trimming, loudness normalisation (`ffmpeg -i in.wav -af loudnorm -c:a libvorbis -q:a 4 out.ogg`).",
+   "notes": "mac (brew install ffmpeg), win, linux."
+  }
+ ],
+ "avoid": [
+  {
+   "id": "pixabay",
+   "name": "Pixabay (images, music, sound effects)",
+   "url": "https://pixabay.com/service/license-summary/",
+   "why": "Kit policy: Pixabay Content License is not a Creative Commons licence and restricts standalone redistribution (a public game repo with the raw files can count). Use CC0/CC BY sources instead.",
+   "license_seen": "Pixabay Content License (custom, not CC)",
+   "quote": "You cannot sell or distribute Content (either in digital or physical form) on a Standalone basis."
+  },
+  {
+   "id": "mixkit",
+   "name": "Mixkit (Envato) music and sound effects",
+   "url": "https://mixkit.co/license/",
+   "why": "Kit policy: custom Mixkit licences (not CC), some items are personal-use only (\"Restricted License\"), and raw items may not be resold/redistributed unaltered.",
+   "license_seen": "Mixkit Free License / Mixkit Restricted License (custom)",
+   "quote": "Only allows use in personal, non-commercial projects. (Restricted License, from mixkit.co/llm-info)"
+  },
+  {
+   "id": "shadertoy",
+   "name": "Shadertoy shaders",
+   "url": "https://www.shadertoy.com/terms",
+   "why": "Shaders without an explicit licence from the author default to CC BY-NC-SA 3.0: no commercial use, share-alike. Only copy a shader whose header states a permissive licence (MIT, CC0).",
+   "license_seen": "CC BY-NC-SA 3.0 by default (terms page sits behind a bot check; default confirmed via shader headers and secondary sources)",
+   "quote": "License Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License."
+  },
+  {
+   "id": "lygia",
+   "name": "LYGIA shader library",
+   "url": "https://github.com/patriciogonzalezvivo/lygia/blob/main/LICENSE.md",
+   "why": "Dual licensed: Prosperity Public License 3.0.0 (non-commercial; commercial use only as a 30-day trial) or the Patron License for GitHub sponsors/contributors. A commercial game needs sponsorship or a paid licence.",
+   "license_seen": "Prosperity-3.0.0 / Patron License",
+   "quote": "This license allows you to use and share this software for noncommercial purposes for free and to try this software for commercial purposes for thirty days."
+  },
+  {
+   "id": "bbc-sound-effects",
+   "name": "BBC Sound Effects archive",
+   "url": "https://sound-effects.bbcrewind.co.uk/licensing",
+   "why": "RemArc licence: personal, educational and research use only; commercial use needs a paid licence (via Pro Sound Effects). Site could not be fetched by our tools; terms confirmed through news coverage quoting the licence.",
+   "license_seen": "RemArc Licence (non-commercial)",
+   "quote": "the Sound Effects are BBC copyright, but they may be used for personal, educational or research purposes"
+  },
+  {
+   "id": "tabletop-audio",
+   "name": "Tabletop Audio",
+   "url": "https://tabletopaudio.com/about.html",
+   "why": "Ambiences are CC BY-NC-ND 4.0: no commercial use and no modification. Patreon covers podcast/video use only.",
+   "license_seen": "CC BY-NC-ND 4.0",
+   "quote": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License"
+  },
+  {
+   "id": "cc-nc-nd-generally",
+   "name": "Any asset marked NC or ND (on any site: Sketchfab, Freesound, FMA, ccMixter, itch.io, OpenGameArt...)",
+   "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+   "why": "NC forbids commercial use (a game with ads, a price, donations or sponsorship counts). ND forbids distributing modified versions (resizing, recolouring, cutting a loop may count). Sketchfab CC BY / CC0 models are fine; its NC, ND and \"Editorial\" models are not.",
+   "license_seen": "CC BY-NC, CC BY-NC-SA, CC BY-ND, CC BY-NC-ND; Sketchfab Editorial",
+   "quote": "NonCommercial — You may not use the material for commercial purposes."
+  },
+  {
+   "id": "zapsplat",
+   "name": "ZapSplat",
+   "url": "https://www.zapsplat.com/license-type/standard-license/",
+   "why": "Needs an account (user must sign up), own Standard License (not CC), free tier requires credit and limits downloads; licence page returned 403 to our fetcher, so terms are unverified. Not agent-friendly.",
+   "license_seen": "ZapSplat Standard License (custom); unverified on site",
+   "quote": "unverified: site blocked automated fetch on 2026-11-14"
+  },
+  {
+   "id": "fab-free",
+   "name": "Fab (Epic) free and \"limited-time free\" assets",
+   "url": "https://www.fab.com/eula",
+   "why": "Not an open licence: needs an Epic account (agent cannot download), proprietary Standard License forbids redistributing assets standalone (a public repo of raw files is risky). Note: the current Fab licence summary does NOT limit use to Unreal Engine; we found no \"UE-only\" clause on 2026-11-14.",
+   "license_seen": "Fab Standard License (proprietary EULA)",
+   "quote": "Resell or redistribute the asset for free on a standalone basis or allow others to do the same."
+  },
+  {
+   "id": "unity-asset-store-free",
+   "name": "Unity Asset Store free assets",
+   "url": "https://unity.com/legal/as-terms",
+   "why": "Account-gated, proprietary EULA: assets licensed only as an embedded component of your product, users may not be enabled to extract/distribute them, publishers can attach extra \"Restricted Asset\" terms. The EULA text does not mention other engines either way. Not usable by an agent and risky in an open repo.",
+   "license_seen": "Unity Asset Store EULA",
+   "quote": "as an embedded component of that Licensed Product"
+  },
+  {
+   "id": "turbosquid-free",
+   "name": "TurboSquid free models (and Free3D, run by TurboSquid)",
+   "url": "https://www.turbosquid.com/help/en/articles/9937423-royalty-free-license-faq",
+   "why": "Royalty Free License requires that end users cannot import/export 3D models; secondary summaries list browser-based games as prohibited. A web game ships the .glb to the browser, so it is a poor fit. Free3D uses the same licence plus per-model \"Personal Use\" labels.",
+   "license_seen": "TurboSquid Royalty Free License; Free3D Personal Use / Royalty Free (per model)",
+   "quote": "The software or game has no functionality for end users to import any open 3D file format or export any 3D model."
+  },
+  {
+   "id": "cgtrader-free",
+   "name": "CGTrader free models",
+   "url": "https://www.cgtrader.com/pages/terms-and-conditions",
+   "why": "Free models use whatever licence the seller picks; the Royalty Free License allows games but requires protecting the model from end-user access (proprietary/encrypted format). Plain .glb files in a browser game do not meet that. Some free models are Editorial-only.",
+   "license_seen": "CGTrader Royalty Free License / Editorial (per model)",
+   "quote": "you must take all commercially reasonable measures to prevent the end user from gaining access to the Product."
+  },
+  {
+   "id": "envato-elements-free",
+   "name": "Envato Elements (incl. free monthly files)",
+   "url": "https://help.elements.envato.com/hc/en-us/articles/360000628966-License-Terms",
+   "why": "Subscription licence, registered per project: items can no longer be used in new projects after the subscription ends, and each use must be registered. Not an open licence; account-gated. Help page blocked our fetcher; terms confirmed from Envato help-centre text in search results.",
+   "license_seen": "Envato Elements License (subscription)",
+   "quote": "you cannot use downloaded items to create new end products after your subscription ends"
+  },
+  {
+   "id": "youtube-royalty-free-music",
+   "name": "\"Royalty free\" / \"no copyright\" music on YouTube channels and similar sites",
+   "url": "https://www.youtube.com/audiolibrary",
+   "why": "Usually no written licence, licences scoped to YouTube videos only (YouTube Audio Library), or Content ID claims later. \"Royalty free\" is not a licence. Use incompetech, Freesound, FMA (filtered) or make music with BeepBox.",
+   "license_seen": "none or platform-specific",
+   "quote": "n/a: no licence text to quote; that absence is the problem"
+  },
+  {
+   "id": "ready-player-me",
+   "name": "Ready Player Me avatars",
+   "url": "https://readyplayer.me",
+   "why": "Service shut down: the public platform, avatar creator and developer APIs/SDKs closed on 31 Jan 2026 after Netflix acquired the company (Dec 2025). The domain no longer resolved on 2026-11-14. Use VRoid Studio, MakeHuman or a Blockbench character instead.",
+   "license_seen": "n/a (service closed)",
+   "quote": "getaddrinfo ENOTFOUND readyplayer.me (our fetch, 2026-11-14)"
+  },
+  {
+   "id": "freepd",
+   "name": "FreePD.com (public-domain music)",
+   "url": "https://freepd.com",
+   "why": "Site permanently closed (2008-2025); mirrors and re-uploads cannot be verified. Use incompetech (CC BY) or Freesound CC0 music loops instead.",
+   "license_seen": "previously \"Public Domain\"; site now closed",
+   "quote": "Public Domain music downloads (site now states hosting and maintenance have ceased)"
+  }
+ ]
+}

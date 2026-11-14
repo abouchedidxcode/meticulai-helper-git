@@ -1,0 +1,1145 @@
+{
+	"sources": {
+		"freesound:162626": {
+			"file": "https://cdn.freesound.org/previews/162/162626_509379-hq.mp3",
+			"title": "CW_Cannon_Single1.wav",
+			"author": "richardemoore",
+			"license": "CC-BY-4.0",
+			"page": "https://freesound.org/people/richardemoore/sounds/162626"
+		},
+		"freesound:161341": {
+			"file": "https://cdn.freesound.org/previews/161/161341_71257-hq.mp3",
+			"title": "Howitzer Artillery Gun Shot Sound Effect 03",
+			"author": "qubodup",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/qubodup/sounds/161341"
+		},
+		"freesound:332935": {
+			"file": "https://cdn.freesound.org/previews/332/332935_4415905-hq.mp3",
+			"title": "Tykki, laukaus / Big gun, cannon, 76 mm, single shots, gunshots",
+			"author": "YleArkisto",
+			"license": "CC-BY-4.0",
+			"page": "https://freesound.org/people/YleArkisto/sounds/332935"
+		},
+		"kenney:impactMetal_medium_000": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/a96f879fec0864a8938e0c745b6996a6c5679c16a234ce31a01cc995e8401003/impactMetal_medium_000.ogg",
+			"title": "impact-sounds/impactMetal_medium_000.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"kenney:impactMetal_medium_001": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/e8a9eaba7c4d27422e4eeb3e6c7100d5d7dc0f83e005efc98c960adcc5265337/impactMetal_medium_001.ogg",
+			"title": "impact-sounds/impactMetal_medium_001.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"freesound:173014": {
+			"file": "https://cdn.freesound.org/previews/173/173014_773642-hq.mp3",
+			"title": "metal door.wav",
+			"author": "ninebilly",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/ninebilly/sounds/173014"
+		},
+		"freesound:161230": {
+			"file": "https://cdn.freesound.org/previews/161/161230_544580-hq.mp3",
+			"title": "Large Metal Lift Door Closing.wav",
+			"author": "lolamadeus",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/lolamadeus/sounds/161230"
+		},
+		"freesound:385938": {
+			"file": "https://cdn.freesound.org/previews/385/385938_7097737-hq.mp3",
+			"title": "S020_Rock_Impact_Mono.wav",
+			"author": "Pól",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/P%C3%B3l/sounds/385938"
+		},
+		"freesound:540913": {
+			"file": "https://cdn.freesound.org/previews/540/540913_11966684-hq.mp3",
+			"title": "Big bricks falling sound.wav",
+			"author": "Rosa-Orenes256",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Rosa-Orenes256/sounds/540913"
+		},
+		"freesound:194688": {
+			"file": "https://cdn.freesound.org/previews/194/194688_1857065-hq.mp3",
+			"title": "PieceofConcrete01.wav",
+			"author": "kingsrow",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/kingsrow/sounds/194688"
+		},
+		"freesound:554148": {
+			"file": "https://cdn.freesound.org/previews/554/554148_9250976-hq.mp3",
+			"title": "Foley_Impact_Stones_Strong_Debris_Stereo_DS.wav",
+			"author": "Nox_Sound",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Nox_Sound/sounds/554148"
+		},
+		"freesound:577454": {
+			"file": "https://cdn.freesound.org/previews/577/577454_4996003-hq.mp3",
+			"title": "Wood Fall.wav",
+			"author": "Manim8",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Manim8/sounds/577454"
+		},
+		"freesound:577455": {
+			"file": "https://cdn.freesound.org/previews/577/577455_4996003-hq.mp3",
+			"title": "Wood Fall 2.wav",
+			"author": "Manim8",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Manim8/sounds/577455"
+		},
+		"freesound:454381": {
+			"file": "https://cdn.freesound.org/previews/454/454381_612689-hq.mp3",
+			"title": "wood impact axe chop real int echo.flac",
+			"author": "kyles",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/kyles/sounds/454381"
+		},
+		"freesound:614063": {
+			"file": "https://cdn.freesound.org/previews/614/614063_11537497-hq.mp3",
+			"title": "Heavy Metal Impact 2",
+			"author": "magnuswaker",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/magnuswaker/sounds/614063"
+		},
+		"freesound:530486": {
+			"file": "https://cdn.freesound.org/previews/530/530486_2532248-hq.mp3",
+			"title": "Metal Impact",
+			"author": "Rickplayer",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Rickplayer/sounds/530486"
+		},
+		"freesound:554566": {
+			"file": "https://cdn.freesound.org/previews/554/554566_8198141-hq.mp3",
+			"title": "Glass Shatter 4.wav",
+			"author": "Greg_Surr",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Greg_Surr/sounds/554566"
+		},
+		"freesound:452667": {
+			"file": "https://cdn.freesound.org/previews/452/452667_612689-hq.mp3",
+			"title": "window break with axe glass shatter in trailer.wav",
+			"author": "kyles",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/kyles/sounds/452667"
+		},
+		"freesound:244238": {
+			"file": "https://cdn.freesound.org/previews/244/244238_3156517-hq.mp3",
+			"title": "Glass Smash.wav",
+			"author": "chewiesmissus",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/chewiesmissus/sounds/244238"
+		},
+		"freesound:569502": {
+			"file": "https://cdn.freesound.org/previews/569/569502_3248005-hq.mp3",
+			"title": "Stone Impact Rubble Debris 6",
+			"author": "Sheyvan",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Sheyvan/sounds/569502"
+		},
+		"freesound:569507": {
+			"file": "https://cdn.freesound.org/previews/569/569507_3248005-hq.mp3",
+			"title": "Stone Impact Rubble Debris 11",
+			"author": "Sheyvan",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Sheyvan/sounds/569507"
+		},
+		"freesound:569500": {
+			"file": "https://cdn.freesound.org/previews/569/569500_3248005-hq.mp3",
+			"title": "Stone Impact Rubble Debris 4",
+			"author": "Sheyvan",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Sheyvan/sounds/569500"
+		},
+		"freesound:567251": {
+			"file": "https://cdn.freesound.org/previews/567/567251_7108319-hq.mp3",
+			"title": "Stones Falling",
+			"author": "iwanPlays",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/iwanPlays/sounds/567251"
+		},
+		"freesound:567250": {
+			"file": "https://cdn.freesound.org/previews/567/567250_7108319-hq.mp3",
+			"title": "Dropping Rocks",
+			"author": "iwanPlays",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/iwanPlays/sounds/567250"
+		},
+		"freesound:179341": {
+			"file": "https://cdn.freesound.org/previews/179/179341_544580-hq.mp3",
+			"title": "Gravel Impacts and Falls.wav",
+			"author": "lolamadeus",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/lolamadeus/sounds/179341"
+		},
+		"freesound:79783": {
+			"file": "https://cdn.freesound.org/previews/79/79783_649468-hq.mp3",
+			"title": "Rockslide 2.wav",
+			"author": "juskiddink",
+			"license": "CC-BY-4.0",
+			"page": "https://freesound.org/people/juskiddink/sounds/79783"
+		},
+		"freesound:721600": {
+			"file": "https://cdn.freesound.org/previews/721/721600_2617407-hq.mp3",
+			"title": "Bakers house collapse",
+			"author": "DasWaff",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/DasWaff/sounds/721600"
+		},
+		"freesound:271130": {
+			"file": "https://cdn.freesound.org/previews/271/271130_726633-hq.mp3",
+			"title": "Pouring Gravel.mp3",
+			"author": "sassyde",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/sassyde/sounds/271130"
+		},
+		"freesound:350748": {
+			"file": "https://cdn.freesound.org/previews/350/350748_2472895-hq.mp3",
+			"title": "stonehit3.wav",
+			"author": "aerror",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/aerror/sounds/350748"
+		},
+		"freesound:350749": {
+			"file": "https://cdn.freesound.org/previews/350/350749_2472895-hq.mp3",
+			"title": "stonehit2.wav",
+			"author": "aerror",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/aerror/sounds/350749"
+		},
+		"freesound:655622": {
+			"file": "https://cdn.freesound.org/previews/655/655622_13805813-hq.mp3",
+			"title": "brick falling on brick.wav",
+			"author": "Hankof",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Hankof/sounds/655622"
+		},
+		"freesound:569510": {
+			"file": "https://cdn.freesound.org/previews/569/569510_3248005-hq.mp3",
+			"title": "Stone Impact Rubble Debris 14",
+			"author": "Sheyvan",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Sheyvan/sounds/569510"
+		},
+		"freesound:569497": {
+			"file": "https://cdn.freesound.org/previews/569/569497_3248005-hq.mp3",
+			"title": "Stone Impact Rubble Debris 1",
+			"author": "Sheyvan",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Sheyvan/sounds/569497"
+		},
+		"freesound:321478": {
+			"file": "https://cdn.freesound.org/previews/321/321478_5485024-hq.mp3",
+			"title": "Concrete Hit 2",
+			"author": "dslrguide",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/dslrguide/sounds/321478"
+		},
+		"freesound:522098": {
+			"file": "https://cdn.freesound.org/previews/522/522098_11537497-hq.mp3",
+			"title": "Concrete SMASH",
+			"author": "magnuswaker",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/magnuswaker/sounds/522098"
+		},
+		"freesound:590096": {
+			"file": "https://cdn.freesound.org/previews/590/590096_6018778-hq.mp3",
+			"title": "Rock collapse or destruction",
+			"author": "Vozme",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Vozme/sounds/590096"
+		},
+		"freesound:569443": {
+			"file": "https://cdn.freesound.org/previews/569/569443_3248005-hq.mp3",
+			"title": "Wood impact Board Short",
+			"author": "Sheyvan",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Sheyvan/sounds/569443"
+		},
+		"freesound:569444": {
+			"file": "https://cdn.freesound.org/previews/569/569444_3248005-hq.mp3",
+			"title": "Wood impact Board Dull",
+			"author": "Sheyvan",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Sheyvan/sounds/569444"
+		},
+		"freesound:569723": {
+			"file": "https://cdn.freesound.org/previews/569/569723_3248005-hq.mp3",
+			"title": "Wood impact Single Plank 3",
+			"author": "Sheyvan",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Sheyvan/sounds/569723"
+		},
+		"freesound:349270": {
+			"file": "https://cdn.freesound.org/previews/349/349270_2104797-hq.mp3",
+			"title": "Clatter wood_05.wav",
+			"author": "deleted_user_2104797",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/deleted_user_2104797/sounds/349270"
+		},
+		"freesound:349268": {
+			"file": "https://cdn.freesound.org/previews/349/349268_2104797-hq.mp3",
+			"title": "Clatter wood_07.wav",
+			"author": "deleted_user_2104797",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/deleted_user_2104797/sounds/349268"
+		},
+		"freesound:349269": {
+			"file": "https://cdn.freesound.org/previews/349/349269_2104797-hq.mp3",
+			"title": "Clatter wood_06.wav",
+			"author": "deleted_user_2104797",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/deleted_user_2104797/sounds/349269"
+		},
+		"kenney:impactPlank_medium_000": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/8403cd7a043f0391574c88c55dd205743725b5363d2407f6de145f201690b68f/impactPlank_medium_000.ogg",
+			"title": "impact-sounds/impactPlank_medium_000.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"kenney:impactPlank_medium_002": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/f6a14da45994229676b4f29e6a35f504b5c2ec2b8166fb1a3b1aa004bc6911ef/impactPlank_medium_002.ogg",
+			"title": "impact-sounds/impactPlank_medium_002.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"freesound:452596": {
+			"file": "https://cdn.freesound.org/previews/452/452596_612689-hq.mp3",
+			"title": "door wood impact hit kick open sudden explode.wav",
+			"author": "kyles",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/kyles/sounds/452596"
+		},
+		"freesound:164590": {
+			"file": "https://cdn.freesound.org/previews/164/164590_2104797-hq.mp3",
+			"title": "Wood impact 4.wav",
+			"author": "deleted_user_2104797",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/deleted_user_2104797/sounds/164590"
+		},
+		"kenney:impactPlank_medium_001": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/d7c304319f8beac616231b62041fa8da74045b62d7155965516efb9b19303df4/impactPlank_medium_001.ogg",
+			"title": "impact-sounds/impactPlank_medium_001.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"freesound:443293": {
+			"file": "https://cdn.freesound.org/previews/443/443293_5701973-hq.mp3",
+			"title": "Wood Break.wav",
+			"author": "Deathscyp",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Deathscyp/sounds/443293"
+		},
+		"freesound:403646": {
+			"file": "https://cdn.freesound.org/previews/403/403646_3012788-hq.mp3",
+			"title": "Wood_Bones_Break_Slow_Juicy - 02.ogg",
+			"author": "LamaMakesMusic",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/LamaMakesMusic/sounds/403646"
+		},
+		"freesound:144945": {
+			"file": "https://cdn.freesound.org/previews/144/144945_2104797-hq.mp3",
+			"title": "Crack_of_branch_2.wav",
+			"author": "deleted_user_2104797",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/deleted_user_2104797/sounds/144945"
+		},
+		"freesound:444007": {
+			"file": "https://cdn.freesound.org/previews/444/444007_9175720-hq.mp3",
+			"title": "Breaking A Branch.m4a",
+			"author": "cfran789",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/cfran789/sounds/444007"
+		},
+		"kenney:impactMetal_heavy_000": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/e07045693e4a2b3d165c424e3dab4c781d9ff8880a386880ac89a51315d7f831/impactMetal_heavy_000.ogg",
+			"title": "impact-sounds/impactMetal_heavy_000.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"kenney:impactMetal_heavy_001": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/83554049f81f4db9209379e103c30bfa63f65c42189a03f300b045c2c82e23ae/impactMetal_heavy_001.ogg",
+			"title": "impact-sounds/impactMetal_heavy_001.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"kenney:impactMetal_medium_002": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/7e89ce2ca0dbda95ea2b78d4b50791cab35c10d20e9f5ccd45dd0b00e99ff548/impactMetal_medium_002.ogg",
+			"title": "impact-sounds/impactMetal_medium_002.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"kenney:impactPlate_medium_000": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/b670d30452983369771081319c268475edaaafe782bf4e8d70bd7eef09d8823c/impactPlate_medium_000.ogg",
+			"title": "impact-sounds/impactPlate_medium_000.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"freesound:378670": {
+			"file": "https://cdn.freesound.org/previews/378/378670_7023873-hq.mp3",
+			"title": "Falling scrap metal",
+			"author": "13FPanská_Tolar_David",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/13FPansk%C3%A1_Tolar_David/sounds/378670"
+		},
+		"kenney:impactPlate_medium_001": {
+			"file": "https://staging-assets.patchusercontent.com/sha256/68ba7701b71ef620f498f3038e832157d71ac8db7ad59424545890b250ceb24e/impactPlate_medium_001.ogg",
+			"title": "impact-sounds/impactPlate_medium_001.ogg",
+			"author": "Kenney",
+			"license": "CC0-1.0",
+			"page": "https://kenney.nl/assets/impact-sounds"
+		},
+		"freesound:145693": {
+			"file": "https://cdn.freesound.org/previews/145/145693_2289019-hq.mp3",
+			"title": "Brick-Drop-Concrete-02.wav",
+			"author": "DWOBoyle",
+			"license": "CC-BY-4.0",
+			"page": "https://freesound.org/people/DWOBoyle/sounds/145693"
+		},
+		"freesound:570961": {
+			"file": "https://cdn.freesound.org/previews/570/570961_7987826-hq.mp3",
+			"title": "Brick Drop on Gravel 1.wav",
+			"author": "dichardson",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/dichardson/sounds/570961"
+		},
+		"freesound:145695": {
+			"file": "https://cdn.freesound.org/previews/145/145695_2289019-hq.mp3",
+			"title": "Brick-Drop-Concrete-06.wav",
+			"author": "DWOBoyle",
+			"license": "CC-BY-4.0",
+			"page": "https://freesound.org/people/DWOBoyle/sounds/145695"
+		},
+		"freesound:655621": {
+			"file": "https://cdn.freesound.org/previews/655/655621_13805813-hq.mp3",
+			"title": "brick falling on floor.wav",
+			"author": "Hankof",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Hankof/sounds/655621"
+		},
+		"freesound:34175": {
+			"file": "https://cdn.freesound.org/previews/34/34175_25449-hq.mp3",
+			"title": "pour out gravel on the stairs.wav",
+			"author": "Dalibor",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/Dalibor/sounds/34175"
+		},
+		"commons:Creaky_wooden_swivel_chair.ogg": {
+			"file": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Creaky_wooden_swivel_chair.ogg",
+			"title": "Creaky_wooden_swivel_chair.ogg",
+			"author": "chocoholic",
+			"license": "Public domain",
+			"page": "https://commons.wikimedia.org/wiki/File:Creaky_wooden_swivel_chair.ogg"
+		},
+		"commons:Creaky_wooden_casket.ogg": {
+			"file": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Creaky_wooden_casket.ogg",
+			"title": "Creaky_wooden_casket.ogg",
+			"author": "stephan",
+			"license": "Public domain",
+			"page": "https://commons.wikimedia.org/wiki/File:Creaky_wooden_casket.ogg"
+		},
+		"freesound:161228": {
+			"file": "https://cdn.freesound.org/previews/161/161228_544580-hq.mp3",
+			"title": "Large Metal Lift Door Opening.wav",
+			"author": "lolamadeus",
+			"license": "CC0-1.0",
+			"page": "https://freesound.org/people/lolamadeus/sounds/161228"
+		},
+		"commons:Rusty_metal_door_clasp.ogg": {
+			"file": "https://upload.wikimedia.org/wikipedia/commons/0/04/Rusty_metal_door_clasp.ogg",
+			"title": "Rusty_metal_door_clasp.ogg",
+			"author": "stephan",
+			"license": "Public domain",
+			"page": "https://commons.wikimedia.org/wiki/File:Rusty_metal_door_clasp.ogg"
+		}
+	},
+	"layers": [
+		{
+			"name": "cannon_body",
+			"target": -9.8,
+			"window": 0.4,
+			"fade": 0.5,
+			"af": [
+				"bass=g=-3:f=50",
+				"equalizer=f=220:t=o:w=1.5:g=9",
+				"equalizer=f=800:t=o:w=1.5:g=6",
+				"lowpass=f=3500"
+			],
+			"takes": [
+				{
+					"src": "freesound:162626",
+					"ss": 0.05,
+					"t": 2.5,
+					"fade": 1.2
+				},
+				{
+					"src": "freesound:161341",
+					"ss": 0,
+					"t": 1.5
+				},
+				{
+					"src": "freesound:332935",
+					"ss": 0.62,
+					"t": 2.5,
+					"fade": 1.2,
+					"af": [
+						"bass=g=6:f=150",
+						"equalizer=f=220:t=o:w=1.5:g=6",
+						"lowpass=f=3000"
+					]
+				}
+			]
+		},
+		{
+			"name": "cannon_report",
+			"target": -13.6,
+			"window": 0.4,
+			"fade": 1.2,
+			"takes": [
+				{
+					"src": "freesound:332935",
+					"ss": 6.6,
+					"t": 4.4,
+					"af": [
+						"bass=g=5:f=120",
+						"lowpass=f=2500"
+					]
+				},
+				{
+					"src": "freesound:332935",
+					"ss": 12.24,
+					"t": 4.4,
+					"af": [
+						"bass=g=5:f=120",
+						"lowpass=f=2500"
+					]
+				},
+				{
+					"src": "freesound:162626",
+					"ss": 0.05,
+					"t": 4.4,
+					"af": [
+						"bass=g=4:f=200"
+					]
+				}
+			]
+		},
+		{
+			"name": "clack",
+			"target": -12,
+			"fade": 0.05,
+			"takes": [
+				{
+					"src": "kenney:impactMetal_medium_000",
+					"ss": 0,
+					"t": 0.26
+				},
+				{
+					"src": "kenney:impactMetal_medium_001",
+					"ss": 0,
+					"t": 0.14
+				}
+			]
+		},
+		{
+			"name": "steel_burst",
+			"target": -10,
+			"fade": 0.15,
+			"takes": [
+				{
+					"src": "freesound:173014",
+					"ss": 1.05,
+					"t": 2.2,
+					"fade": 0.8,
+					"af": [
+						"bass=g=6:f=80"
+					]
+				},
+				{
+					"src": "freesound:161230",
+					"ss": 0,
+					"t": 2.6,
+					"fade": 0.8,
+					"af": [
+						"bass=g=6:f=80",
+						"lowpass=f=2500"
+					]
+				}
+			]
+		},
+		{
+			"name": "hit_brick",
+			"target": -12.5,
+			"window": 0.4,
+			"fade": 0.25,
+			"takes": [
+				{
+					"src": "freesound:385938",
+					"ss": 0.1,
+					"t": 0.65
+				},
+				{
+					"src": "freesound:540913",
+					"ss": 0,
+					"t": 0.95,
+					"af": [
+						"bass=g=8:f=80"
+					]
+				},
+				{
+					"src": "freesound:194688",
+					"ss": 0.2,
+					"t": 1.0,
+					"af": [
+						"bass=g=8:f=80"
+					]
+				}
+			]
+		},
+		{
+			"name": "hit_brick_big",
+			"target": -7.5,
+			"window": 0.4,
+			"fade": 0.5,
+			"takes": [
+				{
+					"src": "freesound:554148",
+					"ss": 0,
+					"t": 2.2
+				},
+				{
+					"src": "freesound:554148",
+					"ss": 3.95,
+					"t": 1.75
+				},
+				{
+					"src": "freesound:540913",
+					"ss": 0,
+					"t": 2.3
+				}
+			]
+		},
+		{
+			"name": "hit_wood",
+			"target": -14,
+			"fade": 0.2,
+			"takes": [
+				{
+					"src": "freesound:577454",
+					"ss": 0.08,
+					"t": 0.9
+				},
+				{
+					"src": "freesound:577455",
+					"ss": 0.08,
+					"t": 0.55
+				},
+				{
+					"src": "freesound:454381",
+					"ss": 0.2,
+					"t": 0.9
+				}
+			]
+		},
+		{
+			"name": "hit_metal",
+			"target": -9.5,
+			"window": 0.4,
+			"fade": 0.4,
+			"takes": [
+				{
+					"src": "freesound:614063",
+					"ss": 0,
+					"t": 1.4
+				},
+				{
+					"src": "freesound:530486",
+					"ss": 0,
+					"t": 1.6
+				}
+			]
+		},
+		{
+			"name": "hit_glass",
+			"target": -14,
+			"fade": 0.3,
+			"takes": [
+				{
+					"src": "freesound:554566",
+					"ss": 0,
+					"t": 1.3
+				},
+				{
+					"src": "freesound:452667",
+					"ss": 0.25,
+					"t": 1.1
+				},
+				{
+					"src": "freesound:244238",
+					"ss": 0.27,
+					"t": 1.2
+				}
+			]
+		},
+		{
+			"name": "glass_break",
+			"target": -14,
+			"fade": 0.3,
+			"takes": [
+				{
+					"src": "freesound:244238",
+					"ss": 0.27,
+					"t": 1.3
+				},
+				{
+					"src": "freesound:452667",
+					"ss": 3.3,
+					"t": 1.4
+				},
+				{
+					"src": "freesound:554566",
+					"ss": 0,
+					"t": 1.7
+				}
+			]
+		},
+		{
+			"name": "debris_small",
+			"target": -19,
+			"fade": 0.25,
+			"takes": [
+				{
+					"src": "freesound:569502",
+					"ss": 0,
+					"t": 0.8
+				},
+				{
+					"src": "freesound:569507",
+					"ss": 0,
+					"t": 0.75
+				},
+				{
+					"src": "freesound:569500",
+					"ss": 0,
+					"t": 0.8
+				}
+			]
+		},
+		{
+			"name": "debris_mid",
+			"target": -11.5,
+			"window": 0.4,
+			"fade": 0.8,
+			"takes": [
+				{
+					"src": "freesound:567251",
+					"ss": 0.3,
+					"t": 3.7
+				},
+				{
+					"src": "freesound:567250",
+					"ss": 0,
+					"t": 3.9
+				},
+				{
+					"src": "freesound:179341",
+					"ss": 2.3,
+					"t": 4
+				}
+			]
+		},
+		{
+			"name": "debris_big",
+			"target": -11.5,
+			"window": 0.4,
+			"fade": 1.5,
+			"takes": [
+				{
+					"src": "freesound:79783",
+					"ss": 1.5,
+					"t": 8
+				},
+				{
+					"src": "freesound:721600",
+					"ss": 0,
+					"t": 5.6
+				},
+				{
+					"src": "freesound:271130",
+					"ss": 4,
+					"t": 8
+				}
+			]
+		},
+		{
+			"name": "concrete_S",
+			"target": -18,
+			"fade": 0.1,
+			"takes": [
+				{
+					"src": "freesound:350748",
+					"ss": 0.5,
+					"t": 0.45
+				},
+				{
+					"src": "freesound:350749",
+					"ss": 0.85,
+					"t": 0.45
+				},
+				{
+					"src": "freesound:350749",
+					"ss": 1.46,
+					"t": 0.45
+				},
+				{
+					"src": "freesound:655622",
+					"ss": 0.15,
+					"t": 0.45
+				}
+			]
+		},
+		{
+			"name": "concrete_M",
+			"target": -20,
+			"fade": 0.2,
+			"takes": [
+				{
+					"src": "freesound:569510",
+					"ss": 0,
+					"t": 0.8
+				},
+				{
+					"src": "freesound:569497",
+					"ss": 0,
+					"t": 0.7
+				},
+				{
+					"src": "freesound:321478",
+					"ss": 0.4,
+					"t": 0.44
+				}
+			]
+		},
+		{
+			"name": "concrete_L",
+			"target": -11.5,
+			"fade": 0.3,
+			"takes": [
+				{
+					"src": "freesound:522098",
+					"ss": 0.03,
+					"t": 1.0
+				},
+				{
+					"src": "freesound:590096",
+					"ss": 0.05,
+					"t": 1.0
+				}
+			]
+		},
+		{
+			"name": "wood_S",
+			"target": -18,
+			"fade": 0.06,
+			"takes": [
+				{
+					"src": "freesound:569443",
+					"ss": 0,
+					"t": 0.18
+				},
+				{
+					"src": "freesound:569444",
+					"ss": 0,
+					"t": 0.2
+				},
+				{
+					"src": "freesound:569723",
+					"ss": 0,
+					"t": 0.32
+				},
+				{
+					"src": "freesound:349270",
+					"ss": 0.14,
+					"t": 0.3
+				}
+			]
+		},
+		{
+			"name": "wood_M",
+			"target": -17.5,
+			"fade": 0.2,
+			"takes": [
+				{
+					"src": "freesound:349268",
+					"ss": 0.3,
+					"t": 0.55
+				},
+				{
+					"src": "freesound:349269",
+					"ss": 0.36,
+					"t": 0.4
+				},
+				{
+					"src": "freesound:577455",
+					"ss": 0.62,
+					"t": 0.8
+				}
+			]
+		},
+		{
+			"name": "wood_L",
+			"target": -9.5,
+			"window": 0.4,
+			"fade": 0.2,
+			"takes": [
+				{
+					"src": "kenney:impactPlank_medium_000",
+					"ss": 0,
+					"t": 0.78
+				},
+				{
+					"src": "kenney:impactPlank_medium_002",
+					"ss": 0,
+					"t": 0.78
+				}
+			]
+		},
+		{
+			"name": "beam_drop",
+			"target": -11,
+			"window": 0.4,
+			"fade": 0.4,
+			"takes": [
+				{
+					"src": "freesound:452596",
+					"ss": 0,
+					"t": 1.7
+				},
+				{
+					"src": "freesound:164590",
+					"ss": 0,
+					"t": 1.5
+				},
+				{
+					"src": "kenney:impactPlank_medium_001",
+					"ss": 0,
+					"t": 0.78,
+					"fade": 0.2
+				}
+			]
+		},
+		{
+			"name": "wood_snap",
+			"target": -10,
+			"window": 0.4,
+			"fade": 0.25,
+			"takes": [
+				{
+					"src": "freesound:443293",
+					"ss": 0.38,
+					"t": 0.48
+				},
+				{
+					"src": "freesound:403646",
+					"ss": 0,
+					"t": 0.8
+				},
+				{
+					"src": "freesound:144945",
+					"ss": 0.3,
+					"t": 1.2
+				},
+				{
+					"src": "freesound:444007",
+					"ss": 1.6,
+					"t": 1.0,
+					"af": [
+						"lowpass=f=6000"
+					]
+				}
+			]
+		},
+		{
+			"name": "metal_S",
+			"target": -15,
+			"fade": 0.06,
+			"takes": [
+				{
+					"src": "kenney:impactMetal_heavy_000",
+					"ss": 0,
+					"t": 0.16
+				},
+				{
+					"src": "kenney:impactMetal_heavy_001",
+					"ss": 0,
+					"t": 0.36
+				},
+				{
+					"src": "kenney:impactMetal_medium_002",
+					"ss": 0,
+					"t": 0.12
+				},
+				{
+					"src": "kenney:impactPlate_medium_000",
+					"ss": 0,
+					"t": 0.6,
+					"fade": 0.15
+				}
+			]
+		},
+		{
+			"name": "metal_M",
+			"target": -12,
+			"fade": 0.2,
+			"takes": [
+				{
+					"src": "freesound:378670",
+					"ss": 0.14,
+					"t": 0.8
+				},
+				{
+					"src": "freesound:378670",
+					"ss": 0.98,
+					"t": 0.75
+				},
+				{
+					"src": "kenney:impactPlate_medium_001",
+					"ss": 0,
+					"t": 0.62
+				}
+			]
+		},
+		{
+			"name": "metal_L",
+			"target": -11,
+			"fade": 0.5,
+			"takes": [
+				{
+					"src": "freesound:161230",
+					"ss": 0,
+					"t": 2.2
+				},
+				{
+					"src": "freesound:614063",
+					"ss": 0,
+					"t": 1.4,
+					"fade": 0.3
+				}
+			]
+		},
+		{
+			"name": "brick_S",
+			"target": -18,
+			"fade": 0.06,
+			"af": [
+				"bass=g=6:f=100"
+			],
+			"takes": [
+				{
+					"src": "freesound:145693",
+					"ss": 0,
+					"t": 0.32
+				},
+				{
+					"src": "freesound:570961",
+					"ss": 0.04,
+					"t": 0.4
+				},
+				{
+					"src": "freesound:145695",
+					"ss": 0.02,
+					"t": 0.4
+				},
+				{
+					"src": "freesound:655621",
+					"ss": 0,
+					"t": 0.24
+				}
+			]
+		},
+		{
+			"name": "slide_rubble",
+			"target": -26,
+			"window": 0.4,
+			"fade": 0.05,
+			"takes": [
+				{
+					"src": "freesound:271130",
+					"ss": 9,
+					"t": 5,
+					"onset": false
+				},
+				{
+					"src": "freesound:34175",
+					"ss": 1.0,
+					"t": 4.5,
+					"onset": false
+				}
+			]
+		},
+		{
+			"name": "creak_wood",
+			"target": -22,
+			"fade": 0.3,
+			"takes": [
+				{
+					"src": "commons:Creaky_wooden_swivel_chair.ogg",
+					"ss": 0,
+					"t": 1.6
+				},
+				{
+					"src": "commons:Creaky_wooden_casket.ogg",
+					"ss": 0,
+					"t": 1.3
+				}
+			]
+		},
+		{
+			"name": "creak_steel",
+			"target": -16,
+			"fade": 0.35,
+			"takes": [
+				{
+					"src": "freesound:161228",
+					"ss": 0.4,
+					"t": 1.8
+				},
+				{
+					"src": "commons:Rusty_metal_door_clasp.ogg",
+					"ss": 0,
+					"t": 1.8
+				}
+			]
+		},
+		{
+			"name": "strain",
+			"target": -11,
+			"fade": 0.8,
+			"takes": [
+				{
+					"src": "freesound:173014",
+					"ss": 5.1,
+					"t": 2.4
+				},
+				{
+					"src": "freesound:161230",
+					"ss": 0,
+					"t": 3.5,
+					"af": [
+						"lowpass=f=1800"
+					]
+				}
+			]
+		}
+	]
+}

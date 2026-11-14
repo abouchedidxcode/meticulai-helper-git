@@ -1,0 +1,10 @@
+node_modules/
+dist/
+_ref/
+shots/*
+!shots/readme.jpg
+!shots/cover.jpg
+*.mp4
+.env
+
+.test/

@@ -8,6 +8,7 @@ technical side; these explain what's going on and what's useful for you to do.
 | [Getting started](getting-started.md) | You haven't started yet, or you're not sure which AI agent to use. |
 | [Testing your game](testing-your-game.md) | The agent gave you a "Play it now" link and you want to give useful feedback. |
 | [Adding references](adding-references.md) | You want to show the agent pictures or videos of the look you like. |
+| [Free assets](free-assets.md) | You want to know where the game's models, sounds and music come from, what "credit" means, or how to say "I don't like that one". |
 | [Your fal key](fal-key.md) | You want the agent to generate pictures or sounds (optional, costs money). |
 | [Costs](costs.md) | You want to know what costs money and how to keep it at $0. |
 | [Autopilot](autopilot-for-humans.md) | You want the agent to keep working while you're away. |

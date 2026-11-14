@@ -6,12 +6,13 @@ else.** It is the whole process, step by step; each step links its instructions 
 If `my-game/` exists, read `my-game/HANDOVER.md` next and continue from there.
 
 **Slash commands** (when the kit is installed as a Claude Code plugin, they appear as `/meticulai-helper-git:<name>`):
-`/setup`, `/new-game`, `/refs`, `/generate`, `/plan-swarm`, `/build`, `/playtest`, `/unstuck`, `/ship`, `/autopilot`,
-`/play`. Without the plugin, the user can just say what they want ("let's playtest it") and you follow the skill.
+`/setup`, `/new-game`, `/refs`, `/assets`, `/generate`, `/plan-swarm`, `/build`, `/playtest`, `/unstuck`, `/ship`,
+`/autopilot`, `/play`. Without the plugin, the user can just say what they want ("let's playtest it") and you follow
+the skill.
 
 **Subagents:** `agents/` holds the roles (director, builder, critic-player, critic-newcomer, critic-art,
-critic-scroller, bug-hunter, triage). Spawn them with the Agent/Task tool, giving each its role file as instructions.
-Builders get their own git worktree (`bash swarm/new-worktree.sh <name>`).
+critic-scroller, bug-hunter, triage, asset-scout). Spawn them with the Agent/Task tool, giving each its role file as
+instructions. Builders get their own git worktree (`bash swarm/new-worktree.sh <name>`).
 
 ## Hard rules (full version in START.md)
 
@@ -28,3 +29,6 @@ Builders get their own git worktree (`bash swarm/new-worktree.sh <name>`).
 - Keep HANDOVER.md, DECISIONS.md, DEVLOG.md current; commit often. Never publish without the user's explicit yes.
   Never push the user's game to the kit's repository.
 - No other people's art, music, characters or game names in the game.
+- Assets: free blocks and assets first, then code, fal last. Look at each one before it goes in and record it in
+  `my-game/ASSETS.md`; bring files in with `node tools/assets/get.mjs` so credits are written
+  ([skills/find-assets/SKILL.md](skills/find-assets/SKILL.md)).

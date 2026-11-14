@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fire</title>
+<link rel="icon" href="data:," />
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; outline: none; cursor: grab; }
+  #view:active { cursor: grabbing; }
+  #view.over { cursor: pointer; }
+  #cover { position: fixed; inset: 0; background: #09090b; display: none; }
+  #cover.on { display: block; }
+  #hint { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); pointer-events: none; white-space: nowrap; font: 500 12px/1.3 system-ui, sans-serif; color: rgba(255, 232, 214, 0.72); text-shadow: 0 1px 3px #000; opacity: 0; transition: opacity 0.8s; }
+  #hint.on { opacity: 1; }
+  #hint.used { opacity: 0.32; }
+  #nogl { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 24px; background: #09090b; color: #e4e4e7; font: 400 14px/1.5 system-ui, sans-serif; }
+  #nogl.on { display: flex; }
+  #nogl .card { max-width: 420px; padding: 22px 24px; border-radius: 12px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+  #nogl h1 { margin: 0 0 8px; font: 600 17px/1.3 system-ui, sans-serif; color: #fafafa; }
+  #nogl p { margin: 0 0 8px; color: #c4c4cc; }
+</style>
+</head>
+<body>
+<canvas id="view" tabindex="0"></canvas>
+<div id="cover" class="on"></div>
+<div id="hint">Drag to look around. Scroll to push in. Click the fire to stoke it.</div>
+<div id="nogl"><div class="card"><h1></h1><div class="body"></div></div></div>
+<script type="module" src="./src/demo.js"></script>
+</body>
+</html>

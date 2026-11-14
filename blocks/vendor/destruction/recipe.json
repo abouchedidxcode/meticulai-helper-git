@@ -1,0 +1,600 @@
+{
+	"mode": "browser",
+	"block": {
+		"controls": [
+			{
+				"id": "structure",
+				"label": "Structure",
+				"hint": "What stands in the yard to knock down: a timber-framed barn, a steel water tower, a brick wall or a chimney.",
+				"type": "choice",
+				"options": [
+					{
+						"value": "barn",
+						"label": "Timber barn",
+						"image": "thumbs/structures/barn.webp"
+					},
+					{
+						"value": "tower",
+						"label": "Water tower",
+						"image": "thumbs/structures/tower.webp"
+					},
+					{
+						"value": "wall",
+						"label": "Garden wall",
+						"image": "thumbs/structures/wall.webp"
+					},
+					{
+						"value": "chimney",
+						"label": "Brick chimney",
+						"image": "thumbs/structures/chimney.webp"
+					}
+				],
+				"default": "barn",
+				"essential": true
+			},
+			{
+				"id": "strength",
+				"label": "Weld strength",
+				"hint": "How strong the welds holding the pieces together are, against what each one carries standing. Rebuilds the structure.",
+				"type": "number",
+				"min": 0.4,
+				"max": 4,
+				"step": 0.05,
+				"default": 1,
+				"unit": "×",
+				"essential": true
+			},
+			{
+				"id": "ball",
+				"label": "Cannonball",
+				"hint": "How big the iron cannonball is (its radius): 12 cm is 56 kg, and twice that is eight times as heavy and hits far harder.",
+				"type": "number",
+				"min": 0.06,
+				"max": 0.35,
+				"step": 0.01,
+				"default": 0.12,
+				"unit": "m",
+				"essential": true
+			},
+			{
+				"id": "speed",
+				"label": "Speed",
+				"hint": "How fast time runs: below 1 is slow motion.",
+				"type": "number",
+				"min": 0.1,
+				"max": 1,
+				"step": 0.05,
+				"default": 1,
+				"unit": "×",
+				"essential": true
+			},
+			{
+				"id": "power",
+				"label": "Ball speed",
+				"hint": "How fast the cannonball flies when it is fired.",
+				"type": "number",
+				"min": 20,
+				"max": 90,
+				"step": 1,
+				"default": 55,
+				"unit": "m/s"
+			},
+			{
+				"id": "density",
+				"label": "Density",
+				"hint": "Every material's density, scaled: heavier pieces load their welds more and hit harder when they fall. Rebuilds the structure.",
+				"type": "number",
+				"min": 0.25,
+				"max": 4,
+				"step": 0.05,
+				"default": 1,
+				"unit": "×"
+			},
+			{
+				"id": "friction",
+				"label": "Friction",
+				"hint": "Every material's friction, scaled: low and rubble slides apart, high and it piles up. Rebuilds the structure.",
+				"type": "number",
+				"min": 0.2,
+				"max": 2,
+				"step": 0.05,
+				"default": 1,
+				"unit": "×"
+			},
+			{
+				"id": "gravity",
+				"label": "Gravity",
+				"hint": "How hard everything is pulled down once the structure stands. Welds are set for 9.81, so more brings a weak structure down on its own.",
+				"type": "number",
+				"min": 1,
+				"max": 20,
+				"step": 0.1,
+				"default": 9.81,
+				"unit": "m/s²"
+			},
+			{
+				"id": "iterations",
+				"label": "Solver iterations",
+				"hint": "Solver passes a step: fewer is cheaper and softer, more is stiffer.",
+				"type": "number",
+				"min": 4,
+				"max": 20,
+				"step": 1,
+				"default": 12
+			},
+			{
+				"id": "auto",
+				"label": "Keep firing",
+				"hint": "Fires at the structure every two seconds by itself, and rebuilds it once it is down, until turned off.",
+				"type": "toggle",
+				"default": false
+			},
+			{
+				"id": "shake",
+				"label": "Camera shake",
+				"hint": "Whether the camera shakes when a ball is fired and things land.",
+				"type": "toggle",
+				"default": true
+			}
+		],
+		"presets": [],
+		"triggers": [
+			{
+				"id": "rebuild",
+				"label": "Rebuild",
+				"hint": "Puts the structure back up, whole, and clears away the rubble and cannonballs."
+			}
+		]
+	},
+	"credits": [
+		{
+			"files": "assets/",
+			"license": "MIT",
+			"source": "https://github.com/sbobyn/three-avbd",
+			"author": "Steven Bobyn (three-avbd, the physics: commit cd3ce90)"
+		},
+		{
+			"files": "assets/",
+			"license": "MIT",
+			"source": "https://github.com/savant117/avbd-demo3d",
+			"author": "Chris Giles (avbd-demo2d and avbd-demo3d, ported in three-avbd)"
+		},
+		{
+			"files": "assets/",
+			"license": "MIT",
+			"source": "https://github.com/sbobyn/three-voxel-destruction",
+			"author": "Steven Bobyn (the sky and particles, from three-voxel-destruction by way of Brickfall)"
+		},
+		{
+			"files": "assets/",
+			"license": "MIT",
+			"source": "https://github.com/mrdoob/three.js",
+			"author": "three.js authors"
+		},
+		{
+			"files": "textures/",
+			"license": "CC0-1.0",
+			"source": "https://polyhaven.com/textures",
+			"author": "Poly Haven (rough_wood, fine_grained_wood, clay_roof_tiles_02, rock_surface, rough_concrete, rusty_metal_sheet, leafy_grass, gravel_floor, bark_brown_02)"
+		},
+		{
+			"files": "textures/leaf_cluster.webp",
+			"license": "CC0-1.0",
+			"source": "https://ambientcg.com/view?id=LeafSet004",
+			"author": "ambientCG (LeafSet004, cut into a leaf-cluster card)"
+		},
+		{
+			"files": "textures/grass_tuft.webp",
+			"license": "CC0-1.0",
+			"source": "https://ambientcg.com/view?id=Foliage001",
+			"author": "ambientCG (Foliage001 and Foliage006 grass blades, composed into a tuft card)"
+		},
+		{
+			"files": "hdri/",
+			"license": "CC0-1.0",
+			"source": "https://polyhaven.com/a/qwantani_late_afternoon_puresky",
+			"author": "Poly Haven (Qwantani late afternoon, puresky, 1k)"
+		},
+		{
+			"files": "thumbs/",
+			"license": "CC0-1.0",
+			"author": "Patch (stills of this demo)"
+		},
+		{
+			"files": "audio/cannon_body_1, audio/cannon_report_3",
+			"license": "CC-BY-4.0",
+			"source": "https://freesound.org/people/richardemoore/sounds/162626",
+			"author": "richardemoore (CW_Cannon_Single1.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/cannon_body_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/qubodup/sounds/161341",
+			"author": "qubodup (Howitzer Artillery Gun Shot Sound Effect 03; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/cannon_body_3, audio/cannon_report_1, audio/cannon_report_2",
+			"license": "CC-BY-4.0",
+			"source": "https://freesound.org/people/YleArkisto/sounds/332935",
+			"author": "YleArkisto (Tykki, laukaus / Big gun, cannon, 76 mm, single shots, gunshots; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/clack_1",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactMetal_medium_000.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/clack_2",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactMetal_medium_001.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/steel_burst_1, audio/strain_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/ninebilly/sounds/173014",
+			"author": "ninebilly (metal door.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/steel_burst_2, audio/metal_L_1, audio/strain_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/lolamadeus/sounds/161230",
+			"author": "lolamadeus (Large Metal Lift Door Closing.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_brick_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/P%C3%B3l/sounds/385938",
+			"author": "Pól (S020_Rock_Impact_Mono.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_brick_2, audio/hit_brick_big_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Rosa-Orenes256/sounds/540913",
+			"author": "Rosa-Orenes256 (Big bricks falling sound.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_brick_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/kingsrow/sounds/194688",
+			"author": "kingsrow (PieceofConcrete01.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_brick_big_1, audio/hit_brick_big_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Nox_Sound/sounds/554148",
+			"author": "Nox_Sound (Foley_Impact_Stones_Strong_Debris_Stereo_DS.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_wood_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Manim8/sounds/577454",
+			"author": "Manim8 (Wood Fall.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_wood_2, audio/wood_M_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Manim8/sounds/577455",
+			"author": "Manim8 (Wood Fall 2.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_wood_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/kyles/sounds/454381",
+			"author": "kyles (wood impact axe chop real int echo.flac; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_metal_1, audio/metal_L_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/magnuswaker/sounds/614063",
+			"author": "magnuswaker (Heavy Metal Impact 2; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_metal_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Rickplayer/sounds/530486",
+			"author": "Rickplayer (Metal Impact; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_glass_1, audio/glass_break_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Greg_Surr/sounds/554566",
+			"author": "Greg_Surr (Glass Shatter 4.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_glass_2, audio/glass_break_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/kyles/sounds/452667",
+			"author": "kyles (window break with axe glass shatter in trailer.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/hit_glass_3, audio/glass_break_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/chewiesmissus/sounds/244238",
+			"author": "chewiesmissus (Glass Smash.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_small_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Sheyvan/sounds/569502",
+			"author": "Sheyvan (Stone Impact Rubble Debris 6; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_small_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Sheyvan/sounds/569507",
+			"author": "Sheyvan (Stone Impact Rubble Debris 11; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_small_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Sheyvan/sounds/569500",
+			"author": "Sheyvan (Stone Impact Rubble Debris 4; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_mid_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/iwanPlays/sounds/567251",
+			"author": "iwanPlays (Stones Falling; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_mid_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/iwanPlays/sounds/567250",
+			"author": "iwanPlays (Dropping Rocks; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_mid_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/lolamadeus/sounds/179341",
+			"author": "lolamadeus (Gravel Impacts and Falls.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_big_1",
+			"license": "CC-BY-4.0",
+			"source": "https://freesound.org/people/juskiddink/sounds/79783",
+			"author": "juskiddink (Rockslide 2.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_big_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/DasWaff/sounds/721600",
+			"author": "DasWaff (Bakers house collapse; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/debris_big_3, audio/slide_rubble_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/sassyde/sounds/271130",
+			"author": "sassyde (Pouring Gravel.mp3; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/concrete_S_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/aerror/sounds/350748",
+			"author": "aerror (stonehit3.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/concrete_S_2, audio/concrete_S_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/aerror/sounds/350749",
+			"author": "aerror (stonehit2.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/concrete_S_4",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Hankof/sounds/655622",
+			"author": "Hankof (brick falling on brick.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/concrete_M_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Sheyvan/sounds/569510",
+			"author": "Sheyvan (Stone Impact Rubble Debris 14; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/concrete_M_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Sheyvan/sounds/569497",
+			"author": "Sheyvan (Stone Impact Rubble Debris 1; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/concrete_M_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/dslrguide/sounds/321478",
+			"author": "dslrguide (Concrete Hit 2; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/concrete_L_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/magnuswaker/sounds/522098",
+			"author": "magnuswaker (Concrete SMASH; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/concrete_L_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Vozme/sounds/590096",
+			"author": "Vozme (Rock collapse or destruction; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_S_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Sheyvan/sounds/569443",
+			"author": "Sheyvan (Wood impact Board Short; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_S_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Sheyvan/sounds/569444",
+			"author": "Sheyvan (Wood impact Board Dull; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_S_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Sheyvan/sounds/569723",
+			"author": "Sheyvan (Wood impact Single Plank 3; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_S_4",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/deleted_user_2104797/sounds/349270",
+			"author": "deleted_user_2104797 (Clatter wood_05.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_M_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/deleted_user_2104797/sounds/349268",
+			"author": "deleted_user_2104797 (Clatter wood_07.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_M_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/deleted_user_2104797/sounds/349269",
+			"author": "deleted_user_2104797 (Clatter wood_06.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_L_1",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactPlank_medium_000.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_L_2",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactPlank_medium_002.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/beam_drop_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/kyles/sounds/452596",
+			"author": "kyles (door wood impact hit kick open sudden explode.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/beam_drop_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/deleted_user_2104797/sounds/164590",
+			"author": "deleted_user_2104797 (Wood impact 4.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/beam_drop_3",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactPlank_medium_001.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_snap_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Deathscyp/sounds/443293",
+			"author": "Deathscyp (Wood Break.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_snap_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/LamaMakesMusic/sounds/403646",
+			"author": "LamaMakesMusic (Wood_Bones_Break_Slow_Juicy - 02.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_snap_3",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/deleted_user_2104797/sounds/144945",
+			"author": "deleted_user_2104797 (Crack_of_branch_2.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/wood_snap_4",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/cfran789/sounds/444007",
+			"author": "cfran789 (Breaking A Branch.m4a; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/metal_S_1",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactMetal_heavy_000.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/metal_S_2",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactMetal_heavy_001.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/metal_S_3",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactMetal_medium_002.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/metal_S_4",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactPlate_medium_000.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/metal_M_1, audio/metal_M_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/13FPansk%C3%A1_Tolar_David/sounds/378670",
+			"author": "13FPanská_Tolar_David (Falling scrap metal; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/metal_M_3",
+			"license": "CC0-1.0",
+			"source": "https://kenney.nl/assets/impact-sounds",
+			"author": "Kenney (impact-sounds/impactPlate_medium_001.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/brick_S_1",
+			"license": "CC-BY-4.0",
+			"source": "https://freesound.org/people/DWOBoyle/sounds/145693",
+			"author": "DWOBoyle (Brick-Drop-Concrete-02.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/brick_S_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/dichardson/sounds/570961",
+			"author": "dichardson (Brick Drop on Gravel 1.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/brick_S_3",
+			"license": "CC-BY-4.0",
+			"source": "https://freesound.org/people/DWOBoyle/sounds/145695",
+			"author": "DWOBoyle (Brick-Drop-Concrete-06.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/brick_S_4",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Hankof/sounds/655621",
+			"author": "Hankof (brick falling on floor.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/slide_rubble_2",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/Dalibor/sounds/34175",
+			"author": "Dalibor (pour out gravel on the stairs.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/creak_wood_1",
+			"license": "Public domain",
+			"source": "https://commons.wikimedia.org/wiki/File:Creaky_wooden_swivel_chair.ogg",
+			"author": "chocoholic (Creaky_wooden_swivel_chair.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/creak_wood_2",
+			"license": "Public domain",
+			"source": "https://commons.wikimedia.org/wiki/File:Creaky_wooden_casket.ogg",
+			"author": "stephan (Creaky_wooden_casket.ogg; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/creak_steel_1",
+			"license": "CC0-1.0",
+			"source": "https://freesound.org/people/lolamadeus/sounds/161228",
+			"author": "lolamadeus (Large Metal Lift Door Opening.wav; cut and levelled by Patch)"
+		},
+		{
+			"files": "audio/creak_steel_2",
+			"license": "Public domain",
+			"source": "https://commons.wikimedia.org/wiki/File:Rusty_metal_door_clasp.ogg",
+			"author": "stephan (Rusty_metal_door_clasp.ogg; cut and levelled by Patch)"
+		}
+	]
+}

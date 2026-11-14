@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Impossible spaces</title>
+		<link rel="icon" href="data:," />
+		<style>
+			html, body { margin: 0; height: 100%; background: #b7b4ae; overflow: hidden; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; }
+			#view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
+			#cover { position: fixed; inset: 0; background: #b7b4ae; }
+			#dot { position: fixed; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px 0 0 -2px; border-radius: 50%; background: rgba(255, 255, 255, 0.8); box-shadow: 0 0 2px rgba(0, 0, 0, 0.6); pointer-events: none; display: none; }
+			.looking #dot { display: block; }
+			#tip { position: fixed; right: 12px; bottom: 10px; font-size: 11px; letter-spacing: 0.02em; color: rgba(255, 255, 255, 0.85); text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55); pointer-events: none; }
+			.hud-off #dot, .hud-off #tip { display: none; }
+			@media (max-width: 560px) { #tip { display: none; } }
+			#trouble { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 24px; background: #16171a; color: #e4e4e7; font-size: 14px; line-height: 1.5; }
+			#trouble.on { display: flex; }
+			#trouble .card { max-width: 420px; }
+			#trouble h1 { margin: 0 0 8px; font-size: 17px; font-weight: 600; color: #fafafa; }
+			#trouble p { margin: 0 0 8px; color: #a1a1aa; }
+			#trouble small { color: #71717a; }
+		</style>
+	</head>
+	<body>
+		<canvas id="view"></canvas>
+		<div id="dot"></div>
+		<div id="tip">Click to look · WASD to walk · E to pick up · click to throw</div>
+		<div id="cover"></div>
+		<div id="trouble"><div class="card"><h1>This demo needs WebGPU</h1><p>It plays in Patch Desktop, and in Chrome or Edge 113 or later with a recent graphics driver.</p><small></small></div></div>
+		<script type="module" src="/src/demo/main.ts"></script>
+	</body>
+</html>

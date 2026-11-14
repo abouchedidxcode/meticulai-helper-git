@@ -1,0 +1,22 @@
+{
+ "late_afternoon": {
+  "file": "qwantani_late_afternoon_puresky_1k.hdr",
+  "sun": [
+   0.5574,
+   0.7632,
+   0.3267
+  ],
+  "elevation": 19.1,
+  "sunColour": [
+   1,
+   0.881,
+   0.737
+  ],
+  "sunIrradiance": 16.108,
+  "skyColour": [
+   0.6354,
+   0.6967,
+   0.7819
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+MIT License
+
+Copyright (c) 2026 Patch
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+Third-party parts
+
+three-avbd (vendor/three-avbd/), commit cd3ce90, by Steven Bobyn,
+Copyright (c) 2026 Steven Bobyn, MIT License: vendor/three-avbd/LICENSE.
+Its own third-party parts (ports of avbd-demo2d and avbd-demo3d, Copyright (c)
+2025 Chris Giles, MIT; box2d-lite, Copyright (c) Erin Catto, MIT; three.js, MIT)
+are in vendor/three-avbd/THIRD_PARTY_NOTICES.md.
+https://github.com/sbobyn/three-avbd
+
+The sky and the particles (src/render/sky.ts, src/fx/particles.ts) are from
+three-voxel-destruction, Copyright (c) 2026 Steven Bobyn, MIT License:
+vendor/LICENSE-three-voxel-destruction.txt.
+https://github.com/sbobyn/three-voxel-destruction
+
+three.js (installed by npm): MIT License, the three.js authors.
+
+Art, all CC0 1.0: textures (public/textures/*_diff|nor|arm.webp) and the sky
+light (public/hdri/) from Poly Haven; the leaf and grass cards
+(public/textures/leaf_cluster.webp, grass_tuft.webp) composed from ambientCG's
+LeafSet004, Foliage001 and Foliage006; the pictures in thumbs/ (stills of this
+demo, Patch).
+
+Red Hat Mono (fonts/): The Red Hat Project Authors, SIL Open Font License 1.1,
+fonts/OFL-red-hat-mono.txt.

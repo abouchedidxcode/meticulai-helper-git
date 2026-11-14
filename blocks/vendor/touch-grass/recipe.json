@@ -1,0 +1,39 @@
+{
+	"mode": "browser",
+	"test": { "move_keys": ["KeyW"] },
+	"block": {
+		"controls": [
+			{
+				"id": "tool",
+				"label": "Tool",
+				"hint": "What is in hand: a scythe to mow with, a torch to set the grass alight, or a ball to throw and roll.",
+				"type": "choice",
+				"options": [
+					{ "value": "scythe", "label": "Scythe" },
+					{ "value": "torch", "label": "Torch" },
+					{ "value": "ball", "label": "Ball" }
+				],
+				"default": "scythe",
+				"essential": true
+			},
+			{ "id": "time", "label": "Time", "hint": "The hour of the day: the sun rises at 6, is highest at 13 and sets at 20.", "type": "number", "min": 4, "max": 23, "step": 0.25, "default": 19.25, "unit": "h", "essential": true },
+			{ "id": "wind", "label": "Wind", "hint": "How hard the wind blows. Fire runs before it.", "type": "number", "min": 0, "max": 12, "step": 0.5, "default": 3.5, "unit": "m/s", "essential": true },
+			{ "id": "regrow", "label": "Regrow", "hint": "Cut grass grows back over about a minute.", "type": "toggle", "default": false },
+			{
+				"id": "quality",
+				"label": "Quality",
+				"hint": "Auto follows Patch's performance mode; lower draws fewer blades.",
+				"type": "choice",
+				"options": [
+					{ "value": "auto", "label": "Auto" },
+					{ "value": "high", "label": "High" },
+					{ "value": "medium", "label": "Medium" },
+					{ "value": "low", "label": "Low" }
+				],
+				"default": "auto"
+			}
+		],
+		"presets": [],
+		"triggers": [{ "id": "reset", "label": "Reset", "hint": "The meadow as it grew: nothing trodden, cut or burnt." }]
+	}
+}

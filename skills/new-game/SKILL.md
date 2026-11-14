@@ -114,9 +114,11 @@ Don't paste the file. Say it in six or seven plain lines:
 >
 > Is that the game? Change anything you like.
 
-Edit until they say yes. Then set `falCapUSD` (their budget, default 0) and `maxAgents` (default 4; lower it to 2 if the
-computer is old or slow, or if they mention running out of usage) in `my-game/helper.json`. Rename `gameName` if
-they gave a name. Log the main choices in `DECISIONS.md`. Commit.
+Edit until they say yes. GREAT.md (the look in words, the camera, the scale) now feeds the asset plan in
+`my-game/ASSETS.md` ([find-assets](../find-assets/SKILL.md)), so make the look specific enough to choose assets by. Then
+set `falCapUSD` (their budget, default 0) and `maxAgents` (default 4; lower it to 2 if the computer is old or slow, or
+if they mention running out of usage) in `my-game/helper.json`. Rename `gameName` if they gave a name. Log the main
+choices in `DECISIONS.md`. Commit.
 
 ## Next
 

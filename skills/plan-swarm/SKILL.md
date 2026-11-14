@@ -25,6 +25,11 @@ Before you start: you must be in the kit's workspace (it has `START.md` and `too
   runs: if you do, nobody reviews it.
 - **Builders:** 3-5, never more than `maxAgents` in `my-game/helper.json`. Each gets
   [agents/builder.md](../../agents/builder.md) plus its section of CONTRACTS.md.
+- **Asset scouts (optional):** when the round needs art or sound, spawn [asset-scouts](../../agents/asset-scout.md)
+  in parallel with the builders, one per category of `my-game/ASSETS.md` (props, characters, ground and sky, audio).
+  They only search, look and write a shortlist in `my-game/.helper/scout/<category>/`; they need no worktree and own
+  no game files. You (or the builder who owns that area) read the shortlist and promote. Scouts count toward
+  `maxAgents`. Details: [find-assets](../find-assets/SKILL.md).
 
 ## Write CONTRACTS.md
 
@@ -37,8 +42,8 @@ Typical areas for a first game (pick the 3-5 that matter now):
 | core | `src/game.js`, `src/rules.js`, `src/tuning.json` | the verb works, win and lose exist |
 | feel | `src/player.js`, `src/camera.js`, `src/fx.js` | inputs answer in under 100 ms, impacts land |
 | world | `src/level*.js`, `src/world.js` | the place exists and reads clearly |
-| look | `src/render.js`, `src/materials.js`, `public/textures/` | one scene matches "the look in words" |
-| audio | `src/audio.js`, `public/audio/` | every action has a sound |
+| look | `src/render.js`, `src/materials.js`, `palette.json`, art in `public/assets/` | one scene matches "the look in words" |
+| audio | `src/audio.js`, sounds and music in `public/assets/` | every action has a sound |
 | ui | `src/ui.js`, `index.html`, `src/style.css` | title, HUD, results, pause |
 
 For each area write: owner name, the files it may edit, the files it may only read, what it exposes to the others (the

@@ -1,0 +1,137 @@
+{
+	"mode": "browser",
+	"block": {
+		"controls": [
+			{
+				"id": "room",
+				"label": "Start in",
+				"hint": "Which room you stand in. Choosing one puts you back at its start, with everything where it was.",
+				"type": "choice",
+				"essential": true,
+				"default": "tunnel",
+				"options": [
+					{
+						"value": "tunnel",
+						"label": "Tunnel",
+						"image": "thumbs/rooms/tunnel.webp"
+					},
+					{
+						"value": "hut",
+						"label": "Hut",
+						"image": "thumbs/rooms/hut.webp"
+					},
+					{
+						"value": "corridor",
+						"label": "Corridor",
+						"image": "thumbs/rooms/corridor.webp"
+					},
+					{
+						"value": "stairs",
+						"label": "Stairs",
+						"image": "thumbs/rooms/stairs.webp"
+					},
+					{
+						"value": "wall",
+						"label": "Wall room",
+						"image": "thumbs/rooms/wall.webp"
+					},
+					{
+						"value": "table",
+						"label": "Table",
+						"image": "thumbs/rooms/table.webp"
+					}
+				]
+			},
+			{
+				"id": "depth",
+				"label": "Views deep",
+				"hint": "How many openings deep a view is drawn (PortalSystem.maxDepth). At 0 every opening is a flat colour, which shows where they are.",
+				"type": "number",
+				"min": 0,
+				"max": 6,
+				"step": 1,
+				"default": 5,
+				"essential": true
+			},
+			{
+				"id": "outlines",
+				"label": "Show openings",
+				"hint": "Draws an orange line round every opening.",
+				"type": "toggle",
+				"default": false,
+				"essential": true
+			},
+			{
+				"id": "fov",
+				"label": "Field of view",
+				"hint": "The camera's vertical field of view.",
+				"type": "number",
+				"min": 50,
+				"max": 100,
+				"step": 1,
+				"default": 72,
+				"unit": "°"
+			},
+			{
+				"id": "speed",
+				"label": "Walk speed",
+				"hint": "Walking speed at full size; Shift runs two thirds faster.",
+				"type": "number",
+				"min": 1,
+				"max": 8,
+				"step": 0.1,
+				"default": 3.3,
+				"unit": "m/s"
+			},
+			{
+				"id": "views",
+				"label": "Views a frame",
+				"hint": "The most views through openings drawn in one frame, the main one aside (PortalSystem.budget). Each is a screen-sized picture.",
+				"type": "number",
+				"min": 1,
+				"max": 12,
+				"step": 1,
+				"default": 10
+			}
+		],
+		"presets": [],
+		"triggers": [
+			{
+				"id": "ball",
+				"label": "Bring the ball"
+			}
+		]
+	},
+	"test": {
+		"move_keys": [
+			"KeyW",
+			"ArrowUp"
+		]
+	},
+	"credits": [
+		{
+			"files": "assets/materials/oak_color.jpg, assets/materials/oak_normal.jpg, assets/materials/oak_rough.jpg",
+			"license": "CC0-1.0",
+			"source": "https://polyhaven.com/a/wood_floor",
+			"author": "Dimitrios Savva (Poly Haven, Wood Floor; 1K maps, by way of Patch's asset library)"
+		},
+		{
+			"files": "assets/materials/concrete_color.jpg, assets/materials/concrete_normal.jpg, assets/materials/concrete_rough.jpg",
+			"license": "CC0-1.0",
+			"source": "https://polyhaven.com/a/brushed_concrete_04",
+			"author": "Amal Kumar (Poly Haven, Brushed Concrete 04; 1K maps, by way of Patch's asset library)"
+		},
+		{
+			"files": "assets/materials/marble_color.jpg, assets/materials/marble_normal.jpg, assets/materials/marble_rough.jpg",
+			"license": "CC0-1.0",
+			"source": "https://polyhaven.com/a/marble_01",
+			"author": "Rob Tuytel (Poly Haven, Marble 01; 1K maps, by way of Patch's asset library)"
+		},
+		{
+			"files": "assets/materials/planks_color.jpg, assets/materials/planks_normal.jpg, assets/materials/planks_rough.jpg",
+			"license": "CC0-1.0",
+			"source": "https://polyhaven.com/a/black_painted_planks",
+			"author": "Dimitrios Savva (Poly Haven, Black Painted Planks; 1K maps, by way of Patch's asset library)"
+		}
+	]
+}

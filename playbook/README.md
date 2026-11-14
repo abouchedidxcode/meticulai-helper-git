@@ -28,7 +28,7 @@ fun" or "it looks generic," the answer is usually in here.
    player, generous input. Never change feel the person praised. [Feel](feel.md), [Audio](audio.md)
 8. **A look with a point of view, in words.** Lock it on one small scene. Let the person pick between looks by
    playing. Restrained bloom, no neon by default, no generic AI interface. References set mood; they are never a
-   target. [Picking a look](picking-a-look.md)
+   target. [Picking a look](picking-a-look.md), [Using free assets](using-free-assets.md)
 9. **Small, solo, free to run.** No online multiplayer and no paid calls at runtime in a first game. Reuse what
    works. [Scope](scope.md)
 10. **Rebuild the core, not the paint.** When the person has played it and it still isn't fun because of the
@@ -49,6 +49,7 @@ say plainly what nobody has checked yet. [Audio](audio.md), [Gotchas](gotchas.md
 | [first-60-seconds.md](first-60-seconds.md) | Title, onboarding, tutorial, death screens |
 | [feel.md](feel.md) | Controls, camera, hits, speed, webcam input |
 | [picking-a-look.md](picking-a-look.md) | Art direction, references, UI, generated images |
+| [using-free-assets.md](using-free-assets.md) | Before pulling, generating or hand-coding any asset; assets that don't belong together |
 | [when-to-start-over.md](when-to-start-over.md) | "It's still not fun" after many rounds |
 | [scope.md](scope.md) | Choosing what to build; multiplayer or paid AI ideas |
 | [audio.md](audio.md) | Sound effects, music, mixing |

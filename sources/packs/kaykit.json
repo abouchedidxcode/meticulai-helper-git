@@ -1,0 +1,453 @@
+{
+ "checked": "2026-11-14",
+ "source": "kaykit",
+ "notes": "Built from kaylousberg.com/game-assets and each pack page (18 requests, 2 s apart); the GitHub links from the KayKit-Game-Assets org via the GitHub API. Every pack page says: \"Free for personal and commercial use, no attribution required. (CC0 Licensed)\". The paid \"Complete KayKit Collection\" bundle is left out.",
+ "zip_layout": "GitHub zips (checked on City Builder Bits): <repo>-main/addons/kaykit_<pack>/Assets/{gltf,fbx,fbx(unity),obj,texture}/ plus LICENSE.txt. The gltf folder holds .gltf + .bin pairs that point at one shared gradient atlas texture (1024x1024 png): keep the folders together or pack each model to .glb with gltf-transform. The addons/ layout is a Godot add-on; ignore it for three.js.",
+ "packs": [
+  {
+   "id": "rpg-tools",
+   "name": "RPG Tools",
+   "url": "https://kaylousberg.com/game-assets/rpg-tools",
+   "download": null,
+   "download_page": "https://kaylousberg.itch.io/rpg-tools-bits",
+   "github": null,
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "tools",
+    "pickaxe",
+    "hammer",
+    "axe",
+    "anvil",
+    "lantern",
+    "crafting",
+    "survival"
+   ],
+   "count": 45,
+   "preview": "https://kaylousberg.com/content/3-game-assets/2-rpg-tools/promo_rpg_tools_bits_sample_extra.png",
+   "license": "CC0-1.0",
+   "notes": "Download the FREE tier from itch.io (name your own price: enter 0 or click \"No thanks, just take me to the downloads\"). EXTRA/SOURCE tiers are paid.",
+   "what": "This pack has a bunch of RPG themed tools and equipment, great for crafting or survival games."
+  },
+  {
+   "id": "holiday-bits",
+   "name": "Holiday Bits",
+   "url": "https://kaylousberg.com/game-assets/holiday-bits",
+   "download": null,
+   "download_page": "https://kaylousberg.itch.io/holiday-bits",
+   "github": null,
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "christmas",
+    "holiday",
+    "snow",
+    "presents",
+    "gingerbread",
+    "winter",
+    "environment",
+    "seasonal",
+    "platformer"
+   ],
+   "count": 55,
+   "preview": "https://kaylousberg.com/content/3-game-assets/3-holiday-bits/promo_holiday_bits_sample.png",
+   "license": "CC0-1.0",
+   "notes": "Download the FREE tier from itch.io (name your own price: enter 0 or click \"No thanks, just take me to the downloads\"). EXTRA/SOURCE tiers are paid.",
+   "what": "This pack has a bunch of holiday themed 3D models, great for adding some festive flair to your game, or make a small seasonal game."
+  },
+  {
+   "id": "character-animations",
+   "name": "Character Animations",
+   "url": "https://kaylousberg.com/game-assets/character-animations",
+   "download": null,
+   "download_page": "https://kaylousberg.itch.io/kaykit-character-animations",
+   "github": null,
+   "kinds": [
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "animation",
+    "humanoid",
+    "retarget",
+    "melee",
+    "movement",
+    "tools",
+    "character"
+   ],
+   "count": null,
+   "preview": "https://kaylousberg.com/content/3-game-assets/4-character-animations/character_animations.png",
+   "license": "CC0-1.0",
+   "notes": "Download the FREE tier from itch.io (name your own price: enter 0 or click \"No thanks, just take me to the downloads\"). EXTRA/SOURCE tiers are paid. Animation sets for KayKit Rig_Medium and Rig_Large; retarget to other humanoids.",
+   "what": "The KayKit - Character Animations pack , is a collection of humanoid animations intended for use with KayKit characters (although they will work on other humanoid characters too, use your engine's retargeting functions for that)."
+  },
+  {
+   "id": "forest-nature-pack",
+   "name": "Forest Nature Pack",
+   "url": "https://kaylousberg.com/game-assets/forest-nature-pack",
+   "download": null,
+   "download_page": "https://kaylousberg.itch.io/kaykit-forest",
+   "github": null,
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "trees",
+    "bushes",
+    "rocks",
+    "grass",
+    "forest",
+    "nature"
+   ],
+   "count": 100,
+   "preview": "https://kaylousberg.com/content/3-game-assets/5-forest-nature-pack/forest_nature_pack.png",
+   "license": "CC0-1.0",
+   "notes": "Download the FREE tier from itch.io (name your own price: enter 0 or click \"No thanks, just take me to the downloads\"). EXTRA/SOURCE tiers are paid. Pack page: \"The FREE tier contains 100+ models of trees, rocks, bushes, and grass.\"",
+   "what": "The Forest Nature Pack is a bundle of game assets that contains 200+ unique (1500+ total models including recolours) stylised forest assets like trees, bushes, rocks, grass and terrain."
+  },
+  {
+   "id": "platformer",
+   "name": "Platformer Pack",
+   "url": "https://kaylousberg.com/game-assets/platformer",
+   "download": null,
+   "download_page": "https://kaylousberg.itch.io/kaykit-platformer",
+   "github": null,
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "platformer",
+    "blocks",
+    "powerups",
+    "obstacles",
+    "party",
+    "coins",
+    "environment",
+    "resources"
+   ],
+   "count": 120,
+   "preview": "https://kaylousberg.com/content/3-game-assets/6-platformer/platformer_pack.png",
+   "license": "CC0-1.0",
+   "notes": "Download the FREE tier from itch.io (name your own price: enter 0 or click \"No thanks, just take me to the downloads\"). EXTRA/SOURCE tiers are paid.",
+   "what": "The Platformer Pack is a bundle of game assets that contains 120 unique (370 total models including recolours) stylised platformer assets, powerups, buttons/switches, obstacles, traps, and more!"
+  },
+  {
+   "id": "resource-bits",
+   "name": "Resource Bits",
+   "url": "https://kaylousberg.com/game-assets/resource-bits",
+   "download": null,
+   "download_page": "https://kaylousberg.itch.io/resource-bits",
+   "github": null,
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "wood",
+    "stone",
+    "iron",
+    "gold",
+    "resources",
+    "materials"
+   ],
+   "count": 75,
+   "preview": "https://kaylousberg.com/content/3-game-assets/7-resource-bits/resource_bits.png",
+   "license": "CC0-1.0",
+   "notes": "Download the FREE tier from itch.io (name your own price: enter 0 or click \"No thanks, just take me to the downloads\"). EXTRA/SOURCE tiers are paid.",
+   "what": "This pack has a bunch of resources and materials, there's Wood, Stone, Iron, Copper, Silver, Gold, Textiles, Fuel and more!"
+  },
+  {
+   "id": "block-bits",
+   "name": "Block Bits",
+   "url": "https://kaylousberg.com/game-assets/block-bits",
+   "download": null,
+   "download_page": "https://kaylousberg.itch.io/block-bits",
+   "github": null,
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "blocks",
+    "voxel",
+    "mining",
+    "diorama",
+    "resources",
+    "environment"
+   ],
+   "count": 32,
+   "preview": "https://kaylousberg.com/content/3-game-assets/8-block-bits/block_bits.png",
+   "license": "CC0-1.0",
+   "notes": "Download the FREE tier from itch.io (name your own price: enter 0 or click \"No thanks, just take me to the downloads\"). EXTRA/SOURCE tiers are paid.",
+   "what": "This pack has a bunch of blocky game assets for creating environments, dioramas, platforming games, or survival-mining games."
+  },
+  {
+   "id": "medieval-hexagon",
+   "name": "Medieval Hexagon",
+   "url": "https://kaylousberg.com/game-assets/medieval-hexagon",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/kaykit-medieval-hexagon",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Medieval-Hexagon-Pack-1.0",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "hexagon",
+    "hex",
+    "tiles",
+    "medieval",
+    "rts",
+    "village",
+    "buildings",
+    "rpg",
+    "top-down"
+   ],
+   "count": 200,
+   "preview": "https://kaylousberg.com/content/3-game-assets/9-medieval-hexagon/thumbnail_medievalhexagons-100.jpg",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "The Medieval Hexagon Pack is a bundle of game assets that contains over 200 stylised medieval hexagonal tiles, buildings, and props!"
+  },
+  {
+   "id": "characters-skeletons",
+   "name": "Characters : Skeletons",
+   "url": "https://kaylousberg.com/game-assets/characters-skeletons",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Skeletons-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/kaykit-skeletons/",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Skeletons-1.0",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "skeleton",
+    "undead",
+    "rigged",
+    "animated",
+    "weapons",
+    "rpg",
+    "character"
+   ],
+   "count": 4,
+   "preview": "https://kaylousberg.com/content/3-game-assets/10-characters-skeletons/thumbnail_skeletons-100.jpg",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "The Skeletons Character Pack is a bundle of characters assets that contain 4 (+2 in the EXTRA tier) stylised low-poly skeleton character assets."
+  },
+  {
+   "id": "characters-adventurers",
+   "name": "Characters : Adventurers",
+   "url": "https://kaylousberg.com/game-assets/characters-adventurers",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/kaykit-adventurers",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0",
+   "kinds": [
+    "model",
+    "animation"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "knight",
+    "mage",
+    "rogue",
+    "barbarian",
+    "rigged",
+    "animated",
+    "weapons",
+    "rpg",
+    "character"
+   ],
+   "count": 5,
+   "preview": "https://kaylousberg.com/content/3-game-assets/11-characters-adventurers/adventurers.png",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "The Adventurers Character Pack is a bundle of characters assets that contain 5 (+3 in the EXTRA tier) stylised low-poly character assets."
+  },
+  {
+   "id": "dungeon-remastered",
+   "name": "Dungeon Remastered",
+   "url": "https://kaylousberg.com/game-assets/dungeon-remastered",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/kaykit-dungeon-remastered",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Dungeon-Remastered-1.0",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "dungeon",
+    "walls",
+    "floors",
+    "chests",
+    "barrels",
+    "modular",
+    "rpg"
+   ],
+   "count": 200,
+   "preview": "https://kaylousberg.com/content/3-game-assets/12-dungeon-remastered/thumbnail_dungeon_remastered.jpg",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "The Dungeon Remastered Pack is a bundle of game assets that contains over 200 stylised 3D Dungeon assets and props!"
+  },
+  {
+   "id": "halloween-bits",
+   "name": "Halloween Bits",
+   "url": "https://kaylousberg.com/game-assets/halloween-bits",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Halloween-Bits-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/halloween-bits",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Halloween-Bits-1.0",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "halloween",
+    "graveyard",
+    "pumpkin",
+    "spooky",
+    "seasonal",
+    "nature",
+    "environment",
+    "food"
+   ],
+   "count": 60,
+   "preview": "https://kaylousberg.com/content/3-game-assets/13-halloween-bits/halloweenbits.png",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "This pack has a bunch of halloween game assets for adding some spooky vibes to your game, like a creepy cemetery!"
+  },
+  {
+   "id": "restaurant-bits",
+   "name": "Restaurant Bits",
+   "url": "https://kaylousberg.com/game-assets/restaurant-bits",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Restaurant-Bits-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/restaurant-bits",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Restaurant-Bits-1.0",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "food",
+    "kitchen",
+    "cooking",
+    "restaurant",
+    "interior",
+    "resources"
+   ],
+   "count": 140,
+   "preview": "https://kaylousberg.com/content/3-game-assets/14-restaurant-bits/restaurantbits.png",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "This pack has a bunch of cooking and food game assets for building kitchen and restaurant interiors , or making chaotic cooking games."
+  },
+  {
+   "id": "prototype-bits",
+   "name": "Prototype Bits",
+   "url": "https://kaylousberg.com/game-assets/prototype-bits",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Prototype-Bits-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/prototype-bits",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Prototype-Bits-1.0",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "prototype",
+    "greybox",
+    "blockout",
+    "targets",
+    "platformer",
+    "shooter",
+    "character",
+    "resources"
+   ],
+   "count": 64,
+   "preview": "https://kaylousberg.com/content/3-game-assets/15-prototype-bits/prototypebits.png",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "This pack has a bunch of game assets for use while prototyping any type of game!"
+  },
+  {
+   "id": "furniture-bits",
+   "name": "Furniture Bits",
+   "url": "https://kaylousberg.com/game-assets/furniture-bits",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Furniture-Bits-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/furniture-bits",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Furniture-Bits-1.0",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "furniture",
+    "interior",
+    "room",
+    "house"
+   ],
+   "count": 50,
+   "preview": "https://kaylousberg.com/content/3-game-assets/16-furniture-bits/thumbnail_furniturebits.jpg",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "This pack has a bunch of furniture game assets for decorating rooms, designing interiors or life simulation games."
+  },
+  {
+   "id": "space-base-bits",
+   "name": "Space Base Bits",
+   "url": "https://kaylousberg.com/game-assets/space-base-bits",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/space-base-bits",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-Space-Base-Bits-1.0",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "space",
+    "base",
+    "sci-fi",
+    "colony",
+    "modular",
+    "top-down",
+    "resources"
+   ],
+   "count": 48,
+   "preview": "https://kaylousberg.com/content/3-game-assets/17-space-base-bits/thumbnail_spacebasebits.jpg",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "This pack has a bunch of game assets for creating modular space bases, or launch your interplanetary mining colony!"
+  },
+  {
+   "id": "city-builder-bits",
+   "name": "City Builder Bits",
+   "url": "https://kaylousberg.com/game-assets/city-builder-bits",
+   "download": "https://github.com/KayKit-Game-Assets/KayKit-City-Builder-Bits-1.0/archive/refs/heads/main.zip",
+   "download_page": "https://kaylousberg.itch.io/city-builder-bits",
+   "github": "https://github.com/KayKit-Game-Assets/KayKit-City-Builder-Bits-1.0",
+   "kinds": [
+    "model"
+   ],
+   "style": "lowpoly",
+   "tags": [
+    "city",
+    "buildings",
+    "roads",
+    "top-down"
+   ],
+   "count": 32,
+   "preview": "https://kaylousberg.com/content/3-game-assets/18-city-builder-bits/thumbnail_citybuilderbits.jpg",
+   "license": "CC0-1.0",
+   "notes": "GitHub copy is the 1.0 release (FREE tier). itch.io may have a newer version; EXTRA/SOURCE tiers there are paid.",
+   "what": "This pack has a bunch of game assets for creating cities, great to use with city planning, simulation, RTS games and whatever you can think of putting these in."
+  }
+ ],
+ "agent_fetch": "direct where download is set, otherwise manual"
+}

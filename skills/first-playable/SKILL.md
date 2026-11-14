@@ -25,6 +25,9 @@ Before you start: you must be in the kit's workspace (it has `START.md` and `too
 - [ ] **The player's choice visibly changes the result.** Two different players should get clearly different outcomes.
       "I felt like I wasn't doing anything" is the worst review a game can get.
 - [ ] **Shapes only.** Boxes, spheres, flat colours, one light. Colour codes meaning (player, danger, goal), nothing else.
+      Assets come after the loop is fun ([find-assets](../find-assets/SKILL.md)). One exception: a ready-made block
+      that IS the core mechanic (a drivable car, an ocean you sail on, things that break apart) comes in now, because
+      the loop can't be judged without it. Add it with `node tools/blocks/add.mjs <block-id>`.
 - [ ] **Tuning numbers live in `src/tuning.json`** (speed, gravity, timers), so the user can change them in the dev
       panel and press "Save for my agent".
 - [ ] **Test hooks work** (see ARCHITECTURE.md): `window.__game.ready`, `state`, `events`, `skipTo`, and `?bot=1` makes a
@@ -58,7 +61,7 @@ and [playbook/when-to-start-over.md](../../playbook/when-to-start-over.md).
 
 ## Common mistakes
 
-- Adding menus, art, or a story before the verb is fun.
+- Adding menus, art, or a story before the verb is fun. (Writing the asset plan is fine; pulling assets waits.)
 - A bot that only walks forward. It must use the verb the way a player would.
 - Hiding the loop behind setup ("first, choose your class"). Drop the player straight into the verb.
 - Tuning numbers for hours. If the loop isn't fun at any reasonable number, the loop is the problem.

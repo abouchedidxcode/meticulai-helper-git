@@ -1,0 +1,27 @@
+{
+  "name": "impossible-spaces",
+  "private": true,
+  "version": "1.0.1",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --port 5374",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "level": "node tools/build-level.mjs",
+    "bake": "blender -b --factory-startup --python tools/bake.py -- --samples 4096",
+    "pack": "node tools/pack-lightmaps.mjs",
+    "preview": "node scripts/serve.mjs dist 5373"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "0.21.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "0.186.0",
+    "@webgpu/types": "0.1.74",
+    "playwright": "1.64.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

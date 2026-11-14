@@ -8,4 +8,4 @@
 
 | Asset | Author | Licence | Link | Where used |
 | --- | --- | --- | --- | --- |
-| <!-- e.g. Rock 04 texture --> | <!-- e.g. Poly Haven --> | <!-- CC0 --> | <!-- https://... --> | <!-- public/textures/rock04.jpg, the cliffs --> |
+| <!-- e.g. Rock 04 texture --> | <!-- e.g. Poly Haven --> | <!-- CC0 --> | <!-- https://... --> | <!-- public/assets/material/rock04.jpg, the cliffs --> |

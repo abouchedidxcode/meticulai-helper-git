@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "@webgpu/types",
+      "vite/client"
+    ],
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "paths": {
+      "three-avbd": [
+        "./vendor/three-avbd/src/lib/index.ts"
+      ],
+      "three-avbd/advanced": [
+        "./vendor/three-avbd/src/lib/advanced.ts"
+      ],
+      "patch-block": [
+        "./lib/patch-block.js"
+      ]
+    },
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src",
+    "recipe.json"
+  ]
+}

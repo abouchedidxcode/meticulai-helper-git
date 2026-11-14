@@ -30,24 +30,32 @@ Background: [playbook/picking-a-look.md](../../playbook/picking-a-look.md).
 
 1. **Pick one small scene** (one room, one stretch of track, one arena). Lock the look there before touching anything
    else.
-2. **Assets, free first:** Poly Haven, ambientCG (CC0 textures and HDRIs), Kenney (CC0 models and UI), OpenGameArt
-   (check each licence). Procedural materials and skies are often better than any download. Credit everything in
-   `my-game/CREDITS.md`. Paid generation only through [generate-assets](../generate-assets/SKILL.md).
-3. **Builders** with [plan-swarm](../plan-swarm/SKILL.md): `look` (lighting, materials, grade), `world` (props,
-   composition of the scene), `ui` (fonts, HUD, menus in the same style). 2-3 builders.
-4. **Measure, don't just eyeball:** take a shot of the scene and run `node tools/refs/palette.mjs shot.png` (and
+2. **Write the look down as numbers:** fill `my-game/palette.json` (base colours, accents, shadow, light, sun,
+   ambient, fog, exposure) from "the look in words". From a reference picture, start with
+   `node tools/assets/palette-from.mjs <image>`. The asset tools read it; make the game's lights and materials
+   read it too (or keep the code's colours in step with it), so assets are judged under the game's real light.
+3. **Assets, free first, through [find-assets](../find-assets/SKILL.md):** the plan in `my-game/ASSETS.md`, one or two
+   style families, ready-made blocks and free libraries (Poly Haven, ambientCG, Kenney, OpenGameArt and the rest in
+   `sources/`). Look at each candidate lit like the game (`node tools/assets/look.mjs <file> --in-game`) and make it
+   fit with `node tools/assets/restyle.mjs` (recolour to the palette, real scale, smaller textures, shared materials).
+   Procedural materials and skies are often better than any download. Credits go into `my-game/CREDITS.md` through
+   `get.mjs`. Paid generation only through [generate-assets](../generate-assets/SKILL.md), last.
+4. **Builders** with [plan-swarm](../plan-swarm/SKILL.md): `look` (lighting, materials, grade), `world` (props,
+   composition of the scene), `ui` (fonts, HUD, menus in the same style). 2-3 builders, plus
+   [asset-scouts](../../agents/asset-scout.md) per category if there is a lot to find.
+5. **Measure, don't just eyeball:** take a shot of the scene and run `node tools/refs/palette.mjs shot.png` (and
    against a reference if there is one). Check brightness and saturation match the intent ("warm and low-saturation"
    should measure that way). Use the numbers to catch drift, not to copy pixels.
-5. **Compare blind when choosing between versions:** `node tools/play/blind-ab.mjs a.png b.png` gives shuffled copies.
+6. **Compare blind when choosing between versions:** `node tools/play/blind-ab.mjs a.png b.png` gives shuffled copies.
    Have `critic-art` pick without knowing which is new. Only for real choices between big alternatives, never as a
    loop of small tweaks.
-6. **Judge in motion.** Record (`node tools/play/record.mjs --bot --seconds 45`) and have
+7. **Judge in motion.** Record (`node tools/play/record.mjs --bot --seconds 45`) and have
    [agents/critic-art.md](../../agents/critic-art.md) watch the sheets with GREAT.md. A frame that looks nice still
    can be a game that reads badly in motion.
-7. **Hand back** the one scene ([hand-back](../hand-back/SKILL.md)) and ask: "Is this the look? What would you change?"
+8. **Hand back** the one scene ([hand-back](../hand-back/SKILL.md)) and ask: "Is this the look? What would you change?"
    If the look is truly undecided, build two or three switchable looks (a key or `?look=2`) and let them choose after
    playing.
-8. **Only after a yes**, roll it out to the rest of the game.
+9. **Only after a yes**, roll it out to the rest of the game.
 
 ## Done means
 
@@ -60,5 +68,6 @@ The user said yes to the locked scene, the rest of the game follows it, CREDITS.
 - Matching a reference picture frame by frame. It never converges; 100+ rounds of tiny tweaks went nowhere once.
 - Turning up bloom, fog and particles to make it "look good". It reads as AI-made instantly.
 - Breaking readability for beauty: the player can't find themselves on screen.
+- Assets from three families in one scene. Pick the families first; restyle to one palette and one light.
 - Heavy assets: keep textures 2K or smaller, models light, total download small. A pretty game that takes 30 seconds
   to load loses the player.

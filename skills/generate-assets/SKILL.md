@@ -1,6 +1,6 @@
 ---
 name: generate-assets
-description: Optional paid generation of pictures, textures, 3D props, sound effects and music with fal, always as a dry run first, with the cost shown and the user's yes before every batch. Use only when the user has a fal key, a budget above $0, and a free or procedural option clearly won't do.
+description: Optional paid generation of pictures, textures, 3D props, sound effects and music with fal, always as a dry run first, with the cost shown and the user's yes before every batch. The last rung of the asset ladder - use only when the user has a fal key, a budget above $0, and find-assets showed no free block, free asset or code option will do.
 ---
 
 # Generate assets (optional, costs money)
@@ -22,15 +22,13 @@ Before you start: you must be in the kit's workspace (it has `START.md` and `too
    and prices.
 4. Read [tools/fal/PROMPTS.md](../../tools/fal/PROMPTS.md) for prompt patterns that work.
 
-## Free first
+## Free first: fal is the last rung
 
-Check these before paying, and pick whatever is good enough:
-- **Textures and HDRIs:** Poly Haven, ambientCG (CC0).
-- **Models, sprites, UI, sounds:** Kenney (CC0), OpenGameArt (check each file's licence: CC0 and CC-BY are fine with
-  credit; avoid GPL art and "non-commercial").
-- **Procedural:** sky, water, terrain, particles, most sound effects and simple music can be made in code, for free,
-  and often look better than a generated texture.
-Every free asset goes in `my-game/CREDITS.md` with source, author and licence.
+The asset ladder is: ready-made block -> free CC0 asset -> credit-required asset -> made in code -> fal. Before any
+batch, follow [find-assets](../find-assets/SKILL.md) for that need: `node tools/blocks/list.mjs`, then
+`node tools/assets/find.mjs "<what>"` and look at the contact sheet. Sky, water, terrain, particles, most sound effects
+and simple music can also be made in code, for free, and often look better than a generated texture. The row in
+`my-game/ASSETS.md` should say why free options didn't fit before you generate.
 
 Pay only when it clearly wins: a distinctive style frame to anchor the look, a hero texture, a prop no pack has, music
 with a specific mood.
@@ -57,7 +55,11 @@ with a specific mood.
 3. Only after a yes: run with `--yes`. The tool refuses to pass the cap; never edit the cap yourself, only the user can
    raise it.
 4. The tool logs each call; add a line to `my-game/paid-ledger.md` (what, why, cost, which files it made) if it didn't.
-5. Show the results. Keep the good ones in the game; leave the rest in `refs/generated/`.
+5. **Look and judge, like any asset.** Run `node tools/assets/look.mjs <file> --in-game` (for a model, also
+   `node tools/assets/restyle.mjs <in.glb> --scale-to <metres> --look` if it needs to fit). Judge it with
+   the find-assets checklist (family, silhouette, palette, detail, scale, file size). Bring the keepers in with
+   `node tools/assets/get.mjs promote <path>`, and record them in ASSETS.md.
+6. Show the results. Keep the good ones in the game; leave the rest in `refs/generated/`.
 
 ## Hard rules
 

@@ -1,0 +1,16 @@
+{
+  "name": "warm dusk",
+  "colors": {
+    "base": ["#93ad5e", "#6f8a45", "#b9957a", "#a88462"],
+    "accent": ["#ffc46b", "#d4893f"],
+    "shadow": "#4a3f5e",
+    "light": "#ffc08a"
+  },
+  "light": {
+    "sun": "#ffc08a",
+    "ambient": "#b4c0e6",
+    "fog": "#7d6a86",
+    "exposure": 1.1
+  },
+  "notes": "The starter game's palette: a floating island at dusk. Base = moss, dark moss, rock, path. Accents = amber and autumn orange, kept for things that matter (pickups, the goal). Shadow is the cool violet under the island; light is the warm sun. Replace with the look from GREAT.md (or start from: node tools/assets/palette-from.mjs <image>). Used by restyle.mjs --palette and look.mjs --in-game."
+}

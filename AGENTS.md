@@ -21,3 +21,6 @@ If `my-game/` exists, read `my-game/HANDOVER.md` next and continue from there.
   often.
 - Never publish anything without the user's explicit go-ahead. Never push the user's game to the kit's repository.
 - No other people's art, music, characters or game names in the game.
+- Assets: free blocks and assets first, then code, fal last. Look at each one before it goes in and record it in
+  `my-game/ASSETS.md`; bring files in with `node tools/assets/get.mjs` so credits are written
+  ([skills/find-assets/SKILL.md](skills/find-assets/SKILL.md)).

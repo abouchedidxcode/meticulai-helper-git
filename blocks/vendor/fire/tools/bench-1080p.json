@@ -1,0 +1,420 @@
+{
+ "candle half opening view": {
+  "run1": {
+   "median": 0.154,
+   "p95": 0.208
+  },
+  "run2": {
+   "median": 0.073,
+   "p95": 0.076
+  },
+  "lower_median": 0.073
+ },
+ "candle half close": {
+  "run1": {
+   "median": 0.208,
+   "p95": 0.449
+  },
+  "run2": {
+   "median": 0.344,
+   "p95": 0.391
+  },
+  "lower_median": 0.208
+ },
+ "candle full opening view": {
+  "run1": {
+   "median": 0.44,
+   "p95": 0.47
+  },
+  "run2": {
+   "median": 0.144,
+   "p95": 0.356
+  },
+  "lower_median": 0.144
+ },
+ "candle full close": {
+  "run1": {
+   "median": 1.484,
+   "p95": 2.252
+  },
+  "run2": {
+   "median": 0.557,
+   "p95": 0.717
+  },
+  "lower_median": 0.557
+ },
+ "torch half opening view": {
+  "run1": {
+   "median": 0.561,
+   "p95": 0.691
+  },
+  "run2": {
+   "median": 0.131,
+   "p95": 0.175
+  },
+  "lower_median": 0.131
+ },
+ "torch half close": {
+  "run1": {
+   "median": 0.279,
+   "p95": 0.317
+  },
+  "run2": {
+   "median": 0.479,
+   "p95": 0.585
+  },
+  "lower_median": 0.279
+ },
+ "torch full opening view": {
+  "run1": {
+   "median": 0.296,
+   "p95": 0.319
+  },
+  "run2": {
+   "median": 0.291,
+   "p95": 0.482
+  },
+  "lower_median": 0.291
+ },
+ "torch full close": {
+  "run1": {
+   "median": 0.87,
+   "p95": 0.938
+  },
+  "run2": {
+   "median": 1.564,
+   "p95": 1.763
+  },
+  "lower_median": 0.87
+ },
+ "gas half opening view": {
+  "run1": {
+   "median": 0.046,
+   "p95": 0.048
+  },
+  "run2": {
+   "median": 0.042,
+   "p95": 0.069
+  },
+  "lower_median": 0.042
+ },
+ "gas half close": {
+  "run1": {
+   "median": 0.145,
+   "p95": 0.206
+  },
+  "run2": {
+   "median": 0.139,
+   "p95": 0.205
+  },
+  "lower_median": 0.139
+ },
+ "gas full opening view": {
+  "run1": {
+   "median": 0.097,
+   "p95": 0.148
+  },
+  "run2": {
+   "median": 0.088,
+   "p95": 0.089
+  },
+  "lower_median": 0.088
+ },
+ "gas full close": {
+  "run1": {
+   "median": 0.282,
+   "p95": 0.288
+  },
+  "run2": {
+   "median": 0.426,
+   "p95": 0.467
+  },
+  "lower_median": 0.282
+ },
+ "campfire half opening view": {
+  "run1": {
+   "median": 0.181,
+   "p95": 0.2
+  },
+  "run2": {
+   "median": 0.205,
+   "p95": 0.315
+  },
+  "lower_median": 0.181
+ },
+ "campfire half close": {
+  "run1": {
+   "median": 0.535,
+   "p95": 0.582
+  },
+  "run2": {
+   "median": 0.975,
+   "p95": 1.417
+  },
+  "lower_median": 0.535
+ },
+ "campfire full opening view": {
+  "run1": {
+   "median": 0.467,
+   "p95": 0.51
+  },
+  "run2": {
+   "median": 0.522,
+   "p95": 1.474
+  },
+  "lower_median": 0.467
+ },
+ "campfire full close": {
+  "run1": {
+   "median": 1.711,
+   "p95": 1.88
+  },
+  "run2": {
+   "median": 4.306,
+   "p95": 4.678
+  },
+  "lower_median": 1.711
+ },
+ "brazier half opening view": {
+  "run1": {
+   "median": 0.153,
+   "p95": 0.165
+  },
+  "run2": {
+   "median": 0.57,
+   "p95": 0.713
+  },
+  "lower_median": 0.153
+ },
+ "brazier half close": {
+  "run1": {
+   "median": 0.472,
+   "p95": 0.514
+  },
+  "run2": {
+   "median": 2.504,
+   "p95": 2.809
+  },
+  "lower_median": 0.472
+ },
+ "brazier full opening view": {
+  "run1": {
+   "median": 0.354,
+   "p95": 0.648
+  },
+  "run2": {
+   "median": 2.316,
+   "p95": 2.498
+  },
+  "lower_median": 0.354
+ },
+ "brazier full close": {
+  "run1": {
+   "median": 1.56,
+   "p95": 2.907
+  },
+  "run2": {
+   "median": 1.551,
+   "p95": 3.354
+  },
+  "lower_median": 1.551
+ },
+ "fireplace half opening view": {
+  "run1": {
+   "median": 0.295,
+   "p95": 0.329
+  },
+  "run2": {
+   "median": 0.982,
+   "p95": 1.248
+  },
+  "lower_median": 0.295
+ },
+ "fireplace half close": {
+  "run1": {
+   "median": 0.81,
+   "p95": 0.857
+  },
+  "run2": {
+   "median": 3.377,
+   "p95": 3.713
+  },
+  "lower_median": 0.81
+ },
+ "fireplace full opening view": {
+  "run1": {
+   "median": 0.833,
+   "p95": 0.899
+  },
+  "run2": {
+   "median": 3.497,
+   "p95": 4.234
+  },
+  "lower_median": 0.833
+ },
+ "fireplace full close": {
+  "run1": {
+   "median": 2.523,
+   "p95": 2.64
+  },
+  "run2": {
+   "median": 2.684,
+   "p95": 2.776
+  },
+  "lower_median": 2.523
+ },
+ "bonfire half opening view": {
+  "run1": {
+   "median": 0.398,
+   "p95": 0.419
+  },
+  "run2": {
+   "median": 0.972,
+   "p95": 1.317
+  },
+  "lower_median": 0.398
+ },
+ "bonfire half close": {
+  "run1": {
+   "median": 1.073,
+   "p95": 1.141
+  },
+  "run2": {
+   "median": 1.152,
+   "p95": 2.412
+  },
+  "lower_median": 1.073
+ },
+ "bonfire full opening view": {
+  "run1": {
+   "median": 1.037,
+   "p95": 2.455
+  },
+  "run2": {
+   "median": 2.963,
+   "p95": 3.287
+  },
+  "lower_median": 1.037
+ },
+ "bonfire full close": {
+  "run1": {
+   "median": 3.658,
+   "p95": 3.95
+  },
+  "run2": {
+   "median": 3.777,
+   "p95": 4.001
+  },
+  "lower_median": 3.658
+ },
+ "crate half opening view": {
+  "run1": {
+   "median": 0.456,
+   "p95": 0.615
+  },
+  "run2": {
+   "median": 0.462,
+   "p95": 0.707
+  },
+  "lower_median": 0.456
+ },
+ "crate half close": {
+  "run1": {
+   "median": 1.87,
+   "p95": 2.013
+  },
+  "run2": {
+   "median": 1.903,
+   "p95": 2.145
+  },
+  "lower_median": 1.87
+ },
+ "crate full opening view": {
+  "run1": {
+   "median": 1.17,
+   "p95": 1.798
+  },
+  "run2": {
+   "median": 1.697,
+   "p95": 1.968
+  },
+  "lower_median": 1.17
+ },
+ "crate full close": {
+  "run1": {
+   "median": 4.503,
+   "p95": 4.823
+  },
+  "run2": {
+   "median": 4.475,
+   "p95": 4.809
+  },
+  "lower_median": 4.475
+ },
+ "line half opening view": {
+  "run1": {
+   "median": 0.315,
+   "p95": 0.472
+  },
+  "run2": {
+   "median": 0.319,
+   "p95": 0.783
+  },
+  "lower_median": 0.315
+ },
+ "line half close": {
+  "run1": {
+   "median": 1.033,
+   "p95": 1.079
+  },
+  "run2": {
+   "median": 1.192,
+   "p95": 1.741
+  },
+  "lower_median": 1.033
+ },
+ "line full opening view": {
+  "run1": {
+   "median": 0.952,
+   "p95": 0.989
+  },
+  "run2": {
+   "median": 1.103,
+   "p95": 1.874
+  },
+  "lower_median": 0.952
+ },
+ "line full close": {
+  "run1": {
+   "median": 3.131,
+   "p95": 3.222
+  },
+  "run2": {
+   "median": 3.641,
+   "p95": 3.763
+  },
+  "lower_median": 3.131
+ },
+ "campfire half opening view, no smoke": {
+  "run1": {
+   "median": 0.153,
+   "p95": 0.213
+  },
+  "run2": {
+   "median": 0.332,
+   "p95": 0.399
+  },
+  "lower_median": 0.153
+ },
+ "campfire half opening view, gale": {
+  "run1": {
+   "median": 0.57,
+   "p95": 0.679
+  },
+  "run2": {
+   "median": 0.4,
+   "p95": 0.609
+  },
+  "lower_median": 0.4
+ }
+}

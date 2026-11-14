@@ -1,0 +1,240 @@
+{
+	"mode": "browser",
+	"block": {
+		"controls": [
+			{
+				"id": "type",
+				"label": "Fire",
+				"hint": "Which fire. Each is shaped by what is burning, from a candle wick to a tall stack of logs.",
+				"type": "choice",
+				"options": [
+					{
+						"value": "candle",
+						"label": "Candle",
+						"group": "Small flames",
+						"image": "thumbs/types/candle.webp"
+					},
+					{
+						"value": "torch",
+						"label": "Torch",
+						"group": "Small flames",
+						"image": "thumbs/types/torch.webp"
+					},
+					{
+						"value": "gas",
+						"label": "Gas jet",
+						"group": "Small flames",
+						"image": "thumbs/types/gas.webp"
+					},
+					{
+						"value": "campfire",
+						"label": "Campfire",
+						"group": "Fires you tend",
+						"image": "thumbs/types/campfire.webp"
+					},
+					{
+						"value": "brazier",
+						"label": "Brazier",
+						"group": "Fires you tend",
+						"image": "thumbs/types/brazier.webp"
+					},
+					{
+						"value": "fireplace",
+						"label": "Fireplace",
+						"group": "Fires you tend",
+						"image": "thumbs/types/fireplace.webp"
+					},
+					{
+						"value": "bonfire",
+						"label": "Bonfire",
+						"group": "Big fires",
+						"image": "thumbs/types/bonfire.webp"
+					},
+					{
+						"value": "crate",
+						"label": "Burning crate",
+						"group": "Big fires",
+						"image": "thumbs/types/crate.webp"
+					},
+					{
+						"value": "line",
+						"label": "Fire line",
+						"group": "Big fires",
+						"image": "thumbs/types/line.webp"
+					}
+				],
+				"default": "campfire",
+				"essential": true
+			},
+			{
+				"id": "size",
+				"label": "Size",
+				"hint": "How big the whole fire is, against what this type starts at.",
+				"type": "number",
+				"min": 0.4,
+				"max": 2,
+				"step": 0.05,
+				"default": 1,
+				"unit": "×",
+				"essential": true
+			},
+			{
+				"id": "intensity",
+				"label": "Intensity",
+				"hint": "How hard it burns: low red embers of a flame at one end, a roaring yellow one at the other. Height, colour, sparks and light move together.",
+				"type": "number",
+				"min": 0.3,
+				"max": 1.6,
+				"step": 0.05,
+				"default": 1,
+				"essential": true
+			},
+			{
+				"id": "wind",
+				"label": "Wind",
+				"hint": "Bends the flames, smoke and sparks over and stirs them harder, in gusts.",
+				"type": "number",
+				"min": 0,
+				"max": 1,
+				"step": 0.02,
+				"default": 0,
+				"essential": true
+			},
+			{
+				"id": "direction",
+				"label": "Wind direction",
+				"hint": "Where the wind blows to, in degrees round the fire.",
+				"type": "number",
+				"min": 0,
+				"max": 360,
+				"step": 5,
+				"default": 335,
+				"unit": "°"
+			},
+			{
+				"id": "smoke",
+				"label": "Smoke",
+				"hint": "How thick the smoke is. 0 turns it off and saves its share of the cost.",
+				"type": "number",
+				"min": 0,
+				"max": 3,
+				"step": 0.05,
+				"default": 1
+			},
+			{
+				"id": "embers",
+				"label": "Sparks",
+				"hint": "How many sparks rise from the fire, against what the type starts with.",
+				"type": "number",
+				"min": 0,
+				"max": 1.6,
+				"step": 0.05,
+				"default": 1,
+				"unit": "×"
+			},
+			{
+				"id": "light",
+				"label": "Light",
+				"hint": "How strongly the fire lights what is around it.",
+				"type": "number",
+				"min": 0,
+				"max": 2.5,
+				"step": 0.05,
+				"default": 1,
+				"unit": "×"
+			},
+			{
+				"id": "speed",
+				"label": "Speed",
+				"hint": "How fast the flames move.",
+				"type": "number",
+				"min": 0.25,
+				"max": 2,
+				"step": 0.05,
+				"default": 1,
+				"unit": "×"
+			},
+			{
+				"id": "resolution",
+				"label": "Fire resolution",
+				"hint": "The fire's pixels against the screen's. Half suits a game, third is for weak graphics cards, and full is finest up close at about 3 times the cost.",
+				"type": "choice",
+				"options": [
+					{
+						"value": "half",
+						"label": "Half"
+					},
+					{
+						"value": "third",
+						"label": "Third"
+					},
+					{
+						"value": "full",
+						"label": "Full"
+					}
+				],
+				"default": "half"
+			},
+			{
+				"id": "dressing",
+				"label": "Show the dressing",
+				"hint": "The logs, stones, torch and wall. They are not part of the effect.",
+				"type": "toggle",
+				"default": true
+			},
+			{
+				"id": "bloom",
+				"label": "Bloom",
+				"hint": "The glow round the hottest parts.",
+				"type": "number",
+				"min": 0,
+				"max": 1,
+				"step": 0.02,
+				"default": 0.3
+			},
+			{
+				"id": "exposure",
+				"label": "Exposure",
+				"hint": "How bright the whole picture is.",
+				"type": "number",
+				"min": 0.3,
+				"max": 1.5,
+				"step": 0.01,
+				"default": 0.72
+			},
+			{
+				"id": "turn",
+				"label": "Turn the view",
+				"hint": "Slowly turns the view around the fire until turned off.",
+				"type": "toggle",
+				"default": false
+			}
+		],
+		"presets": [],
+		"triggers": [
+			{
+				"id": "stoke",
+				"label": "Stoke",
+				"hint": "The fire flares up for a couple of seconds and throws up a burst of sparks. Clicking the fire does the same."
+			},
+			{
+				"id": "reset",
+				"label": "Reset",
+				"hint": "Everything back to the start: the campfire, every control at its default, and the view."
+			}
+		]
+	},
+	"credits": [
+		{
+			"files": "assets/",
+			"license": "MIT",
+			"source": "https://github.com/mrdoob/three.js",
+			"author": "three.js authors"
+		},
+		{
+			"files": "thumbs/",
+			"license": "MIT",
+			"author": "Patch (stills of this demo)"
+		}
+	]
+}

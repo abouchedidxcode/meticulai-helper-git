@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grass you can touch</title>
+<link rel="icon" href="data:," />
+<style>
+  @font-face { font-family: 'Red Hat Mono'; font-weight: 500; font-display: swap; src: url('./fonts/red-hat-mono-latin-500-normal.woff2') format('woff2'); }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #2a2b22; user-select: none; }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; outline: none; }
+  .hud { position: fixed; pointer-events: none; font: 500 10px/1.5 'Red Hat Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    letter-spacing: 0.06em; text-transform: uppercase; color: rgba(250, 250, 250, 0.78); text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55); }
+  #tip { right: 12px; bottom: 10px; text-align: right; }
+  #start { left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 11px; padding: 8px 12px; border-radius: 7px;
+    background: rgba(9, 9, 11, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); }
+  .playing #start { display: none; }
+  #dot { left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 50%; background: rgba(255, 255, 255, 0.7); display: none; }
+  .playing #dot { display: block; }
+  /* (not quite opaque: a fully opaque cover let the page stall near the end of a load) */
+  #cover { position: fixed; inset: 0; background: #2a2b22; opacity: 0.996; }
+  #cover.message { opacity: 1; display: grid; place-items: center; color: #e4e4e7; font: 500 13px/1.5 system-ui, sans-serif; }
+  .clean .hud { display: none; }
+  @media (max-width: 520px) { #tip { display: none; } }
+</style>
+</head>
+<body>
+<canvas id="view"></canvas>
+<div id="start" class="hud">Click to play</div>
+<div id="dot" class="hud"></div>
+<div id="tip" class="hud">WASD move · Shift run · Space jump<br />Click use · 1 2 3 tool · R reset</div>
+<div id="cover"></div>
+<script type="module" src="/src/demo/main.js"></script>
+</body>
+</html>

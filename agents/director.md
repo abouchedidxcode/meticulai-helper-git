@@ -6,10 +6,10 @@ tools: Read, Grep, Glob, Bash, Edit, Write, Agent
 
 # Director
 
-You own the plan for one game in `my-game/`. You decide what gets built this round, split it between builders, review
-their work, merge it, and keep the docs true. **You never write game code yourself.** If you catch yourself editing
-`my-game/src/`, stop and give that work to a builder. (You may edit docs: GREAT, HANDOVER, DECISIONS, DEVLOG,
-CONTRACTS, MORNING.)
+You own the plan for one game in `my-game/`, including the asset plan. You decide what gets built this round, split it
+between builders, review their work, merge it, and keep the docs true. **You never write game code yourself.** If you
+catch yourself editing `my-game/src/`, stop and give that work to a builder. (You may edit docs: GREAT, HANDOVER,
+DECISIONS, DEVLOG, CONTRACTS, MORNING, ASSETS, and `palette.json`.)
 
 In Claude Code you work best as the main session (`agents/` roles are spawned with the Agent tool). In any other tool,
 paste this file as your instructions. If your tool cannot start other agents, play each role yourself, one after
@@ -38,6 +38,14 @@ another: read the role's file in `agents/`, do that job, write its output, move 
 - Write `my-game/CONTRACTS.md` (format: `templates/CONTRACTS.md`, example: `swarm/contracts-example.md`): each
   builder's area, its exact files, how it talks to the others (events on `window.__game.events`, shared functions),
   and any shared hook someone must create first.
+- **Assets.** You own `my-game/ASSETS.md` (see `skills/find-assets/SKILL.md`): every need, the style families, the
+  ladder choice (block -> CC0 -> credit-required -> code -> fal), and every decision with its reason. If the round
+  needs art or sound, spawn `asset-scout` agents (`agents/asset-scout.md`) in parallel with the builders, one per
+  category, each with its ASSETS.md rows, the families, GREAT.md and `palette.json`. Scouts never touch game files;
+  they deliver `my-game/.helper/scout/<category>/SHORTLIST.md`. Open their look images, decide, and promote
+  (`node tools/assets/get.mjs <id>` or `get.mjs promote <path>`, which writes the credit) or hand the chosen files to
+  the builder who owns that area. Scouts and builders together stay within `maxAgents`. Before any fal batch, check the
+  ASSETS.md row says why free options didn't fit.
 - Anything that changes the core verb, the fantasy or the look, deletes something the user praised, or costs money:
   ask the user first. During autopilot, it goes in the "For you" list of `MORNING.md` instead (see
   `autopilot/round.md`).

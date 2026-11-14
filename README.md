@@ -63,6 +63,8 @@ Never used an AI agent? Read [guides/getting-started.md](guides/getting-started.
 | `skills/` | Detailed instructions for each step, for the agent. |
 | `agents/` | Roles for AI helpers: builders, reviewers, a director. |
 | `tools/` | Small programs the agent runs: check your computer, run the game, record it, pack it. |
+| `sources/` | Where free models, textures, sounds and music come from, and what each licence asks. |
+| `blocks/` | Ready-made effects and systems (fire, ocean, sky, trees...), with credits to their authors. |
 | `starter/` | The starter game your game grows from. |
 | `my-game/` | Your game. Created during setup. Everything you make lives here. |
 
@@ -75,6 +77,14 @@ If your AI plan is a big one, two things make the most of it:
 - **Autopilot.** Leave it running overnight or during a workday. It works in rounds: build, record, review, fix. It
   stops at the time you set, never spends money or publishes anything, and leaves you a short report that starts with
   a link to play the new version. See [guides/autopilot-for-humans.md](guides/autopilot-for-humans.md).
+
+## Free assets and ready-made effects
+
+The agent knows where to find tens of thousands of free 3D models, textures, skies, sounds and music, from the
+original libraries that publish them (Poly Haven, ambientCG, Kenney, OpenGameArt and others). It also has ready-made
+effects and systems it can drop into your game and adjust: fire, an ocean, skies, trees, magic, crowds. It picks one
+style for your game, looks at each piece before using it, and changes colours and sizes so everything fits together.
+Every credit is written down for you in your game's `CREDITS.md`. See [guides/free-assets.md](guides/free-assets.md).
 
 ## Optional: generated pictures and sounds
 
@@ -98,6 +108,13 @@ before every batch, and it never goes over. See [guides/fal-key.md](guides/fal-k
 - About 30 minutes for the first session.
 
 The agent installs everything else (Node.js, git, ffmpeg, a hidden browser for testing).
+
+## Thanks
+
+This kit stands on free work by other people: the artists and libraries behind the free assets (each one credited in
+[sources/](sources/README.md)), and the authors of the open-source effects and systems in [blocks/](blocks/README.md),
+including Patch ([patch.gg](https://patch.gg)), whose open-source blocks are included with full credit in
+[blocks/CREDITS.md](blocks/CREDITS.md). Thank you.
 
 ## License
 

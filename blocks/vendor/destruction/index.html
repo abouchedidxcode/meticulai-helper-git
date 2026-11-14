@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Destruction physics</title>
+<link rel="icon" href="data:," />
+<style>
+  @font-face { font-family: 'Red Hat Mono'; font-weight: 500; font-display: swap; src: url('./fonts/red-hat-mono-latin-500-normal.woff2') format('woff2'); }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #b9c4c8; }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; outline: none; cursor: crosshair; }
+  #view.drag { cursor: grabbing; }
+  #cover { position: fixed; inset: 0; background: #b9c4c8; }
+  .hud { position: fixed; pointer-events: none; font: 500 11px/1 'Red Hat Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    letter-spacing: 0.06em; text-transform: uppercase; color: #fafafa; }
+  #label { top: 12px; left: 12px; display: flex; align-items: center; gap: 8px; padding: 8px 11px; border-radius: 7px;
+    background: rgba(9, 9, 11, 0.62); border: 1px solid rgba(255, 255, 255, 0.08); transition: border-color 0.3s; }
+  #label[hidden] { display: none; }
+  #label .dot { width: 7px; height: 7px; border-radius: 50%; background: #e8a25a; box-shadow: 0 0 8px #e8a25a; }
+  #label .k { color: #a1a1aa; }
+  #label.hit { border-color: #e8a25a; transition: none; }
+  #tip { right: 12px; bottom: 10px; font-size: 10px; color: rgba(250, 250, 250, 0.72); text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45); }
+  #credit { left: 12px; bottom: 10px; font-size: 10px; color: rgba(250, 250, 250, 0.6); text-transform: none; letter-spacing: 0.02em; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45); }
+  @media (max-width: 520px) { #tip, #credit { display: none; } }
+  #nogpu, #lost { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; padding: 24px;
+    background: radial-gradient(120% 90% at 50% 20%, #3a4248 0%, #16191c 70%); color: #e4e4e7; font: 400 14px/1.5 system-ui, sans-serif; }
+  #nogpu.on, #lost.on { display: flex; }
+  #lost button { font: 600 14px/1 system-ui, sans-serif; padding: 10px 14px; border-radius: 8px; border: 0; background: #e8a25a; color: #16191c; cursor: pointer; }
+  #nogpu .card, #lost .card { max-width: 420px; padding: 22px 24px; border-radius: 12px; background: rgba(9, 9, 11, 0.55); border: 1px solid rgba(255, 255, 255, 0.1); }
+  #nogpu h1, #lost h1 { margin: 0 0 8px; font: 600 17px/1.3 system-ui, sans-serif; color: #fafafa; }
+  #nogpu p, #lost p { margin: 0 0 8px; color: #a1a1aa; }
+  #nogpu small, #lost small { display: block; margin-top: 10px; color: #71717a; font: 500 11px/1.4 'Red Hat Mono', ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<canvas id="view"></canvas>
+<div id="cover"></div>
+<div id="label" class="hud" hidden><span class="dot"></span><span class="name"></span><span class="k"></span></div>
+<div id="tip" class="hud">Click to fire · drag to orbit · scroll to zoom</div>
+<div id="credit" class="hud">Physics: three-avbd by Steven Bobyn (MIT)</div>
+<div id="nogpu"><div class="card">
+  <h1>This demo needs WebGPU</h1>
+  <p>Every brick, board and beam here is a rigid body simulated on your graphics card with WebGPU, and this browser can't give it one.</p>
+  <p>It plays in Patch Desktop, and in Chrome or Edge 113 or later on a computer with a recent graphics driver.</p>
+  <small class="why"></small>
+</div></div>
+<div id="lost"><div class="card">
+  <h1>The graphics card stopped answering</h1>
+  <p>Your browser's graphics process stopped responding. Reload this page, and if that doesn't help, restart the browser.</p>
+  <p><button type="button" id="reload">Reload</button></p>
+</div></div>
+<script type="module" src="./src/demo.ts"></script>
+</body>
+</html>

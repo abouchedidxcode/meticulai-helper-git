@@ -1,0 +1,75 @@
+// Writes recipe.json, the car block's demo recipe (mode browser + block): `node make-recipe.mjs`.
+// demo.js reads its controls from that file.
+//
+// For people, at most five: the view, the map, assists and grip. WASD drives, Space is the handbrake and V swaps the view. The rest
+// is for agents, in this recipe with its range and default.
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const here = path.dirname(fileURLToPath(import.meta.url));
+
+const recipe = {
+	mode: 'browser',
+	block: {
+		controls: [
+			{
+				id: 'view',
+				label: 'View',
+				hint: 'Behind the car, or from the driver\'s seat. V swaps them while you drive.',
+				type: 'choice',
+				options: [
+					{ value: 'chase', label: 'Chase' },
+					{ value: 'driver', label: 'Driver' },
+				],
+				default: 'chase',
+				essential: true,
+			},
+			{
+				id: 'map',
+				label: 'Map',
+				hint: 'A rally stage round an open space, or the old yard.',
+				type: 'choice',
+				options: [
+					{ value: 'stage', label: 'Stage' },
+					{ value: 'yard', label: 'Yard' },
+				],
+				default: 'stage',
+				essential: true,
+			},
+			{ id: 'assists', label: 'Assists', hint: 'ABS, traction control and steering help. Off, full lock is full lock and the brakes will lock.', type: 'toggle', default: true, essential: true },
+			{ id: 'grip', label: 'Grip', hint: 'How much all the tyres hold, on every surface. 1 is real tyres.', type: 'number', min: 0.4, max: 1.35, step: 0.05, default: 1, essential: true },
+			{ id: 'stiffness', label: 'Suspension', hint: 'How stiff the springs are. Low and the body leans and dives; high and it stays flat.', type: 'number', min: 0.6, max: 2.2, step: 0.05, default: 1 },
+			{ id: 'slow', label: 'Slow motion', hint: 'Slows the whole world down, the car with it. 0 is full speed; 0.9 is a tenth of it.', type: 'number', min: 0, max: 0.9, step: 0.05, default: 0 },
+			{ id: 'power', label: 'Power', hint: 'The engine, as a share of what the car has.', type: 'number', min: 0.4, max: 2.5, step: 0.05, default: 1 },
+			{ id: 'drive', label: 'Front drive', hint: 'How much drive goes to the front: 0 is rear drive, 1 front drive. Below 0, what the car has.', type: 'number', min: -0.05, max: 1, step: 0.05, default: -0.05 },
+			{ id: 'lock', label: 'Steering lock', hint: 'How far the front wheels can turn, as a share of what the car has.', type: 'number', min: 0.5, max: 1.4, step: 0.05, default: 1 },
+			{ id: 'flip_wait', label: 'Seconds on its roof', hint: 'How long it lies on its roof or side before it rights itself.', type: 'number', min: 0.5, max: 10, step: 0.5, default: 3, unit: 's' },
+		],
+		presets: [],
+		triggers: [{ id: 'reset', label: 'Reset', hint: 'Back to the start: every control, the car, the crates, the mannequins and the view.' }],
+	},
+	credits: [
+		{ files: 'assets/', license: 'MIT', source: 'https://github.com/Dechode/Godot-Advanced-Vehicle', author: 'Dechode (Godot Advanced Vehicle: the tyre model, ported)' },
+		{ files: 'assets/', license: 'MIT', source: 'https://github.com/DAShoe1/Godot-Easy-Vehicle-Physics', author: 'David Shoemaker, Dechode and Baron Wittman (Godot Easy Vehicle Physics: gearbox, suspension rates and assists, ported)' },
+		{ files: 'assets/', license: 'MIT', source: 'https://github.com/brunosimon/folio-2025', author: 'Bruno Simon (folio-2025: righting the car)' },
+		{ files: 'assets/', license: 'Apache-2.0', source: 'https://github.com/dimforge/rapier.js', author: 'Dimforge (Rapier, the physics)' },
+		{ files: 'assets/', license: 'MIT', source: 'https://github.com/mrdoob/three.js', author: 'three.js authors' },
+		{ files: 'models/', license: 'CC0-1.0', author: 'Patch (the Vireo and the mannequin)' },
+		{ files: 'audio/', license: 'CC0-1.0', source: 'https://freesound.org', author: 'Recordings from Freesound, by the people listed in audio/CREDITS.txt' },
+		{ files: 'stage/*-diff.webp', license: 'CC0-1.0', source: 'https://polyhaven.com', author: 'Poly Haven: Rob Tuytel, Rico Cilliers, Charlotte Baglioni (the stage\'s ground)' },
+		{ files: 'stage/*-nor.webp', license: 'CC0-1.0', source: 'https://polyhaven.com', author: 'Poly Haven: Rob Tuytel, Rico Cilliers, Charlotte Baglioni (the stage\'s ground)' },
+		{ files: 'stage/sky.webp', license: 'CC0-1.0', source: 'https://polyhaven.com/a/kloofendal_38d_partly_cloudy_puresky', author: 'Greg Zaal and Jarod Guest, Poly Haven (the sky)' },
+		{ files: 'stage/rocks.glb', license: 'CC0-1.0', source: 'https://polyhaven.com/a/rock_moss_set_01', author: 'Kless Gyzen, Poly Haven (the boulders)' },
+		{ files: 'stage/trees.bin', license: 'MIT', source: 'https://github.com/dgreenheck/ez-tree', author: 'Daniel Greenheck (ez-tree, which grew the trees)' },
+		{ files: 'stage/*-leaf.webp', license: 'MIT', source: 'https://github.com/dgreenheck/ez-tree', author: 'Daniel Greenheck (ez-tree\'s leaves)' },
+		{ files: 'stage/bark-*.webp', license: 'CC0-1.0', source: 'https://ambientcg.com', author: 'ambientCG (Bark 002 and 003)' },
+	],
+};
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+	const essential = recipe.block.controls.filter((c) => c.essential).length;
+	if (essential > 5) throw new Error(`${essential} essential controls: Patch takes at most 5`);
+	fs.writeFileSync(path.join(here, 'recipe.json'), `${JSON.stringify(recipe, null, '\t')}\n`);
+	const c = recipe.block.controls;
+	console.log(`recipe.json: ${c.length} controls (${c.filter((x) => x.essential).length} essential), ${recipe.block.triggers.length} triggers`);
+}
