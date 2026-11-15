@@ -1,0 +1,115 @@
+{
+  "id": "space-minimal",
+  "name": "Minimal space",
+  "order": 31,
+  "one_line": "A few flat planets, thin orbit lines and a lot of quiet.",
+  "mood": [
+    "quiet",
+    "minimal",
+    "cool"
+  ],
+  "look_words": "Space drawn with very few things. A deep navy background with a sparse scatter of small stars; planets and platforms as flat matte shapes in dusty blue and teal, each with one soft shadow side; thin pale orbit lines. Most of the screen is empty, and that emptiness is the look. Gold marks what to collect, mint the goal, coral-red what to avoid, and the player is a small cream shape. Shapes are circles, rings and simple wedges. Motion is slow and smooth: drifting, orbiting, long curved paths, tiny trails. Avoid nebula clouds, lens flares, realistic textures, crowded star fields, bloom and more than five colours.",
+  "palette": {
+    "name": "navy space",
+    "colors": {
+      "base": [
+        "#2b3760",
+        "#1c2542",
+        "#3f8088",
+        "#6a76a8"
+      ],
+      "accent": [
+        "#ffd166",
+        "#9be7d8"
+      ],
+      "danger": "#ff4d5e",
+      "player": "#f4ecd8",
+      "shadow": "#0b1022",
+      "light": "#fff6e0",
+      "ink": "#f1ecdf"
+    },
+    "sky": {
+      "top": "#0a0f24",
+      "horizon": "#131b3a",
+      "below": "#080b1a",
+      "sun": "#fff1c9"
+    },
+    "light": {
+      "sun": "#fff2d8",
+      "sunStrength": 2.4,
+      "ambient": "#56679a",
+      "ground": "#141a30",
+      "ambientStrength": 1,
+      "fog": "#0d1328",
+      "fogAmount": 0.15,
+      "exposure": 1.1,
+      "sunElevation": 35,
+      "sunAzimuth": 300
+    },
+    "notes": "Almost no fog in space. One clear light from one side gives every shape its shadow side."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "flat fills, no outlines, or none",
+  "upgrade": [],
+  "blocks": [
+    "meticulai-procedural-songs",
+    "meticulai-marble-physics",
+    "meticulai-painterly-styles"
+  ],
+  "asset_search": [
+    "rocket",
+    "planet",
+    "asteroid",
+    "satellite",
+    "star"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "nasa-3d",
+    "solar-system-scope"
+  ],
+  "music": {
+    "mood": "slow, soft arpeggio and a warm pad",
+    "tempo": "slow",
+    "notes": "Sparse, like the picture."
+  },
+  "sound_feel": "soft and distant; gentle blips, low whooshes, a chime on pickups",
+  "good_for": [
+    "flyer",
+    "marble",
+    "grid-puzzle",
+    "runner",
+    "orbiting and gravity games",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Minimal space scene: a tiny cream-coloured rocket with one coral fin flies between three simple flat-coloured planets, one with a thin ring, on a deep navy background with a sparse scatter of small stars. Flat matte shapes with a single soft shadow side, thin pale orbit lines, a small glowing gold star to collect. Lots of empty space, calm and quiet, very few colours: navy, cream, coral, dusty teal. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Minimal space scene from behind a tiny cream-coloured rocket with one coral fin approaching a small round dusty-teal moon with a single cream lighthouse on it, a thin pale orbit line curving past, deep navy background with a sparse scatter of small stars, one distant ringed planet. Flat matte shapes with a single soft shadow side, lots of empty space, calm and quiet, very few colours. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

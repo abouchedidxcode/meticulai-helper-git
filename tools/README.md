@@ -34,6 +34,13 @@ Every tool:
 | `node tools/blocks/suggest.mjs` | Reads your game's plan (`my-game/GREAT.md`, and `ASSETS.md`) and points at the blocks and code libraries that may fit it, best first, with the words that matched. `--text "ride a horse and shoot arrows"` works without a plan. Adds nothing; it's a pointer for the agent. |
 | `node tools/blocks/add.mjs <id>` | Copies a block into `my-game/vendor/<id>/` (or downloads it from its author at the checked version), adds its credits and a `VENDOR.md`. `--install` adds the packages it needs. |
 | `node tools/blocks/build-catalog.mjs` | For people who keep the kit up to date: gathers every `blocks/vendor/*/block.json` into `blocks/catalog.json` and rewrites `blocks/BY-NEED.md` and the Meticulai part of `blocks/CREDITS.md`. Prints any problem in a block.json. `--check` changes nothing. |
+| `node tools/starters/list.mjs` | The starting games (island, platformer, top-down, racer, first-person). `--for "<the game in a few words>"` ranks them. |
+| `node tools/init.mjs --starter <id>` | Creates `my-game/` from that starting game instead of the island. |
+| `node tools/starters/switch.mjs <id>` | Changes the starting game under an existing `my-game/` (after the interview), keeping the plan, palette, pictures and notes. The old game code is kept in `.helper/`. |
+| `node tools/starters/test.mjs <id>` | For people who keep the kit up to date: proves a starter works from a clean copy (title, 40 s of bot play, win, lose, play again, shipping build). `--preview` saves its picture. `save.mjs <id>` saves a work folder as a starter. |
+| `node tools/vibes/open.mjs` | Opens the gallery of ready-made looks in your normal browser. `node tools/vibes/list.mjs --for "<words>"` lists them; `node tools/vibes/apply.mjs <id>` puts one on your game (palette, light, drawing style, words in GREAT.md). |
+| `node tools/looks/list.mjs` | Drawing styles that go over the whole picture. `node tools/looks/apply.mjs <id>` puts one on (`none` takes it off). |
+| `node tools/sounds/list.mjs` | The free sounds that come with the kit. `--for "soft footstep"` finds some; `node tools/sounds/add.mjs <id>` copies them into your game with a credit line; `node tools/sounds/audition.mjs` makes a page to listen to them; `node tools/sounds/synth.mjs` makes new ones in code. |
 | `node tools/fal/gen.mjs <kind> ...` | Optional, paid: generates pictures, textures, sounds, music or 3D models with fal.ai. Shows the cost and waits for your yes; never goes over the cap in `helper.json`. `status` shows spending, `models` lists prices. |
 
 ## For agents
@@ -43,7 +50,8 @@ Every tool:
   (`ensureServer()`, `stopServer()`, `startStatic()`, `buildGame()`), `check.mjs` (`checkGame()`), `ffmpeg.mjs`
   (`encodeFrames()`, `contactSheets()`, `videoInfo()`), `proc.mjs`, `log.mjs`, `args.mjs`.
 - Never launch a browser directly: use `launch()` inside `withBrowserLock()`. The lock is the folder
-  `/tmp/mhg-browser.lock` (the temp folder on Windows); a shell script can share it with `mkdir`/`rmdir`.
+  `/tmp/mhg-browser.lock` (the temp folder on Windows); a shell script can share it with `mkdir`/`rmdir`. Set
+  `HELPER_BROWSER_LOCK=<folder>` to share one lock with other tooling on the same machine.
 - Pages opened with `newGamePage()` can't be reloaded by Vite's hot reload, so another agent saving a file won't
   spoil a test or a recording. `record.mjs` also restarts the recording if the page reloads anyway.
 - Waits in play scripts are in game time (`__game.time`), because the hidden browser can run slower than real time.

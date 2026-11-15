@@ -1,0 +1,125 @@
+{
+  "id": "overgrown-ruins",
+  "name": "Overgrown ruins",
+  "order": 16,
+  "one_line": "Mossy stone, hanging vines and dappled sunlight.",
+  "mood": [
+    "peaceful",
+    "mysterious",
+    "green"
+  ],
+  "look_words": "Old stone buildings that the forest has taken back. Warm grey stone with soft worn edges, moss and deep fresh greens over everything, vines and tree roots wrapped around arches and fallen columns, shallow clear pools. Sunlight comes down through leaves in dappled patches, so the ground is a pattern of light and shade. Gold marks what to collect, turquoise marks the goal, red is harm, and the player is pale cream against the green. Shapes are big blocks softened by plants. Motion is quiet: leaves shifting, light patches moving, birds, falling petals. It should feel safe and old, not threatening. Avoid dark jungle gloom, bright saturated greens, carved writing, skulls and bloom.",
+  "palette": {
+    "name": "mossy ruins",
+    "colors": {
+      "base": [
+        "#6f9a4f",
+        "#4f7a3f",
+        "#a8a08f",
+        "#8f8a72"
+      ],
+      "accent": [
+        "#ffd447",
+        "#4fd6e0"
+      ],
+      "danger": "#d93a3a",
+      "player": "#fbf3df",
+      "shadow": "#22332a",
+      "light": "#fff6d6",
+      "ink": "#f4f6e6"
+    },
+    "sky": {
+      "top": "#6fa8d0",
+      "horizon": "#dcebd0",
+      "below": "#3f6a3a",
+      "sun": "#fff6cf"
+    },
+    "light": {
+      "sun": "#fff0c4",
+      "sunStrength": 2.8,
+      "ambient": "#c9e0d0",
+      "ground": "#6a7a50",
+      "ambientStrength": 1.8,
+      "fog": "#cfe0c6",
+      "fogAmount": 0.5,
+      "exposure": 1.05,
+      "sunElevation": 50,
+      "sunAzimuth": 300
+    },
+    "notes": "Fog is a pale green so far ruins fade into leaf light. The ambient light is slightly green too, as if filtered by leaves."
+  },
+  "look": {
+    "id": "soft-haze",
+    "options": {}
+  },
+  "look_wish": "soft painterly shading, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-haze",
+      "why": "soft sunlit air so far ruins fade into the leaf light"
+    },
+    {
+      "block": "touch-grass",
+      "why": "grass and undergrowth that bend where the player walks"
+    }
+  ],
+  "blocks": [
+    "meticulai-haze",
+    "touch-grass",
+    "ez-tree",
+    "soil-and-grass"
+  ],
+  "asset_search": [
+    "ruins",
+    "stone column",
+    "vines",
+    "temple",
+    "fern"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kaykit",
+    "polyhaven",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "soft marimba, wooden flute and a warm pad",
+    "tempo": "slow",
+    "notes": "Curious and calm."
+  },
+  "sound_feel": "birdsong, water trickling, stone scrapes, rustling leaves",
+  "good_for": [
+    "island",
+    "first-person",
+    "platformer",
+    "top-down",
+    "exploring",
+    "gentle puzzles"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Overgrown ruins in soft daylight, third-person camera behind a small explorer with a brown satchel and a teal scarf walking a mossy stone causeway toward a broken temple archway wrapped in vines and tree roots, fallen carved columns with no writing, ferns, white flowers, a shallow clear pool, birds. Warm grey stone, deep and fresh greens, dappled sunlight through leaves, peaceful and a little mysterious. Stylised painterly 3D. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Overgrown ruins seen from a high three-quarter camera: a small explorer with a brown satchel and a teal scarf climbs wide mossy steps up a crumbling stone tower with a tree growing through its roof, hanging vines, a broken bridge over a green river, an old stone statue of a sitting animal half covered in ivy. Warm grey stone, deep and fresh greens, dappled sunlight, peaceful. Stylised painterly 3D. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "soft-haze",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

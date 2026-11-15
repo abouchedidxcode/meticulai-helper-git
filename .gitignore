@@ -7,3 +7,6 @@ node_modules/
 my-game/.helper/
 my-game/node_modules/
 my-game/dist/
+
+# work folders for building and testing starters and vibes (kit maintenance)
+.starters-work/

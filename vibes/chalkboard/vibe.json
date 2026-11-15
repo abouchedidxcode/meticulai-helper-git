@@ -1,0 +1,118 @@
+{
+  "id": "chalkboard",
+  "name": "Chalk on a blackboard",
+  "order": 36,
+  "one_line": "White chalk lines and a few dusty colours on dark green.",
+  "mood": [
+    "playful",
+    "school",
+    "hand-drawn"
+  ],
+  "look_words": "A game drawn in chalk on a blackboard. The board is a dark, slightly uneven green with smudges and half-rubbed-out marks. Everything in the world is a white chalk line: wobbly, broken in places, thicker where the hand pressed. A few soft chalk colours carry meaning: yellow for things to collect, pink for the goal, red for harm; the player is solid white. There is no lighting and no shading beyond a little scribbled hatching. Shapes are simple doodles: stick figures, box houses, spiral clouds. Motion is redrawn every few frames so lines shimmer, and things can be rubbed out and drawn again. Avoid clean vectors, filled shapes, gradients, glow and too many colours.",
+  "palette": {
+    "name": "chalkboard",
+    "colors": {
+      "base": [
+        "#2f4a3f",
+        "#243a31",
+        "#3d5a4d",
+        "#4a6558"
+      ],
+      "accent": [
+        "#ffe680",
+        "#ff9ecb"
+      ],
+      "danger": "#ff5a4a",
+      "player": "#f4f4ec",
+      "shadow": "#16241e",
+      "light": "#f7f7ef",
+      "ink": "#f1f1e8"
+    },
+    "sky": {
+      "top": "#2a4338",
+      "horizon": "#35524a",
+      "below": "#1e3029",
+      "sun": "#f7f7ef"
+    },
+    "light": {
+      "sun": "#ffffff",
+      "sunStrength": 1.8,
+      "ambient": "#ffffff",
+      "ground": "#2f4a3f",
+      "ambientStrength": 2.4,
+      "fog": "#2f4a3f",
+      "fogAmount": 0.5,
+      "exposure": 1,
+      "sunElevation": 60,
+      "sunAzimuth": 0
+    },
+    "notes": "The bases are four board greens: without an outline look the world will be dark and flat. This vibe really wants white lines drawn on top."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "white hand-drawn outlines that shimmer, no fills",
+  "upgrade": [
+    {
+      "block": "meticulai-ink-illustration",
+      "why": "outlines that are redrawn several times a second with uneven pressure; set the line to white and the paper to board green"
+    }
+  ],
+  "blocks": [
+    "meticulai-ink-illustration",
+    "coloured-pencil"
+  ],
+  "asset_search": [
+    "simple character",
+    "castle",
+    "ladder",
+    "chalk font",
+    "blackboard texture"
+  ],
+  "asset_families": [
+    "kenney",
+    "google-fonts",
+    "ambientcg",
+    "game-icons"
+  ],
+  "music": {
+    "mood": "toy xylophone and hand claps",
+    "tempo": "medium",
+    "notes": "Like a playground rhyme."
+  },
+  "sound_feel": "chalk scratches and taps, an eraser rub, a school bell",
+  "good_for": [
+    "platformer",
+    "grid-puzzle",
+    "top-down",
+    "runner",
+    "drawing games",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Chalk drawing on a dark green-black blackboard of a little game world, side view: a chalk-drawn stick hero with a paper hat climbs a chalk ladder to a chalk castle on a hill, chalk clouds, a chalk sun, a river with a little boat, dotted path lines. White chalk with a few soft pastel chalks in yellow, pink and pale blue, dusty smudges, uneven hand-drawn strokes, eraser marks, no letters or numbers. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Chalk drawing on a dark green-black blackboard of a little game world seen from above like a map: a chalk-drawn island with a zigzag path, a chalk lighthouse, three chalk trees, a little chalk boat and a small chalk figure with a paper hat, wavy sea lines, a yellow chalk star at the end of the path. White chalk with a few soft pastel chalks, dusty smudges, uneven hand-drawn strokes, no letters or numbers. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

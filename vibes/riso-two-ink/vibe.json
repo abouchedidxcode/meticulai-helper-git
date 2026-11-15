@@ -1,0 +1,118 @@
+{
+  "id": "riso-two-ink",
+  "name": "Two-ink riso print",
+  "order": 18,
+  "one_line": "Blue and coral ink on cream paper, with the dots showing.",
+  "mood": [
+    "graphic",
+    "printed",
+    "fresh"
+  ],
+  "look_words": "The game as a two-colour print on cream paper. Deep blue ink does all the dark work: buildings, shadows, outlines of nothing, just solid shapes. A lighter blue is the same ink printed thin. Coral is the second ink and is kept for danger; a single yellow and a mint (blue over yellow) are the only other colours and mark what matters. Shapes are bold and flat with no outlines; shading is halftone dots and grain, and layers sit slightly out of line with each other. Light is flat and even, as on paper. Motion is crisp and a little stepped, like frames of a flip book. Avoid gradients, gloss, soft glow, more than four inks and thin detail.",
+  "palette": {
+    "name": "two-ink print",
+    "colors": {
+      "base": [
+        "#efe6d2",
+        "#dccfb4",
+        "#2f5d8a",
+        "#7fa3c4"
+      ],
+      "accent": [
+        "#ffb300",
+        "#12a878"
+      ],
+      "danger": "#f0503c",
+      "player": "#1c2f4a",
+      "shadow": "#1c2f4a",
+      "light": "#fff7e2",
+      "ink": "#fff7e2"
+    },
+    "sky": {
+      "top": "#efe6d2",
+      "horizon": "#f6efdf",
+      "below": "#dccfb4",
+      "sun": "#ffb300"
+    },
+    "light": {
+      "sun": "#ffffff",
+      "sunStrength": 2.4,
+      "ambient": "#ffffff",
+      "ground": "#dccfb4",
+      "ambientStrength": 2.2,
+      "fog": "#efe6d2",
+      "fogAmount": 0.45,
+      "exposure": 1,
+      "sunElevation": 55,
+      "sunAzimuth": 300
+    },
+    "notes": "Cream paper is the ground and the sky. Blue is the world, coral is harm, yellow is what you want. The player is the darkest navy. UI text is cream on a navy card."
+  },
+  "look": {
+    "id": "print-lite",
+    "options": {}
+  },
+  "look_wish": "halftone print",
+  "upgrade": [
+    {
+      "block": "meticulai-riso-print",
+      "why": "the full print look with real spot inks and halftone; it needs each material tagged by role"
+    }
+  ],
+  "blocks": [
+    "meticulai-riso-print",
+    "meticulai-ink-illustration"
+  ],
+  "asset_search": [
+    "city",
+    "lighthouse",
+    "bicycle",
+    "simple buildings"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "kaykit",
+    "google-fonts"
+  ],
+  "music": {
+    "mood": "dry, jazzy, upright bass and brushes",
+    "tempo": "medium",
+    "notes": "A little tape wobble suits the print."
+  },
+  "sound_feel": "dry, papery, short; stamps, clicks, a soft snare",
+  "good_for": [
+    "top-down",
+    "grid-puzzle",
+    "first-person",
+    "runner",
+    "puzzle",
+    "walking games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Two-colour risograph print of a small game world: a hillside town with a lighthouse, a winding road and one cyclist, drawn in deep blue ink and warm coral-pink ink on cream paper, where the two inks overlap they make a dark plum. Visible halftone dots, slightly misregistered layers, grainy flat fills, no outlines, bold simple shapes, a single yellow sun as the only third colour. High three-quarter view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Two-colour risograph print of a game scene, side view: a small figure with a kite crossing a footbridge over a river, pine trees and a water tower behind. Deep blue ink and coral-pink ink on cream paper, overlapping into dark plum, visible halftone dots and grain, slightly misregistered layers, flat bold shapes with no outlines, one small yellow kite as the only third colour. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "print-lite",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

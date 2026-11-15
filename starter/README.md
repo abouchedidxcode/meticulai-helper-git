@@ -16,16 +16,17 @@ npm run build     # production build into dist/ (relative paths; tools/ship.mjs 
 | `index.html` | Loads `src/main.js`. | Yes |
 | `helper.json` | Project settings (game name, port, spending cap). Read by the kit's tools. | Yes |
 | `vite.config.js` | Relative paths (`base: './'`), fixed port, the helper plugin. | Yes |
-| `helper-plugin.js` | Dev-server-only endpoints: `/__helper/notes`, `/__helper/tuning`, `/__helper/ping`. | Yes |
+| `helper-plugin.js` | Dev-server-only endpoints: notes, tuning, palette, screenshots, vibes, ping. | Yes |
 | `src/main.js` | Wires everything together and runs the flow: title, play, pause, end. Read it first. | Yes (edit) |
-| `src/tuning.json` | Every number worth tuning, with ranges. The dev panel edits it. | Yes (edit) |
+| `src/tuning.json` | Every number worth tuning, with ranges. The dev menu edits it. | Yes (edit) |
 | `src/core/loop.js` | Fixed 60 Hz simulation, game time vs wall time, pause and step. | Yes |
 | `src/core/hooks.js` | `window.__game` and the URL switches. The tools depend on it. | Yes, don't rename |
 | `src/core/random.js` | Seeded random (`rng`). Use it instead of `Math.random`. | Yes |
 | `src/core/events.js` | Event bus. Emit `jump` `land` `pickup` `hit` `death` `score` `win`. | Yes |
 | `src/core/input.js` | Keyboard, mouse, touch, gamepad behind named actions; `makeBuffer()`. | Yes |
 | `src/core/errors.js` | Collects errors into `__game.errors`; red banner with `?test=1`. | Yes |
-| `src/core/settings.js` | `tune` values + the dev panel (backquote key). | Yes |
+| `src/core/settings.js` | `tune` values, `define`, and `dev` (the game's own rows in the dev menu). | Yes |
+| `src/core/dev/` | The dev menu (backquote key): sliders, tools, look, sound. Loaded only when it is on. | Yes, don't edit |
 | `src/core/notes.js` | The N-key note box: the player's notes reach you in `playtest-notes/`. | Yes |
 | `src/core/testmode.js` | Skip buttons and `__game.skipTo(name)`. | Yes |
 | `src/feel/juice.js` | `hitStop`, `shake`, `flash`, `slowmo`, `punch`, all in game time. | Yes |
@@ -106,9 +107,36 @@ URL switches: `?seed=42`, `?autostart=1`, `?bot=1` (implies autostart; restarts 
 
 ## Dev-only tools in the game
 
-- **Backquote key (`)**: the tuning panel. Drag sliders while playing; changed rows turn amber (click the
-  name to reset it). "Save for my agent" writes `src/tuning.json` without reloading the page. "Copy" puts the
-  changed values on the clipboard. Also available with `?test=1`.
+- **Backquote key (`) or F2**: the dev menu. On in the dev server and with `?test=1`; in a shipped build only
+  with `?dev=1` in the address (`?dev=open` opens it at once, `?dev=0` hides it). Players never see it. It has:
+  - **Essentials** first: a short list in plain words (the game's own, or made from the first few numbers of each
+    group), then **Everything** and a search box. Drag a slider while playing; a changed row turns gold (click the
+    gold value or double-click the row to put it back). A / B / C keep whole sets of changes to flip between;
+    presets are whole feels with a sentence each. "Save for my agent" writes `src/tuning.json` (no reload); "Copy
+    changes" and "Paste" move values as text. Changes are kept in this browser until saved (`?tune=0` ignores them).
+  - **Tools for any game**: frames per second and the frame's cost on top; Freeze (`\`) and Step (`.`); Speed
+    from 1/8 to 4 times (fixed steps, so 1x plays exactly as before); a free camera (`C`: W A S D, Q / E, drag to
+    look, wheel to zoom, Shift fast; Esc goes back, the game's camera is never touched; pan and zoom for a flat,
+    orthographic camera); No HUD (`H`); Screenshot (into `playtest-notes/shots/`); Copy view; Restart; Computer
+    plays (reloads with `?bot=1` and starts by itself); a button for every `testmode.add` moment; Leave a note.
+    Single-letter keys only work while the menu is open (or to leave a mode that is on), so the game keeps them.
+  - **Look**: every palette colour and light number; Brightness and the UI colours change at once, the rest after
+    "Save palette for my agent" (writes `palette.json`, keeps the old one in `.helper/`, reloads the page). The
+    vibe chooser lists the kit's vibes and puts one on (then reloads).
+  - **Sound**: main, music and effects volumes, and Mute.
+
+  Add the game's own rows with `ctx.dev` (each is one line; they do nothing when the menu is off):
+  ```js
+  dev.essentials([['The jump', [['How high', 'player.jumpSpeed', 'Higher = a bigger jump.'], ['Weight', 'player.gravity']]]]);
+  dev.presets([{ name: 'Floaty', about: 'Moon jumps.', values: { 'player.gravity': 14 } }]);
+  dev.button('Cheats', 'Heal', () => { hp = 3; }, 'All hearts back.');
+  dev.toggle('Cheats', 'Walk through walls', () => noclip, (on) => { noclip = on; });
+  dev.readout('Player', 'Speed', () => speed.toFixed(1) + ' m/s');
+  dev.pick('World', 'Level', ['1', '2', '3'], () => level, (v) => loadLevel(v));
+  ```
+  Ids in essentials and presets are `<group>.<id>` from `tuning.json`. Nothing of the menu shows in recordings,
+  previews or `__game.capture()` (unless the address says `?dev=open`), and closed it costs only a frame counter.
+  Tests and tools reach it as `window.__game.dev` (`open()`, `close()`, `state()`).
 - **N key**: the note box. Pauses the game, asks what was fun / confusing / where they stopped / what felt
   wrong, and saves the note with a screenshot and the game state to `playtest-notes/`. Read new notes with
   `node tools/play/notes.mjs`. Does nothing in a shipped build.

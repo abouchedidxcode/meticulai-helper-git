@@ -1,0 +1,90 @@
+{
+  "id": "fixture-paper-toy",
+  "name": "Paper toy (fixture)",
+  "one_line": "A tabletop model under a warm desk lamp.",
+  "mood": [
+    "cosy",
+    "handmade",
+    "quiet"
+  ],
+  "look_words": "Soft matte colours like painted card and felt: sage, clay and cream, with one warm yellow for the things that matter. Chunky, rounded shapes with no fine detail. One warm lamp from the side, long soft shadows. Slow, gentle motion. Avoid neon, gloss and hard black.",
+  "palette": {
+    "name": "desk lamp",
+    "colors": {
+      "base": [
+        "#a9b58a",
+        "#7f9068",
+        "#d9b08c",
+        "#c49a78"
+      ],
+      "accent": [
+        "#ffd166",
+        "#e59a3c"
+      ],
+      "danger": "#d9534f",
+      "player": "#fff1d6",
+      "shadow": "#5a4a5c",
+      "light": "#ffe2b0",
+      "ink": "#fff6e6"
+    },
+    "sky": {
+      "top": "#6f7fa8",
+      "horizon": "#f0c9a0",
+      "below": "#5a4a5c",
+      "sun": "#ffd9a0"
+    },
+    "light": {
+      "sun": "#ffe2b0",
+      "sunStrength": 3.2,
+      "ambient": "#c7cbe8",
+      "ambientStrength": 1.7,
+      "fog": "#b79a9a",
+      "fogAmount": 0.4,
+      "exposure": 1.1,
+      "sunElevation": 32,
+      "sunAzimuth": 240
+    }
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {
+      "blur": 1.4
+    }
+  },
+  "upgrade": [
+    {
+      "block": "meticulai-tilt-shift-macro",
+      "why": "focus on your own subject and camera shots"
+    }
+  ],
+  "blocks": [
+    "patchwork-quilt"
+  ],
+  "asset_search": [
+    "low poly toy",
+    "wooden"
+  ],
+  "asset_families": [],
+  "music": {
+    "mood": "slow, warm, plucked",
+    "tempo": "slow",
+    "notes": ""
+  },
+  "sound_feel": "soft, wooden, close",
+  "good_for": [
+    "island",
+    "top-down",
+    "cosy collecting games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "fixture",
+      "model": null,
+      "prompt": "(test fixture: a copy of the island starter preview, not a real mood picture)",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [],
+  "status": "ready"
+}

@@ -1,0 +1,131 @@
+{
+  "id": "gouache-harbour",
+  "name": "Gouache harbour",
+  "order": 8,
+  "one_line": "A flat painted fishing village on a sea-green bay.",
+  "mood": [
+    "friendly",
+    "painted",
+    "seaside"
+  ],
+  "look_words": "A small fishing village painted in flat gouache, like a children's book. The sea is an even sea green and takes up most of the picture; houses are warm orange wood on stilts, joined by plank walkways, with boats, barrels and crates floating between them. Paint is opaque and flat with a few visible brush strokes and a slight paper texture; shadows are a darker tone of the same colour with a soft edge. Morning light, mild and warm. Cream and buoy pink mark what to collect and the goal, a deep crimson is harm, and the player wears a bright yellow coat. Motion is bobbing: boats rock, water rings spread, gulls circle. Avoid realistic water, gloss, strong shadows, dark scenes and bloom.",
+  "palette": {
+    "name": "gouache harbour",
+    "colors": {
+      "base": [
+        "#6dbb9c",
+        "#4f9a84",
+        "#d98a4f",
+        "#c9a070"
+      ],
+      "accent": [
+        "#fff6e6",
+        "#ff5fa8"
+      ],
+      "danger": "#b01e4a",
+      "player": "#ffd42e",
+      "shadow": "#274a52",
+      "light": "#fff6df",
+      "ink": "#fbf6e6"
+    },
+    "sky": {
+      "top": "#8fc9b8",
+      "horizon": "#e9efd6",
+      "below": "#4f9a84",
+      "sun": "#fff3cf"
+    },
+    "light": {
+      "sun": "#fff0d0",
+      "sunStrength": 2.8,
+      "ambient": "#d6efe6",
+      "ground": "#7aa88f",
+      "ambientStrength": 2,
+      "fog": "#cfe6d6",
+      "fogAmount": 0.4,
+      "exposure": 1,
+      "sunElevation": 35,
+      "sunAzimuth": 110
+    },
+    "notes": "The main \"ground\" is the sea. Houses are orange wood, so harm is a deep crimson that sits well away from it."
+  },
+  "look": {
+    "id": "painterly",
+    "options": {}
+  },
+  "look_wish": "flat gouache paint with soft-edged shadows",
+  "upgrade": [
+    {
+      "block": "meticulai-painterly-styles",
+      "why": "its gouache style paints an ordinary scene with brush-sized strokes"
+    },
+    {
+      "block": "meticulai-ripple-water",
+      "why": "water that rings and ripples when things touch it"
+    }
+  ],
+  "blocks": [
+    "meticulai-painterly-styles",
+    "meticulai-ripple-water",
+    "meticulai-rope-cloth-chains"
+  ],
+  "asset_search": [
+    "fishing boat",
+    "wooden house",
+    "barrel",
+    "pier",
+    "crate"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "kaykit",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "accordion, whistle and soft guitar",
+    "tempo": "medium",
+    "notes": "A gentle sea shanty."
+  },
+  "sound_feel": "water lapping, gulls, wooden knocks, rope creaks",
+  "good_for": [
+    "grid-puzzle",
+    "top-down",
+    "island",
+    "platformer",
+    "sailing",
+    "physics puzzles"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Flat gouache picture-book painting of a tiny harbour seen from above at a three-quarter angle: a child in a bright yellow raincoat rows a small red boat between wooden houses on stilts joined by plank walkways, floating barrels, a net drying on poles, a cat on a roof, buoys, calm sea-green water. Opaque flat brush strokes, paper texture, soft morning light, warm oranges and reds against sea green, simple friendly shapes. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Flat gouache picture-book painting of a tiny harbour: a child in a bright yellow raincoat stands on a wooden quay beside stacked crates and a moored red rowing boat, wooden houses with red roofs on stilts, a small lighthouse on a rock, gulls, calm sea-green water. Opaque flat brush strokes, paper texture, soft morning light, warm reds and oranges against sea green, simple friendly shapes. High three-quarter view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "painterly",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

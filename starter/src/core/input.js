@@ -6,6 +6,13 @@
 //   input.move()            { x, y } from WASD / arrows / left stick / touch stick, length <= 1
 //                           (y = +1 means "forward": W, up arrow, stick up)
 //   input.mouse             { x, y, dx, dy, buttons, wheel } (dx/dy/wheel: since the last step)
+//   input.look()            { x, y } "look around" for this step: mouse movement in pixels plus the
+//                           gamepad's right stick (x = right, y = down). Multiply by your sensitivity.
+//   input.aim()             { x, y } the right stick alone, length <= 1 (twin-stick aiming)
+//
+// Mouse-look games (first person, flight): set `pointerLock: true` in the game's `info` and main.js
+// captures the mouse while playing and pauses the game when the player frees it with Esc.
+// input.pointerLocked says whether the mouse is captured right now.
 //
 // "Pressed" is counted per simulation step, not per screen frame, so a press is never missed
 // or seen twice when the screen runs faster or slower than 60 Hz.
@@ -15,6 +22,7 @@
 //
 // Bots and tests can drive the same actions:
 //   input.virtual.press('jump'); input.virtual.hold('jump', true); input.virtual.setMove(0, 1);
+//   input.virtual.look(12, 0); input.virtual.setAim(1, 0);
 //
 // Buffering (press slightly early, still counts): see makeBuffer() at the bottom.
 
@@ -61,6 +69,8 @@ export function createInput({ canvas, actions = {} } = {}) {
   const virtualHeld = new Set();
   const virtualPressed = new Set();
   const virtualMove = { x: 0, y: 0, active: false };
+  const virtualLook = { x: 0, y: 0 }; // pixels to add to the next step's look()
+  const virtualAim = { x: 0, y: 0, active: false };
 
   function down(code) {
     if (!held.has(code)) pendingDown.add(code);
@@ -175,6 +185,7 @@ export function createInput({ canvas, actions = {} } = {}) {
 
   // Queries ---------------------------------------------------------------------------
   const codesOf = (name) => map[name] ?? [name]; // unknown name = a raw key code
+  const lookNow = { x: 0, y: 0 }; // the bot's look for this step
 
   const input = {
     mouse,
@@ -195,6 +206,31 @@ export function createInput({ canvas, actions = {} } = {}) {
     released(name) {
       if (!input.enabled) return false;
       return codesOf(name).some((c) => releasedNow.has(c));
+    },
+    // The mouse is captured by the game (the cursor is hidden and movement is endless).
+    get pointerLocked() {
+      return !!canvas && document.pointerLockElement === canvas;
+    },
+    // Ask the browser to capture the mouse. Only works right after a click or a key press.
+    lockPointer() {
+      if (!canvas || input.pointerLocked || navigator.webdriver) return;
+      try {
+        const p = canvas.requestPointerLock?.();
+        p?.catch?.(() => {}); // refused (no user gesture yet): the next click will ask again
+      } catch { /* not supported: the game still works with the pointer free */ }
+    },
+    unlockPointer() {
+      if (input.pointerLocked) document.exitPointerLock?.();
+    },
+    look() {
+      if (!input.enabled) return { x: 0, y: 0 };
+      const stick = 14; // pixels per step at full right-stick push
+      return { x: mouse.dx + pad.axes[2] * stick + lookNow.x, y: mouse.dy + pad.axes[3] * stick + lookNow.y };
+    },
+    aim() {
+      if (!input.enabled) return { x: 0, y: 0 };
+      if (virtualAim.active) return { x: virtualAim.x, y: virtualAim.y };
+      return { x: pad.axes[2], y: pad.axes[3] };
     },
     move() {
       if (!input.enabled) return { x: 0, y: 0 };
@@ -222,6 +258,9 @@ export function createInput({ canvas, actions = {} } = {}) {
       mouse.dy = pendingDy;
       mouse.wheel = pendingWheel;
       pendingDx = pendingDy = pendingWheel = 0;
+      lookNow.x = virtualLook.x;
+      lookNow.y = virtualLook.y;
+      virtualLook.x = virtualLook.y = 0;
     },
     // Called by main.js at the end of every fixed step.
     endTick() {
@@ -250,10 +289,23 @@ export function createInput({ canvas, actions = {} } = {}) {
         virtualMove.x = x;
         virtualMove.y = y;
       },
+      // Turn the view by this many pixels of "mouse" on the next step (x = right, y = down).
+      look(dx, dy) {
+        virtualLook.x += dx;
+        virtualLook.y += dy;
+      },
+      // Push the right stick (twin-stick aiming).
+      setAim(x, y) {
+        virtualAim.active = true;
+        virtualAim.x = x;
+        virtualAim.y = y;
+      },
       release() {
         virtualHeld.clear();
         virtualPressed.clear();
         virtualMove.active = false;
+        virtualAim.active = false;
+        virtualLook.x = virtualLook.y = 0;
       },
     },
   };

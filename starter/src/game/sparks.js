@@ -2,6 +2,7 @@
 
 import * as THREE from 'three';
 import { glowTexture } from './world.js';
+import { look } from '../core/look.js';
 
 // [x, surface height, z]. The spark floats 0.9 above the surface.
 export const SPARK_SPOTS = [
@@ -22,10 +23,10 @@ export const SPARK_SPOTS = [
 export function createSparks(scene) {
   const coreGeo = new THREE.OctahedronGeometry(0.2, 0);
   const coreMat = new THREE.MeshStandardMaterial({
-    color: '#ffe2b0', emissive: '#ffbe55', emissiveIntensity: 3, roughness: 0.4,
+    color: look.shade(look.accent[0], 0.45), emissive: look.accent[0], emissiveIntensity: 3, roughness: 0.4,
   });
   const haloMat = new THREE.SpriteMaterial({
-    map: glowTexture(), color: '#ffc46b', transparent: true, opacity: 0.95,
+    map: glowTexture(), color: look.accent[0], transparent: true, opacity: 0.95,
     depthWrite: false, blending: THREE.AdditiveBlending,
   });
 
@@ -45,7 +46,7 @@ export function createSparks(scene) {
   // (invisible by opacity) so their shaders are compiled at load, not at the first pickup.
   const burstMat = () =>
     new THREE.SpriteMaterial({
-      map: glowTexture(), color: '#ffd08a', transparent: true, opacity: 0,
+      map: glowTexture(), color: look.shade(look.accent[0], 0.25), transparent: true, opacity: 0,
       depthWrite: false, blending: THREE.AdditiveBlending,
     });
   const pool = Array.from({ length: 40 }, () => {

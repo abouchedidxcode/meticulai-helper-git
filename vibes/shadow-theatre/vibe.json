@@ -1,0 +1,126 @@
+{
+  "id": "shadow-theatre",
+  "name": "Shadow theatre",
+  "order": 32,
+  "one_line": "Black cut-out puppets on a glowing amber screen.",
+  "mood": [
+    "dramatic",
+    "handmade",
+    "warm"
+  ],
+  "look_words": "A shadow-puppet play. The whole screen is a sheet of warm amber light, brighter near the lamp and darker at the edges, and everything in the world is a black silhouette in front of it. Puppets and scenery are flat cut-outs with fine pierced patterns, like lace, that let the light through; things further from the screen are softer and paler, which gives depth. The player is the sharpest, blackest shape. Because there is almost no colour, meaning comes from small coloured gels: pale gold and jade for the things that matter, crimson for harm. Motion is jointed and stiff, on rods, with a flickering flame behind. Avoid shading inside the silhouettes, more colours, camera rotation, and bloom.",
+  "palette": {
+    "name": "shadow play",
+    "colors": {
+      "base": [
+        "#e89a4a",
+        "#c9742e",
+        "#1a120d",
+        "#3a2418"
+      ],
+      "accent": [
+        "#fff3c4",
+        "#5fe0c8"
+      ],
+      "danger": "#b0123f",
+      "player": "#120c0a",
+      "shadow": "#1a100c",
+      "light": "#ffe2a8",
+      "ink": "#ffeccc"
+    },
+    "sky": {
+      "top": "#b8642a",
+      "horizon": "#f2b05a",
+      "below": "#120c0a",
+      "sun": "#ffe9b0"
+    },
+    "light": {
+      "sun": "#ffd08a",
+      "sunStrength": 2.4,
+      "ambient": "#e89a4a",
+      "ground": "#5a3018",
+      "ambientStrength": 1.6,
+      "fog": "#d98a3f",
+      "fogAmount": 0.5,
+      "exposure": 1.05,
+      "sunElevation": 20,
+      "sunAzimuth": 0
+    },
+    "notes": "The ground colours are the lit screen; structures are the black silhouettes. The player is black too, so it must stay in front of the amber, not in front of scenery."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "flat black silhouettes on a lit screen, side view",
+  "upgrade": [
+    {
+      "block": "fire",
+      "why": "a real flickering lamp flame behind the screen"
+    }
+  ],
+  "blocks": [
+    "fire",
+    "meticulai-rope-cloth-chains",
+    "meticulai-anim-springs"
+  ],
+  "asset_search": [
+    "tree silhouette",
+    "palace",
+    "puppet",
+    "oil lamp",
+    "ornament pattern"
+  ],
+  "asset_families": [
+    "kenney",
+    "game-icons",
+    "opengameart",
+    "google-fonts"
+  ],
+  "music": {
+    "mood": "metal chimes, a bowed string and hand drums",
+    "tempo": "medium",
+    "notes": "Rhythmic and ceremonial."
+  },
+  "sound_feel": "wooden rods tapping, a flame flutter, cloth, small gongs",
+  "good_for": [
+    "platformer",
+    "runner",
+    "grid-puzzle",
+    "story games",
+    "duelling",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Shadow puppet theatre game scene, side view: black cut-out silhouettes on a glowing warm amber paper screen, a small silhouette child flying a diamond kite runs along a silhouette hilltop toward a silhouette tree with lace-like pierced leaves, a silhouette deer, birds, a long-tailed silhouette dragon kite in the sky, a small oil lamp flame at the bottom. Only black shapes on amber and orange light, softer paler shadows further back. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Shadow puppet theatre game scene, side view: black cut-out silhouettes on a glowing warm amber paper screen, a small silhouette hero with a spear and a tall feathered hat walks a silhouette bridge toward a silhouette palace with ornate pierced patterns, silhouette trees with lace-like leaves, a small oil lamp flame at the bottom. Only black shapes on amber and orange light, soft edges where puppets sit further from the screen. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

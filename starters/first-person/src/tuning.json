@@ -1,0 +1,461 @@
+{
+  "look": {
+    "sensitivity": {
+      "value": 2.2,
+      "min": 0.4,
+      "max": 6,
+      "step": 0.1,
+      "label": "Mouse sensitivity",
+      "help": "How far the view turns for each bit of mouse movement (thousandths of a radian per pixel). The view follows the mouse exactly: no smoothing, no acceleration. Also scales the gamepad's right stick."
+    },
+    "invertY": {
+      "value": false,
+      "label": "Invert up/down",
+      "help": "On: pushing the mouse forward looks down (flight-stick style). Some players need this."
+    },
+    "pitchLimit": {
+      "value": 85,
+      "min": 30,
+      "max": 89,
+      "step": 1,
+      "label": "Look up/down limit (degrees)",
+      "help": "How far you can look up or down. Under 90 so the view can never flip over."
+    },
+    "fov": {
+      "value": 72,
+      "min": 50,
+      "max": 100,
+      "step": 1,
+      "label": "Field of view (degrees)",
+      "help": "How wide the view is. Wider feels faster and shows more, but bends the edges. 65-80 suits most people."
+    },
+    "sprintFovKick": {
+      "value": 6,
+      "min": 0,
+      "max": 16,
+      "step": 0.5,
+      "label": "Sprint view widening",
+      "help": "Extra degrees of view while sprinting: the cheap trick that makes running feel fast. 0 = off (kinder for motion sickness)."
+    }
+  },
+  "move": {
+    "walkSpeed": {
+      "value": 3.8,
+      "min": 1.5,
+      "max": 9,
+      "step": 0.1,
+      "label": "Walk speed",
+      "help": "Metres per second. The same forwards, sideways and diagonally."
+    },
+    "sprintSpeed": {
+      "value": 5.8,
+      "min": 2,
+      "max": 14,
+      "step": 0.1,
+      "label": "Sprint speed",
+      "help": "Metres per second while holding Shift and moving forward."
+    },
+    "groundAccel": {
+      "value": 60,
+      "min": 8,
+      "max": 150,
+      "step": 1,
+      "label": "Grip when starting",
+      "help": "How fast you reach full speed. Low = sluggish, like walking on ice."
+    },
+    "stopAccel": {
+      "value": 75,
+      "min": 8,
+      "max": 150,
+      "step": 1,
+      "label": "Grip when stopping",
+      "help": "How fast you stop when you let go. High = you stop where you meant to."
+    },
+    "airControl": {
+      "value": 0.35,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": "Air control",
+      "help": "Share of your grip you keep in the air, so you can steer a jump a little."
+    },
+    "jumpSpeed": {
+      "value": 6.2,
+      "min": 3,
+      "max": 12,
+      "step": 0.1,
+      "label": "Jump speed",
+      "help": "Upward speed at take-off. Height = speed squared / (2 x gravity): about 0.95 m here, enough for the low walls (0.8 m)."
+    },
+    "gravity": {
+      "value": 20,
+      "min": 8,
+      "max": 50,
+      "step": 0.5,
+      "label": "Gravity",
+      "help": "Pull while rising, metres per second squared."
+    },
+    "fallGravity": {
+      "value": 1.5,
+      "min": 1,
+      "max": 3,
+      "step": 0.05,
+      "label": "Fall gravity x",
+      "help": "Extra pull on the way down. Above 1 makes jumps land crisply instead of floating."
+    },
+    "coyoteTime": {
+      "value": 0.12,
+      "min": 0,
+      "max": 0.3,
+      "step": 0.01,
+      "label": "Coyote time (s)",
+      "help": "You can still jump this long after walking off an edge."
+    },
+    "jumpBuffer": {
+      "value": 0.12,
+      "min": 0,
+      "max": 0.3,
+      "step": 0.01,
+      "label": "Jump buffer (s)",
+      "help": "A jump pressed this long before landing still happens."
+    },
+    "stepHeight": {
+      "value": 0.35,
+      "min": 0,
+      "max": 0.6,
+      "step": 0.01,
+      "label": "Step-up height (m)",
+      "help": "Ledges up to this high are walked up without jumping (stairs, kerbs, the ruin floor)."
+    }
+  },
+  "comfort": {
+    "bobHeight": {
+      "value": 0.035,
+      "min": 0,
+      "max": 0.1,
+      "step": 0.005,
+      "label": "Head bob (up/down, m)",
+      "help": "How much the view dips on each footstep. 0 = a perfectly steady view (best for anyone who gets motion sick)."
+    },
+    "bobSway": {
+      "value": 0.018,
+      "min": 0,
+      "max": 0.06,
+      "step": 0.002,
+      "label": "Head bob (side to side, m)",
+      "help": "How much the view shifts from foot to foot. 0 = off."
+    },
+    "strideLength": {
+      "value": 1.5,
+      "min": 0.6,
+      "max": 3,
+      "step": 0.05,
+      "label": "Stride length (m)",
+      "help": "Metres between footsteps. Bob and footstep sounds follow distance walked, so they speed up when you sprint."
+    },
+    "landDip": {
+      "value": 0.07,
+      "min": 0,
+      "max": 0.2,
+      "step": 0.005,
+      "label": "Landing dip (m)",
+      "help": "How far the view sinks when you land from a jump. 0 = off."
+    },
+    "handSway": {
+      "value": 1,
+      "min": 0,
+      "max": 2.5,
+      "step": 0.05,
+      "label": "Hand sway",
+      "help": "How much the hand lags behind when you turn. 0 = a rigid hand."
+    },
+    "handBob": {
+      "value": 1,
+      "min": 0,
+      "max": 2.5,
+      "step": 0.05,
+      "label": "Hand bob",
+      "help": "How much the hand and lantern swing as you walk. 0 = still."
+    }
+  },
+  "use": {
+    "range": {
+      "value": 3.4,
+      "min": 1,
+      "max": 8,
+      "step": 0.1,
+      "label": "Reach (m)",
+      "help": "How close you must be to use something."
+    },
+    "coneDegrees": {
+      "value": 16,
+      "min": 2,
+      "max": 40,
+      "step": 1,
+      "label": "Use cone (degrees)",
+      "help": "How far from the centre of the view a thing can be and still count as looked at. Small = fiddly, large = forgiving."
+    },
+    "holdTime": {
+      "value": 0.9,
+      "min": 0,
+      "max": 4,
+      "step": 0.05,
+      "label": "Hold to use (s)",
+      "help": "How long Use must be held. The ring fills as you hold and drains slowly if you let go. 0 = one press does it. The hold is what makes a shade nearby a problem: stun it first."
+    }
+  },
+  "spark": {
+    "speed": {
+      "value": 26,
+      "min": 8,
+      "max": 60,
+      "step": 1,
+      "label": "Spark speed",
+      "help": "Metres per second. Fast = it lands where you looked."
+    },
+    "cooldown": {
+      "value": 0.8,
+      "min": 0.05,
+      "max": 3,
+      "step": 0.05,
+      "label": "Time between sparks (s)",
+      "help": "Lower = closer to a shooter."
+    },
+    "range": {
+      "value": 22,
+      "min": 5,
+      "max": 60,
+      "step": 1,
+      "label": "Spark range (m)",
+      "help": "How far a spark flies, and how far aim assist reaches."
+    },
+    "assistDegrees": {
+      "value": 9,
+      "min": 0,
+      "max": 25,
+      "step": 0.5,
+      "label": "Aim assist (degrees)",
+      "help": "A shade this close to the crosshair gets the spark thrown straight at it. 0 = no help."
+    },
+    "hitRadius": {
+      "value": 0.75,
+      "min": 0.2,
+      "max": 2,
+      "step": 0.05,
+      "label": "Spark hit size (m)",
+      "help": "How near a shade the spark must pass to hit. Bigger than it looks, on purpose."
+    }
+  },
+  "shades": {
+    "maxCount": {
+      "value": 6,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "label": "Shades",
+      "help": "One shade haunts each dark lantern (except the first you meet), up to this many. A shade caught in a lantern's light as it is lit is gone for good; the rest keep following you. Takes effect on the next run."
+    },
+    "wakeRange": {
+      "value": 12,
+      "min": 3,
+      "max": 25,
+      "step": 0.5,
+      "label": "Notices you from (m)",
+      "help": "A haunting shade leaves its lantern and comes for you when you get this close."
+    },
+    "restless": {
+      "value": 4,
+      "min": 0,
+      "max": 12,
+      "step": 0.5,
+      "label": "More restless per lantern (m)",
+      "help": "Each lit lantern adds this to how far away the remaining shades notice you. This is the pressure that grows: early shades wait for you, late ones come and find you."
+    },
+    "speed": {
+      "value": 2.3,
+      "min": 0.3,
+      "max": 5,
+      "step": 0.1,
+      "label": "Drift speed",
+      "help": "Metres per second. Deep dusk adds about a third, each lit lantern a little more, but never more than 85% of walk speed: you must always be able to walk away."
+    },
+    "speedPerLantern": {
+      "value": 0.12,
+      "min": 0,
+      "max": 0.5,
+      "step": 0.01,
+      "label": "Speed-up per lantern",
+      "help": "Each lit lantern makes the shades this much faster: the pressure that grows."
+    },
+    "lungeRange": {
+      "value": 3.2,
+      "min": 1,
+      "max": 8,
+      "step": 0.1,
+      "label": "Lunge from (m)",
+      "help": "A shade this close stops and winds up."
+    },
+    "windup": {
+      "value": 0.85,
+      "min": 0.2,
+      "max": 2,
+      "step": 0.05,
+      "label": "Warning before a lunge (s)",
+      "help": "The hiss and the swell. Long enough to step aside; under 0.4 feels unfair."
+    },
+    "lungeSpeed": {
+      "value": 7.5,
+      "min": 2,
+      "max": 16,
+      "step": 0.5,
+      "label": "Lunge speed",
+      "help": "Metres per second of the short rush after the hiss. Speed x length = how far it reaches (about 4 m): a sidestep during the hiss must be enough to dodge it."
+    },
+    "lungeTime": {
+      "value": 0.55,
+      "min": 0.1,
+      "max": 1.5,
+      "step": 0.05,
+      "label": "Lunge length (s)",
+      "help": "How long the rush lasts. Longer = it reaches further and is harder to dodge."
+    },
+    "recover": {
+      "value": 1.3,
+      "min": 0,
+      "max": 4,
+      "step": 0.1,
+      "label": "Rest after a lunge (s)",
+      "help": "Your opening: walk away or throw a spark."
+    },
+    "touchRadius": {
+      "value": 0.85,
+      "min": 0.3,
+      "max": 2,
+      "step": 0.05,
+      "label": "Touch distance (m)",
+      "help": "How close a shade must come to hurt. Smaller than the shade looks: near misses go to the player."
+    },
+    "stunTime": {
+      "value": 3,
+      "min": 0.5,
+      "max": 12,
+      "step": 0.5,
+      "label": "Stun length (s)",
+      "help": "How long a spark takes a shade out."
+    },
+    "hearRange": {
+      "value": 13,
+      "min": 3,
+      "max": 30,
+      "step": 1,
+      "label": "Heard from (m)",
+      "help": "The whisper starts here and grows as the shade nears; the heartbeat starts at about half this."
+    },
+    "hintRange": {
+      "value": 13,
+      "min": 3,
+      "max": 30,
+      "step": 1,
+      "label": "Edge hint from (m)",
+      "help": "A shade behind you this close shows as a glow on the edge of the screen."
+    }
+  },
+  "lanterns": {
+    "safeRadius": {
+      "value": 4.5,
+      "min": 1.5,
+      "max": 9,
+      "step": 0.1,
+      "label": "Safe circle (m)",
+      "help": "The radius of light round a lit lantern. Shades cannot enter it, and any shade inside it at the moment of lighting is banished."
+    },
+    "brightness": {
+      "value": 26,
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "label": "Lantern brightness",
+      "help": "How strongly a lit lantern lights the world around it."
+    }
+  },
+  "world": {
+    "duskSeconds": {
+      "value": 120,
+      "min": 20,
+      "max": 600,
+      "step": 5,
+      "label": "Dusk takes (s)",
+      "help": "How long until the evening is at its darkest. The run's clock: shades get quicker and more numerous as it darkens."
+    },
+    "duskDepth": {
+      "value": 0.75,
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "label": "How dark it gets",
+      "help": "0 = the light never changes, 1 = nearly night. Your own lantern and the lit ones matter more as it darkens."
+    },
+    "handLight": {
+      "value": 9,
+      "min": 0,
+      "max": 40,
+      "step": 0.5,
+      "label": "Hand lantern brightness",
+      "help": "How strongly the lantern you carry lights what is near you (at full dusk)."
+    }
+  },
+  "feel": {
+    "lightStopMs": {
+      "value": 60,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "label": "Lighting freeze (ms)",
+      "help": "A tiny freeze when a lantern lights: it makes the moment land. 0 = off."
+    },
+    "hitStopMs": {
+      "value": 120,
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "label": "Hurt freeze (ms)",
+      "help": "A short freeze when a shade touches you, so you feel the hit and see what happened. 0 = off."
+    },
+    "hitShake": {
+      "value": 0.12,
+      "min": 0,
+      "max": 0.6,
+      "step": 0.01,
+      "label": "Hurt shake (m)",
+      "help": "First-person shake is strong medicine: keep it small. 0 = off."
+    },
+    "invincible": {
+      "value": false,
+      "label": "Invincible",
+      "help": "Shades cannot take warmth (for testing and for a pure walking game)."
+    }
+  },
+  "audio": {
+    "master": {
+      "value": 0.8,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": "Master"
+    },
+    "music": {
+      "value": 0.5,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": "Music"
+    },
+    "sfx": {
+      "value": 0.8,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": "Sound effects"
+    }
+  }
+}

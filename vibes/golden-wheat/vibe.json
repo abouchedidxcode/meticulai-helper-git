@@ -1,0 +1,125 @@
+{
+  "id": "golden-wheat",
+  "name": "Golden-hour fields",
+  "order": 4,
+  "one_line": "Tall wheat glowing amber, long shadows, a dusty track.",
+  "mood": [
+    "warm",
+    "open",
+    "nostalgic"
+  ],
+  "look_words": "Open farmland in the last hour of sun. Wheat and dry grass in amber and straw, a pale dusty track, weathered wood and stone, a few dark poplars. The sun sits low and orange, shadows are long and warm, and the far hills go blue in the haze. Shapes are broad and simple with visible brush marks. Because the whole world is gold, the things that matter are cool: teal and clean white for pickups and the goal, a clear red for harm, a blue cloak for the player. Motion is wind: grass in waves, dust behind hooves, swallows. Avoid green lawns, midday light, grey skies, gloss and bloom on the sun.",
+  "palette": {
+    "name": "golden hour",
+    "colors": {
+      "base": [
+        "#d9a441",
+        "#b5822f",
+        "#8a6a4a",
+        "#c9a97a"
+      ],
+      "accent": [
+        "#2fa7b8",
+        "#f7f3e6"
+      ],
+      "danger": "#d0201a",
+      "player": "#2f4fa0",
+      "shadow": "#4a3550",
+      "light": "#ffe0a0",
+      "ink": "#fff3d9"
+    },
+    "sky": {
+      "top": "#5f83b8",
+      "horizon": "#ffd9a0",
+      "below": "#b5822f",
+      "sun": "#ffc870"
+    },
+    "light": {
+      "sun": "#ffc27a",
+      "sunStrength": 3.4,
+      "ambient": "#b7c3e8",
+      "ground": "#a87a3a",
+      "ambientStrength": 1.4,
+      "fog": "#e8b888",
+      "fogAmount": 0.5,
+      "exposure": 1.1,
+      "sunElevation": 12,
+      "sunAzimuth": 250
+    },
+    "notes": "A gold world needs cool accents. The sun is very low (12 degrees), so shadows are long: place things so they do not hide the path."
+  },
+  "look": {
+    "id": "painterly",
+    "options": {}
+  },
+  "look_wish": "painterly brush marks, or none",
+  "upgrade": [
+    {
+      "block": "touch-grass",
+      "why": "a field to the horizon that bends under feet and hooves"
+    },
+    {
+      "block": "meticulai-haze",
+      "why": "warm low haze so the distance glows"
+    }
+  ],
+  "blocks": [
+    "touch-grass",
+    "meticulai-haze",
+    "meticulai-painterly-styles",
+    "meticulai-horse-locomotion"
+  ],
+  "asset_search": [
+    "windmill",
+    "horse",
+    "wooden cart",
+    "wheat",
+    "poplar tree"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kaykit",
+    "polyhaven",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "slow fiddle and guitar, wide and warm",
+    "tempo": "slow",
+    "notes": "Swell when the view opens."
+  },
+  "sound_feel": "wind in grass, hooves on dirt, insects, a creaking wheel",
+  "good_for": [
+    "rider",
+    "island",
+    "flyer",
+    "racer",
+    "farming",
+    "exploring"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Golden hour over rolling wheat fields, third-person camera behind a small rider in a blue cloak on a chestnut horse following a dusty track toward a lone windmill on a hill. Tall wheat glowing amber, long warm shadows, a few dark green poplars, low orange sun, soft peach sky with thin clouds, light haze in the distance. Painterly stylised 3D, broad simple shapes, warm and calm. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Golden hour on an open grassy plain seen from a low camera in the grass: a small figure in a blue cloak walks beside a wooden cart along a rutted track, a single old oak tree and a stone well ahead, swallows in the air. Amber and straw-coloured grass, long warm shadows, low orange sun, soft peach sky, distant blue hills in haze. Painterly stylised 3D, broad simple shapes. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "painterly",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

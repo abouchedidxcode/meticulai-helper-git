@@ -1,0 +1,121 @@
+{
+  "id": "autumn-village",
+  "name": "Autumn village",
+  "order": 10,
+  "one_line": "Cobbles, crooked cottages and leaves coming down.",
+  "mood": [
+    "cosy",
+    "lived-in",
+    "golden"
+  ],
+  "look_words": "A small village on an autumn afternoon. Faded olive grass, cream plaster and timber, slate roofs, cobbles half buried in rust-coloured leaves, maples in orange and gold. The sun is low and soft, the sky a grey-blue, and chimney smoke hangs in the air. Shapes are crooked and friendly, with hand-painted textures. Because orange is everywhere, the things that matter are a clear bright yellow and a clean cream-white; harm is a hot pink-crimson; the player wears a strong blue. Motion is leaves: falling, blowing across the lane, kicked up underfoot. Avoid summer greens, clean modern surfaces, heavy darkness and bloom.",
+  "palette": {
+    "name": "autumn lane",
+    "colors": {
+      "base": [
+        "#a39a52",
+        "#7c7440",
+        "#c9b59a",
+        "#b5683c"
+      ],
+      "accent": [
+        "#ffd92e",
+        "#fff4e0"
+      ],
+      "danger": "#e6007a",
+      "player": "#1b5fa8",
+      "shadow": "#3f3350",
+      "light": "#ffe2b0",
+      "ink": "#fbeed8"
+    },
+    "sky": {
+      "top": "#6f8fb5",
+      "horizon": "#f0d2a8",
+      "below": "#7c7440",
+      "sun": "#ffd08a"
+    },
+    "light": {
+      "sun": "#ffc98a",
+      "sunStrength": 3,
+      "ambient": "#b9c3dd",
+      "ground": "#8a6a4a",
+      "ambientStrength": 1.5,
+      "fog": "#d9b99a",
+      "fogAmount": 0.45,
+      "exposure": 1.05,
+      "sunElevation": 22,
+      "sunAzimuth": 240
+    },
+    "notes": "Paths are leaf rust, so harm is a hot pink-crimson rather than orange-red, and pickups are a cleaner yellow than any leaf."
+  },
+  "look": {
+    "id": "painterly",
+    "options": {}
+  },
+  "look_wish": "hand-painted shading, coloured pencil, or none",
+  "upgrade": [
+    {
+      "block": "coloured-pencil",
+      "why": "draws the whole village as a sketchbook page in coloured pencil"
+    }
+  ],
+  "blocks": [
+    "coloured-pencil",
+    "ez-tree",
+    "meticulai-haze",
+    "crowds"
+  ],
+  "asset_search": [
+    "medieval house",
+    "pumpkin",
+    "autumn tree",
+    "stone bridge",
+    "market stall"
+  ],
+  "asset_families": [
+    "kaykit",
+    "polyfork",
+    "quaternius",
+    "kenney",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "warm, accordion and acoustic guitar",
+    "tempo": "medium",
+    "notes": "A walking pace."
+  },
+  "sound_feel": "leaves underfoot, a bicycle bell, distant voices, crows",
+  "good_for": [
+    "top-down",
+    "island",
+    "first-person",
+    "delivery",
+    "walking and collecting",
+    "small adventure"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Autumn village in late afternoon, high three-quarter camera: a small postman in a teal jacket rides a bicycle down a cobbled lane between half-timbered cottages with slate roofs, maple trees in orange, rust and gold dropping leaves, pumpkins by a doorstep, a stone bridge, chimney smoke. Soft low golden light, long shadows, a grey-blue sky. Stylised hand-painted 3D, cosy and lived-in. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Autumn village market square, third-person camera behind a small postman in a teal jacket walking past stalls with apples and pumpkins, a stone fountain, half-timbered houses, maple trees in orange, rust and gold, fallen leaves blowing across cobbles. Soft low golden light, long shadows, grey-blue sky, chimney smoke. Stylised hand-painted 3D, cosy and lived-in. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "painterly",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

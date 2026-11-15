@@ -1,0 +1,125 @@
+{
+  "id": "tropical-lagoon",
+  "name": "Tropical lagoon",
+  "order": 15,
+  "one_line": "White sand, turquoise shallows and a high bright sun.",
+  "mood": [
+    "sunny",
+    "fresh",
+    "holiday"
+  ],
+  "look_words": "A reef island at midday. Pale sand, palm and jungle green, bleached wood, and water that goes from clear turquoise in the shallows to deep blue past the reef. The sun is high, so shadows are small and crisp, and the sky is a clean blue with puffy clouds. Shapes are simple and rounded, colours saturated but fresh. Hibiscus pink and violet are kept for pickups and the goal, a strong red for harm, and the player wears bright orange. Motion is water: ripples, bobbing boats, swaying palms, fish shadows. Avoid murky water, grey skies, heavy detail on the sand, and bloom on the highlights.",
+  "palette": {
+    "name": "lagoon noon",
+    "colors": {
+      "base": [
+        "#f2e2b8",
+        "#d9c08a",
+        "#3f9a63",
+        "#b98a5a"
+      ],
+      "accent": [
+        "#ff4fa0",
+        "#7a48d8"
+      ],
+      "danger": "#c81e3a",
+      "player": "#ff6a00",
+      "shadow": "#0f5f7a",
+      "light": "#f4fffb",
+      "ink": "#f7fffb"
+    },
+    "sky": {
+      "top": "#3f9be0",
+      "horizon": "#bfe9f5",
+      "below": "#2fb7c4",
+      "sun": "#fffbe0"
+    },
+    "light": {
+      "sun": "#fff6dc",
+      "sunStrength": 3.6,
+      "ambient": "#cfeeff",
+      "ground": "#e8d8a8",
+      "ambientStrength": 1.9,
+      "fog": "#bfe6f0",
+      "fogAmount": 0.25,
+      "exposure": 1,
+      "sunElevation": 68,
+      "sunAzimuth": 20
+    },
+    "notes": "The dark end is deep lagoon blue, not black: use it for deep water and undersides. Below the horizon the sky is turquoise, which reads as sea."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "clean bright shading, or none",
+  "upgrade": [
+    {
+      "block": "ultra-water",
+      "why": "a real ocean with shore breakers, foam and an underwater view (a bigger job)"
+    },
+    {
+      "block": "meticulai-ripple-water",
+      "why": "small water that answers when the player touches it"
+    }
+  ],
+  "blocks": [
+    "meticulai-ripple-water",
+    "ultra-water",
+    "procedural-terrains",
+    "meticulai-flock"
+  ],
+  "asset_search": [
+    "palm tree",
+    "sailing boat",
+    "beach hut",
+    "coral",
+    "wooden jetty"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "kaykit",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "bright, steel pans and ukulele",
+    "tempo": "medium",
+    "notes": "Keep it light, no heavy drums."
+  },
+  "sound_feel": "waves, gulls, wooden creaks, splashes",
+  "good_for": [
+    "island",
+    "racer",
+    "flyer",
+    "top-down",
+    "sailing",
+    "fishing"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Tropical lagoon at midday, high three-quarter camera: a small wooden sailing boat with a white sail and a tiny sailor in an orange shirt glides over clear turquoise shallows toward a white sand islet with three palm trees and a thatched hut. Coral shapes visible under the water, deeper blue beyond the reef, bright sun, crisp small shadows, puffy white clouds. Clean stylised 3D, saturated but fresh colours. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Tropical beach cove, third-person camera behind a small explorer in an orange shirt standing on white sand, looking at a wooden jetty, a rowing boat, turquoise shallows with coral and a green jungle headland with a waterfall. Bright midday sun, crisp small shadows, palm trees, a red parrot on a post, puffy white clouds. Clean stylised 3D, saturated but fresh colours. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

@@ -25,7 +25,10 @@ they are playing the starter game from a link.
    `git init && git add -A && git commit -m "Start"`. Git is the undo button for everything later.
 4. **Create the game folder.** `node tools/init.mjs --name "<working title>"`. Use the user's idea if they already
    gave one ("Lantern Keeper"), otherwise "My Game". It copies the starter and templates into `my-game/`, installs
-   packages, picks a fixed port and writes `my-game/helper.json`.
+   packages, picks a fixed port and writes `my-game/helper.json`. If the user already said what kind of game it is
+   ("a racing game"), start from the matching starter: `node tools/starters/list.mjs --for "<their words>"`, then
+   `node tools/init.mjs --name "..." --starter <id>`. Otherwise the island is fine for now: the interview picks the
+   right starter and switches to it.
 5. **Commit:** `git add -A && git commit -m "Create my-game"`.
 6. **Hand back** (see [hand-back](../hand-back/SKILL.md)): `node tools/serve.mjs --check`, the card, and then move
    straight into the interview.

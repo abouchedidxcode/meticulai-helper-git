@@ -4,6 +4,7 @@
 
 import * as THREE from 'three';
 import { makeBuffer } from '../core/input.js';
+import { look } from '../core/look.js';
 import { collideSphere, groundAt } from './world.js';
 
 export const PLAYER_RADIUS = 0.5;
@@ -19,12 +20,12 @@ function buildMesh() {
 
   const body = new THREE.Mesh(
     new THREE.SphereGeometry(PLAYER_RADIUS, 32, 20),
-    new THREE.MeshStandardMaterial({ color: '#f7c98a', roughness: 0.5 }),
+    new THREE.MeshStandardMaterial({ color: look.player, roughness: 0.5 }),
   );
   body.castShadow = true;
   inner.add(body);
 
-  const eyeMat = new THREE.MeshStandardMaterial({ color: '#2a2230', roughness: 0.3 });
+  const eyeMat = new THREE.MeshStandardMaterial({ color: look.shade(look.shadow, -0.5), roughness: 0.3 });
   for (const side of [-1, 1]) {
     const eye = new THREE.Mesh(new THREE.SphereGeometry(0.07, 12, 8), eyeMat);
     eye.position.set(side * 0.17, 0.1, 0.45);
@@ -32,7 +33,7 @@ function buildMesh() {
     inner.add(eye);
     const cheek = new THREE.Mesh(
       new THREE.CircleGeometry(0.06, 12),
-      new THREE.MeshBasicMaterial({ color: '#e88f72', transparent: true, opacity: 0.6 }),
+      new THREE.MeshBasicMaterial({ color: look.mix(look.player, look.danger, 0.5), transparent: true, opacity: 0.6 }),
     );
     cheek.position.set(side * 0.27, -0.04, 0.42);
     cheek.lookAt(side * 0.6, -0.1, 1.2);
@@ -41,7 +42,7 @@ function buildMesh() {
   // A little leaf on top.
   const leaf = new THREE.Mesh(
     new THREE.SphereGeometry(0.13, 10, 6),
-    new THREE.MeshStandardMaterial({ color: '#86a858', roughness: 0.8 }),
+    new THREE.MeshStandardMaterial({ color: look.shade(look.base[0], -0.05), roughness: 0.8 }),
   );
   leaf.scale.set(0.55, 0.18, 1.2);
   leaf.position.set(0.05, 0.53, -0.02);
@@ -59,7 +60,7 @@ export function createPlayer({ scene, solids, tune, input, events, audio, juice 
   // A soft dark spot straight below: shows where you will land.
   const blob = new THREE.Mesh(
     new THREE.CircleGeometry(0.48, 24),
-    new THREE.MeshBasicMaterial({ color: '#1a1420', transparent: true, opacity: 0.35, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4 }),
+    new THREE.MeshBasicMaterial({ color: look.shade(look.shadow, -0.7), transparent: true, opacity: 0.35, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -4 }),
   );
   blob.rotation.x = -Math.PI / 2;
   scene.add(blob);

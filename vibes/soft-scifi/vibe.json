@@ -1,0 +1,120 @@
+{
+  "id": "soft-scifi",
+  "name": "Soft sci-fi",
+  "order": 27,
+  "one_line": "Clean white curves, plants, and one orange accent.",
+  "mood": [
+    "clean",
+    "friendly",
+    "calm"
+  ],
+  "look_words": "A friendly future: white and pale grey rooms with rounded corners, soft even light, a few green plants and big windows. Surfaces are matte and smooth with thin panel lines; nothing is dirty or sharp. There is exactly one accent colour, orange, used for doors, handles, buttons and anything the player can use or should follow. A magenta-red means harm. The player is dark navy so it reads against all the white. Shadows are pale and soft. Motion is smooth and slow: sliding doors, a hovering helper, drifting dust in window light. Avoid neon, glowing blue lines, grime, dark corridors, lens flares and bloom.",
+  "palette": {
+    "name": "white station",
+    "colors": {
+      "base": [
+        "#e6eaee",
+        "#c8d0d8",
+        "#aab4c0",
+        "#f4f6f8"
+      ],
+      "accent": [
+        "#ff7a1a",
+        "#ffa64d"
+      ],
+      "danger": "#e11d62",
+      "player": "#27364f",
+      "shadow": "#3a4458",
+      "light": "#ffffff",
+      "ink": "#f4f7fa"
+    },
+    "sky": {
+      "top": "#cfd9e6",
+      "horizon": "#f2f5f8",
+      "below": "#b9c3cf",
+      "sun": "#ffffff"
+    },
+    "light": {
+      "sun": "#ffffff",
+      "sunStrength": 2.6,
+      "ambient": "#e3ecf7",
+      "ground": "#cfd6dc",
+      "ambientStrength": 2.2,
+      "fog": "#e8eef4",
+      "fogAmount": 0.4,
+      "exposure": 1,
+      "sunElevation": 55,
+      "sunAzimuth": 320
+    },
+    "notes": "One accent only: the second accent is the same orange, lighter. If everything is orange, nothing is. Text sits on the dark card."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "clean flat shading with thin outlines, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-painterly-styles",
+      "why": "its clean toon style gives flat fills and a tidy outline over an ordinary scene"
+    }
+  ],
+  "blocks": [
+    "meticulai-painterly-styles",
+    "meticulai-anim-springs",
+    "meticulai-tilt-shift-macro"
+  ],
+  "asset_search": [
+    "space station",
+    "astronaut",
+    "sci-fi corridor",
+    "rover",
+    "house plant"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "kaykit",
+    "nasa-3d"
+  ],
+  "music": {
+    "mood": "soft, airy synth pads and a gentle pulse",
+    "tempo": "slow",
+    "notes": "Clean and uncluttered."
+  },
+  "sound_feel": "soft beeps, air hiss, smooth door slides, padded footsteps",
+  "good_for": [
+    "first-person",
+    "grid-puzzle",
+    "top-down",
+    "platformer",
+    "marble",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Soft clean science-fiction interior, third-person camera behind a small astronaut in a white suit with one orange stripe walking a curved white corridor with rounded panels, a big window onto a pale planet, potted plants, a little hovering helper robot. Matte white and pale grey surfaces, soft even light, a single orange accent on doors and handles, gentle shadows, calm and friendly, no glowing neon. Stylised simple 3D. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Soft clean science-fiction outpost on a pale grey moon, high three-quarter camera: rounded white habitat pods joined by tubes, a small astronaut in a white suit with one orange stripe driving a little white rover toward an orange beacon, solar panels, smooth dunes. Matte white and pale grey, soft even light, one orange accent colour only, gentle shadows, calm and friendly. Stylised simple 3D. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

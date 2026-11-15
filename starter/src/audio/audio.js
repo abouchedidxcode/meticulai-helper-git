@@ -13,6 +13,17 @@
 //
 // Every voice takes `vary` (semitones of random pitch spread, default small) so repeated
 // sounds don't feel like a machine gun. ?mute=1 silences everything.
+//
+// Sound FILES are optional and sit beside the synth voices (get some with `node tools/sounds/add.mjs`,
+// how-to in recipes/sound-files.md):
+//
+//   audio.loadAll(sounds)                            everything in src/audio/sounds.json
+//   audio.load('hit', ['a.mp3', 'b.mp3'])            one name, one or several takes
+//   audio.play('hit', { vol: 0.8, rate: 1, vary: 0.6, pan: -0.3 })   a random take, never the same twice in a row
+//   const rain = audio.loop('rain', { vol: 0.4, fade: 1 }); rain.set(0.2); rain.stop();
+//   audio.music.playFile('assets/audio/music/theme.mp3', { fade: 2 }); audio.music.stopFile();
+//
+// A missing or broken file gives one warning in the console and silence, never an error.
 
 import { createRandom } from '../core/random.js';
 import { flags } from '../core/hooks.js';
@@ -70,6 +81,32 @@ export function createAudio({ muted = flags.mute } = {}) {
   const pos = (v) => Math.max(0.0001, Number.isFinite(v) ? v : 0.0001);
   const vary = (amount) => semis((rand.next() * 2 - 1) * amount);
 
+  // ---- Sound files: shared helpers ------------------------------------------------------
+  const warned = new Set();
+  function warnOnce(key, message) {
+    if (warned.has(key)) return;
+    warned.add(key);
+    console.warn(`[audio] ${message}`);
+  }
+  // Resolves when the audio engine exists (after the first click or key press).
+  const whenReady = () => new Promise((resolve) => (ctx ? resolve() : readyCallbacks.push(resolve)));
+  async function fetchBytes(url) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`the server answered ${res.status}`);
+    // a dev server answers a missing file with the game's page instead of an error
+    if ((res.headers.get('content-type') || '').includes('text/html')) throw new Error('file not found');
+    return res.arrayBuffer();
+  }
+  const decode = (bytes) =>
+    new Promise((resolve, reject) => {
+      try {
+        const p = ctx.decodeAudioData(bytes, resolve, reject);
+        if (p && p.catch) p.catch(reject);
+      } catch (e) {
+        reject(e);
+      }
+    });
+
   // One enveloped oscillator. Returns nothing; nodes clean themselves up.
   function tone({ freq, type = 'sine', vol = 0.3, attack = 0.005, length = 0.15, slide = 1, bus = sfxBus, at = 0 }) {
     const t = ctx.currentTime + at;
@@ -116,9 +153,27 @@ export function createAudio({ muted = flags.mute } = {}) {
     let timer = 0;
     let index = 0;
     let playing = false;
+    let track = null; // the music file that is playing, if any
+
+    function stopTrack(t, fade) {
+      if (!t || t.stopped) return;
+      t.stopped = true;
+      if (track === t) track = null;
+      if (!t.src) return; // still loading: it will see `stopped` and never start
+      const now = ctx.currentTime;
+      const f = Math.max(0.02, fade);
+      t.gain.gain.cancelScheduledValues(now);
+      t.gain.gain.setValueAtTime(t.gain.gain.value, now);
+      t.gain.gain.linearRampToValueAtTime(0, now + f);
+      try {
+        t.src.stop(now + f + 0.05);
+      } catch {
+        /* already stopped */
+      }
+    }
 
     function chord() {
-      if (!ok() || !playing) return;
+      if (!ok() || !playing || track) return; // a music file takes the pad's place
       const t = ctx.currentTime;
       const len = 9;
       for (const m of chords[index % chords.length]) {
@@ -159,8 +214,120 @@ export function createAudio({ muted = flags.mute } = {}) {
         playing = false;
         clearInterval(timer);
       },
+      // Play a music file through the music bus (so the music volume and duck() apply). It replaces the synth
+      // pad while it plays. loopPoints: [start, end] in seconds for a file made to loop without a click.
+      playFile(url, { fade = 1, vol = 1, loop = true, loopPoints = null } = {}) {
+        stopTrack(track, fade);
+        const t = { stopped: false, src: null, gain: null };
+        track = t;
+        (async () => {
+          try {
+            const bytes = await fetchBytes(url);
+            await whenReady();
+            if (t.stopped) return;
+            const buffer = await decode(bytes);
+            if (t.stopped) return;
+            const now = ctx.currentTime;
+            t.src = ctx.createBufferSource();
+            t.src.buffer = buffer;
+            t.src.loop = !!loop;
+            if (loop && loopPoints) {
+              t.src.loopStart = loopPoints[0];
+              t.src.loopEnd = Math.min(loopPoints[1], buffer.duration);
+            }
+            t.gain = ctx.createGain();
+            t.gain.gain.setValueAtTime(0, now);
+            t.gain.gain.linearRampToValueAtTime(Math.max(0, vol), now + Math.max(0.02, fade));
+            t.src.connect(t.gain).connect(musicBus);
+            t.src.onended = () => {
+              if (track === t) track = null;
+            };
+            t.src.start(now, loop && loopPoints ? loopPoints[0] : 0);
+          } catch (e) {
+            if (track === t) track = null;
+            warnOnce(url, `could not play the music file ${url} (${e?.message || e}). The game goes on without it.`);
+          }
+        })();
+        return { stop: (f = fade) => stopTrack(t, f) };
+      },
+      stopFile(fade = 1) {
+        stopTrack(track, fade);
+      },
+      get filePlaying() {
+        return !!track;
+      },
     };
   })();
+
+  // ---- Sound files: one-shots and loops -------------------------------------------------
+  const samples = new Map(); // name -> { urls, gain, loop, buffers, ready, last, lastTime, live }
+  const voices = []; // one-shots that are playing, oldest first
+  const MAX_VOICES = 24; // all file sounds together
+  const MAX_SAME = 4; // of one name at once
+  const SAME_GAP = 0.03; // seconds between two starts of the same name (30 hits in a frame = one sound)
+  const BURST = 6; // new sounds allowed inside one SAME_GAP window, whatever their names
+  const sampleStats = { loaded: 0, failed: 0, played: 0, skipped: 0 };
+  let sampleBus = null;
+  let burstStart = -1;
+  let burstCount = 0;
+
+  // File sounds share one limiter in front of the sfx bus, so a pile-up gets squeezed instead of clipping.
+  function sampleOut() {
+    if (!sampleBus) {
+      sampleBus = ctx.createGain();
+      const limiter = ctx.createDynamicsCompressor();
+      limiter.threshold.value = -10;
+      limiter.knee.value = 6;
+      limiter.ratio.value = 12;
+      limiter.attack.value = 0.002;
+      limiter.release.value = 0.12;
+      sampleBus.connect(limiter).connect(sfxBus);
+    }
+    return sampleBus;
+  }
+
+  function endVoice(voice) {
+    if (voice.done) return;
+    voice.done = true;
+    voice.sample.live--;
+    const i = voices.indexOf(voice);
+    if (i >= 0) voices.splice(i, 1);
+  }
+  function stopVoice(voice, fade = 0.03) {
+    if (voice.done) return;
+    const now = ctx.currentTime;
+    const f = Math.max(0.005, fade);
+    voice.gain.gain.cancelScheduledValues(now);
+    voice.gain.gain.setValueAtTime(voice.gain.gain.value, now);
+    voice.gain.gain.linearRampToValueAtTime(0, now + f);
+    try {
+      voice.src.stop(now + f + 0.01);
+    } catch {
+      /* already stopped */
+    }
+    endVoice(voice);
+  }
+
+  function loadSample(name, urls, { gain = 1, loop = null } = {}) {
+    const list = (Array.isArray(urls) ? urls : [urls]).filter((u) => typeof u === 'string' && u);
+    const sample = { urls: list, gain, loop, buffers: list.map(() => null), ready: null, last: -1, lastTime: -1, live: 0 };
+    samples.set(name, sample);
+    if (!list.length) warnOnce(`load:${name}`, `load("${name}"): no file was given.`);
+    sample.ready = Promise.all(
+      list.map(async (url, i) => {
+        try {
+          const bytes = await fetchBytes(url); // fetched right away; turned into sound once the engine exists
+          await whenReady();
+          sample.buffers[i] = await decode(bytes);
+          sampleStats.loaded++;
+        } catch (e) {
+          sampleStats.failed++;
+          warnOnce(url, `could not load "${name}" from ${url} (${e?.message || e}). The game goes on without it.`);
+        }
+      }),
+    ).then(() => sample.buffers.some(Boolean));
+    return sample.ready;
+  }
 
   const audio = {
     get ready() {
@@ -177,6 +344,138 @@ export function createAudio({ muted = flags.mute } = {}) {
     setVolume(bus, v) {
       volumes[bus] = Math.max(0, Math.min(1, v));
       applyVolumes();
+    },
+    // ---- sound files ----
+    // Load one sound: a url, or a list of urls (takes of the same sound; play() picks one at random).
+    // opts: { gain: its base volume, loop: [start, end] seconds for loop() }. Resolves true if any take loaded.
+    load(name, urls, opts) {
+      return loadSample(name, urls, opts);
+    },
+    // Load everything in a sounds.json written by tools/sounds/add.mjs ({ sounds: { name: { files, gain, loop } } }).
+    // `base` goes in front of every file path. Resolves when all are loaded or have failed.
+    loadAll(manifest, { base = '' } = {}) {
+      const list = manifest?.sounds || manifest || {};
+      const jobs = [];
+      for (const [name, s] of Object.entries(list)) {
+        const files = Array.isArray(s) || typeof s === 'string' ? s : s?.files;
+        if (!files) continue;
+        jobs.push(loadSample(name, [].concat(files).map((f) => base + f), { gain: s.gain ?? 1, loop: s.loop || null }));
+      }
+      return Promise.all(jobs);
+    },
+    // Play a loaded sound once. vol 0..1+, rate (speed and pitch, 1 = as recorded), vary (semitones of random
+    // pitch spread), pan (-1 left .. 1 right). Returns { stop(fadeSeconds) }, or null when nothing was played
+    // (audio not unlocked yet, file missing or still loading, or the same sound played a moment ago).
+    play(name, { vol = 1, rate = 1, vary: v = 0.6, pan = 0 } = {}) {
+      if (!ok()) return null;
+      const sample = samples.get(name);
+      if (!sample) {
+        warnOnce(`play:${name}`, `play("${name}"): no sound with that name was loaded. Check src/audio/sounds.json.`);
+        return null;
+      }
+      const ready = [];
+      sample.buffers.forEach((b, i) => b && ready.push(i));
+      if (!ready.length) return null; // still loading, or missing (already warned)
+      const now = ctx.currentTime;
+      if (now - burstStart >= SAME_GAP) {
+        burstStart = now;
+        burstCount = 0;
+      }
+      if (now - sample.lastTime < SAME_GAP || sample.live >= MAX_SAME || burstCount >= BURST) {
+        sampleStats.skipped++;
+        return null;
+      }
+      let pick = ready[Math.floor(rand.next() * ready.length)];
+      if (ready.length > 1 && pick === sample.last) pick = ready[(ready.indexOf(pick) + 1) % ready.length];
+      sample.last = pick;
+      sample.lastTime = now;
+      burstCount++;
+      while (voices.length >= MAX_VOICES) stopVoice(voices[0], 0.02);
+
+      const src = ctx.createBufferSource();
+      src.buffer = sample.buffers[pick];
+      src.playbackRate.value = pos(rate) * vary(v);
+      const gain = ctx.createGain();
+      gain.gain.value = Math.max(0, Number.isFinite(vol) ? vol : 1) * sample.gain;
+      src.connect(gain);
+      if (pan && ctx.createStereoPanner) {
+        const panner = ctx.createStereoPanner();
+        panner.pan.value = Math.max(-1, Math.min(1, pan));
+        gain.connect(panner).connect(sampleOut());
+      } else {
+        gain.connect(sampleOut());
+      }
+      const voice = { src, gain, sample, done: false };
+      voices.push(voice);
+      sample.live++;
+      src.onended = () => endVoice(voice);
+      src.start(now);
+      sampleStats.played++;
+      return { stop: (fade) => stopVoice(voice, fade) };
+    },
+    // A loaded sound that keeps going (rain, wind, an engine). Starts by itself once audio is unlocked and the
+    // file is loaded. bus: 'sfx' (default) or 'music'. Returns { set(volume), stop(fadeSeconds), playing }.
+    loop(name, { vol = 1, fade = 0.3, rate = 1, bus = 'sfx' } = {}) {
+      const sample = samples.get(name);
+      let src = null;
+      let gain = null;
+      let stopped = false;
+      let want = Math.max(0, Number.isFinite(vol) ? vol : 1);
+      if (!sample) {
+        warnOnce(`loop:${name}`, `loop("${name}"): no sound with that name was loaded. Check src/audio/sounds.json.`);
+        return { set() {}, stop() {}, playing: false };
+      }
+      const start = () => {
+        if (stopped || src) return;
+        const buffer = sample.buffers.find(Boolean);
+        if (!buffer) return; // missing (already warned)
+        const now = ctx.currentTime;
+        src = ctx.createBufferSource();
+        src.buffer = buffer;
+        src.loop = true;
+        if (sample.loop) {
+          src.loopStart = sample.loop[0];
+          src.loopEnd = Math.min(sample.loop[1], buffer.duration);
+        }
+        src.playbackRate.value = pos(rate);
+        gain = ctx.createGain();
+        gain.gain.setValueAtTime(0, now);
+        gain.gain.linearRampToValueAtTime(want * sample.gain, now + Math.max(0.02, fade));
+        src.connect(gain).connect(bus === 'music' ? musicBus : sfxBus);
+        src.start(now, sample.loop ? sample.loop[0] : 0);
+      };
+      sample.ready.then(whenReady).then(start);
+      return {
+        set(volume, seconds = 0.08) {
+          want = Math.max(0, Number.isFinite(volume) ? volume : 0);
+          if (!gain) return;
+          const now = ctx.currentTime;
+          gain.gain.cancelScheduledValues(now);
+          gain.gain.setTargetAtTime(want * sample.gain, now, Math.max(0.005, seconds));
+        },
+        stop(fadeOut = fade) {
+          if (stopped) return;
+          stopped = true;
+          if (!src) return;
+          const now = ctx.currentTime;
+          const f = Math.max(0.02, fadeOut);
+          gain.gain.cancelScheduledValues(now);
+          gain.gain.setValueAtTime(gain.gain.value, now);
+          gain.gain.linearRampToValueAtTime(0, now + f);
+          try {
+            src.stop(now + f + 0.05);
+          } catch {
+            /* already stopped */
+          }
+        },
+        get playing() {
+          return !!src && !stopped;
+        },
+      };
+    },
+    // For tests and debugging: how many files loaded or failed, how many plays happened or were held back.
+    get sampleStats() {
+      return { ...sampleStats, voices: voices.length };
     },
     blip({ freq = 660, vol = 0.18, length = 0.09, slide = 1.6, type = 'triangle', vary: v = 0.5 } = {}) {
       if (!ok()) return;

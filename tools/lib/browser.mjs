@@ -52,8 +52,14 @@ export async function launch(opts = {}) {
 
 // ---------------------------------------------------------------- one browser at a time
 
-/** The lock folder. /tmp on macOS/Linux (so plain `mkdir /tmp/mhg-browser.lock` scripts share it), the temp folder on Windows. */
-export const LOCK_DIR = path.join(process.platform !== 'win32' && fs.existsSync('/tmp') ? '/tmp' : os.tmpdir(), 'mhg-browser.lock');
+/**
+ * The lock folder. /tmp on macOS/Linux (so plain `mkdir /tmp/mhg-browser.lock` scripts share it), the temp folder on
+ * Windows. Set HELPER_BROWSER_LOCK to a folder path to share a lock with other tooling on the same machine (the lock
+ * holds `owner.json` and a plain `pid` file, and a lock whose `pid` is dead counts as stale).
+ */
+export const LOCK_DIR = process.env.HELPER_BROWSER_LOCK
+  ? path.resolve(process.env.HELPER_BROWSER_LOCK)
+  : path.join(process.platform !== 'win32' && fs.existsSync('/tmp') ? '/tmp' : os.tmpdir(), 'mhg-browser.lock');
 const OWNER_FILE = path.join(LOCK_DIR, 'owner.json');
 const MAX_AGE_MS = 45 * 60 * 1000; // a holder older than this is assumed dead, even if its pid was reused
 const NO_OWNER_MAX_AGE_MS = 10 * 60 * 1000; // a bare mkdir lock (from a shell script) with no owner file

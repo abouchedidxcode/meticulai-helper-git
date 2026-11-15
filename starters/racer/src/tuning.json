@@ -1,0 +1,122 @@
+{
+  "car": {
+    "topSpeed": {"value": 42, "min": 15, "max": 80, "step": 1, "label": "Top speed (m/s)", "help": "Flat-out speed in metres per second. x 3.6 = km/h (42 = about 150 km/h). The camera, sound and speed lines all scale with it."},
+    "accel": {"value": 16, "min": 4, "max": 40, "step": 0.5, "label": "Acceleration", "help": "Push from the engine at a standstill; it fades as you near top speed. Higher = quicker off the line and out of corners."},
+    "brake": {"value": 34, "min": 8, "max": 70, "step": 1, "label": "Brakes", "help": "How hard the brake slows the car, in m/s lost per second. Strong brakes are forgiving: you can brake late."},
+    "coast": {"value": 0.35, "min": 0, "max": 2, "step": 0.05, "label": "Coasting drag", "help": "How quickly the car slows with no pedals pressed. Low = it rolls on, high = it feels like engine braking."},
+    "reverseSpeed": {"value": 9, "min": 2, "max": 20, "step": 0.5, "label": "Reverse speed", "help": "Top speed backwards (hold brake when stopped)."},
+    "turnLow": {"value": 2.3, "min": 0.8, "max": 4, "step": 0.05, "label": "Turning at low speed", "help": "How fast the nose swings round when slow (radians per second at full lock). High = nimble in hairpins."},
+    "turnHigh": {"value": 0.95, "min": 0.3, "max": 3, "step": 0.05, "label": "Turning at top speed", "help": "The same at top speed. LOWER than the slow value on purpose: less lock at speed keeps the car steady on straights. Raise it if fast corners feel like a bus."},
+    "turnFullAt": {"value": 6, "min": 1, "max": 20, "step": 0.5, "label": "Full steering from (m/s)", "help": "Below this speed the steering fades out, so the car can't spin on the spot."},
+    "grip": {"value": 9, "min": 2, "max": 25, "step": 0.5, "label": "Grip", "help": "How fast sideways sliding dies away when NOT drifting. High = on rails. Low = loose, like ice."},
+    "tapSteer": {"value": 0.3, "min": 0, "max": 1, "step": 0.02, "label": "Keyboard: tap bite", "help": "A key tap gives this share of full steering at once (then it ramps up). It is what makes small corrections possible on a keyboard."},
+    "steerTime": {"value": 0.3, "min": 0.02, "max": 0.8, "step": 0.01, "label": "Keyboard: time to full lock (s)", "help": "How long a held key takes to reach full steering. Short = twitchy, long = lazy."},
+    "centreTime": {"value": 0.1, "min": 0.02, "max": 0.6, "step": 0.01, "label": "Keyboard: self-centre time (s)", "help": "How fast the wheel straightens when you let go."},
+    "stickCurve": {"value": 1.5, "min": 1, "max": 3, "step": 0.1, "label": "Gamepad stick curve", "help": "1 = straight line. Higher = small stick movements steer less, for precision near the centre."},
+    "hillPull": {"value": 0.35, "min": 0, "max": 1.5, "step": 0.05, "label": "Hills slow you", "help": "How much gravity slows the car uphill and speeds it downhill. 0 = hills are only scenery."}
+  },
+  "drift": {
+    "minSpeed": {"value": 13, "min": 4, "max": 30, "step": 0.5, "label": "Slowest drift (m/s)", "help": "Below this speed the handbrake won't start a drift, and a drift ends."},
+    "liftAt": {"value": 0.6, "min": 0.2, "max": 1, "step": 0.02, "label": "Lift-off drift from", "help": "Above this share of top speed, letting go of the accelerator while steering hard also starts a drift."},
+    "kick": {"value": 0.1, "min": 0, "max": 0.4, "step": 0.01, "label": "Entry flick", "help": "The nose snaps this far into the corner the moment a drift starts (radians), so the slide begins at once."},
+    "grip": {"value": 2.4, "min": 0.5, "max": 8, "step": 0.1, "label": "Grip while drifting", "help": "Lower = longer, wider slides. Compare with Grip in the car group."},
+    "turnBoost": {"value": 1.2, "min": 1, "max": 2.5, "step": 0.05, "label": "Drift turn boost", "help": "The nose turns this much faster while drifting: a drift takes a tighter line than gripping does."},
+    "maxTurn": {"value": 1.45, "min": 0.6, "max": 3, "step": 0.05, "label": "Fastest drift rotation", "help": "The nose never swings faster than this in a drift (radians per second, before the boost above). Stops a slow drift from turning into a U-turn."},
+    "hold": {"value": 0.4, "min": 0, "max": 0.9, "step": 0.05, "label": "Drift self-steer", "help": "With the handbrake held the car keeps turning in by this share even with the wheel centred. Steering only adjusts the line."},
+    "maxSlip": {"value": 32, "min": 10, "max": 60, "step": 1, "label": "Largest slide angle (deg)", "help": "The slide can never get bigger than this, so the car cannot spin. Bigger looks wilder and is harder to place."},
+    "exitSlip": {"value": 6, "min": 2, "max": 20, "step": 0.5, "label": "Drift ends below (deg)", "help": "When the slide angle falls under this (you straightened up), the drift ends and the boost fires."},
+    "chargeSlip": {"value": 9, "min": 2, "max": 30, "step": 0.5, "label": "Boost charges above (deg)", "help": "The slide must be at least this big to charge the boost."},
+    "chargeTime": {"value": 0.7, "min": 0.1, "max": 3, "step": 0.05, "label": "Drift time for a boost (s)", "help": "Hold a drift this long and you get the small boost when it ends."},
+    "chargeFull": {"value": 1.8, "min": 0.3, "max": 5, "step": 0.1, "label": "Drift time for the big boost (s)", "help": "Hold it this long for the full boost (the sparks turn white)."},
+    "boostTime": {"value": 1.3, "min": 0.2, "max": 4, "step": 0.1, "label": "Boost length (s)", "help": "How long the full boost lasts. The small boost lasts half as long."},
+    "boostTop": {"value": 0.12, "min": 0, "max": 0.6, "step": 0.01, "label": "Boost top speed +", "help": "Extra top speed while boosting (0.16 = 16% faster)."},
+    "boostKick": {"value": 3, "min": 0, "max": 15, "step": 0.5, "label": "Boost kick (m/s)", "help": "Speed added the instant the boost fires."},
+    "handbrakeDrag": {"value": 2.5, "min": 0, "max": 15, "step": 0.5, "label": "Handbrake drag", "help": "How much holding the handbrake slows the car."},
+    "scrub": {"value": 5, "min": 0, "max": 20, "step": 0.5, "label": "Drift speed loss", "help": "Sliding sideways costs this much speed (bigger slide = more). 0 = drifting is free."}
+  },
+  "forgive": {
+    "wallLoss": {"value": 0.02, "min": 0, "max": 0.15, "step": 0.005, "label": "Rail hit: speed lost per m/s", "help": "A harder hit costs more speed. Low = rails are friendly."},
+    "wallLossMax": {"value": 0.4, "min": 0, "max": 0.9, "step": 0.05, "label": "Rail hit: most speed lost", "help": "Even a head-on hit never takes more than this share of your speed. This is why a rail can't stop the car dead."},
+    "scrapeDrag": {"value": 0.5, "min": 0, "max": 3, "step": 0.05, "label": "Scraping drag", "help": "Speed lost per second while rubbing along a rail."},
+    "wallAlign": {"value": 6, "min": 0, "max": 20, "step": 0.5, "label": "Rail straightens the car", "help": "How fast a rail turns the nose back along the road. 0 = you have to steer out yourself."},
+    "offroadMargin": {"value": 1.2, "min": 0, "max": 4, "step": 0.1, "label": "Free metres off the road", "help": "You can run this far over the edge line (onto the kerb) before the grass slows you."},
+    "offroadTop": {"value": 0.72, "min": 0.3, "max": 1, "step": 0.02, "label": "Top speed on grass", "help": "Share of top speed you can hold off the road."},
+    "offroadDrag": {"value": 1.1, "min": 0.2, "max": 5, "step": 0.1, "label": "Grass slows you this fast", "help": "How quickly the grass brings you down to its top speed. Low = gentle."},
+    "stuckTime": {"value": 2.5, "min": 0.5, "max": 10, "step": 0.5, "label": "Auto-reset when stuck (s)", "help": "Pressing a pedal but not moving for this long puts the car back on the road."},
+    "wrongWayTime": {"value": 4, "min": 1, "max": 15, "step": 0.5, "label": "Auto-reset when wrong way (s)", "help": "Driving the wrong way for this long turns the car round."},
+    "resetSpeed": {"value": 10, "min": 0, "max": 30, "step": 1, "label": "Speed after a reset (m/s)", "help": "A reset puts you back already rolling, so it costs little time."},
+    "bumpLoss": {"value": 0.8, "min": 0, "max": 1, "step": 0.05, "label": "Car bump softness", "help": "How much of the closing speed a bump with another car takes away. 1 = a dead thud, 0 = you pass through."}
+  },
+  "camera": {
+    "distance": {"value": 5.6, "min": 3, "max": 15, "step": 0.1, "label": "Distance", "help": "Metres behind the car when standing still."},
+    "height": {"value": 2.3, "min": 0.8, "max": 8, "step": 0.1, "label": "Height", "help": "Metres above the car when standing still."},
+    "speedDistance": {"value": 1.0, "min": 0, "max": 6, "step": 0.1, "label": "Drops back at speed", "help": "Extra metres behind the car at top speed (the follow lag adds more by itself)."},
+    "speedDrop": {"value": 0.6, "min": 0, "max": 3, "step": 0.05, "label": "Lowers at speed", "help": "Metres the camera sinks at top speed. Lower to the road = the road rushes more."},
+    "fov": {"value": 60, "min": 40, "max": 80, "step": 1, "label": "Field of view", "help": "How wide the view is when standing still."},
+    "speedFov": {"value": 14, "min": 0, "max": 35, "step": 1, "label": "Wider at speed", "help": "Degrees added at top speed. The strongest single speed effect: the edges of the screen stretch away."},
+    "boostFov": {"value": 7, "min": 0, "max": 20, "step": 1, "label": "Wider when boosting", "help": "Extra degrees during a boost."},
+    "boostDistance": {"value": 1, "min": 0, "max": 4, "step": 0.1, "label": "Drops back when boosting", "help": "Extra metres behind the car during a boost: the car leaps away from you."},
+    "follow": {"value": 14, "min": 2, "max": 30, "step": 0.5, "label": "Follow tightness", "help": "Lower = more lag: the car pulls ahead when it accelerates."},
+    "turnFollow": {"value": 5, "min": 1, "max": 20, "step": 0.5, "label": "Swing-round speed", "help": "How fast the camera gets back behind the car in a turn. Lower shows more of the car's side."},
+    "driftSwing": {"value": 0.6, "min": 0, "max": 1, "step": 0.05, "label": "Swing out in drifts", "help": "0 = always behind the nose. 1 = behind the direction of travel, so a drift shows the car fully side-on."},
+    "lookAhead": {"value": 7, "min": 0, "max": 25, "step": 0.5, "label": "Look ahead (m)", "help": "The camera looks at a point this far in front of the car."},
+    "lookTurn": {"value": 3, "min": 0, "max": 10, "step": 0.25, "label": "Look into the turn (m)", "help": "The look point slides this far toward the inside of the corner when you steer."},
+    "minHeight": {"value": 1.1, "min": 0.3, "max": 4, "step": 0.1, "label": "Keep above ground (m)", "help": "The camera never gets closer than this to the land under it."},
+    "seeThrough": {"value": 2.5, "min": 0, "max": 8, "step": 0.25, "label": "See through rivals in the way (m)", "help": "A rival in the line between the camera and your car turns see-through, fading back in over this many metres to the side, so it never hides you. 0 = always solid."}
+  },
+  "speed": {
+    "linesFrom": {"value": 0.45, "min": 0, "max": 1, "step": 0.05, "label": "Speed lines from", "help": "Streaks start to appear above this share of top speed."},
+    "linesStrength": {"value": 0.55, "min": 0, "max": 1, "step": 0.05, "label": "Speed lines strength", "help": "How visible the streaks are at top speed. 0 = off (a calmer look)."},
+    "linesLength": {"value": 0.14, "min": 0, "max": 0.6, "step": 0.02, "label": "Speed lines length", "help": "Metres of streak per m/s of speed."},
+    "skidFrom": {"value": 0.3, "min": 0.05, "max": 1, "step": 0.05, "label": "Skid marks from", "help": "How hard the tyres must slide (0 to 1) before they leave marks and smoke."},
+    "smoke": {"value": 0.8, "min": 0, "max": 1, "step": 0.05, "label": "Tyre smoke", "help": "How much smoke a slide makes."},
+    "engineVolume": {"value": 0.3, "min": 0, "max": 1, "step": 0.02, "label": "Engine volume", "help": "The engine hum. Its pitch climbs with speed and drops at each gear change."},
+    "windVolume": {"value": 0.3, "min": 0, "max": 1, "step": 0.02, "label": "Wind volume", "help": "Wind noise; it grows with the square of speed."},
+    "tyreVolume": {"value": 0.3, "min": 0, "max": 1, "step": 0.02, "label": "Tyre hiss volume", "help": "The hiss of sliding tyres."}
+  },
+  "weight": {
+    "roll": {"value": 0.006, "min": 0, "max": 0.02, "step": 0.0005, "label": "Body roll", "help": "How far the body leans out of a corner. 0 = stiff as a board."},
+    "pitch": {"value": 0.004, "min": 0, "max": 0.015, "step": 0.0005, "label": "Dive and squat", "help": "How far the nose dips under braking and lifts under power."},
+    "spring": {"value": 90, "min": 20, "max": 300, "step": 5, "label": "Spring stiffness", "help": "Higher = the body snaps to its lean faster."},
+    "damping": {"value": 11, "min": 2, "max": 40, "step": 0.5, "label": "Spring damping", "help": "Lower = the body wobbles after a turn. Higher = it settles at once."},
+    "wheelTurn": {"value": 0.5, "min": 0, "max": 0.9, "step": 0.02, "label": "Front wheels turn (rad)", "help": "How far the front wheels visibly turn at full lock."}
+  },
+  "race": {
+    "track": {"value": 0, "min": 0, "max": 1, "step": 1, "label": "Track (reload to apply)", "help": "Which track from tracks.js: 0 = Lakeside Circuit, 1 = Pine Loop. Save, then reload the page. Or add ?track=1 to the address."},
+    "rivals": {"value": 3, "min": 0, "max": 3, "step": 1, "label": "Rivals", "help": "How many computer cars race. 0 turns the game into a time trial (applies on the next restart)."},
+    "ghost": {"value": false, "label": "Show best-lap ghost", "help": "A see-through car replays your best lap of this session. Made for time trials."},
+    "winPosition": {"value": 1, "min": 1, "max": 4, "step": 1, "label": "Win if you finish in the top", "help": "1 = you must win the race. 3 = a podium is enough."},
+    "countBeat": {"value": 0.7, "min": 0.3, "max": 1.5, "step": 0.05, "label": "Countdown beat (s)", "help": "Seconds between 3, 2, 1 and GO."},
+    "rocketWindow": {"value": 0.35, "min": 0, "max": 1, "step": 0.05, "label": "Rocket start window (s)", "help": "Press the accelerator within this long before GO for a boost off the line. Earlier just revs the engine (no penalty)."},
+    "finishGrace": {"value": 25, "min": 5, "max": 90, "step": 5, "label": "Time to finish after the winner (s)", "help": "Once a rival wins, you have this long to reach the line before the race is called."}
+  },
+  "rivals": {
+    "pace": {"value": 1.0, "min": 0.6, "max": 1.3, "step": 0.01, "label": "Pace", "help": "The main difficulty dial. Share of their ideal speed the rivals drive at (1 = a good lap; 0.9 = an easy race)."},
+    "topSpeed": {"value": 41.5, "min": 15, "max": 80, "step": 1, "label": "Top speed (m/s)", "help": "Their speed on the straights. Keep it a little under the player's."},
+    "cornerGrip": {"value": 28, "min": 8, "max": 60, "step": 1, "label": "Corner speed", "help": "How fast they take corners (sideways pull in m/s2). The player's car can pull about 35 without drifting."},
+    "accel": {"value": 15, "min": 4, "max": 40, "step": 0.5, "label": "Acceleration", "help": "Like the player's acceleration."},
+    "brake": {"value": 24, "min": 6, "max": 60, "step": 1, "label": "Braking", "help": "Lower = they brake earlier and softer for corners."},
+    "bandDistance": {"value": 55, "min": 20, "max": 300, "step": 5, "label": "Rubber band reach (m)", "help": "The catch-up help is at full strength when a rival is this far from the player."},
+    "catchUp": {"value": 0.1, "min": 0, "max": 0.4, "step": 0.01, "label": "Rubber band: behind you", "help": "A rival far behind drives this much faster (0.1 = 10%). Keeps someone in your mirrors."},
+    "easeOff": {"value": 0.18, "min": 0, "max": 0.4, "step": 0.01, "label": "Rubber band: ahead of you", "help": "A rival far ahead drives this much slower. Keeps first place reachable. 0 on both = an honest race."},
+    "mistakeEvery": {"value": 14, "min": 4, "max": 60, "step": 1, "label": "A mistake about every (s)", "help": "Each rival lifts and runs wide about this often."},
+    "mistakeTime": {"value": 1.2, "min": 0.2, "max": 4, "step": 0.1, "label": "Mistake length (s)", "help": "How long a mistake lasts."},
+    "mistakeSlow": {"value": 0.8, "min": 0.4, "max": 1, "step": 0.02, "label": "Mistake pace", "help": "Share of their pace during a mistake."},
+    "laneSpeed": {"value": 4, "min": 1, "max": 10, "step": 0.5, "label": "Lane change speed (m/s)", "help": "How quickly they move across the road to pass or follow their line."},
+    "slideShow": {"value": 0.3, "min": 0, "max": 1, "step": 0.05, "label": "Tail-out in corners", "help": "How much their tail steps out in tight corners. Only for show."}
+  },
+  "bot": {
+    "pace": {"value": 0.88, "min": 0.5, "max": 1.3, "step": 0.01, "label": "Bot pace", "help": "How hard the ?bot=1 test driver pushes (it drives your car with your handling)."},
+    "cornerGrip": {"value": 25, "min": 8, "max": 60, "step": 1, "label": "Bot corner speed", "help": "The corner speed the bot plans for. Too high and it meets the rails."},
+    "lookAhead": {"value": 0.42, "min": 0.1, "max": 1, "step": 0.02, "label": "Bot look-ahead (s)", "help": "It steers at a point this many seconds down the road."},
+    "steerGain": {"value": 2.4, "min": 0.5, "max": 6, "step": 0.1, "label": "Bot steering strength", "help": "How hard it turns toward its aim point."},
+    "wander": {"value": 0.3, "min": 0, "max": 1, "step": 0.05, "label": "Bot sloppiness", "help": "How much it wanders off the ideal line. 0 = a tidy lap."},
+    "driftTurn": {"value": 0.021, "min": 0.005, "max": 0.06, "step": 0.001, "label": "Bot drifts in corners tighter than", "help": "1 / corner radius in metres. 0.021 = it drifts corners tighter than about 48 m."},
+    "driftHold": {"value": 1.3, "min": 0.3, "max": 3, "step": 0.1, "label": "Bot drift length (s)", "help": "The longest it holds the handbrake."}
+  },
+  "audio": {
+    "master": {"value": 0.8, "min": 0, "max": 1, "step": 0.01, "label": "Master"},
+    "music": {"value": 0.5, "min": 0, "max": 1, "step": 0.01, "label": "Music"},
+    "sfx": {"value": 0.8, "min": 0, "max": 1, "step": 0.01, "label": "Sound effects"}
+  }
+}

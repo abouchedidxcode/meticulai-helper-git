@@ -44,11 +44,17 @@ Background: [playbook/feel.md](../../playbook/feel.md).
 ## Steps
 
 1. List every action and event. Next to each: its sound, its visual, its timing. The gaps are your work list.
+   Sounds: the kit has about 90 free ones made for games (`node tools/sounds/list.mjs --for "<the action>"`, add with
+   `node tools/sounds/add.mjs <id>`, play with `audio.play(name)`: `recipes/sound-files.md`), and makes new ones in
+   code (`node tools/sounds/synth.mjs`). The base's synth (`audio.blip/chime/thud/whoosh`) covers the rest.
+   Nobody has heard them: the user should listen (`node tools/sounds/audition.mjs` makes a page with play buttons).
 2. Measure: `node tools/play/fps.mjs` (frame-time percentiles; aim for the 95th percentile under 20 ms on this
    machine) and `node tools/play/loud.mjs` (no event far louder than the rest; you can't listen, so trust numbers).
 3. Builders, with [plan-swarm](../plan-swarm/SKILL.md): usually `feel` (input, camera, hit-stop, shake), `audio`
    (every event's sound), `fx` (particles, squash). 2-3 builders.
-4. Put every feel number in `src/tuning.json` so the user can adjust it in the dev panel and save it for you.
+4. Put every feel number in `src/tuning.json` so the user can adjust it in the dev menu (backquote key) and save it
+   for you. Give the menu an essentials list in plain words (`ctx.dev.essentials`) and two or three presets with a
+   sentence each (`ctx.dev.presets`): the island demo in `starter/src/game/game.js` shows both.
 5. Record a short scripted run that does each action once (see play scripts in ARCHITECTURE.md), for example:
    ```
    press Enter

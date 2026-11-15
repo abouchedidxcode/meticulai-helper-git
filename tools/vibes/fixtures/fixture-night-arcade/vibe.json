@@ -1,0 +1,82 @@
+{
+  "id": "fixture-night-arcade",
+  "name": "Night arcade (fixture)",
+  "one_line": "Chunky pixels in a deep blue night with hot pink lights.",
+  "mood": [
+    "retro",
+    "electric",
+    "night"
+  ],
+  "look_words": "A dark blue-violet world with two loud colours kept for what matters: hot pink and cyan. Blocky shapes, big readable silhouettes. Cool moonlight from above, glows on pickups. Snappy motion. Avoid browns, soft gradients and realism.",
+  "palette": {
+    "name": "night arcade",
+    "colors": {
+      "base": [
+        "#2e3a6e",
+        "#1f2850",
+        "#4a3f7a",
+        "#3a5a8a"
+      ],
+      "accent": [
+        "#ff4fa3",
+        "#33e0e0"
+      ],
+      "danger": "#ff5a36",
+      "player": "#f4f1ff",
+      "shadow": "#12122a",
+      "light": "#9fd8ff"
+    },
+    "light": {
+      "sun": "#9fb8ff",
+      "sunStrength": 2.4,
+      "ambient": "#5a6ab8",
+      "ambientStrength": 1.9,
+      "fog": "#1a1a3a",
+      "fogAmount": 0.55,
+      "exposure": 1.15,
+      "sunElevation": 55,
+      "sunAzimuth": 200
+    }
+  },
+  "look": {
+    "id": "pixel",
+    "options": {
+      "rows": 160,
+      "dither": 0.8
+    }
+  },
+  "upgrade": [
+    {
+      "block": "meticulai-pixel-3d",
+      "why": "true pixel art, needs its own camera and materials"
+    }
+  ],
+  "blocks": [],
+  "asset_search": [
+    "voxel",
+    "arcade"
+  ],
+  "asset_families": [],
+  "music": {
+    "mood": "driving, bright synths",
+    "tempo": "fast",
+    "notes": ""
+  },
+  "sound_feel": "bleeps, short and bright",
+  "good_for": [
+    "platformer",
+    "racer",
+    "arcade score games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "fixture",
+      "model": null,
+      "prompt": "(test fixture: a copy of the island starter preview, not a real mood picture)",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [],
+  "status": "ready"
+}

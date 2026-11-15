@@ -1,0 +1,76 @@
+{
+  "id": "film",
+  "order": 8,
+  "name": "Film",
+  "one_line": "Shot on film: fine grain, darker corners, a gentle curve, tinted shadows and highlights.",
+  "kind": "post",
+  "block": null,
+  "options": {
+    "grain": {
+      "default": 0.05,
+      "min": 0,
+      "max": 0.2,
+      "help": "Grain",
+      "label": "Grain",
+      "step": 0.005
+    },
+    "vignette": {
+      "default": 0.35,
+      "min": 0,
+      "max": 1,
+      "help": "Dark corners",
+      "label": "Dark corners"
+    },
+    "fade": {
+      "default": 0.35,
+      "min": 0,
+      "max": 1,
+      "help": "Lifts the darkest tones and tints them with the palette shadow colour.",
+      "label": "Faded blacks"
+    },
+    "warmth": {
+      "default": 0.4,
+      "min": 0,
+      "max": 1,
+      "help": "Leans the bright tones toward the palette light colour.",
+      "label": "Tinted highlights"
+    },
+    "contrast": {
+      "default": 0.35,
+      "min": 0,
+      "max": 1,
+      "help": "Strength of the film curve.",
+      "label": "Contrast"
+    },
+    "glow": {
+      "default": 0.3,
+      "min": 0,
+      "max": 1,
+      "help": "A soft halo round the brightest things.",
+      "label": "Glow"
+    },
+    "fringe": {
+      "default": 0.5,
+      "min": 0,
+      "max": 2,
+      "help": "Colour splitting toward the frame edges, like a real lens.",
+      "label": "Edge fringing"
+    }
+  },
+  "cost": "light",
+  "preview": "looks/film/preview.jpg",
+  "orthographic": {
+    "works": true,
+    "note": "Checked on the platformer starter."
+  },
+  "measured": {
+    "starter": "island",
+    "size": "1280x720",
+    "frame_ms": 6.6,
+    "plain_frame_ms": 2.8,
+    "added_ms": 3.8,
+    "fps": 59.9,
+    "date": "2026-11-14",
+    "how": "hidden Chromium on the kit's test laptop, whole frame read back from the graphics chip; machine load changes it"
+  }
+}

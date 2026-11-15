@@ -1,0 +1,78 @@
+{
+  "run": {
+    "speed": { "value": 7.5, "min": 3, "max": 14, "step": 0.1, "label": "Run speed", "help": "Top speed, in tiles per second. The whole level is measured against this: change it and re-check your gaps." },
+    "accel": { "value": 70, "min": 10, "max": 200, "step": 1, "label": "Ground: speed up", "help": "How fast you reach top speed on the ground. 70 = full speed in about a tenth of a second. Low = heavy, slow to get going." },
+    "decel": { "value": 85, "min": 10, "max": 200, "step": 1, "label": "Ground: stop", "help": "How fast you stop when you let go. Low = slides like ice." },
+    "turn": { "value": 150, "min": 10, "max": 300, "step": 1, "label": "Ground: turn round", "help": "How fast you reverse direction. Higher than 'stop' makes turning feel snappy instead of mushy." },
+    "airAccel": { "value": 55, "min": 0, "max": 200, "step": 1, "label": "Air: speed up", "help": "Steering strength in the air. 0 = you can't steer a jump at all." },
+    "airDecel": { "value": 30, "min": 0, "max": 200, "step": 1, "label": "Air: stop", "help": "How fast you lose sideways speed in the air when you let go. Low keeps the momentum of a running jump." },
+    "airTurn": { "value": 90, "min": 0, "max": 300, "step": 1, "label": "Air: turn round", "help": "How fast you can reverse in the air. High = you can save a bad jump." }
+  },
+  "jump": {
+    "height": { "value": 3.3, "min": 1, "max": 7, "step": 0.1, "label": "Jump height (tiles)", "help": "How high a full, held jump goes. Levels are built for about 3: a 3-tile step is the tallest climb." },
+    "gravity": { "value": 62, "min": 20, "max": 140, "step": 1, "label": "Gravity (rising)", "help": "Pull while going up. Higher = a quicker, snappier jump of the same height. Lower = floaty." },
+    "fallGravity": { "value": 1.45, "min": 1, "max": 3, "step": 0.05, "label": "Fall gravity x", "help": "Extra pull on the way down. Above 1 makes the fall faster than the rise, which feels weighty." },
+    "maxFall": { "value": 21, "min": 8, "max": 50, "step": 0.5, "label": "Top fall speed", "help": "You never fall faster than this (tiles per second), so long drops stay steerable." },
+    "cut": { "value": 0.45, "min": 0.1, "max": 1, "step": 0.05, "label": "Short-hop cut", "help": "Let go of jump early and you keep this share of your upward speed: tap = hop, hold = full jump. 1 = every jump is full height." },
+    "coyote": { "value": 0.1, "min": 0, "max": 0.3, "step": 0.01, "label": "Coyote time (s)", "help": "You can still jump this long after running off a ledge. Without it, jumps at the very edge feel 'eaten'." },
+    "buffer": { "value": 0.12, "min": 0, "max": 0.3, "step": 0.01, "label": "Jump buffer (s)", "help": "A jump pressed this long before landing still happens on landing." },
+    "apexSpeed": { "value": 3.5, "min": 0, "max": 10, "step": 0.1, "label": "Apex hang: zone", "help": "Near the top of a jump (slower than this, up or down) gravity gets lighter while jump is held. 0 = no hang." },
+    "apexGravity": { "value": 0.5, "min": 0.1, "max": 1, "step": 0.05, "label": "Apex hang: gravity x", "help": "How light gravity gets at the top. 0.5 = half. It buys a beat to aim the landing. 1 = off." }
+  },
+  "assist": {
+    "cornerNudge": { "value": 0.3, "min": 0, "max": 0.5, "step": 0.05, "label": "Ceiling corner nudge", "help": "If your head clips the corner of a block by less than this (in tiles), you slide round it instead of stopping dead. 0 = off." },
+    "ledgeLift": { "value": 0.3, "min": 0, "max": 0.5, "step": 0.05, "label": "Ledge lift", "help": "If your feet land less than this (in tiles) below the top of a ledge, you are lifted onto it. 0 = off." }
+  },
+  "wall": {
+    "enabled": { "value": true, "label": "Wall slide + wall jump", "help": "Push against a wall while falling to slide slowly; press jump to kick off it. Turn off for a simpler, classic game." },
+    "slideSpeed": { "value": 3.2, "min": 0.5, "max": 12, "step": 0.1, "label": "Slide speed", "help": "How fast you slip down a wall you are pushing against (tiles per second)." },
+    "jumpUp": { "value": 0.92, "min": 0.4, "max": 1.2, "step": 0.01, "label": "Wall jump: up", "help": "Share of a normal jump's upward speed." },
+    "jumpAway": { "value": 8.5, "min": 2, "max": 16, "step": 0.1, "label": "Wall jump: away", "help": "Sideways kick off the wall, tiles per second." },
+    "lock": { "value": 0.14, "min": 0, "max": 0.4, "step": 0.01, "label": "Wall jump: steering lock (s)", "help": "For this long after a wall jump, steering is ignored so the kick carries you away. Short enough and you can climb a single wall." },
+    "grace": { "value": 0.1, "min": 0, "max": 0.3, "step": 0.01, "label": "Wall jump: grace (s)", "help": "You can still wall jump this long after leaving the wall (coyote time for walls)." }
+  },
+  "mover": {
+    "speed": { "value": 2.6, "min": 0.5, "max": 8, "step": 0.1, "label": "Platform speed", "help": "Average speed of moving platforms, tiles per second." },
+    "wait": { "value": 0.9, "min": 0, "max": 3, "step": 0.1, "label": "Platform wait (s)", "help": "How long a platform rests at each end of its track: the moment to step on or off." }
+  },
+  "enemy": {
+    "speed": { "value": 1.8, "min": 0.5, "max": 6, "step": 0.1, "label": "Crawler speed", "help": "Tiles per second. Slow enough to read and jump on." },
+    "turnPause": { "value": 0.35, "min": 0, "max": 1.5, "step": 0.05, "label": "Pause before turning (s)", "help": "A crawler stops for a beat at a wall or ledge before walking back: its tell." },
+    "stompGrace": { "value": 0.18, "min": 0, "max": 0.5, "step": 0.01, "label": "Stomp: extra width", "help": "The stomp counts this far (in tiles) either side of the enemy. Generous on purpose." },
+    "stompBounce": { "value": 13, "min": 4, "max": 26, "step": 0.5, "label": "Stomp bounce", "help": "Upward speed after squashing an enemy." },
+    "stompBounceHeld": { "value": 21, "min": 4, "max": 30, "step": 0.5, "label": "Stomp bounce (jump held)", "help": "Hold jump while you stomp to bounce higher." },
+    "hurtShrink": { "value": 0.12, "min": 0, "max": 0.3, "step": 0.01, "label": "Hurt box shrink", "help": "The part of an enemy that hurts is this much smaller (tiles, each side) than it looks. Near misses are forgiven." }
+  },
+  "camera": {
+    "viewHeight": { "value": 13.5, "min": 8, "max": 24, "step": 0.5, "label": "View height (tiles)", "help": "How many tiles fit top to bottom. Smaller = closer, bigger character." },
+    "lookAhead": { "value": 3, "min": 0, "max": 8, "step": 0.1, "label": "Look ahead (tiles)", "help": "The camera shifts this far in the direction you face, so you see what is coming." },
+    "lookAheadSpeed": { "value": 2.2, "min": 0.5, "max": 10, "step": 0.1, "label": "Look-ahead speed", "help": "How quickly the camera swings round when you turn. Low = calm; a quick change of direction doesn't whip the view." },
+    "followX": { "value": 9, "min": 1, "max": 30, "step": 0.5, "label": "Follow speed (sideways)", "help": "Higher = the camera sticks closer to the player." },
+    "deadZoneUp": { "value": 3.6, "min": 0, "max": 6, "step": 0.1, "label": "Dead zone: up (tiles)", "help": "The camera ignores jumps lower than this, so hopping doesn't bob the whole screen. Keep it just above the jump height." },
+    "deadZoneDown": { "value": 1.2, "min": 0, "max": 6, "step": 0.1, "label": "Dead zone: down (tiles)", "help": "Fall further than this and the camera follows at once, so you see where you land." },
+    "followY": { "value": 5, "min": 1, "max": 20, "step": 0.5, "label": "Catch-up speed (up/down)", "help": "How quickly the camera moves to your new height after you land somewhere higher or lower." },
+    "height": { "value": 2.4, "min": -2, "max": 6, "step": 0.1, "label": "Framing height (tiles)", "help": "How far above the player's feet the middle of the screen sits. Higher shows more sky, lower shows more ground." }
+  },
+  "feel": {
+    "squash": { "value": 1, "min": 0, "max": 2, "step": 0.05, "label": "Squash and stretch", "help": "How rubbery the character is when it jumps and lands. 0 = stiff." },
+    "dust": { "value": true, "label": "Dust puffs", "help": "Little puffs on take-off, landing, turning and wall slides." },
+    "stompStopMs": { "value": 60, "min": 0, "max": 200, "step": 5, "label": "Stomp freeze (ms)", "help": "The world freezes this long when you squash an enemy. It makes the hit feel solid." },
+    "hurtStopMs": { "value": 110, "min": 0, "max": 300, "step": 5, "label": "Hurt freeze (ms)", "help": "The world freezes this long when you are hurt, so you see what got you." },
+    "hurtShake": { "value": 0.22, "min": 0, "max": 1, "step": 0.01, "label": "Hurt shake", "help": "Camera shake when hurt, in tiles." },
+    "footsteps": { "value": true, "label": "Footstep ticks", "help": "A very quiet tick with every stride." }
+  },
+  "rules": {
+    "hearts": { "value": 3, "min": 1, "max": 9, "step": 1, "label": "Hearts", "help": "Hits you can take in one run." },
+    "checkpointHeals": { "value": true, "label": "Checkpoints give a heart back", "help": "Touching a new checkpoint restores one lost heart." },
+    "respawnTime": { "value": 0.45, "min": 0.1, "max": 1.5, "step": 0.05, "label": "Back in play after (s)", "help": "How long between being hurt and standing at the checkpoint again. Keep it short: waiting is the real punishment." },
+    "invulnTime": { "value": 1.2, "min": 0, "max": 3, "step": 0.1, "label": "Safe time after return (s)", "help": "You blink and can't be hurt for this long after coming back." },
+    "coinReach": { "value": 0.42, "min": 0.1, "max": 1.2, "step": 0.01, "label": "Coin reach (tiles)", "help": "A coin is taken when it is this close to your body. Generous feels better than exact." },
+    "spikeShrink": { "value": 0.18, "min": 0, "max": 0.4, "step": 0.01, "label": "Spike forgiveness", "help": "Only the inner part of a spike tile hurts; this much (tiles) at each side is safe." },
+    "invincible": { "value": false, "label": "Invincible", "help": "Nothing costs a heart (falls still send you back to the checkpoint)." }
+  },
+  "audio": {
+    "master": { "value": 0.8, "min": 0, "max": 1, "step": 0.01, "label": "Master" },
+    "music": { "value": 0.5, "min": 0, "max": 1, "step": 0.01, "label": "Music" },
+    "sfx": { "value": 0.8, "min": 0, "max": 1, "step": 0.01, "label": "Sound effects" }
+  }
+}

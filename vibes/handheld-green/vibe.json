@@ -1,0 +1,123 @@
+{
+  "id": "handheld-green",
+  "name": "Four-shade handheld green",
+  "order": 38,
+  "one_line": "Four olive greens, big square pixels, a tiny screen.",
+  "mood": [
+    "retro",
+    "simple",
+    "charming"
+  ],
+  "look_words": "The look of an early handheld screen: four shades of olive green and nothing else. The palest green is the ground and sky, two middle greens build walls, bushes and water, and the darkest green draws outlines and solid shapes. Everything is tile-sized and made of big square pixels; a character is only a dozen pixels tall, so each one counts. There is no lighting, just flat tiles. With so few shades, roles are told apart by shape: pickups are pale and blink, hazards are the darkest and spiky, the player is a dark sprite with a pale face. Motion is two-frame and steps one tile or a few pixels at a time. Avoid extra colours, gradients, smooth movement and small text.",
+  "palette": {
+    "name": "four greens",
+    "colors": {
+      "base": [
+        "#b4c662",
+        "#93a84e",
+        "#567238",
+        "#7d9644"
+      ],
+      "accent": [
+        "#eef7c0",
+        "#f7fbe0"
+      ],
+      "danger": "#182412",
+      "player": "#33502b",
+      "shadow": "#121c0d",
+      "light": "#f2f9cf",
+      "ink": "#eef7c0"
+    },
+    "sky": {
+      "top": "#c9d98a",
+      "horizon": "#dfeaa8",
+      "below": "#93a84e",
+      "sun": "#f7fbe0"
+    },
+    "light": {
+      "sun": "#f4fad0",
+      "sunStrength": 2.6,
+      "ambient": "#dbe8a0",
+      "ground": "#7d9644",
+      "ambientStrength": 2.2,
+      "fog": "#cfdc92",
+      "fogAmount": 0.2,
+      "exposure": 1,
+      "sunElevation": 60,
+      "sunAzimuth": 315
+    },
+    "notes": "Four shades cannot give every role its own colour, so this palette spreads the roles along light to dark and leans on shape. The player is close to the wall green: give it an outline."
+  },
+  "look": {
+    "id": "pixel",
+    "options": {
+      "rows": 144,
+      "dither": 0.4
+    }
+  },
+  "look_wish": "chunky pixels with a four-shade palette",
+  "upgrade": [
+    {
+      "block": "meticulai-pixel-3d",
+      "why": "draws a 3D scene as exact-palette pixel art, which is what a four-shade screen needs"
+    }
+  ],
+  "blocks": [
+    "meticulai-pixel-3d",
+    "pixelfx",
+    "meticulai-procedural-songs"
+  ],
+  "asset_search": [
+    "pixel tileset",
+    "pixel character",
+    "monochrome sprites",
+    "1-bit tiles",
+    "pixel font"
+  ],
+  "asset_families": [
+    "kenney",
+    "pixel-frog",
+    "grafxkid",
+    "opengameart",
+    "itch-io-cc0"
+  ],
+  "music": {
+    "mood": "two-voice chiptune with a noise drum",
+    "tempo": "medium",
+    "notes": "Catchy and short."
+  },
+  "sound_feel": "pure beeps and a noise click; tiny and bright",
+  "good_for": [
+    "top-down",
+    "grid-puzzle",
+    "platformer",
+    "runner",
+    "small role-playing games",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Pixel art in exactly four shades of olive green, like an early handheld console screen filling the whole picture, top-down view of a small garden maze: a tiny round robot hero with an antenna on a stone path between hedges, a pond with a bridge, a windmill, flower beds, a key lying on the path and a locked gate. Very low resolution, big square pixels, tile-based, darkest green for outlines, lightest pale green for the ground. No other colours. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Pixel art in exactly four shades of olive green, like an early handheld console screen filling the whole picture, side view of a platform level: a tiny round robot hero with an antenna jumping between brick platforms over a pit, a ladder, a few coins, a cloud, a small round enemy, hills in the background. Very low resolution, big square pixels, tile-based, darkest green for outlines, lightest pale green for the sky. No other colours. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "pixel",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

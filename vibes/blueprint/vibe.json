@@ -1,0 +1,118 @@
+{
+  "id": "blueprint",
+  "name": "Blueprint",
+  "order": 37,
+  "one_line": "Thin white lines on deep blue, with one filled figure.",
+  "mood": [
+    "precise",
+    "clever",
+    "cool"
+  ],
+  "look_words": "The game as a technical drawing. Deep blue paper with a faint grid; the world drawn in thin white and pale cyan lines, with dashed lines for hidden or planned parts and small tick marks at corners. Nothing is filled in except the things that matter: the player is solid orange, pickups are pale yellow, the goal is mint, and harm is a pink-red hatch. There is no lighting at all. Shapes are exact: straight edges, clean arcs, gears, pipes and ladders seen from the side or at a fixed angle. Motion is mechanical and smooth, and new parts draw themselves in line by line. Avoid shading, texture, soft edges, glow, bloom and freehand wobble.",
+  "palette": {
+    "name": "blueprint",
+    "colors": {
+      "base": [
+        "#1f4f9a",
+        "#173f80",
+        "#2f66b8",
+        "#3f7acc"
+      ],
+      "accent": [
+        "#fff2a8",
+        "#7ff0e0"
+      ],
+      "danger": "#ff5470",
+      "player": "#ff9a2e",
+      "shadow": "#0d2552",
+      "light": "#eaf4ff",
+      "ink": "#eef6ff"
+    },
+    "sky": {
+      "top": "#173f80",
+      "horizon": "#1f4f9a",
+      "below": "#123468",
+      "sun": "#eaf4ff"
+    },
+    "light": {
+      "sun": "#ffffff",
+      "sunStrength": 1.8,
+      "ambient": "#dfeaff",
+      "ground": "#173f80",
+      "ambientStrength": 2.4,
+      "fog": "#1f4f9a",
+      "fogAmount": 0.5,
+      "exposure": 1,
+      "sunElevation": 60,
+      "sunAzimuth": 0
+    },
+    "notes": "The bases are four paper blues: the look depends on white lines drawn over them. Without an outline look the world will read as flat blue shapes."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "thin white outlines on flat blue, no fills",
+  "upgrade": [
+    {
+      "block": "meticulai-ink-illustration",
+      "why": "gives outlines from the scene's edges; use a thin white line and turn the wobble and hatching down"
+    }
+  ],
+  "blocks": [
+    "meticulai-ink-illustration",
+    "meticulai-sonar-sketch"
+  ],
+  "asset_search": [
+    "gear",
+    "crane",
+    "pipe",
+    "rocket",
+    "factory"
+  ],
+  "asset_families": [
+    "kenney",
+    "quaternius",
+    "google-fonts",
+    "tabler-icons"
+  ],
+  "music": {
+    "mood": "ticking percussion and a clean synth line",
+    "tempo": "medium",
+    "notes": "Tidy, like clockwork."
+  },
+  "sound_feel": "pencil ticks, soft clicks, ratchets, a ruler snap",
+  "good_for": [
+    "grid-puzzle",
+    "platformer",
+    "top-down",
+    "marble",
+    "machines and contraptions",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Blueprint line drawing of a small game world: an isometric workshop island with a crane, a water tower, gears and a little rocket on a launch stand, drawn in thin white and pale cyan lines on deep blue paper with a faint grid, one small figure in solid warm orange walking a gangway as the only filled colour. Technical drafting style, dashed construction lines, no letters or numbers, clean and precise. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Blueprint line drawing of a game level, side view cutaway: a submarine dock with pipes, ladders, a round hatch and a small submarine, drawn in thin white and pale cyan lines on deep blue paper with a faint grid, one small figure in solid warm orange climbing a ladder as the only filled colour. Technical drafting style, dashed construction lines, no letters or numbers, clean and precise. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

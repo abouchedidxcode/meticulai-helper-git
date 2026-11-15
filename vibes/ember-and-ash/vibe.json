@@ -1,0 +1,125 @@
+{
+  "id": "ember-and-ash",
+  "name": "Ember and ash",
+  "order": 44,
+  "one_line": "Black rock, falling ash and one river of orange.",
+  "mood": [
+    "harsh",
+    "dramatic",
+    "hot"
+  ],
+  "look_words": "A volcanic land after the fire. Charcoal and soot-brown rock, grey ash on every ledge, dead black trees, a heavy red-brown sky. Lava is the only bright thing in the world and it means harm, so its orange is never used for anything else. Things to collect and the goal are cool: pale cyan and pale gold, the opposite of the fire. The player is pale grey, like ash-covered cloth, and reads against the black rock. Light is dim and comes from below, with warm bounce from the lava on the undersides of things. Shapes are jagged and cracked. Motion is slow and heavy: ash falling like snow, embers rising, lava creeping. Avoid red fog over everything, glow on rocks, purple, and bloom that washes out the lava.",
+  "palette": {
+    "name": "ember and ash",
+    "colors": {
+      "base": [
+        "#3a3436",
+        "#2a2527",
+        "#5a4f4c",
+        "#6e6460"
+      ],
+      "accent": [
+        "#8fe6ff",
+        "#ffe9a8"
+      ],
+      "danger": "#ff5a1f",
+      "player": "#d9d6e0",
+      "shadow": "#120e10",
+      "light": "#ffd08a",
+      "ink": "#f2e9df"
+    },
+    "sky": {
+      "top": "#2a1616",
+      "horizon": "#7a3a2a",
+      "below": "#0e0b0c",
+      "sun": "#ff8a4a"
+    },
+    "light": {
+      "sun": "#ff9a5a",
+      "sunStrength": 2,
+      "ambient": "#7a5a5a",
+      "ground": "#4a1f14",
+      "ambientStrength": 1.2,
+      "fog": "#3a2420",
+      "fogAmount": 0.65,
+      "exposure": 1.15,
+      "sunElevation": 15,
+      "sunAzimuth": 260
+    },
+    "notes": "Danger is the lava orange. The ground bounce is a dark red so undersides glow faintly, as if lit from below."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "soft painterly shading with tight glows, or none",
+  "upgrade": [
+    {
+      "block": "fire",
+      "why": "real flames you can walk around"
+    },
+    {
+      "block": "geometry-painter",
+      "why": "paints molten cracks along any surface (reference only: read it, then build your own)"
+    }
+  ],
+  "blocks": [
+    "fire",
+    "meticulai-haze",
+    "procedural-terrains",
+    "geometry-painter"
+  ],
+  "asset_search": [
+    "volcano",
+    "lava rock",
+    "dead tree",
+    "ruined pillar",
+    "basalt"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "polyhaven",
+    "kenney",
+    "ambientcg"
+  ],
+  "music": {
+    "mood": "low drums, deep brass and a rumble",
+    "tempo": "medium",
+    "notes": "Heavy and slow, not frantic."
+  },
+  "sound_feel": "rumbles, hiss of steam, crackle, rock cracking",
+  "good_for": [
+    "platformer",
+    "runner",
+    "island",
+    "rider",
+    "top-down",
+    "escape games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Volcanic land of ember and ash, third-person camera behind a small traveller in a pale grey cloak with a tall staff crossing black basalt rock beside a slow river of orange lava, toward a jagged dark volcano with a faint red glow at its top. Grey ash drifting like snow, charcoal and soot-brown ground, dead black trees, heavy dull red-brown sky, the lava is the only bright thing. Stylised painterly 3D. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Volcanic land of ember and ash, high three-quarter camera: a small traveller in a pale grey cloak crosses a natural stone bridge over a glowing orange lava channel between black basalt columns, ruined stone pillars, drifting grey ash, embers rising, heavy dull red-brown sky. Charcoal and soot-brown ground, lava the only bright thing, glow kept tight with no haze. Stylised painterly 3D. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

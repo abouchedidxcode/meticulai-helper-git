@@ -43,6 +43,8 @@ export function createTestMode({ enabled }) {
       addButton('', label, run);
     },
     names: () => [...moments.keys()],
+    // Every moment with its button text: [{ name, label }] (the dev menu's "Skip to" buttons).
+    list: () => [...moments].map(([name, m]) => ({ name, label: m.label })),
     skipTo(name) {
       const m = moments.get(name);
       if (!m) {

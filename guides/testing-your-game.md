@@ -58,10 +58,30 @@ Sometimes the agent gives a second link ending in `?test=1`. That's test mode: s
 level or moment, and a small card showing the controls. Use it to check one thing quickly without replaying the
 start. Play normally (the first link) for your overall impression.
 
-## Settings panel
+## The dev menu: change the game while it runs
 
-Some games have a settings panel where you can move sliders (speed, jump height, and so on). If you find values you
-like, press **Save for my agent** and tell the agent. It will keep them.
+Press the **`** key (top left of the keyboard, under Esc; **F2** works too) while the game is open. A panel slides in
+on the right. Press the same key again to close it. Only you see it: people who play your finished game never do.
+
+- **Essentials** is a short list of the things that matter most, in plain words: how fast you run, how high you
+  jump, how far back the camera sits. Drag a slider while you play and feel the difference at once. A changed row
+  turns gold; double-click it to put it back.
+- **Everything** shows every number the game has. Type in the search box to find one.
+- **Presets** are whole feels to try ("Floaty", "Heavy"...). Hover one to read what it does.
+- **A B C**: click "keep", then A, to keep what you have; change things; click A again to flip back and compare.
+- **Save for my agent** writes what you chose into the game. Tell the agent you saved; it will keep the values.
+
+Tools at the top, for a closer look:
+- **Freeze** stops time (**Step** moves it on a tiny bit). **Speed** plays it slower or faster.
+- **Camera** lets you fly round the scene: W A S D to move, Q and E for down and up, drag to look, the mouse wheel to
+  zoom. Press C or Esc to go back. The game doesn't notice.
+- **No HUD** hides the score and buttons for a clean picture. **Screenshot** saves one for the agent.
+- **Computer plays** lets the computer play while you watch and change things.
+- **Skip to** buttons jump straight to a moment (the last level, the boss...).
+
+Lower down: **Look** has the game's colours, the light and the sun, and the **Vibe** chooser, which tries whole
+ready-made looks. Brightness changes at once; for the rest press **Save palette for my agent** and the game reloads
+with the new colours. **Sound** has the volumes and a Mute switch.
 
 ## Getting someone else to play
 

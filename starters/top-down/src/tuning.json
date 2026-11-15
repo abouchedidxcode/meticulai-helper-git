@@ -1,0 +1,83 @@
+{
+  "player": {
+    "speed": { "value": 7.5, "min": 3, "max": 14, "step": 0.1, "label": "Move speed", "help": "Top speed in metres per second. The same in all 8 directions: diagonals are not faster." },
+    "accel": { "value": 80, "min": 10, "max": 200, "step": 5, "label": "Start-up grip", "help": "How fast you reach full speed. 80 = full speed in about 6 frames. Low feels like ice." },
+    "brake": { "value": 110, "min": 10, "max": 300, "step": 5, "label": "Stopping grip", "help": "How fast you stop when you let go. Higher than start-up, so you stop exactly where you mean to." },
+    "hurtRadius": { "value": 0.3, "min": 0.1, "max": 0.6, "step": 0.01, "label": "Hurt radius", "help": "How close something must get to hurt you, in metres. The robot LOOKS 0.5 wide: keeping this smaller forgives near misses." }
+  },
+  "shooting": {
+    "fireRate": { "value": 7, "min": 1, "max": 20, "step": 0.5, "label": "Shots per second", "help": "While the fire button is held." },
+    "speed": { "value": 24, "min": 8, "max": 45, "step": 1, "label": "Shot speed", "help": "Metres per second. Fast enough that you rarely need to lead a target." },
+    "range": { "value": 17, "min": 5, "max": 40, "step": 1, "label": "Shot range", "help": "How far a shot flies before it fades, in metres." },
+    "damage": { "value": 1, "min": 0.5, "max": 5, "step": 0.5, "label": "Damage per shot", "help": "A creeper has 2 health, a spitter 3, a ram 6 (see KINDS in enemies.js)." },
+    "hitRadius": { "value": 0.4, "min": 0, "max": 1, "step": 0.02, "label": "Hit radius (forgiving)", "help": "A shot hits anything this close to its path. The drop you SEE is much smaller: that gap is what makes shooting feel generous." },
+    "size": { "value": 0.18, "min": 0.05, "max": 0.4, "step": 0.01, "label": "Shot size (looks only)", "help": "How big the drop is drawn. Does not change what it hits." },
+    "assist": { "value": 0.6, "min": 0, "max": 1, "step": 0.05, "label": "Aim magnetism", "help": "How much a shot bends toward the enemy nearest your aim line. 0 = none, 1 = snaps onto it." },
+    "assistAngle": { "value": 14, "min": 0, "max": 45, "step": 1, "label": "Magnetism cone (degrees)", "help": "Only enemies within this angle of where you aim attract shots." },
+    "minConverge": { "value": 2.5, "min": 0.5, "max": 8, "step": 0.1, "label": "Nearest crossing point (m)", "help": "Shots leave the hose (off to one side) and cross your aim line at the aim point. Closer aim points than this are pushed out, so shots never fly sideways." },
+    "spread": { "value": 1.2, "min": 0, "max": 10, "step": 0.1, "label": "Spread (degrees)", "help": "A little randomness per shot, so a stream looks alive. Keep it small." },
+    "flashTime": { "value": 0.05, "min": 0, "max": 0.2, "step": 0.01, "label": "Muzzle flash (s)", "help": "How long the flash at the hose shows for each shot." },
+    "pitchVary": { "value": 2, "min": 0, "max": 6, "step": 0.5, "label": "Shot sound variety", "help": "Random pitch change per shot, in semitones. Without it, fast fire sounds like a machine." },
+    "stickReach": { "value": 6, "min": 2, "max": 12, "step": 0.5, "label": "Gamepad aim reach (m)", "help": "With a stick there is no cursor, so shots cross your aim line this far out." }
+  },
+  "dash": {
+    "distance": { "value": 4.2, "min": 1, "max": 10, "step": 0.1, "label": "Dash distance (m)", "help": "Short on purpose: a dodge, not a way to travel." },
+    "time": { "value": 0.16, "min": 0.05, "max": 0.5, "step": 0.01, "label": "Dash time (s)", "help": "How long the dash takes. Shorter = snappier." },
+    "invuln": { "value": 0.26, "min": 0, "max": 0.8, "step": 0.01, "label": "Safe time (s)", "help": "Nothing can hurt you for this long from the start of a dash. A little longer than the dash itself, to forgive late presses." },
+    "cooldown": { "value": 0.9, "min": 0, "max": 4, "step": 0.05, "label": "Cooldown (s)", "help": "Wait between dashes. The disc at your feet shows it filling." },
+    "buffer": { "value": 0.15, "min": 0, "max": 0.4, "step": 0.01, "label": "Press-early window (s)", "help": "A dash pressed this long before it is ready still happens." },
+    "trail": { "value": 0.28, "min": 0.05, "max": 1, "step": 0.01, "label": "Afterimage fade (s)", "help": "How long the ghost copies left by a dash take to fade." }
+  },
+  "enemies": {
+    "speed": { "value": 1, "min": 0.3, "max": 2, "step": 0.05, "label": "Enemy speed x", "help": "Multiplies every enemy's walking speed (each kind's own speed is in KINDS in enemies.js)." },
+    "telegraph": { "value": 1, "min": 0.3, "max": 3, "step": 0.05, "label": "Warning time x", "help": "Multiplies how long every enemy warns before it strikes. Raise it to make the game kinder." },
+    "shotSpeed": { "value": 1, "min": 0.3, "max": 3, "step": 0.05, "label": "Seed speed x", "help": "Multiplies the speed of enemy seeds. They are slow so you can walk around them." },
+    "spawnWarn": { "value": 0.9, "min": 0.2, "max": 3, "step": 0.05, "label": "Spawn warning (s)", "help": "A ring closes on the ground for this long before an enemy appears." },
+    "safeSpawn": { "value": 5, "min": 2, "max": 12, "step": 0.5, "label": "No spawns within (m)", "help": "Nothing ever appears closer to you than this." },
+    "maxAttackers": { "value": 3, "min": 1, "max": 10, "step": 1, "label": "Attackers at once", "help": "How many enemies may be winding up or striking at the same moment. The rest wait their turn." },
+    "separation": { "value": 1, "min": 0, "max": 1, "step": 0.05, "label": "Push apart", "help": "How firmly overlapping enemies push each other apart. 0 = they stack into one blob." },
+    "spacing": { "value": 1.05, "min": 0.8, "max": 2, "step": 0.05, "label": "Personal space x", "help": "How much room each enemy keeps, as a multiple of its size." }
+  },
+  "waves": {
+    "breakTime": { "value": 2.6, "min": 0.5, "max": 10, "step": 0.1, "label": "Breather between waves (s)", "help": "A moment to collect gems and breathe. The waves themselves are the table in waves.js." }
+  },
+  "feel": {
+    "knockback": { "value": 7, "min": 0, "max": 20, "step": 0.5, "label": "Knock-back on hit", "help": "How hard a shot shoves an enemy (heavy kinds resist: see knock in KINDS)." },
+    "killStopMs": { "value": 30, "min": 0, "max": 120, "step": 5, "label": "Freeze on a kill (ms)", "help": "A tiny freeze when an enemy pops. 30 ms is two frames: felt, not seen." },
+    "bossStopMs": { "value": 180, "min": 0, "max": 400, "step": 10, "label": "Freeze on the boss kill (ms)", "help": "A longer freeze for the big moment." },
+    "hurtStopMs": { "value": 90, "min": 0, "max": 300, "step": 5, "label": "Freeze when hurt (ms)", "help": "So you always notice losing a heart." },
+    "hurtShake": { "value": 0.3, "min": 0, "max": 1, "step": 0.05, "label": "Shake when hurt", "help": "Camera shake in metres. Shake is saved for big events: being hurt, and the boss." },
+    "bigShake": { "value": 0.5, "min": 0, "max": 1.5, "step": 0.05, "label": "Shake on the boss kill", "help": "The biggest shake in the game." },
+    "hurtInvuln": { "value": 1.3, "min": 0.3, "max": 3, "step": 0.1, "label": "Safe time after a hit (s)", "help": "You blink and nothing can hurt you again for this long." },
+    "hurtKnock": { "value": 9, "min": 0, "max": 20, "step": 0.5, "label": "Push when hurt", "help": "How hard you are shoved away from what hit you." },
+    "lastHeartSlow": { "value": 0.35, "min": 0.1, "max": 1, "step": 0.05, "label": "Last-heart slow motion", "help": "When you drop to one heart the world runs at this speed for a moment. 1 = off." },
+    "lastHeartMs": { "value": 700, "min": 0, "max": 2000, "step": 50, "label": "Last-heart slow motion (ms)", "help": "How long that moment lasts." },
+    "invincible": { "value": false, "label": "Invincible", "help": "Nothing costs hearts. For testing and for looking around." }
+  },
+  "camera": {
+    "height": { "value": 33, "min": 6, "max": 60, "step": 0.5, "label": "Height", "help": "How high the camera is above the player, in metres." },
+    "back": { "value": 18.5, "min": 0, "max": 30, "step": 0.5, "label": "Back", "help": "How far behind (toward the bottom of the screen). 0 = straight down; same as Height = 45 degrees." },
+    "fov": { "value": 30, "min": 20, "max": 75, "step": 1, "label": "Field of view", "help": "Narrow (30-45) looks flatter and tidier from above." },
+    "follow": { "value": 7, "min": 1, "max": 20, "step": 0.5, "label": "Follow speed", "help": "Higher = the camera sticks closer to the player. Lower = softer." },
+    "lookAhead": { "value": 0.22, "min": 0, "max": 0.6, "step": 0.01, "label": "Look-ahead", "help": "The camera leans this share of the way toward where you aim." },
+    "lookAheadMax": { "value": 2.5, "min": 0, "max": 8, "step": 0.1, "label": "Look-ahead limit (m)", "help": "The lean never exceeds this." },
+    "leash": { "value": 4, "min": 1, "max": 10, "step": 0.5, "label": "Leash (m)", "help": "The camera's centre is never further than this from the player, so they can't leave the screen." },
+    "crowdZoom": { "value": 0.14, "min": 0, "max": 0.5, "step": 0.01, "label": "Crowd zoom-out", "help": "How much further back the camera goes when many enemies are near. 0.14 = 14%." },
+    "crowdSize": { "value": 8, "min": 1, "max": 30, "step": 1, "label": "Crowd size", "help": "This many enemies nearby gives the full zoom-out." },
+    "crowdRange": { "value": 11, "min": 3, "max": 30, "step": 1, "label": "Crowd range (m)", "help": "Enemies within this distance count as near." }
+  },
+  "pickups": {
+    "magnetRadius": { "value": 3.6, "min": 0, "max": 12, "step": 0.1, "label": "Magnet radius (m)", "help": "Gems and hearts this close fly to you." },
+    "magnetSpeed": { "value": 7, "min": 1, "max": 25, "step": 0.5, "label": "Magnet speed", "help": "How fast they start flying in (they speed up on the way)." },
+    "collectRadius": { "value": 0.8, "min": 0.3, "max": 2, "step": 0.05, "label": "Collect radius (m)", "help": "Touching distance." },
+    "life": { "value": 12, "min": 3, "max": 60, "step": 1, "label": "Gem lifetime (s)", "help": "Gems blink for the last 3 seconds, then vanish. Hearts last twice as long." },
+    "gemScore": { "value": 5, "min": 1, "max": 100, "step": 1, "label": "Points per gem", "help": "Added to the score for each gem." },
+    "heartChance": { "value": 0.08, "min": 0, "max": 1, "step": 0.01, "label": "Heart drop chance", "help": "Chance a beaten enemy drops a heart, only while you are hurt. A cleared wave always gives one if you are hurt." },
+    "streakTime": { "value": 1.5, "min": 0.2, "max": 5, "step": 0.1, "label": "Chime streak window (s)", "help": "Pickups this close together ring higher and higher." }
+  },
+  "audio": {
+    "master": { "value": 0.8, "min": 0, "max": 1, "step": 0.01, "label": "Master" },
+    "music": { "value": 0.5, "min": 0, "max": 1, "step": 0.01, "label": "Music" },
+    "sfx": { "value": 0.8, "min": 0, "max": 1, "step": 0.01, "label": "Sound effects" }
+  }
+}

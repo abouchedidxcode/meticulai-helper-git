@@ -1,0 +1,70 @@
+{
+  "id": "print-lite",
+  "order": 1,
+  "name": "Print (lite)",
+  "one_line": "The picture printed on paper: flat colour, halftone dots for the shade, inked outlines.",
+  "kind": "post",
+  "block": null,
+  "options": {
+    "dotSize": {
+      "default": 6.5,
+      "min": 3,
+      "max": 14,
+      "help": "Size of the halftone dots, in pixels at 720p.",
+      "label": "Dot size",
+      "step": 0.1
+    },
+    "ink": {
+      "default": 0.85,
+      "min": 0,
+      "max": 1,
+      "help": "How dark the dots and lines print.",
+      "label": "Ink"
+    },
+    "flatten": {
+      "default": 0.8,
+      "min": 0,
+      "max": 1,
+      "help": "How much shading is taken out of the colours and given to the dots.",
+      "label": "Flat colour"
+    },
+    "lines": {
+      "default": 0.7,
+      "min": 0,
+      "max": 1,
+      "help": "Inked outlines round things. 0 = none.",
+      "label": "Outlines"
+    },
+    "misprint": {
+      "default": 1,
+      "min": 0,
+      "max": 4,
+      "help": "How far the ink plate sits off the colour plate.",
+      "label": "Misprint",
+      "step": 0.05
+    },
+    "grain": {
+      "default": 1,
+      "min": 0,
+      "max": 2,
+      "help": "Paper texture and uneven ink.",
+      "label": "Paper grain"
+    }
+  },
+  "cost": "light",
+  "preview": "looks/print-lite/preview.jpg",
+  "orthographic": {
+    "works": true,
+    "note": "Checked on the platformer starter: outlines, dots and paper all work."
+  },
+  "measured": {
+    "starter": "island",
+    "size": "1280x720",
+    "frame_ms": 5.5,
+    "plain_frame_ms": 2.8,
+    "added_ms": 2.7,
+    "fps": 60.1,
+    "date": "2026-11-14",
+    "how": "hidden Chromium on the kit's test laptop, whole frame read back from the graphics chip; machine load changes it"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "fixture-plain-meadow",
+  "name": "Plain meadow (fixture)",
+  "one_line": "A bright spring morning. Colours and light only.",
+  "mood": [
+    "fresh",
+    "calm",
+    "clear"
+  ],
+  "look_words": "Fresh greens and a clear pale-blue sky, with poppy red for the things that matter. Simple friendly shapes. High morning sun, short crisp shadows, hardly any fog. Avoid dusk colours and heavy effects.",
+  "palette": {
+    "name": "spring morning",
+    "colors": {
+      "base": [
+        "#8fc46a",
+        "#6aa350",
+        "#c9c2a8",
+        "#b0a487"
+      ],
+      "accent": [
+        "#ff6b5a",
+        "#ffb347"
+      ],
+      "shadow": "#3d5a6e",
+      "light": "#fff7d6"
+    },
+    "light": {
+      "sun": "#fff3cf",
+      "ambient": "#bcdcff",
+      "fog": "#bfe0f0",
+      "fogAmount": 0.25,
+      "exposure": 1.05,
+      "sunElevation": 52,
+      "sunAzimuth": 120
+    }
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "upgrade": [],
+  "blocks": [
+    "touch-grass"
+  ],
+  "asset_search": [
+    "nature",
+    "meadow"
+  ],
+  "asset_families": [],
+  "music": {
+    "mood": "light, airy, flute",
+    "tempo": "medium",
+    "notes": ""
+  },
+  "sound_feel": "soft, bright, outdoors",
+  "good_for": [
+    "any gentle outdoor game"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "fixture",
+      "model": null,
+      "prompt": "(test fixture: a copy of the island starter preview, not a real mood picture)",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [],
+  "status": "ready"
+}

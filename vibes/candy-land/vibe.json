@@ -1,0 +1,127 @@
+{
+  "id": "candy-land",
+  "name": "Candy and sweets",
+  "order": 34,
+  "one_line": "Biscuit paths, icing hills and glossy sugar.",
+  "mood": [
+    "sweet",
+    "bright",
+    "silly"
+  ],
+  "look_words": "A world you could eat. Pink icing and mint cream for the ground, biscuit and wafer for paths and bridges, cake houses, gumdrop bushes, candy-cane posts. Colours are soft pastels with small glossy highlights, like sugar glaze; shapes are plump, rounded and a bit melted. Light is bright and soft with pale shadows. Gold foil and grape purple mark what to collect and the goal. Strong red is kept for harm only, so scenery sweets stay pink, mint and cream. The player is gingerbread brown, which reads well on all the pastels. Motion is bouncy and gooey: jelly wobbles, drips, sprinkles scattering. Avoid dark scenes, realism, sharp shapes, heavy bloom on the gloss, and too many strong colours at once.",
+  "palette": {
+    "name": "sweet shop",
+    "colors": {
+      "base": [
+        "#ffd6e0",
+        "#f7b6c8",
+        "#f4e3c0",
+        "#bfeede"
+      ],
+      "accent": [
+        "#f59e00",
+        "#7a4fd6"
+      ],
+      "danger": "#e0123a",
+      "player": "#a8642f",
+      "shadow": "#6a3f6f",
+      "light": "#fffaf2",
+      "ink": "#fff6ee"
+    },
+    "sky": {
+      "top": "#9fd8f5",
+      "horizon": "#ffeef2",
+      "below": "#f7b6c8",
+      "sun": "#fff8d6"
+    },
+    "light": {
+      "sun": "#fff4dc",
+      "sunStrength": 3.2,
+      "ambient": "#ffe6f0",
+      "ground": "#f0c9c0",
+      "ambientStrength": 2,
+      "fog": "#ffeaf0",
+      "fogAmount": 0.3,
+      "exposure": 1,
+      "sunElevation": 55,
+      "sunAzimuth": 45
+    },
+    "notes": "A pink world: keep red rare and strong so it still means harm. Text sits on the plum card."
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {
+      "blur": 0.8
+    }
+  },
+  "look_wish": "soft glossy shading with a little tilt-shift blur, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-tilt-shift-macro",
+      "why": "makes it read as a tray of real sweets photographed up close"
+    },
+    {
+      "block": "meticulai-sdf-meshes",
+      "why": "smooth melted blobs and icing shapes modelled in code"
+    }
+  ],
+  "blocks": [
+    "meticulai-tilt-shift-macro",
+    "meticulai-sdf-meshes",
+    "meticulai-anim-springs",
+    "meticulai-marble-physics"
+  ],
+  "asset_search": [
+    "candy",
+    "cake",
+    "donut",
+    "gingerbread",
+    "food kit"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "kaykit",
+    "poly-pizza",
+    "quaternius"
+  ],
+  "music": {
+    "mood": "bubbly synth pop with bells",
+    "tempo": "fast",
+    "notes": "Sugary but short loops get tiring: vary it."
+  },
+  "sound_feel": "pops, crunches, squishes, sparkles",
+  "good_for": [
+    "platformer",
+    "runner",
+    "marble",
+    "grid-puzzle",
+    "racer",
+    "games for young children"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Candy and sweets world, third-person camera behind a small gingerbread character with white icing buttons walking a path of biscuit tiles past candy-cane lamp posts, gumdrop bushes, a wafer bridge over a pink strawberry-milk river and a cake house with whipped cream on the roof. Glossy sugar highlights, soft pastel pink, mint and cream with a few bright cherry reds, bright soft daylight, pale blue sky, cheerful. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Candy and sweets world seen from a high three-quarter camera: a small gingerbread character with white icing buttons hops across floating macaron platforms over a chocolate river toward a lollipop tree with a golden wrapped sweet on top, marshmallow hills, sprinkles on the ground, a doughnut arch. Glossy sugar highlights, pastel pink, mint and cream with a few cherry reds, bright soft daylight, cheerful. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "toy-tilt-shift",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

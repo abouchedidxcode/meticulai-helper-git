@@ -1,0 +1,124 @@
+{
+  "id": "desert-noon",
+  "name": "Desert noon",
+  "order": 22,
+  "one_line": "Bleached sand, banded mesas and short hard shadows.",
+  "mood": [
+    "bright",
+    "graphic",
+    "still"
+  ],
+  "look_words": "A desert at midday, drawn like a poster. Pale sand and cream, mesas in flat bands of sand and soft orange, an almost white sky. The sun is straight overhead, so shadows are short, hard and dark plum, and they are the main drawing tool. Shapes are flat, clean and strongly outlined by light; there is a lot of empty space. Turquoise and cobalt are the only cool colours and are kept for water, pickups and the goal; red is harm. The player wears deep indigo and is always the darkest small shape. Motion is sparse: heat shimmer, a little blown sand, a slow bird. Avoid texture noise, soft gradients, greenery, haze that greys the shadows, and bloom.",
+  "palette": {
+    "name": "desert noon",
+    "colors": {
+      "base": [
+        "#ecd9b0",
+        "#d6b98a",
+        "#d99a6c",
+        "#f5ecd6"
+      ],
+      "accent": [
+        "#18b5a8",
+        "#2f5fd0"
+      ],
+      "danger": "#c4281f",
+      "player": "#2b2f6b",
+      "shadow": "#5a3d4a",
+      "light": "#fffaf0",
+      "ink": "#fff8ea"
+    },
+    "sky": {
+      "top": "#bcdcf0",
+      "horizon": "#f7f1e3",
+      "below": "#e6cfa3",
+      "sun": "#ffffff"
+    },
+    "light": {
+      "sun": "#fff8e8",
+      "sunStrength": 4,
+      "ambient": "#e8eefa",
+      "ground": "#e6c99a",
+      "ambientStrength": 1.8,
+      "fog": "#f3ead6",
+      "fogAmount": 0.2,
+      "exposure": 0.95,
+      "sunElevation": 78,
+      "sunAzimuth": 10
+    },
+    "notes": "Very strong, high sun and low exposure: the look depends on hard shadows staying dark. Text sits on the dark card."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "flat shading with hard shadows, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-sand-trails",
+      "why": "sand that keeps tracks, grooves and craters where things move"
+    },
+    {
+      "block": "procedural-terrains",
+      "why": "canyons and dunes from a seed (a bigger job)"
+    }
+  ],
+  "blocks": [
+    "meticulai-sand-trails",
+    "procedural-terrains",
+    "meticulai-haze"
+  ],
+  "asset_search": [
+    "desert rocks",
+    "cactus",
+    "camel",
+    "palm tree",
+    "canyon"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kenney",
+    "kaykit",
+    "polyhaven"
+  ],
+  "music": {
+    "mood": "sparse, slide guitar and a hand drum",
+    "tempo": "slow",
+    "notes": "Lots of space between notes."
+  },
+  "sound_feel": "dry; wind, sand hiss, footsteps on grit, a far hawk",
+  "good_for": [
+    "racer",
+    "rider",
+    "island",
+    "first-person",
+    "top-down",
+    "exploring"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Desert at noon, bleached and graphic, high three-quarter camera: a tiny traveller in an indigo robe leads a camel along a pale sand ridge past flat-topped mesas in bands of cream, sand and pale orange. Hard short dark shadows, almost white sky, a few dry bushes, one bright turquoise water flask on the saddle. Flat clean shapes, no texture noise, strong simple silhouettes, lots of empty space. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Desert canyon at noon, bleached and graphic, third-person camera behind a tiny traveller in an indigo robe walking toward a white-walled well under a single palm, between tall sandstone walls in bands of cream and pale orange. Hard short dark shadows, almost white sky, a striped awning in turquoise. Flat clean shapes, no texture noise, strong simple silhouettes, lots of empty space. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

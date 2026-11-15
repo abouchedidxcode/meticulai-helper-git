@@ -1,0 +1,25 @@
+{
+  "id": "island",
+  "order": 1,
+  "name": "Island (run, jump, collect)",
+  "base": true,
+  "pitch": "A little round creature runs and jumps around a floating island, gathering sparks while stones roll past.",
+  "you": ["run", "jump", "collect"],
+  "camera": "third person, behind and above",
+  "controls": "WASD or arrows to move, Space to jump, Q/E or drag to turn the camera. Gamepad and touch work.",
+  "session": "about 2 minutes",
+  "use_when": "a 3D game where you see your character from behind: collecting, exploring a small place, a 3D platformer, an adventure, anything with a character that runs and jumps. Also the right pick when no other starter fits.",
+  "not_for": "first-person games, side-on 2D, vehicles, flying",
+  "tags": ["3d", "third person", "platformer", "collect", "explore", "adventure", "character", "jump"],
+  "blocks": [],
+  "skips": ["win", "lose", "last-spark", "invincible"],
+  "already_good": [
+    "Jump with coyote time, buffering, variable height and faster falling",
+    "A follow camera that never clips through the island",
+    "Hazards you can read before they move (worn tracks, a wobble)",
+    "Pickups with a freeze-frame and a rising chime",
+    "An end card that says why you lost and what to try"
+  ],
+  "preview": "starters/island/preview.jpg",
+  "status": "ready"
+}

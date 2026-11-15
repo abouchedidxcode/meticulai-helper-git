@@ -1,0 +1,125 @@
+{
+  "id": "spooky-cute-night",
+  "name": "Spooky-cute night",
+  "order": 35,
+  "one_line": "Purple sky, friendly ghosts and glowing pumpkins.",
+  "mood": [
+    "playful",
+    "spooky",
+    "night"
+  ],
+  "look_words": "A friendly haunted night. Purple and plum ground under a deep violet sky with a crescent moon; twisty bare trees, wonky fences and a crooked little house. Everything is rounded and cartoonish, so nothing is truly scary. Low green mist curls along the ground. Pumpkin orange glows mark things to collect and windows to visit, ghostly green marks the goal, hot pink-red is harm, and the player is white. Light is dim violet moonlight with small warm pools around lanterns and pumpkins. Motion is bobbing and floaty: ghosts drift, bats flap, flames flicker, eyes blink in the dark. Avoid gore, realism, jump scares, grey murk, and bloom that smears the glows.",
+  "palette": {
+    "name": "purple night",
+    "colors": {
+      "base": [
+        "#4a3a78",
+        "#372a5e",
+        "#5f5290",
+        "#6f5a86"
+      ],
+      "accent": [
+        "#ff9a2e",
+        "#8ff0a4"
+      ],
+      "danger": "#ff3d6e",
+      "player": "#f6f3ff",
+      "shadow": "#1a1230",
+      "light": "#ffe9b8",
+      "ink": "#f3eeff"
+    },
+    "sky": {
+      "top": "#1f1440",
+      "horizon": "#5a3a8a",
+      "below": "#150e2a",
+      "sun": "#fff0b8"
+    },
+    "light": {
+      "sun": "#cdbcff",
+      "sunStrength": 1.6,
+      "ambient": "#7a5fc0",
+      "ground": "#2a1f4a",
+      "ambientStrength": 1.4,
+      "fog": "#3a2a66",
+      "fogAmount": 0.6,
+      "exposure": 1.2,
+      "sunElevation": 30,
+      "sunAzimuth": 220
+    },
+    "notes": "Moonlight is violet, not blue. Orange is the reward colour here, so harm is pink-red to stay clear of it."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "outlines and flat fills with soft drawn glows, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-firefly-swarm",
+      "why": "wisps and glowing things that drift, blink and react to the player"
+    },
+    {
+      "block": "fire",
+      "why": "real little flames for candles, lanterns and pumpkins"
+    }
+  ],
+  "blocks": [
+    "meticulai-firefly-swarm",
+    "fire",
+    "meticulai-haze",
+    "meticulai-flock"
+  ],
+  "asset_search": [
+    "pumpkin",
+    "ghost",
+    "graveyard",
+    "haunted house",
+    "bare tree"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "kaykit",
+    "quaternius",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "sneaky pizzicato, theremin and a soft organ",
+    "tempo": "medium",
+    "notes": "Tiptoe, not terror."
+  },
+  "sound_feel": "hoots, creaks, soft whooshes, a silly rattle of bones",
+  "good_for": [
+    "top-down",
+    "platformer",
+    "island",
+    "runner",
+    "first-person",
+    "collecting"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Spooky-cute purple night: a small round ghost with big friendly eyes carrying a tiny orange lantern floats down a crooked path through a pumpkin patch toward a wonky little haunted house with glowing orange windows, twisty bare trees, friendly bats, a crescent moon. Deep purple and plum sky, soft green mist near the ground, orange glow accents, rounded cartoon shapes, playful not scary. High three-quarter view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Spooky-cute purple night in a tiny graveyard: a small round ghost with big friendly eyes and a tiny orange lantern floats past rounded gravestones with no writing, a smiling pumpkin, a black cat on a wonky fence, twisty bare trees, a crooked iron gate, a big crescent moon. Deep purple and plum sky, soft green mist near the ground, orange glow accents, rounded cartoon shapes, playful not scary. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

@@ -1,0 +1,125 @@
+{
+  "id": "painted-meadow",
+  "name": "Painted meadow",
+  "order": 6,
+  "one_line": "Wildflowers, dry-stone walls and heaped summer clouds.",
+  "mood": [
+    "peaceful",
+    "sunny",
+    "pastoral"
+  ],
+  "look_words": "A summer meadow painted by hand. Fresh greens and butter yellows, pale stone walls and a sandy lane, soft rolling hills, an oak for shade, and a blue sky with heaped white clouds. Brush strokes are visible, edges are loose, and far hills are simpler and bluer than near ones. The sun is warm and fairly high; shadows are cool and soft. Bright yellow and poppy pink mark what to collect and the goal, red is harm, and the player wears cornflower blue. Motion is gentle: grass in the wind, cloud shadows crossing the field, butterflies, a stream. Avoid sharp digital edges, flat lawn green, grey skies, heavy darkness and bloom.",
+  "palette": {
+    "name": "summer meadow",
+    "colors": {
+      "base": [
+        "#8fc45a",
+        "#6ba548",
+        "#c9bda6",
+        "#bfa878"
+      ],
+      "accent": [
+        "#ffd400",
+        "#e85aa0"
+      ],
+      "danger": "#d42a2a",
+      "player": "#2f4fb8",
+      "shadow": "#3a4a70",
+      "light": "#fffbe6",
+      "ink": "#fbf8e8"
+    },
+    "sky": {
+      "top": "#4f97e0",
+      "horizon": "#d6efff",
+      "below": "#6ba548",
+      "sun": "#fff9d9"
+    },
+    "light": {
+      "sun": "#fff4d0",
+      "sunStrength": 3.4,
+      "ambient": "#cfe3ff",
+      "ground": "#9aa86a",
+      "ambientStrength": 1.9,
+      "fog": "#d3e9f7",
+      "fogAmount": 0.35,
+      "exposure": 1,
+      "sunElevation": 52,
+      "sunAzimuth": 120
+    },
+    "notes": "Meadows are full of small yellow flowers: keep scenery flowers pale and small so the bright yellow pickups still stand out."
+  },
+  "look": {
+    "id": "painterly",
+    "options": {}
+  },
+  "look_wish": "painterly brush strokes",
+  "upgrade": [
+    {
+      "block": "painted-valley",
+      "why": "a whole summer valley in the look of hand-painted film backgrounds, with clouds and brush-mark grass"
+    },
+    {
+      "block": "touch-grass",
+      "why": "a meadow that bends and remembers where you walked"
+    }
+  ],
+  "blocks": [
+    "painted-valley",
+    "touch-grass",
+    "oil-paint",
+    "meticulai-painterly-styles"
+  ],
+  "asset_search": [
+    "sheep",
+    "farmhouse",
+    "oak tree",
+    "stone wall",
+    "wildflowers"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kaykit",
+    "polyhaven",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "gentle flute, harp and strings",
+    "tempo": "slow",
+    "notes": "Open and airy."
+  },
+  "sound_feel": "larks, bees, a stream, sheep, wind in grass",
+  "good_for": [
+    "island",
+    "rider",
+    "flyer",
+    "first-person",
+    "farming",
+    "walking and collecting"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Sunlit hand-painted pastoral meadow: third-person camera behind a small shepherd girl in a red skirt and straw hat walking through tall grass and wildflowers toward a stone farmhouse under a big oak, three sheep, a dry-stone wall, a stream with a plank bridge, soft rolling hills. Visible brush strokes, fresh greens and butter yellows, heaped white summer clouds in a blue sky, warm late-morning sun, peaceful. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Sunlit hand-painted pastoral valley from a gentle hilltop: a small shepherd girl in a red skirt and straw hat sits under an apple tree with a dog, looking over patchwork fields, hedgerows, a winding lane, a village with a church tower and distant blue hills. Visible brush strokes, fresh greens and butter yellows, heaped white summer clouds in a blue sky, warm late-morning sun, peaceful. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "painterly",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

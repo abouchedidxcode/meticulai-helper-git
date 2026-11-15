@@ -1,0 +1,121 @@
+{
+  "id": "ink-and-wash",
+  "name": "Ink and wash",
+  "order": 13,
+  "one_line": "Black brush strokes and grey mist on warm paper, with one red.",
+  "mood": [
+    "calm",
+    "spare",
+    "elegant"
+  ],
+  "look_words": "Brush and ink on warm off-white paper. Three values only: paper, grey wash and black. Mountains, trees and rocks are soft grey washes that fade into mist in layers; the nearest things are the darkest. Empty paper is most of the picture and counts as sky, water and fog. Shapes are simple silhouettes with a dry-brush edge. One red, vermilion, is kept for harm and the final blow; a mineral green and a clear blue, used in small touches, mark what the player is after. The player is the blackest, sharpest shape on screen. Light is flat. Motion is like a stroke: quick, then still, with ink splashes for hits. Avoid colour fills, glow, bloom, hard digital lines and clutter.",
+  "palette": {
+    "name": "ink and wash",
+    "colors": {
+      "base": [
+        "#e9e2d0",
+        "#c9c3b4",
+        "#5c5a57",
+        "#a39e92"
+      ],
+      "accent": [
+        "#0f9a6a",
+        "#1f66d0"
+      ],
+      "danger": "#d6402b",
+      "player": "#1a1714",
+      "shadow": "#1f1c1a",
+      "light": "#f7f1e1",
+      "ink": "#f4eedd"
+    },
+    "sky": {
+      "top": "#e4dccb",
+      "horizon": "#efe9d9",
+      "below": "#cfc8b8",
+      "sun": "#f7f1e1"
+    },
+    "light": {
+      "sun": "#fff6e6",
+      "sunStrength": 2.2,
+      "ambient": "#f0ece2",
+      "ground": "#bdb6a6",
+      "ambientStrength": 2.2,
+      "fog": "#e6dfcf",
+      "fogAmount": 0.7,
+      "exposure": 1,
+      "sunElevation": 50,
+      "sunAzimuth": 200
+    },
+    "notes": "Paper, wash and black do almost everything. Red means harm and nothing else. Heavy fog is the look: far things should melt into the paper."
+  },
+  "look": {
+    "id": "ink",
+    "options": {
+      "paper": 0.35
+    }
+  },
+  "look_wish": "ink outlines and grey wash on paper",
+  "upgrade": [
+    {
+      "block": "meticulai-ink-illustration",
+      "why": "pen and brush lines that wobble like a hand drew them, with a paper grain"
+    }
+  ],
+  "blocks": [
+    "meticulai-ink-illustration",
+    "meticulai-painterly-styles",
+    "meticulai-haze"
+  ],
+  "asset_search": [
+    "pine tree",
+    "rock",
+    "wooden bridge",
+    "paper texture"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "polyhaven",
+    "ambientcg",
+    "google-fonts"
+  ],
+  "music": {
+    "mood": "sparse, bamboo flute and a single plucked string",
+    "tempo": "slow",
+    "notes": "Long silences are part of it."
+  },
+  "sound_feel": "a brush on paper, wind, one wooden knock, water drops",
+  "good_for": [
+    "platformer",
+    "top-down",
+    "island",
+    "duelling",
+    "walking games",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Ink and wash illustration on warm off-white paper, wide side view like a 2D adventure: a small figure in a wide straw hat poles a narrow boat across a misty lake toward a tiny pavilion on stilts, reeds in the foreground, two herons, far mountains as pale grey washes fading into empty paper. Black brush strokes, soft grey washes, dry-brush texture, lots of empty paper, one small vermilion-red lantern on the boat as the only colour. No seals, stamps or writing. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Ink and wash illustration of a mountain valley on warm off-white paper, side view like a 2D adventure: a small traveller in a wide straw hat with a single vermilion-red scarf walks a narrow path past twisted pines toward a wooden footbridge, crags fading into pale grey mist in layers. Black brush strokes, soft grey washes, lots of empty paper, dry-brush texture, only one red accent. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "ink",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

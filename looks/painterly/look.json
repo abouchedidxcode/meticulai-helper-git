@@ -1,0 +1,34 @@
+{
+  "id": "painterly",
+  "order": 5,
+  "name": "Painterly",
+  "one_line": "A gouache painting: broad brush strokes near, fine ones far, paper tooth.",
+  "kind": "post",
+  "block": "meticulai-painterly-styles",
+  "options": {
+    "brush": {
+      "default": 2.2,
+      "min": 0.6,
+      "max": 3,
+      "help": "Bigger = broader strokes and softer detail.",
+      "label": "Brush size",
+      "step": 0.05
+    }
+  },
+  "cost": "medium",
+  "preview": "looks/painterly/preview.jpg",
+  "orthographic": {
+    "works": true,
+    "note": "Checked on the platformer starter. The brush is one size over the whole picture there (it is sized by distance, and a flat game has one)."
+  },
+  "measured": {
+    "starter": "island",
+    "size": "1280x720",
+    "frame_ms": 7.6,
+    "plain_frame_ms": 2.8,
+    "added_ms": 4.8,
+    "fps": 60,
+    "date": "2026-11-14",
+    "how": "hidden Chromium on the kit's test laptop, whole frame read back from the graphics chip; machine load changes it"
+  }
+}

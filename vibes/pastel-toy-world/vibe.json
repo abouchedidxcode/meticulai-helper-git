@@ -1,0 +1,119 @@
+{
+  "id": "pastel-toy-world",
+  "name": "Pastel toy world",
+  "order": 19,
+  "one_line": "Rounded plastic shapes in mint, pink and butter yellow.",
+  "mood": [
+    "cheerful",
+    "bright",
+    "gentle"
+  ],
+  "look_words": "A bright toy world under even daylight. Mint-green ground, cream paths, pink and butter-yellow buildings, a pale blue sky with a few puffy clouds. Every shape is rounded, chunky and simple, as if moulded from matte plastic; nothing is sharp or thin. Shadows are soft and pale lavender, never black. Orange and violet are kept for pickups and the goal, a clear red for anything that hurts, and the player is a strong blue so it never gets lost. Motion is bouncy: squash and stretch, little hops, wobbling trees. Avoid dark corners, realism, grit, fine detail and bloom.",
+  "palette": {
+    "name": "pastel toys",
+    "colors": {
+      "base": [
+        "#bfe6c4",
+        "#9ad3b0",
+        "#f6e4c6",
+        "#f5cdd2"
+      ],
+      "accent": [
+        "#ff9d1f",
+        "#8a6fe8"
+      ],
+      "danger": "#d92b45",
+      "player": "#3f6fe0",
+      "shadow": "#56608f",
+      "light": "#fffaf0",
+      "ink": "#fdf8ee"
+    },
+    "sky": {
+      "top": "#8cc6f0",
+      "horizon": "#e6f3fb",
+      "below": "#cfe6f5",
+      "sun": "#fffbe6"
+    },
+    "light": {
+      "sun": "#fff3d6",
+      "sunStrength": 3.3,
+      "ambient": "#d8e8ff",
+      "ground": "#e6d8c2",
+      "ambientStrength": 2,
+      "fog": "#e3f0fa",
+      "fogAmount": 0.25,
+      "exposure": 1,
+      "sunElevation": 60,
+      "sunAzimuth": 40
+    },
+    "notes": "A pale world needs a strong player: keep the blue for the player alone. Orange is pickups, violet is the goal. Text sits on the dark card, not straight on the pale ground."
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {}
+  },
+  "look_wish": "soft rounded shading with a little tilt-shift blur, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-tilt-shift-macro",
+      "why": "makes the whole scene read as a small toy on a table"
+    }
+  ],
+  "blocks": [
+    "meticulai-tilt-shift-macro",
+    "meticulai-anim-springs",
+    "meticulai-marble-physics"
+  ],
+  "asset_search": [
+    "cute character",
+    "toy house",
+    "round tree",
+    "platformer kit"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "kaykit",
+    "quaternius",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "light, bouncy, marimba and whistles",
+    "tempo": "medium",
+    "notes": "Short happy loop; add a layer when things go well."
+  },
+  "sound_feel": "pops, boings, soft plastic clicks",
+  "good_for": [
+    "platformer",
+    "marble",
+    "grid-puzzle",
+    "runner",
+    "games for young children",
+    "collecting"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Bright pastel toy world seen from a high three-quarter camera: a tiny rounded island of mint-green lawn with a cream path, a little round-roofed house in pink and butter yellow, lollipop-shaped trees, and a small blue rounded character with a backpack walking the path. Soft even daylight, pale blue sky with a few puffy clouds, smooth matte plastic shapes with rounded edges, gentle soft shadows, clean and cheerful. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Bright pastel toy playground seen from behind a small blue rounded character: chunky stepping blocks in mint, peach and butter yellow lead over a shallow pale-blue pond to a pink arch with a golden star on top. Smooth matte plastic shapes with rounded edges, soft even daylight, pale sky, puffy clouds, gentle soft shadows. Clean, cheerful, uncluttered. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "toy-tilt-shift",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "first-person",
+  "order": 6,
+  "name": "First person (walk, look, use)",
+  "pitch": "Through your own eyes in a walled garden at dusk: light seven lanterns while slow shades drift toward you; a lit lantern makes a circle of light they cannot enter.",
+  "you": [
+    "look",
+    "walk",
+    "use",
+    "throw"
+  ],
+  "camera": "first person, eyes at 1.6 m, mouse look (pointer lock)",
+  "controls": "Mouse to look (click to capture, Esc to pause), WASD to walk, Shift to sprint, Space to jump, hold E (or the mouse button) to use what you look at, click or F to throw a spark. Gamepad works (right stick looks); touch has no look yet.",
+  "session": "about 1 to 2 minutes",
+  "use_when": "any game seen through the character's eyes: exploring, walking stories, light horror, puzzle rooms, collecting, escape rooms, and (with work) shooters. Levels are text maps the agent can type.",
+  "not_for": "games where you see your character (third person, side-on, top-down), vehicles, flying",
+  "tags": [
+    "3d",
+    "first person",
+    "fps",
+    "explore",
+    "walking simulator",
+    "horror",
+    "puzzle",
+    "escape room",
+    "shooter",
+    "collect",
+    "mouse look"
+  ],
+  "blocks": [],
+  "skips": [
+    "win",
+    "lose",
+    "last-lantern",
+    "deep-dusk",
+    "shade-close",
+    "invincible"
+  ],
+  "already_good": [
+    "Raw mouse look (no smoothing), sensitivity, invert-Y, pitch clamp, gamepad right stick and bot through one input.look()",
+    "Walking that starts and stops at once, full-speed strafe, no faster diagonals, sprint with a small FOV kick",
+    "Jump with coyote time and buffering, a little air control",
+    "Capsule collision with wall sliding, step-up with smoothed eyes, sub-steps so nothing passes through at low frame rates",
+    "Head bob and footsteps by distance walked, a landing dip, all tunable to zero",
+    "Use by a forgiving cone with a prompt, a filling ring and an answer in sound and light",
+    "A held lantern that sways, bobs, dips and shows your health",
+    "Threats you can hear and see coming: a growing whisper, a heartbeat, screen-edge hints for anything behind you, a hiss before every lunge",
+    "An aimed throw with aim assist and a lock ring: the seed of a shooter",
+    "The level is a text map that builds both the meshes and the collision"
+  ],
+  "preview": "starters/first-person/preview.jpg",
+  "status": "ready"
+}

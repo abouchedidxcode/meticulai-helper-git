@@ -30,7 +30,7 @@ const MAX_HEALTH = 3;
 const CHIME_SCALE = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21, 24, 26]; // pentatonic, rising per spark
 
 export function createGame(ctx) {
-  const { input, juice, audio, ui, events, rng, tune, flags, testmode } = ctx;
+  const { input, juice, audio, ui, events, rng, tune, flags, testmode, look, dev } = ctx;
 
   const scene = new THREE.Scene();
   const world = buildWorld(scene);
@@ -47,6 +47,7 @@ export function createGame(ctx) {
     ending: 0, // > 0: counting down to the end card
     endInfo: null,
     lastCause: '',
+    arpeggio: [], // win chime notes still to play: { note, at (seconds from now) }
   };
   let worldTime = 0;
   const wish = new THREE.Vector3();
@@ -62,6 +63,7 @@ export function createGame(ctx) {
     run.time = 0;
     run.ending = 0;
     run.endInfo = null;
+    run.arpeggio = [];
     sparks.reset();
     stones.reset();
     player.reset(START.x, START.y, START.z);
@@ -91,9 +93,9 @@ export function createGame(ctx) {
     };
     if (won) {
       juice.slowmo(0.35, 900);
-      juice.flash('#ffd9a0', 400);
+      juice.flash(look.shade(look.light, 0.3), 400);
       audio.duck(0.3, 1200);
-      [0, 4, 7, 12].forEach((n, i) => setTimeout(() => audio.chime({ note: n, vol: 0.18 }), i * 90));
+      run.arpeggio = [0, 4, 7, 12].map((note, i) => ({ note, at: i * 0.09 })); // played in update(), in game time
       events.emit('win', { time: run.time, health: run.health });
     } else {
       juice.slowmo(0.4, 700);
@@ -157,7 +159,7 @@ export function createGame(ctx) {
         player.invuln = 1.5;
         juice.hitStop(tune.feel.hitStopMs);
         juice.shake(tune.feel.hitShake, 300);
-        juice.flash('#ff8a5c', 180);
+        juice.flash(look.danger, 180);
         audio.thud({ freq: 95, vol: 0.7, length: 0.25 });
         audio.whoosh({ vol: 0.12, length: 0.25, from: 1600, to: 300 });
         events.emit('hit', { by: 'stone', health: run.health - (tune.feel.invincible ? 0 : 1) });
@@ -167,7 +169,7 @@ export function createGame(ctx) {
 
     // Fell off the island.
     if (player.pos.y < -9) {
-      juice.flash('#2c3a63', 300);
+      juice.flash(look.shadow, 300);
       audio.whoosh({ vol: 0.2, length: 0.5, from: 2000, to: 200 });
       events.emit('hit', { by: 'fall', health: run.health - (tune.feel.invincible ? 0 : 1) });
       const lost = hurt('fall', 'You fell off the edge of the island. The blob under you shows where you will land.');
@@ -189,9 +191,11 @@ export function createGame(ctx) {
     rig.snap(player.pos, rig.yaw);
     updateHud();
   });
-  testmode.add('end', 'Win now', () => {
+  const winNow = () => {
     for (const s of sparks.list) if (!s.taken) collect(s);
-  });
+  };
+  testmode.add('win', 'Win now', winNow);
+  testmode.add('end', 'End', winNow); // older play scripts use this name
   testmode.add('lose', 'Lose now', () => {
     run.health = 1;
     tune.feel.invincible = false;
@@ -201,6 +205,37 @@ export function createGame(ctx) {
     tune.feel.invincible = !tune.feel.invincible;
     ui.toast(tune.feel.invincible ? 'Invincible: on' : 'Invincible: off', 1200);
   });
+
+  // The dev menu (backquote key). Essentials: the short list it opens on, in plain words (ids are "<group>.<id>"
+  // from tuning.json). Presets: whole feels to flip between. Then the game's own readouts and buttons, one line each.
+  dev.essentials([
+    ['How you move', [
+      ['Running speed', 'player.runSpeed', 'How fast the creature runs.'],
+      ['Jump height', 'player.jumpSpeed', 'Higher = a bigger jump.'],
+      ['Weight', 'player.gravity', 'Higher = you come back down sooner.'],
+      ['Grip', 'player.groundAccel', 'Low = slippery, like ice. High = stops on the spot.'],
+      ['Steering in the air', 'player.airControl', '0 = none, 1 = the same as on the ground.'],
+    ]],
+    ['The camera', [['How far back', 'camera.distance'], ['How high', 'camera.height'], ['How wide it sees', 'camera.fov']]],
+    ['The stones', [
+      ['How fast they roll', 'stones.speed'],
+      ['Warning before they roll (s)', 'stones.rest', 'How long a stone wobbles at the end of its track before it comes back.'],
+      ['How hard they throw you', 'stones.knockback'],
+    ]],
+    ['Punch', [
+      ['Freeze on a hit (ms)', 'feel.hitStopMs', 'The tiny pause when a stone hits you. 0 = none.'],
+      ['Screen shake on a hit', 'feel.hitShake'],
+      ['Squash on landing', 'feel.landSquash'],
+      ['Cannot be hurt', 'feel.invincible', 'Stones and falls cost no hearts.'],
+    ]],
+  ]);
+  dev.presets([
+    { name: 'Floaty', about: 'Moon jumps: light, slow to come down, easy to steer in the air.', values: { 'player.gravity': 14, 'player.fallGravity': 1.15, 'player.jumpSpeed': 8, 'player.airControl': 0.9 } },
+    { name: 'Snappy', about: 'Quick and tight: a fast run, short sharp jumps, stops on the spot.', values: { 'player.runSpeed': 8, 'player.groundAccel': 100, 'player.jumpSpeed': 11, 'player.gravity': 40, 'player.fallGravity': 2, 'camera.follow': 9 } },
+    { name: 'Heavy', about: 'A big creature: slow to get going, low jumps, lands with a thump.', values: { 'player.runSpeed': 5, 'player.groundAccel': 22, 'player.jumpSpeed': 8.5, 'player.gravity': 34, 'player.airControl': 0.3, 'feel.landSquash': 0.5, 'feel.hitShake': 0.6 } },
+  ]);
+  dev.readout('Island', 'Where you are', () => `${player.pos.x.toFixed(1)}, ${player.pos.y.toFixed(1)}, ${player.pos.z.toFixed(1)}`);
+  dev.button('Island', 'Heal', () => { run.health = MAX_HEALTH; updateHud(); }, 'All three hearts back.');
 
   reset();
   ui.hud.show(false);
@@ -217,6 +252,8 @@ export function createGame(ctx) {
 
     update(dt, mode) {
       worldTime += dt;
+      for (const n of run.arpeggio) if ((n.at -= dt) <= 0) audio.chime({ note: n.note, vol: 0.18 });
+      run.arpeggio = run.arpeggio.filter((n) => n.at > 0);
       world.animate(worldTime);
       sparks.update(dt, worldTime);
       if (mode === 'playing') {

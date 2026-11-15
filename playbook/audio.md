@@ -57,6 +57,9 @@ have to launch the browser with autoplay allowed, or they measure silence.
 - [ ] Every player action and every important event fires a sound through one place (an event bus), so nothing is
       silent by accident: jump, land, hit, pickup, death, score, win.
 - [ ] Start with sound made in code. Note in `DECISIONS.md` where you would pay for generated sound, and ask first.
+- [ ] Need a recorded-style sound (a coin, footsteps, rain, a short music loop)? The kit's starter pack in `sounds/`
+      has about 85, free and with no credit needed: `node tools/sounds/list.mjs`, then `add.mjs`
+      ([how](../recipes/sound-files.md)). Nobody has listened to all of them, so the person still has to.
 - [ ] Unlock audio on the first click or key press. Show a speaker button if the game should make sound before that.
 - [ ] Measure loudness with `node tools/play/loud.mjs` during bot play. Aim for p90 between -27 and -31 dBFS and peaks
       at or below -8 dBFS. Fix outliers with a limiter on the master bus, not by lowering everything.

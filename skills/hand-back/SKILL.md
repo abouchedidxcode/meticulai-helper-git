@@ -42,6 +42,7 @@ What changed
 Try this
 - Jump off the tallest ledge and land on the moving platform.
 - Test mode (skip buttons, jump to any level): http://localhost:5173/?test=1
+- Press ` (top left of the keyboard) for the dev menu: sliders for how it feels, a free camera, presets.
 
 Controls
 - Arrow keys or WASD to move, Space to jump, Esc to pause.
@@ -59,6 +60,8 @@ Rules for the card:
   "the ship turns faster and leans into the turn" is.
 - **Try this**: one to three concrete missions that send them straight to the new thing. Add the `?test=1` link when
   skip buttons save them time.
+  When you added numbers to tune, point at the dev menu (backquote key) by the names its Essentials list uses, and
+  read `src/tuning.json` next turn: "Save for my agent" writes it.
 - **Still rough**: honest. Include anything you couldn't verify ("I can't hear audio, so tell me if the music is too
   loud").
 - If you need a decision from them, ask one question at the very end, after the card.

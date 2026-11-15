@@ -1,0 +1,127 @@
+{
+  "id": "felt-and-wool",
+  "name": "Felt and wool",
+  "order": 11,
+  "one_line": "Stitched felt hills, pom-pom trees and button doors.",
+  "mood": [
+    "soft",
+    "cosy",
+    "handmade"
+  ],
+  "look_words": "A world sewn from felt and knitted from wool. Soft greens, dusty rose, oat and linen for the land; hills are stuffed cushions with visible seams, trees are pom-poms, clouds are cotton wool, doors are buttons. Every edge is fuzzy and every join has a stitch you can see. Light is soft daylight from a window, with gentle shadows and no shine anywhere. Plum purple and denim blue mark the things to collect and the goal, red yarn is harm, and the player is fox orange. Motion is soft and springy: things flop, bounce and unravel; thread and yarn trail behind. Avoid hard edges, metal, gloss, sharp shadows, dark scenes and bloom.",
+  "palette": {
+    "name": "felt and wool",
+    "colors": {
+      "base": [
+        "#a8c389",
+        "#88a66f",
+        "#d4a9a0",
+        "#e8dabd"
+      ],
+      "accent": [
+        "#7a3fb0",
+        "#3f6fb0"
+      ],
+      "danger": "#c8323c",
+      "player": "#e8662a",
+      "shadow": "#4f4560",
+      "light": "#fff6e3",
+      "ink": "#fbf4e4"
+    },
+    "sky": {
+      "top": "#a9cbe6",
+      "horizon": "#f2e8d8",
+      "below": "#88a66f",
+      "sun": "#fff4d6"
+    },
+    "light": {
+      "sun": "#fff1d9",
+      "sunStrength": 2.6,
+      "ambient": "#e3e8f2",
+      "ground": "#bfae93",
+      "ambientStrength": 2.1,
+      "fog": "#ebe6dc",
+      "fogAmount": 0.35,
+      "exposure": 1,
+      "sunElevation": 50,
+      "sunAzimuth": 80
+    },
+    "notes": "High ambient light keeps everything soft. The orange player and the red yarn are neighbours: make hazards spiky or tangled so shape helps too."
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {}
+  },
+  "look_wish": "fuzzy fabric shading with stitches, tilt-shift blur",
+  "upgrade": [
+    {
+      "block": "patchwork-quilt",
+      "why": "makes the whole world out of cloth: puffed patches, seams, stitches and fuzzy felt, seen as a small thing on a table"
+    }
+  ],
+  "blocks": [
+    "patchwork-quilt",
+    "meticulai-tilt-shift-macro",
+    "meticulai-rope-cloth-chains"
+  ],
+  "asset_search": [
+    "fabric texture",
+    "cute animal",
+    "button",
+    "round tree",
+    "small house"
+  ],
+  "asset_families": [
+    "ambientcg",
+    "polyfork",
+    "polyhaven",
+    "kenney",
+    "kaykit"
+  ],
+  "music": {
+    "mood": "soft glockenspiel, ukulele and brushed drums",
+    "tempo": "slow",
+    "notes": "Warm and small."
+  },
+  "sound_feel": "soft pats, a needle pull, muffled bounces, a zip",
+  "good_for": [
+    "platformer",
+    "top-down",
+    "marble",
+    "island",
+    "games for young children",
+    "collecting"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Felt and wool craft seaside: a small needle-felted fox in a knitted blue scarf stands on a stitched felt pier beside a little felt boat with a button porthole, a knitted striped lighthouse on a felt rock, blue felt waves with white embroidered foam, cotton-wool clouds on a pale linen sky, a felt gull. Visible fibres and stitches, soft fuzzy edges, warm soft daylight, cosy and handmade. Slightly high view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Felt and wool craft world: a small needle-felted fox in a knitted blue scarf walks a path of stitched felt stepping stones across rolling green felt hills, pom-pom trees, a knitted cottage with a button door, embroidered flowers, cotton-wool clouds on a pale linen sky. Visible fibres and stitches, soft fuzzy edges, warm soft daylight, gentle shadows, cosy and handmade. Slightly high view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "toy-tilt-shift",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

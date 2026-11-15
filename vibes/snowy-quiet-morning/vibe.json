@@ -1,0 +1,125 @@
+{
+  "id": "snowy-quiet-morning",
+  "name": "Snowy quiet morning",
+  "order": 9,
+  "one_line": "Fresh snow, blue shadows and a pale pink sunrise.",
+  "mood": [
+    "quiet",
+    "cold",
+    "peaceful"
+  ],
+  "look_words": "The morning after snow. White ground with soft blue shadows, grey-blue rock and weathered wood, snow-heavy fir trees, a sky that goes from pale blue to pink and cream at the horizon. The sun is very low, so shadows are long and gentle. Shapes are simple and rounded by the snow. Warm orange is kept for windows, fires and things to collect, violet for the goal; red means harm. The player wears deep blue, which reads cleanly against white. Motion is slow: falling flakes, chimney smoke, breath, footprints left behind. Sound is muffled. Avoid grey slush, dirty whites, hard black, heavy blizzard effects and bloom on the snow.",
+  "palette": {
+    "name": "snow morning",
+    "colors": {
+      "base": [
+        "#eef2f8",
+        "#cfdcec",
+        "#8a9bb0",
+        "#b9a58f"
+      ],
+      "accent": [
+        "#ff7a00",
+        "#8a4fd8"
+      ],
+      "danger": "#d1344b",
+      "player": "#274a8a",
+      "shadow": "#3c4a6e",
+      "light": "#fff6ea",
+      "ink": "#f6f8fc"
+    },
+    "sky": {
+      "top": "#a9c4e4",
+      "horizon": "#fbe3d6",
+      "below": "#cfdcec",
+      "sun": "#fff0d8"
+    },
+    "light": {
+      "sun": "#ffe9cf",
+      "sunStrength": 2.6,
+      "ambient": "#cfe0f7",
+      "ground": "#c9d6e8",
+      "ambientStrength": 2,
+      "fog": "#e6edf6",
+      "fogAmount": 0.55,
+      "exposure": 1,
+      "sunElevation": 14,
+      "sunAzimuth": 120
+    },
+    "notes": "Snow shadows are blue, never grey. Exposure stays at 1 so the snow does not burn out. Text sits on the dark card."
+  },
+  "look": {
+    "id": "soft-haze",
+    "options": {}
+  },
+  "look_wish": "soft shading, a little haze, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-sand-trails",
+      "why": "soft ground that remembers: footprints and sled tracks stay in the snow"
+    },
+    {
+      "block": "meticulai-haze",
+      "why": "pale morning air so far trees fade into the sky"
+    }
+  ],
+  "blocks": [
+    "meticulai-sand-trails",
+    "meticulai-haze",
+    "fire",
+    "lowpoly-tree-generator"
+  ],
+  "asset_search": [
+    "snow tree",
+    "cabin",
+    "sled",
+    "wooden fence",
+    "snowy rocks"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "kaykit",
+    "polyhaven"
+  ],
+  "music": {
+    "mood": "slow, glassy bells and a soft pad",
+    "tempo": "slow",
+    "notes": "Very quiet; let the footsteps lead."
+  },
+  "sound_feel": "muffled; snow crunch, wind, a far-off crow",
+  "good_for": [
+    "island",
+    "rider",
+    "first-person",
+    "top-down",
+    "sledding",
+    "walking and collecting"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Quiet snowy morning in a small stylised world, third-person camera behind a child in a red coat and woolly hat pulling a wooden sled across fresh snow toward a cabin with smoke rising from its chimney. Soft blue shadows, pale pink and cream sunrise sky, snow-laden fir trees, a frozen pond, a wooden fence half buried. Simple soft shapes, low sun, calm and still, gentle haze. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Quiet snowy morning seen from a high three-quarter camera: a small figure in a red coat crosses a little wooden bridge over a frozen stream, footprints trailing behind, round snow-covered fir trees, a stone lantern, a deer watching from the trees. Pale blue shadows on white snow, soft pink and cream sky, low gentle sun, simple soft stylised shapes, calm and still. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "soft-haze",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

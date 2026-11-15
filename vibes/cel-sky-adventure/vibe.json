@@ -1,0 +1,125 @@
+{
+  "id": "cel-sky-adventure",
+  "name": "Cel-shaded sky adventure",
+  "order": 25,
+  "one_line": "Bright grass, big clouds and islands in a blue sky.",
+  "mood": [
+    "bright",
+    "hopeful",
+    "energetic"
+  ],
+  "look_words": "A bright adventure high in the sky. Vivid grass green, warm stone and sandy paths under a deep blue sky stacked with big white clouds; floating islands, waterfalls, windmills and rope bridges. Everything is shaded in two flat tones with a crisp edge between light and shadow and a thin dark outline. Shadows are blue-violet, never grey. The sun is high and clear. Yellow marks things to collect, violet the goal, red is harm, and the player wears white so it shows against grass and sky. Motion is lively: wind in the grass, cloth flapping, clouds sliding past, quick snappy jumps. Avoid muddy colours, soft realistic shading, fog that dulls the sky and bloom.",
+  "palette": {
+    "name": "bright sky",
+    "colors": {
+      "base": [
+        "#6cc24a",
+        "#4a9e3a",
+        "#b9b2a3",
+        "#b89a68"
+      ],
+      "accent": [
+        "#ffd11a",
+        "#b06cff"
+      ],
+      "danger": "#e3262e",
+      "player": "#f7f7ff",
+      "shadow": "#2f3f7a",
+      "light": "#ffffff",
+      "ink": "#f5f9ff"
+    },
+    "sky": {
+      "top": "#2f7fe0",
+      "horizon": "#a9defa",
+      "below": "#e9f6ff",
+      "sun": "#fffbe0"
+    },
+    "light": {
+      "sun": "#fff8e0",
+      "sunStrength": 3.6,
+      "ambient": "#bcdcff",
+      "ground": "#8fb86a",
+      "ambientStrength": 1.9,
+      "fog": "#bfe4fb",
+      "fogAmount": 0.3,
+      "exposure": 1,
+      "sunElevation": 58,
+      "sunAzimuth": 30
+    },
+    "notes": "Below the horizon the sky is nearly white: it reads as a floor of cloud under the islands."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "outlines and flat fills (two-tone)",
+  "upgrade": [
+    {
+      "block": "painted-valley",
+      "why": "flat clean colour, heaped clouds and an inked outline in the style of hand-painted film backgrounds"
+    },
+    {
+      "block": "meticulai-painterly-styles",
+      "why": "a quicker clean toon filter over an ordinary scene"
+    }
+  ],
+  "blocks": [
+    "painted-valley",
+    "meticulai-painterly-styles",
+    "meticulai-glider-flight",
+    "touch-grass"
+  ],
+  "asset_search": [
+    "floating island",
+    "windmill",
+    "adventurer",
+    "rope bridge",
+    "waterfall"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kaykit",
+    "kenney",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "bright, flute and strings with a skipping beat",
+    "tempo": "fast",
+    "notes": "A tune you could whistle."
+  },
+  "sound_feel": "airy and bright; wind, cloth, chimes on pickups",
+  "good_for": [
+    "flyer",
+    "platformer",
+    "island",
+    "rider",
+    "gliding",
+    "adventure"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cel-shaded bright sky adventure: third-person camera behind a young girl explorer with dark curly hair, an orange poncho and a red backpack standing on a grassy cliff edge, looking across a blue sky full of big white cumulus clouds at floating islands with waterfalls and a windmill. Two-tone flat shading with crisp shadow edges, thin dark outlines, vivid grass green and sky blue, bright midday sun, wind in the grass, hopeful and open. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cel-shaded bright sky adventure: a young girl explorer with dark curly hair, an orange poncho and a red backpack glides on a small sailcloth glider between floating grassy islands joined by rope bridges, a stone tower with a red flag ahead, big white cumulus clouds below and above. Two-tone flat shading with crisp shadow edges, thin dark outlines, vivid grass green and sky blue, bright midday sun, hopeful and open. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

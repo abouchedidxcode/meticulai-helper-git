@@ -1,0 +1,127 @@
+{
+  "id": "flat-vector",
+  "name": "Flat vector minimal",
+  "order": 24,
+  "one_line": "Clean flat shapes, five colours and room to breathe.",
+  "mood": [
+    "clean",
+    "calm",
+    "modern"
+  ],
+  "look_words": "A landscape built from flat, clean shapes like a travel poster. Layered hills in sage and teal, sand and cream for paths and buildings, a big pale sun, a sky with one gentle fade. No outlines, no texture, no shading beyond one lighter and one darker tone per shape. There is plenty of empty space, and everything lines up neatly. Orange and soft pink mark what to collect and where to go, vermilion is harm, and the player is dark navy. Shapes are geometric: circles, triangles for trees, long curves for roads. Motion is smooth and eased, with simple slides and scales. Avoid detail, noise, realistic light, drop shadows, glow and clutter.",
+  "palette": {
+    "name": "flat poster",
+    "colors": {
+      "base": [
+        "#7fb8a4",
+        "#5f9c8c",
+        "#e6d3a8",
+        "#f3ead2"
+      ],
+      "accent": [
+        "#ff8a00",
+        "#ff8fab"
+      ],
+      "danger": "#e0342b",
+      "player": "#1e2a47",
+      "shadow": "#2f4858",
+      "light": "#fff6df",
+      "ink": "#fbf6e6"
+    },
+    "sky": {
+      "top": "#9fd0d6",
+      "horizon": "#f6ecd0",
+      "below": "#5f9c8c",
+      "sun": "#fff1c2"
+    },
+    "light": {
+      "sun": "#fff3d6",
+      "sunStrength": 2.6,
+      "ambient": "#e6f2f0",
+      "ground": "#cdbf99",
+      "ambientStrength": 2.2,
+      "fog": "#e9ecd9",
+      "fogAmount": 0.35,
+      "exposure": 1,
+      "sunElevation": 45,
+      "sunAzimuth": 135
+    },
+    "notes": "High ambient light keeps shapes flat. Use fog to separate the layers of hills rather than detail."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "flat fills, no outlines",
+  "upgrade": [
+    {
+      "block": "meticulai-painterly-styles",
+      "why": "its clean toon style flattens an ordinary scene into tidy fills"
+    }
+  ],
+  "blocks": [
+    "meticulai-painterly-styles",
+    "meticulai-haze",
+    "meticulai-procedural-songs"
+  ],
+  "asset_search": [
+    "car",
+    "simple tree",
+    "minimal building",
+    "biplane",
+    "hills"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "poly-pizza",
+    "google-fonts"
+  ],
+  "music": {
+    "mood": "light, mellow electric piano and soft claps",
+    "tempo": "medium",
+    "notes": "Tidy and unhurried."
+  },
+  "sound_feel": "clean, soft taps and swooshes",
+  "good_for": [
+    "racer",
+    "runner",
+    "flyer",
+    "grid-puzzle",
+    "marble",
+    "driving"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Flat vector minimal seascape, side view: a small sailing boat with a white sail and a navy hull crosses flat bands of teal sea toward a simple striped lighthouse on a sand-coloured island, a big pale sun disc, three flat gulls, two geometric clouds. No outlines, no texture, no gradients except one soft sky fade, clean geometric shapes, lots of calm empty space, limited palette of five colours. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Flat vector minimal landscape, side view: a small red car drives a winding road over layered hills in flat teal, sage and sand colours toward a simple white observatory, a big pale sun disc, three flat birds, geometric pine trees. No outlines, no texture, no gradients except one soft sky fade, clean geometric shapes, lots of calm empty space, limited palette of five colours. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

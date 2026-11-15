@@ -1,0 +1,132 @@
+{
+  "id": "deep-sea-glow",
+  "name": "Deep sea glow",
+  "order": 28,
+  "one_line": "Black-blue water lit only by living things.",
+  "mood": [
+    "dark",
+    "calm",
+    "wonder"
+  ],
+  "look_words": "The deep ocean, where the only light is alive. Water is black-blue; rock walls are barely there, a shade lighter than the dark. Sea plants, jellyfish and small creatures glow in teal and soft violet, and those glows are small, soft and separate, never a haze. The player carries the one warm light, a yellow lamp with a short beam. Red-pink glow means harm. Shapes are simple and rounded; far things are silhouettes. Motion is slow and floating: drifting specks, pulsing jellyfish, plants swaying in a current. Avoid bright ambient light, surface sunbeams everywhere, bloom that smears the glows together, and clutter.",
+  "palette": {
+    "name": "deep sea",
+    "colors": {
+      "base": [
+        "#0f2a3f",
+        "#0a1d2e",
+        "#1f3f52",
+        "#2a5560"
+      ],
+      "accent": [
+        "#5ff0d0",
+        "#b78cff"
+      ],
+      "danger": "#ff4f6d",
+      "player": "#ffd66b",
+      "shadow": "#04101c",
+      "light": "#c9fff2",
+      "ink": "#e6fbff"
+    },
+    "sky": {
+      "top": "#06182a",
+      "horizon": "#0e3048",
+      "below": "#030a12",
+      "sun": "#8fd8e8"
+    },
+    "light": {
+      "sun": "#7fc8e0",
+      "sunStrength": 1.2,
+      "ambient": "#3f6f98",
+      "ground": "#0a1a28",
+      "ambientStrength": 1.2,
+      "fog": "#0a2236",
+      "fogAmount": 0.8,
+      "exposure": 1.2,
+      "sunElevation": 70,
+      "sunAzimuth": 0
+    },
+    "notes": "Everything bright is an accent or the player, so keep them rare. Thick fog stands in for dark water. Light comes weakly from above."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "soft drawn glows with no bloom haze, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-firefly-swarm",
+      "why": "glowing creatures that drift, blink and react to the player without blown-out bloom"
+    },
+    {
+      "block": "meticulai-sonar-sketch",
+      "why": "a sonar ping that draws the dark world as glowing points"
+    }
+  ],
+  "blocks": [
+    "meticulai-firefly-swarm",
+    "meticulai-sonar-sketch",
+    "meticulai-flock",
+    "meticulai-haze"
+  ],
+  "asset_search": [
+    "submarine",
+    "jellyfish",
+    "coral",
+    "fish",
+    "underwater rocks"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kenney",
+    "poly-pizza",
+    "opengameart"
+  ],
+  "music": {
+    "mood": "slow, deep drones and soft bells",
+    "tempo": "slow",
+    "notes": "Wide and echoing."
+  },
+  "sound_feel": "muffled, deep; sonar pings, bubbles, low hums",
+  "good_for": [
+    "flyer",
+    "top-down",
+    "first-person",
+    "submarine",
+    "exploring",
+    "gentle collecting"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Deep sea floor in near darkness, side view: a small diver in a round brass helmet carrying a warm yellow lamp walks across pale sand toward a sunken stone arch covered in softly glowing teal and violet sea plants, a few glowing jellyfish above, tiny fish, drifting specks in the lamp light. Black-blue water, glows small and separate with no haze, the lamp is the only warm light. Stylised simple shapes. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Deep sea at night-black depth, side view: a small round yellow submarine with one headlight drifts past a rocky trench wall covered in softly glowing teal and violet sea plants, a few glowing jellyfish, tiny lantern fish, drifting specks in the beam. Almost black blue water, glow kept small and soft, no bloom haze, the submarine is the brightest warm thing. Stylised simple shapes. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

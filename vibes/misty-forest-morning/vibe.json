@@ -1,0 +1,121 @@
+{
+  "id": "misty-forest-morning",
+  "name": "Misty forest morning",
+  "order": 7,
+  "one_line": "Tall pines fading into pale green mist.",
+  "mood": [
+    "quiet",
+    "damp",
+    "mysterious"
+  ],
+  "look_words": "A pine forest just after dawn. Moss greens and grey-blue trunks, a soft earth path, ferns and fallen logs, everything fading into pale green-grey mist in layers so that only the nearest trees are clear. Light is cool and low with a few soft shafts between trunks; there are no hard shadows. Shapes are tall verticals and soft mounds. The player wears mustard yellow, the warmest thing in the forest. Pale cream glows and a clear aqua mark what to find and where to go; red means harm. Motion is slow: drifting mist, falling needles, a deer lifting its head. Avoid bright greens, clear blue sky, hard sunlight, bloom and busy undergrowth that hides the path.",
+  "palette": {
+    "name": "forest mist",
+    "colors": {
+      "base": [
+        "#5f7a5a",
+        "#46604a",
+        "#5a6468",
+        "#8a917a"
+      ],
+      "accent": [
+        "#f6f1d8",
+        "#63d0d8"
+      ],
+      "danger": "#e04a3a",
+      "player": "#f2b632",
+      "shadow": "#22302e",
+      "light": "#e9f2df",
+      "ink": "#eef4e6"
+    },
+    "sky": {
+      "top": "#9fb3ae",
+      "horizon": "#d6e0d2",
+      "below": "#46604a",
+      "sun": "#f6f0d0"
+    },
+    "light": {
+      "sun": "#f1ecd0",
+      "sunStrength": 1.8,
+      "ambient": "#b7cbc6",
+      "ground": "#4a5a48",
+      "ambientStrength": 1.9,
+      "fog": "#c3d1c8",
+      "fogAmount": 0.85,
+      "exposure": 1,
+      "sunElevation": 20,
+      "sunAzimuth": 95
+    },
+    "notes": "The fog is the look (0.85): it hides the distance and makes near things matter. Sun is weak, ambient does most of the lighting."
+  },
+  "look": {
+    "id": "soft-haze",
+    "options": {}
+  },
+  "look_wish": "soft painterly shading with haze, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-haze",
+      "why": "low patchy mist that lies between the trunks instead of a flat fog wall"
+    }
+  ],
+  "blocks": [
+    "meticulai-haze",
+    "ez-tree",
+    "soil-and-grass",
+    "meticulai-firefly-swarm"
+  ],
+  "asset_search": [
+    "pine tree",
+    "fern",
+    "mushroom",
+    "fallen log",
+    "forest rocks"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "polyhaven",
+    "kenney",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "slow, breathy pads and a low clarinet",
+    "tempo": "slow",
+    "notes": "Mostly air; a few notes."
+  },
+  "sound_feel": "damp and soft; drips, birdsong far off, twigs, footsteps on moss",
+  "good_for": [
+    "first-person",
+    "island",
+    "top-down",
+    "rider",
+    "exploring",
+    "gentle mystery"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Misty forest morning, third-person camera behind a small hooded wanderer in a mustard-yellow cape walking a mossy path between tall dark pine trunks that fade into pale green-grey mist in layers. Soft shafts of cool light, ferns, a fallen log, a few pale mushrooms, a little wooden signpost with no writing. Muted greens and grey-blues, quiet and damp, stylised painterly 3D with simple shapes. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Misty forest clearing at dawn, slightly high camera: a small hooded wanderer in a mustard-yellow cape stands by a still pond with stepping stones, a deer drinking on the far side, tall pine trunks fading into pale green-grey mist in layers, ferns and moss, a faint warm glow where the sun is rising. Muted greens and grey-blues, quiet and damp, stylised painterly 3D with simple shapes. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "soft-haze",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

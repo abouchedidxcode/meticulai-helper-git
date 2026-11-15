@@ -1,0 +1,124 @@
+{
+  "id": "watercolour-storybook",
+  "name": "Watercolour storybook",
+  "order": 2,
+  "one_line": "Soft washes, pencil lines and white paper showing at the edges.",
+  "mood": [
+    "gentle",
+    "storybook",
+    "soft"
+  ],
+  "look_words": "A page from a picture book painted in watercolour. Soft greens, dusty blue and warm ochre laid down as loose washes that pool and bleed a little; pencil lines show through, and the white of the paper is left bare at the edges and for highlights. Shapes are friendly and slightly wonky: crooked cottages, round trees, low stone walls. Light is a mild morning with pale blue shadows. Warm orange and a soft violet are kept for the things to find, a muted red for harm, and the player wears deep blue. Motion is slow and floaty, with colour spreading in where the player has been. Avoid hard edges, pure black, saturated colour, gloss and bloom.",
+  "palette": {
+    "name": "watercolour",
+    "colors": {
+      "base": [
+        "#a9c08a",
+        "#86a074",
+        "#d9c7a3",
+        "#e8dcc0"
+      ],
+      "accent": [
+        "#f08a00",
+        "#8a64c0"
+      ],
+      "danger": "#cf3f36",
+      "player": "#2f4f93",
+      "shadow": "#4a5578",
+      "light": "#fff8e8",
+      "ink": "#fbf5e6"
+    },
+    "sky": {
+      "top": "#a8c8e0",
+      "horizon": "#f3ead8",
+      "below": "#c9d6c8",
+      "sun": "#fff3cf"
+    },
+    "light": {
+      "sun": "#fff0d0",
+      "sunStrength": 2.6,
+      "ambient": "#dfe8f2",
+      "ground": "#c9b996",
+      "ambientStrength": 2,
+      "fog": "#e9e6da",
+      "fogAmount": 0.45,
+      "exposure": 1,
+      "sunElevation": 40,
+      "sunAzimuth": 110
+    },
+    "notes": "Keep everything a little washed out so the orange pickups and the blue player are the strongest colours on the page."
+  },
+  "look": {
+    "id": "painterly",
+    "options": {}
+  },
+  "look_wish": "watercolour wash",
+  "upgrade": [
+    {
+      "block": "watercolour",
+      "why": "a world that starts as pencil and fills with paint as you walk through it"
+    },
+    {
+      "block": "meticulai-painterly-styles",
+      "why": "a quicker painted filter over an ordinary scene"
+    }
+  ],
+  "blocks": [
+    "watercolour",
+    "meticulai-painterly-styles",
+    "coloured-pencil",
+    "meticulai-haze"
+  ],
+  "asset_search": [
+    "cottage",
+    "apple tree",
+    "stone wall",
+    "fox"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kaykit",
+    "poly-pizza",
+    "polyhaven"
+  ],
+  "music": {
+    "mood": "soft piano and clarinet, a lullaby",
+    "tempo": "slow",
+    "notes": "One simple tune that returns."
+  },
+  "sound_feel": "soft, round, close; birds, a gate, footsteps in grass",
+  "good_for": [
+    "island",
+    "top-down",
+    "first-person",
+    "walking and collecting",
+    "story games",
+    "gardening"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Watercolour storybook illustration of a small game world: a child in a yellow coat and a fox walk a winding garden path toward a crooked cottage with a blue door, apple trees, a washing line, a low stone wall. Soft wet-on-wet washes, pencil lines showing through, white paper left at the edges, gentle morning light, muted greens, dusty blue and warm ochre. Slightly high side view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "painterly",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

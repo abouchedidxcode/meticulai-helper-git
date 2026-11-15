@@ -13,6 +13,12 @@ changed value, values kept across reloads, paste back, freeze and frame step, an
 
 Renderer: none (plain DOM, works with any renderer or none). npm deps: none (`three` and `vite` only for the demo).
 
+**Games made from the kit starter already have all of this built in**, and more: since 2026-11-14 the starter's dev
+menu (`starter/src/core/dev/`, backquote or F2) is this registry and panel plus game-wide tools (fps and frame cost,
+freeze and step, speed 1/8x to 4x, a free camera, No HUD, screenshot, copy view, restart, the computer playing, skip
+buttons), the palette and vibe chooser, and sound. Don't add this block to such a game. This block is for games that
+were NOT made from the starter (see "Using it without the starter"), and for older starter games, below.
+
 ## Files
 
 - `src/tuning.js`: the registry (no DOM, no imports): controls, defaults, storage, slots, presets, copy and paste.
@@ -20,7 +26,10 @@ Renderer: none (plain DOM, works with any renderer or none). npm deps: none (`th
 - `src/starter.js`: the adapter for the kit starter's `src/core/settings.js`.
 - `src/index.js`: exports all three. `demo/`: a bouncing ball and a ring of pillars on the panel. `test/`: 22 tests.
 
-## Drop it into the starter (replaces its panel)
+## Drop it into an older starter game (made before 2026-11-14)
+
+A game made from today's starter already has the full dev menu: skip this section. For an older one:
+
 
 1. `node tools/blocks/add.mjs meticulai-tuning-panel` (copies the block to `my-game/vendor/meticulai-tuning-panel/`).
 2. Replace the whole of `my-game/src/core/settings.js` with:

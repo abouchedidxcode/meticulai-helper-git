@@ -1,0 +1,124 @@
+{
+  "id": "neon-arcade",
+  "name": "Neon arcade (restrained)",
+  "order": 45,
+  "one_line": "Thin bright lines on dark indigo; light used sparingly.",
+  "mood": [
+    "energetic",
+    "fast",
+    "electric"
+  ],
+  "look_words": "An arcade look that keeps its light under control. Dark indigo surfaces with a slight gloss; thin crisp lines in magenta and cyan along edges, lanes and gates; a low skyline of plain dark blocks. Nine tenths of the screen stays dark so the lines stay sharp. The player is cyan, pickups are yellow, the goal is green, and magenta means harm. Shapes are simple geometry: triangles, grids, rings. Glow is small and tight around each line, never a haze over the picture. Motion is fast and clean: short light trails, quick flashes on hits, a pulsing grid in time with the music. Avoid heavy bloom, purple fog, lens flares, chrome, more than four bright colours and flashing that strains the eyes.",
+  "palette": {
+    "name": "dark arcade",
+    "colors": {
+      "base": [
+        "#1a1a3a",
+        "#12122a",
+        "#2a2a55",
+        "#3a2f6a"
+      ],
+      "accent": [
+        "#ffe84a",
+        "#3dff9a"
+      ],
+      "danger": "#ff2e88",
+      "player": "#22e6ff",
+      "shadow": "#07071a",
+      "light": "#f0f6ff",
+      "ink": "#eaf2ff"
+    },
+    "sky": {
+      "top": "#07071a",
+      "horizon": "#2a1a5a",
+      "below": "#050512",
+      "sun": "#ff7ad9"
+    },
+    "light": {
+      "sun": "#b9a8ff",
+      "sunStrength": 1.4,
+      "ambient": "#4a4a9a",
+      "ground": "#101028",
+      "ambientStrength": 1.2,
+      "fog": "#140f33",
+      "fogAmount": 0.5,
+      "exposure": 1.1,
+      "sunElevation": 40,
+      "sunAzimuth": 0
+    },
+    "notes": "Use the bright colours as thin lines and small shapes on dark surfaces. If you add bloom, keep it very low (about 0.15) or the lines turn to fog."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "thin glowing outlines on dark fills, very little bloom",
+  "upgrade": [
+    {
+      "block": "meticulai-adaptive-music",
+      "why": "a soundtrack that builds with the action, synthesised live"
+    },
+    {
+      "block": "meticulai-procedural-songs",
+      "why": "whole synth songs from a seed with no sound files"
+    }
+  ],
+  "blocks": [
+    "meticulai-procedural-songs",
+    "meticulai-adaptive-music",
+    "meticulai-arcade-flight"
+  ],
+  "asset_search": [
+    "hover car",
+    "spaceship",
+    "race track",
+    "sci-fi city",
+    "grid"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "sfxr-me",
+    "beepbox"
+  ],
+  "music": {
+    "mood": "driving synth bass and arpeggios",
+    "tempo": "fast",
+    "notes": "Tie pulses on screen to the beat."
+  },
+  "sound_feel": "zaps, sharp blips, whooshes, a punchy kick on hits",
+  "good_for": [
+    "racer",
+    "flyer",
+    "runner",
+    "top-down",
+    "shooting",
+    "score chasing"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Restrained neon arcade look: a small sleek hover racer with a bright cyan stripe speeds along a dark glossy track with thin magenta edge lines toward a row of glowing gates, low geometric city silhouettes on a deep indigo horizon. Mostly dark surfaces, light used sparingly as thin crisp lines and small glows, no haze or blown-out bloom, only cyan, magenta and a little yellow. Chase camera behind the racer. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Restrained neon arcade look, top-down three-quarter view of a small arena: a triangular cyan ship weaves between simple magenta geometric enemies on a dark indigo grid floor with thin glowing lines, a few small yellow pickups, short light trails. Mostly dark surfaces, light used sparingly as thin crisp lines and small glows, no haze or blown-out bloom, only cyan, magenta and a little yellow. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

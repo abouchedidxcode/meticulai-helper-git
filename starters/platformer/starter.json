@@ -1,0 +1,52 @@
+{
+  "id": "platformer",
+  "order": 3,
+  "name": "2D platformer (run, jump)",
+  "pitch": "A small eared creature runs, jumps and stomps across a hand-typed level of pits, spikes, crawlers and moving platforms to a glowing door.",
+  "you": [
+    "run",
+    "jump",
+    "stomp",
+    "collect"
+  ],
+  "camera": "side-on, flat (orthographic), follows with look-ahead",
+  "controls": "A/D or arrows to run, Space (or W / Up) to jump (hold for higher), S + Space to drop through wooden platforms, jump against a wall to wall jump. Gamepad works; touch has no jump button yet.",
+  "session": "about 1 to 2 minutes",
+  "use_when": "any game seen from the side: classic platformers, precision platformers, side-scrolling adventures, metroidvania-style rooms, auto-runners seen from the side. Levels are text maps the agent can type.",
+  "not_for": "top-down games, 3D worlds, first-person, vehicles",
+  "tags": [
+    "2d",
+    "side view",
+    "platformer",
+    "side-scroller",
+    "runner",
+    "metroidvania",
+    "jump",
+    "levels",
+    "tiles",
+    "retro"
+  ],
+  "blocks": [],
+  "skips": [
+    "win",
+    "lose",
+    "invincible",
+    "spikes",
+    "platforms",
+    "home",
+    "walls",
+    "level2"
+  ],
+  "already_good": [
+    "Run with separate speed-up, stop and turn rates, on the ground and in the air",
+    "Jump with variable height, coyote time, buffering, apex hang, heavier falling and a fall-speed cap",
+    "Corner correction: slips round ceiling corners, lifts onto ledges a few pixels short",
+    "One-way platforms, moving platforms that carry you, wall slide and wall jump",
+    "A camera with look-ahead and a vertical dead zone, clamped to the level",
+    "Levels typed as text, drawn with automatic grass caps and edges in one draw call",
+    "A parallax backdrop painted from the palette",
+    "Half-second respawn at checkpoints, a generous stomp, an end card that says why"
+  ],
+  "preview": "starters/platformer/preview.jpg",
+  "status": "ready"
+}

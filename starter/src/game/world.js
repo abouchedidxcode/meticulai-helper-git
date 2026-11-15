@@ -5,22 +5,21 @@
 import * as THREE from 'three';
 import { createRandom } from '../core/random.js';
 
+import { look } from '../core/look.js';
+import { createAtmosphere } from '../render/atmosphere.js';
+
+// Every colour comes from palette.json by role (see core/look.js), so a new palette restyles the island.
 export const PALETTE = {
-  skyTop: '#2c3a63',
-  skyHorizon: '#c98a7a',
-  skySun: '#ffb46b',
-  skyBelow: '#4a3f5e',
-  fog: '#7d6a86',
-  sun: '#ffc08a',
-  hemiSky: '#b4c0e6',
-  hemiGround: '#8a6450',
-  moss: '#93ad5e',
-  mossDark: '#6f8a45',
-  rock: '#b9957a',
-  rockDark: '#6e5752',
-  path: '#a88462',
-  amber: '#ffc46b',
-  autumn: '#d4893f',
+  moss: look.base[0],
+  mossDark: look.base[1],
+  rock: look.base[2],
+  rockDark: look.mix(look.base[2], look.shadow, 0.6),
+  path: look.base[3],
+  amber: look.accent[0],
+  autumn: look.accent[1],
+  trunk: look.mix(look.base[3], look.shadow, 0.55),
+  stone: look.mix(look.base[2], look.shadow, 0.3),
+  glow: look.light,
 };
 
 // A soft round dot, used for glows and particles.
@@ -58,47 +57,6 @@ function lumpy(geo, rand, amount, keep = () => false) {
   return geo;
 }
 
-function sky(scene, sunDir) {
-  const mat = new THREE.ShaderMaterial({
-    side: THREE.BackSide,
-    depthWrite: false,
-    fog: false,
-    uniforms: {
-      top: { value: new THREE.Color(PALETTE.skyTop) },
-      horizon: { value: new THREE.Color(PALETTE.skyHorizon) },
-      sunGlow: { value: new THREE.Color(PALETTE.skySun) },
-      below: { value: new THREE.Color(PALETTE.skyBelow) },
-      sunDir: { value: sunDir.clone().normalize() },
-    },
-    vertexShader: /* glsl */ `
-      varying vec3 vDir;
-      void main() {
-        vDir = position;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-      }`,
-    fragmentShader: /* glsl */ `
-      uniform vec3 top, horizon, sunGlow, below, sunDir;
-      varying vec3 vDir;
-      void main() {
-        vec3 d = normalize(vDir);
-        float s = max(dot(d, sunDir), 0.0);
-        float towardSun = pow(max(dot(normalize(d.xz + 1e-5), normalize(sunDir.xz)), 0.0), 3.0);
-        vec3 hor = mix(horizon, sunGlow, towardSun * 0.8);
-        vec3 col = mix(hor, top, smoothstep(-0.02, 0.5, d.y));
-        col = mix(col, below, smoothstep(0.0, -0.4, d.y));
-        col += sunGlow * (pow(s, 900.0) * 3.0 + pow(s, 24.0) * 0.35);
-        gl_FragColor = vec4(col, 1.0);
-        #include <tonemapping_fragment>
-        #include <colorspace_fragment>
-      }`,
-  });
-  const mesh = new THREE.Mesh(new THREE.SphereGeometry(400, 32, 16), mat);
-  mesh.renderOrder = -1;
-  mesh.frustumCulled = false;
-  scene.add(mesh);
-  return mesh;
-}
-
 export function buildWorld(scene) {
   const rand = createRandom(1234); // fixed: the island is the same for every seed
   const solids = [];
@@ -111,21 +69,10 @@ export function buildWorld(scene) {
     });
 
   // Light ----------------------------------------------------------------------------
-  const sunDir = new THREE.Vector3(-0.9, 0.42, -0.25);
-  scene.fog = new THREE.Fog(PALETTE.fog, 45, 190);
-  const skyMesh = sky(scene, sunDir);
-
-  const hemi = new THREE.HemisphereLight(PALETTE.hemiSky, PALETTE.hemiGround, 1.6);
-  scene.add(hemi);
-  const sun = new THREE.DirectionalLight(PALETTE.sun, 3.0);
-  sun.position.copy(sunDir).multiplyScalar(40);
-  sun.castShadow = true;
-  sun.shadow.mapSize.set(2048, 2048);
-  const sc = sun.shadow.camera;
-  sc.left = -20; sc.right = 20; sc.top = 20; sc.bottom = -20; sc.near = 1; sc.far = 100;
-  sun.shadow.bias = -0.0005;
-  sun.shadow.normalBias = 0.03;
-  scene.add(sun, sun.target);
+  const air = createAtmosphere(scene, { look, far: 155, shadows: { size: 2048, area: 20, far: 100 } });
+  const sun = air.sun;
+  const skyMesh = air.sky;
+  air.follow(null, new THREE.Vector3(0, 0, 0)); // the island is small: the shadows stay centred on it
 
   // Materials ------------------------------------------------------------------------
   const moss = new THREE.MeshStandardMaterial({ color: PALETTE.moss, roughness: 0.95 });
@@ -210,7 +157,7 @@ export function buildWorld(scene) {
   slab(-10.2, 3.3, 0.4, 2.2, 2.2);
 
   // A fallen log near the far edge: a low step up.
-  const log = shadowy(new THREE.Mesh(new THREE.CylinderGeometry(0.46, 0.5, 4.2, 10), new THREE.MeshStandardMaterial({ color: '#7a5640', roughness: 1, flatShading: true })));
+  const log = shadowy(new THREE.Mesh(new THREE.CylinderGeometry(0.46, 0.5, 4.2, 10), new THREE.MeshStandardMaterial({ color: PALETTE.trunk, roughness: 1, flatShading: true })));
   log.rotation.z = Math.PI / 2;
   log.position.set(1.8, 0.46, -11.2);
   scene.add(log);
@@ -218,11 +165,11 @@ export function buildWorld(scene) {
   slab(0, 0, 16.6, 2.4, 2.4); // out past the edge: a risky spark
 
   // Trees (solid trunks) ------------------------------------------------------------------
-  const trunkMat = new THREE.MeshStandardMaterial({ color: '#6b4a36', roughness: 1 });
+  const trunkMat = new THREE.MeshStandardMaterial({ color: look.shade(PALETTE.trunk, -0.1), roughness: 1 });
   const leafMats = [
     new THREE.MeshStandardMaterial({ color: PALETTE.autumn, roughness: 0.9, flatShading: true }),
-    new THREE.MeshStandardMaterial({ color: '#8a9a4a', roughness: 0.9, flatShading: true }),
-    new THREE.MeshStandardMaterial({ color: '#c46a3a', roughness: 0.9, flatShading: true }),
+    new THREE.MeshStandardMaterial({ color: look.mix(look.base[0], look.accent[1], 0.25), roughness: 0.9, flatShading: true }),
+    new THREE.MeshStandardMaterial({ color: look.shade(look.accent[1], -0.12), roughness: 0.9, flatShading: true }),
   ];
   // Near the rim, so they frame the island instead of blocking the camera.
   const trees = [[-6, 11.2], [8, 10], [12.3, 1.2], [-12.2, 6], [6, -11.6], [-4.5, -12.3]];
@@ -257,7 +204,7 @@ export function buildWorld(scene) {
     const s = rand.range(0.6, 1.4);
     m4.compose(new THREE.Vector3(Math.cos(a) * r, 0, Math.sin(a) * r), q, new THREE.Vector3(s, s, s));
     tufts.setMatrixAt(i, m4);
-    tufts.setColorAt(i, col.set(rand.pick(['#a2bd68', '#8fae5a', '#b5c776', '#c9b46a'])));
+    tufts.setColorAt(i, col.set(rand.pick([look.shade(look.base[0], 0.1), look.shade(look.base[0], -0.04), look.shade(look.base[0], 0.22), look.mix(look.base[0], look.accent[0], 0.35)])));
   }
   tufts.receiveShadow = true;
   scene.add(tufts);
@@ -269,7 +216,7 @@ export function buildWorld(scene) {
     const r = Math.sqrt(rand.next()) * (R - 0.8);
     m4.makeTranslation(Math.cos(a) * r, 0.08, Math.sin(a) * r);
     flowers.setMatrixAt(i, m4);
-    flowers.setColorAt(i, col.set(rand.pick(['#f6e2b8', '#f2c27a', '#f6efe0'])));
+    flowers.setColorAt(i, col.set(rand.pick([look.shade(look.light, 0.45), look.accent[0], look.shade(look.light, 0.75)])));
   }
   scene.add(flowers);
 
@@ -302,7 +249,7 @@ export function buildWorld(scene) {
   const motes = new THREE.Points(
     moteGeo,
     new THREE.PointsMaterial({
-      size: 0.16, map: glowTexture(), color: '#ffd59a', transparent: true, opacity: 0.8,
+      size: 0.16, map: glowTexture(), color: look.shade(look.light, 0.25), transparent: true, opacity: 0.8,
       depthWrite: false, blending: THREE.AdditiveBlending,
     }),
   );

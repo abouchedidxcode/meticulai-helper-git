@@ -1,0 +1,120 @@
+{
+  "id": "warm-lowpoly-dusk",
+  "name": "Warm low-poly dusk",
+  "order": 1,
+  "one_line": "Chunky faceted hills, one lit window, the last of the sun.",
+  "mood": [
+    "warm",
+    "calm",
+    "lived-in"
+  ],
+  "look_words": "A small faceted world at the end of the day. Olive and moss greens for the ground, terracotta and warm stone for rocks and walls, long violet shadows, a peach horizon under a deep blue sky. Shapes are chunky and flat-shaded, two tones per surface, no texture noise. One low warm sun does the work; amber is kept for lit windows, lanterns and the things to collect. Motion is slow: smoke, a swaying tree, drifting dust. Materials are matte, like painted wood and clay. Avoid glossy surfaces, bloom, neon, pure black and busy textures.",
+  "palette": {
+    "name": "warm dusk",
+    "colors": {
+      "base": [
+        "#8fa65a",
+        "#6c8444",
+        "#b98e72",
+        "#a67f5f"
+      ],
+      "accent": [
+        "#ffcf6e",
+        "#3fd0e0"
+      ],
+      "danger": "#d81e3a",
+      "player": "#fff3df",
+      "shadow": "#463c5c",
+      "light": "#ffc58f",
+      "ink": "#f7ecd9"
+    },
+    "sky": {
+      "top": "#2b3a66",
+      "horizon": "#e09a7c",
+      "below": "#463c5c",
+      "sun": "#ffb56b"
+    },
+    "light": {
+      "sun": "#ffbf88",
+      "sunStrength": 3,
+      "ambient": "#aebbe6",
+      "ground": "#86624e",
+      "ambientStrength": 1.5,
+      "fog": "#806b88",
+      "fogAmount": 0.5,
+      "exposure": 1.1,
+      "sunElevation": 18,
+      "sunAzimuth": 255
+    },
+    "notes": "Amber is the reward colour (windows, lanterns, pickups); bright aqua is for the goal or water you can use. Red only for harm. The player is the palest warm thing on screen."
+  },
+  "look": {
+    "id": "soft-haze",
+    "options": {}
+  },
+  "look_wish": "flat shading with a soft outline, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-haze",
+      "why": "one sun-tinted air for the whole world, so far hills fade into the dusk sky"
+    }
+  ],
+  "blocks": [
+    "meticulai-haze",
+    "lowpoly-tree-generator",
+    "touch-grass",
+    "meticulai-firefly-swarm"
+  ],
+  "asset_search": [
+    "tree",
+    "cottage",
+    "rocks",
+    "lantern"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "kaykit",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "slow, warm, plucked strings and a soft pad",
+    "tempo": "slow",
+    "notes": "Leave room for crickets and wind."
+  },
+  "sound_feel": "soft, wooden, close; footsteps on dirt, a distant bell",
+  "good_for": [
+    "island",
+    "first-person",
+    "top-down",
+    "rider",
+    "walking and collecting",
+    "small adventure"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Low-poly island at dusk seen from a third-person camera behind a small traveller with a red scarf walking a dirt path toward a stone cottage with one lit window. Chunky faceted hills in olive green, two tones per surface, terracotta rocks, a few round trees, long soft violet shadows, peach horizon under a deep blue sky, a little haze. Warm, calm, lived-in. Flat-shaded polygons, no texture noise. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Low-poly fishing dock at dusk, high three-quarter camera. A small figure with a red scarf stands at the end of a wooden pier holding a lantern, a little boat tied beside it, olive-green faceted hills and terracotta cliffs behind, a few glowing amber windows in a hut. Long violet shadows, peach and rose horizon, deep blue sky, calm flat water. Chunky flat-shaded polygons, two tones per surface. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "soft-haze",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

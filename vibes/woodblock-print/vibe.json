@@ -1,0 +1,128 @@
+{
+  "id": "woodblock-print",
+  "name": "Woodblock print",
+  "order": 21,
+  "one_line": "Flat indigo, green and cream with fine lines and wood grain.",
+  "mood": [
+    "calm",
+    "traditional",
+    "graphic"
+  ],
+  "look_words": "A landscape printed from carved wooden blocks. Flat areas of muted green, cream and tan with a fine dark outline around every shape, and skies and water that fade smoothly from pale paper to deep indigo at one edge. The paper is slightly yellowed and the wood grain shows through the colour. Shapes are stylised: curling waves, twisted pines, flat bands of cloud, steep rounded rocks. Deep orange and blossom pink mark what to collect and the goal, brick red is harm, and the player is indigo. Light is flat; there are no cast shadows. Motion is slow and looping: waves, drifting cloud, falling petals. Avoid gloss, realistic shading, strong saturation, glow and bloom.",
+  "palette": {
+    "name": "woodblock",
+    "colors": {
+      "base": [
+        "#8fa87a",
+        "#6f8a66",
+        "#c9b796",
+        "#e6dcc0"
+      ],
+      "accent": [
+        "#d97a00",
+        "#f0608a"
+      ],
+      "danger": "#c4391f",
+      "player": "#1f3a63",
+      "shadow": "#1f2f4a",
+      "light": "#f7efd9",
+      "ink": "#f6eeda"
+    },
+    "sky": {
+      "top": "#3a5f8f",
+      "horizon": "#f1e6c8",
+      "below": "#2f4f7a",
+      "sun": "#e8644a"
+    },
+    "light": {
+      "sun": "#fff0d6",
+      "sunStrength": 2.4,
+      "ambient": "#e3e6e0",
+      "ground": "#b8a888",
+      "ambientStrength": 2,
+      "fog": "#e9e0c6",
+      "fogAmount": 0.5,
+      "exposure": 1,
+      "sunElevation": 35,
+      "sunAzimuth": 100
+    },
+    "notes": "The sky fade from cream at the horizon to indigo at the top is the signature. The sun is a flat red-orange disc."
+  },
+  "look": {
+    "id": "ink",
+    "options": {
+      "hatching": 0,
+      "wobble": 1,
+      "paper": 0.35
+    }
+  },
+  "look_wish": "fine dark outlines, flat fills and a paper grain",
+  "upgrade": [
+    {
+      "block": "meticulai-painterly-styles",
+      "why": "its ink miniature style gives outlines and flat colour on paper"
+    },
+    {
+      "block": "meticulai-ink-illustration",
+      "why": "pen outlines with a paper texture"
+    }
+  ],
+  "blocks": [
+    "meticulai-painterly-styles",
+    "meticulai-ink-illustration",
+    "meticulai-haze"
+  ],
+  "asset_search": [
+    "pine tree",
+    "wooden bridge",
+    "rock",
+    "fishing boat",
+    "paper texture"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "polyhaven",
+    "ambientcg",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "slow plucked strings and a wooden flute",
+    "tempo": "slow",
+    "notes": "Unhurried, with pauses."
+  },
+  "sound_feel": "water, wooden knocks, wind in pines, a small bell",
+  "good_for": [
+    "island",
+    "top-down",
+    "platformer",
+    "rider",
+    "sailing",
+    "walking games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Traditional woodblock print style game scene: a small traveller with a walking staff and a round straw hat crosses an arched wooden bridge over a river, pine trees on a rocky shore, a far mountain with a snowy top, drifting flat clouds. Flat colour areas with soft gradation at the edges, visible wood grain, fine dark outlines, indigo, muted green, cream and a little brick red on slightly yellowed paper. Side view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Traditional woodblock print style game scene: a small fishing boat with one figure rides stylised curling waves near a rocky coast with twisted pines and a little hillside shrine gate in brick red, flat banded sky fading from cream to indigo. Flat colour areas with soft gradation, visible wood grain, fine dark outlines, indigo, muted green, cream and brick red on slightly yellowed paper. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "ink",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

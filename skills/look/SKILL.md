@@ -30,8 +30,14 @@ Background: [playbook/picking-a-look.md](../../playbook/picking-a-look.md).
 
 1. **Pick one small scene** (one room, one stretch of track, one arena). Lock the look there before touching anything
    else.
-2. **Write the look down as numbers:** fill `my-game/palette.json` (base colours, accents, shadow, light, sun,
-   ambient, fog, exposure) from "the look in words". From a reference picture, start with
+2. **Write the look down as numbers:** fill `my-game/palette.json` (colours by role: base, accent, danger, player,
+   shadow, light, ink; sky; sun, ambient, fog, exposure, sun height) from "the look in words". Every starter takes
+   ALL its colours and light from this file, so this one file restyles the whole game (it applies on reload). The
+   quickest start is a vibe: `node tools/vibes/list.mjs --for "<the look in words>"`, `node tools/vibes/apply.mjs
+   <id>`, then adjust. A drawing style on top of the whole picture (print, pixels, ink outlines, painterly, tilt-shift,
+   film, haze, retro console) is one command: `node tools/looks/list.mjs`, `node tools/looks/apply.mjs <id>` (`none`
+   takes it off); its options are in the dev menu under "Look". The user can also flip through vibes and colours
+   themselves in the dev menu (backquote key, "Look") and press "Save palette for my agent". From a reference picture, start with
    `node tools/assets/palette-from.mjs <image>`. The asset tools read it; make the game's lights and materials
    read it too (or keep the code's colours in step with it), so assets are judged under the game's real light.
 3. **Assets, free first, through [find-assets](../find-assets/SKILL.md):** the plan in `my-game/ASSETS.md`, one or two

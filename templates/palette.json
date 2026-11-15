@@ -2,15 +2,25 @@
   "name": "warm dusk",
   "colors": {
     "base": ["#93ad5e", "#6f8a45", "#b9957a", "#a88462"],
-    "accent": ["#ffc46b", "#d4893f"],
+    "accent": ["#ffc46b", "#ff7a1f"],
+    "danger": "#d6336c",
+    "player": "#f7c98a",
     "shadow": "#4a3f5e",
-    "light": "#ffc08a"
+    "light": "#ffc08a",
+    "ink": "#f7ecd9"
   },
+  "sky": { "top": "#2c3a63", "horizon": "#c98a7a", "below": "#4a3f5e", "sun": "#ffb46b" },
   "light": {
     "sun": "#ffc08a",
+    "sunStrength": 3,
     "ambient": "#b4c0e6",
+    "ground": "#8a6450",
+    "ambientStrength": 1.6,
     "fog": "#7d6a86",
-    "exposure": 1.1
+    "fogAmount": 0.5,
+    "exposure": 1.1,
+    "sunElevation": 24,
+    "sunAzimuth": 255
   },
-  "notes": "The starter game's palette: a floating island at dusk. Base = moss, dark moss, rock, path. Accents = amber and autumn orange, kept for things that matter (pickups, the goal). Shadow is the cool violet under the island; light is the warm sun. Replace with the look from GREAT.md (or start from: node tools/assets/palette-from.mjs <image>). Used by restyle.mjs --palette and look.mjs --in-game."
+  "notes": "The game reads this file (src/core/look.js): change a colour here and the whole game follows. Roles, not decoration: base = the world (0 ground, 1 its darker partner, 2 structures and rock, 3 paths); accent = the things that matter to the player (pickups, the goal), kept rare; danger = only things that hurt; player = the player; shadow = the dark end; light = the bright end; ink = text over the game. sky and light set the time of day (sunElevation in degrees above the horizon; fogAmount 0 = clear, 1 = thick). Only colors and light are required; the rest is worked out. Pick a ready-made one with  node tools/vibes/list.mjs , or start from a picture:  node tools/assets/palette-from.mjs <image>. Also used by restyle.mjs --palette and look.mjs --in-game."
 }

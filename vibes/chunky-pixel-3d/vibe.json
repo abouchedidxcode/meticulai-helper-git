@@ -1,0 +1,120 @@
+{
+  "id": "chunky-pixel-3d",
+  "name": "Chunky pixel art",
+  "order": 26,
+  "one_line": "Big crisp pixels, sixteen colours, a tiny world seen from above.",
+  "mood": [
+    "cosy",
+    "crisp",
+    "retro"
+  ],
+  "look_words": "A small world drawn in big, crisp pixels and seen from a raised three-quarter angle. A limited palette of about sixteen colours: grass greens, warm dirt, cream stone, with clear lit and shaded sides on everything. Shading is done with hand-placed dither and a dark one-pixel outline, never with blur or gradients. Light is a warm afternoon. Yellow and sky blue mark pickups and the goal, red is harm, and the player is pale cream with a dark outline. Shapes are chunky and readable at a glance. Motion is in steps: two or three frames for a walk, things that pop rather than fade. Avoid smooth scaling, rotation that breaks the pixel grid, soft shadows and bloom.",
+  "palette": {
+    "name": "sixteen colours",
+    "colors": {
+      "base": [
+        "#7fb04f",
+        "#5a8c3c",
+        "#b8a48a",
+        "#c98f5a"
+      ],
+      "accent": [
+        "#ffd93d",
+        "#5ad1e6"
+      ],
+      "danger": "#e03c32",
+      "player": "#fbf5e3",
+      "shadow": "#2d2440",
+      "light": "#fff3c4",
+      "ink": "#fbf5e3"
+    },
+    "sky": {
+      "top": "#5fa8e8",
+      "horizon": "#c9ecf7",
+      "below": "#3c6a8c",
+      "sun": "#fff6c9"
+    },
+    "light": {
+      "sun": "#fff0c0",
+      "sunStrength": 3.2,
+      "ambient": "#b9d6f5",
+      "ground": "#8a7a5a",
+      "ambientStrength": 1.7,
+      "fog": "#bfe0f0",
+      "fogAmount": 0.25,
+      "exposure": 1.05,
+      "sunElevation": 42,
+      "sunAzimuth": 230
+    },
+    "notes": "Use the base colours and their shades only; a pixel look falls apart when extra in-between colours creep in."
+  },
+  "look": {
+    "id": "pixel",
+    "options": {}
+  },
+  "look_wish": "chunky pixels",
+  "upgrade": [
+    {
+      "block": "meticulai-pixel-3d",
+      "why": "real pixel art from a 3D scene: a small render, an exact palette, a camera that snaps to whole pixels"
+    }
+  ],
+  "blocks": [
+    "meticulai-pixel-3d",
+    "pixelfx",
+    "pixel-plays"
+  ],
+  "asset_search": [
+    "pixel art farm",
+    "pixel character",
+    "tileset",
+    "pixel tree",
+    "voxel house"
+  ],
+  "asset_families": [
+    "kenney",
+    "pixel-frog",
+    "grafxkid",
+    "lpc-character-generator",
+    "0x72-dungeontileset-ii"
+  ],
+  "music": {
+    "mood": "bright chiptune with a soft bass",
+    "tempo": "medium",
+    "notes": "Three or four voices only."
+  },
+  "sound_feel": "short square-wave blips, a soft noise burst for steps",
+  "good_for": [
+    "top-down",
+    "grid-puzzle",
+    "platformer",
+    "island",
+    "farming",
+    "small role-playing games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Chunky pixel art of a small isometric 3D world: a farm plot with a cottage, a water mill, a vegetable patch and a small farmer in a straw hat carrying a watering can. Big crisp square pixels, a limited palette of about sixteen colours, hand-placed dithering, dark one-pixel outlines, warm afternoon light with clear lit and shaded sides, no blur, no gradients. Cosy and readable. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Chunky pixel art of a small isometric 3D world: a cliff-top with a stone tower, a rope bridge, pine trees and a small adventurer in a green hood with a lantern, the sea below. Big crisp square pixels, a limited palette of about sixteen colours, hand-placed dithering, dark one-pixel outlines, warm afternoon light with clear lit and shaded sides, no blur, no gradients. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "pixel",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

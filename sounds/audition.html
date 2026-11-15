@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Meticulai Helper Git: starter sounds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font: 15px/1.45 system-ui, sans-serif; margin: 24px auto; max-width: 980px; padding: 0 16px; color: #1c1c1c; background: #faf8f4; }
+  h1 { font-size: 22px; } h2 { font-size: 16px; margin: 26px 0 6px; text-transform: capitalize; }
+  table { border-collapse: collapse; width: 100%; } td { padding: 4px 8px; border-bottom: 1px solid #e4dfd4; vertical-align: middle; }
+  button { font: inherit; padding: 5px 10px; border: 1px solid #b9b2a3; border-radius: 6px; background: #fff; cursor: pointer; min-width: 230px; text-align: left; }
+  button.playing { background: #ffe9a8; } .feel { color: #666; font-size: 13px; }
+  .bar { position: sticky; top: 0; background: #faf8f4; padding: 8px 0; border-bottom: 1px solid #d8d2c4; }
+  textarea { width: 100%; height: 90px; font: 13px ui-monospace, monospace; }
+</style></head><body>
+<h1>Meticulai Helper Git: starter sounds</h1>
+<p>Every sound that comes with the kit. Click a name to hear it; a sound with several takes plays the next take on each click; a loop stops when you click it again. They were checked by numbers only (length, loudness, clean loops). Nobody has listened to all of them, so your ears decide.</p>
+<div class="bar"><button id="stop" style="min-width:0">Stop everything</button>
+  Volume <input id="vol" type="range" min="0" max="1" step="0.01" value="0.8">
+  <label><input id="even" type="checkbox" checked> play at the suggested level</label>
+  <span id="plain" hidden> &middot; This browser is using its simple player here, so a loop may tick where it joins. In a game the loops join cleanly.</span></div>
+<h2>ui</h2>
+<table>
+      <tr>
+        <td><button data-id="ui-back">&#9654; ui-back</button></td>
+        <td>0.3 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">back, cancel, close, no, two notes down</td>
+        <td><label><input type="radio" name="v-ui-back" value="good"> good</label> <label><input type="radio" name="v-ui-back" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ui-click">&#9654; ui-click</button></td>
+        <td>0.06 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">click, tap, button, press, select, short, clean</td>
+        <td><label><input type="radio" name="v-ui-click" value="good"> good</label> <label><input type="radio" name="v-ui-click" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ui-confirm">&#9654; ui-confirm</button></td>
+        <td>0.34 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">confirm, ok, yes, accept, start, positive, two notes up</td>
+        <td><label><input type="radio" name="v-ui-confirm" value="good"> good</label> <label><input type="radio" name="v-ui-confirm" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ui-error">&#9654; ui-error</button></td>
+        <td>0.32 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">error, wrong, denied, cannot, buzz, negative</td>
+        <td><label><input type="radio" name="v-ui-error" value="good"> good</label> <label><input type="radio" name="v-ui-error" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ui-hover">&#9654; ui-hover</button></td>
+        <td>0.05 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">hover, tick, soft, tiny, menu, move</td>
+        <td><label><input type="radio" name="v-ui-hover" value="good"> good</label> <label><input type="radio" name="v-ui-hover" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ui-toggle">&#9654; ui-toggle</button></td>
+        <td>0.09 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">toggle, switch, tick, on, off, checkbox</td>
+        <td><label><input type="radio" name="v-ui-toggle" value="good"> good</label> <label><input type="radio" name="v-ui-toggle" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-beep">&#9654; mt-beep</button></td>
+        <td>0.18 s</td>
+        <td>from Topple</td>
+        <td class="feel">beep, signal, timer, short, electronic</td>
+        <td><label><input type="radio" name="v-mt-beep" value="good"> good</label> <label><input type="radio" name="v-mt-beep" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-click">&#9654; mt-click</button></td>
+        <td>0.18 s, 3 takes</td>
+        <td>from Topple</td>
+        <td class="feel">click, button, tap, metal, solid</td>
+        <td><label><input type="radio" name="v-mt-click" value="good"> good</label> <label><input type="radio" name="v-mt-click" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-select">&#9654; mt-select</button></td>
+        <td>0.2 s</td>
+        <td>from Topple</td>
+        <td class="feel">select, pick, choose, click, metal</td>
+        <td><label><input type="radio" name="v-mt-select" value="good"> good</label> <label><input type="radio" name="v-mt-select" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>pickup</h2>
+<table>
+      <tr>
+        <td><button data-id="pickup-coin">&#9654; pickup-coin</button></td>
+        <td>0.45 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">coin, collect, score, bright, classic, arcade, ring</td>
+        <td><label><input type="radio" name="v-pickup-coin" value="good"> good</label> <label><input type="radio" name="v-pickup-coin" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="pickup-gem">&#9654; pickup-gem</button></td>
+        <td>0.8 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">gem, crystal, jewel, bell, glassy, sparkly, treasure</td>
+        <td><label><input type="radio" name="v-pickup-gem" value="good"> good</label> <label><input type="radio" name="v-pickup-gem" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="pickup-heal">&#9654; pickup-heal</button></td>
+        <td>1.1 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">heal, health, restore, soft, warm, gentle, rising</td>
+        <td><label><input type="radio" name="v-pickup-heal" value="good"> good</label> <label><input type="radio" name="v-pickup-heal" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="pickup-key">&#9654; pickup-key</button></td>
+        <td>0.5 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">key, keys, metal, jingle, unlock, small</td>
+        <td><label><input type="radio" name="v-pickup-key" value="good"> good</label> <label><input type="radio" name="v-pickup-key" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="pickup-powerup">&#9654; pickup-powerup</button></td>
+        <td>0.8 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">power-up, boost, upgrade, rising, energy, stronger</td>
+        <td><label><input type="radio" name="v-pickup-powerup" value="good"> good</label> <label><input type="radio" name="v-pickup-powerup" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-heal-chime">&#9654; mt-heal-chime</button></td>
+        <td>2.1 s</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">heal, chime, shrine, restore, gentle, bell</td>
+        <td><label><input type="radio" name="v-mt-heal-chime" value="good"> good</label> <label><input type="radio" name="v-mt-heal-chime" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>move</h2>
+<table>
+      <tr>
+        <td><button data-id="move-dash">&#9654; move-dash</button></td>
+        <td>0.3 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">dash, dodge, quick, air, swish, burst</td>
+        <td><label><input type="radio" name="v-move-dash" value="good"> good</label> <label><input type="radio" name="v-move-dash" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="move-jump">&#9654; move-jump</button></td>
+        <td>0.22 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">jump, hop, spring, up, light</td>
+        <td><label><input type="radio" name="v-move-jump" value="good"> good</label> <label><input type="radio" name="v-move-jump" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="move-land-hard">&#9654; move-land-hard</button></td>
+        <td>0.32 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">land, hard, heavy landing, fall, stomp</td>
+        <td><label><input type="radio" name="v-move-land-hard" value="good"> good</label> <label><input type="radio" name="v-move-land-hard" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="move-land-soft">&#9654; move-land-soft</button></td>
+        <td>0.16 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">land, soft, step down, grass, light landing</td>
+        <td><label><input type="radio" name="v-move-land-soft" value="good"> good</label> <label><input type="radio" name="v-move-land-soft" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="move-slide">&#9654; move-slide</button></td>
+        <td>0.6 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">slide, skid, scrape, ground, friction</td>
+        <td><label><input type="radio" name="v-move-slide" value="good"> good</label> <label><input type="radio" name="v-move-slide" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="move-step-grass">&#9654; move-step-grass</button></td>
+        <td>0.16 s, 4 takes</td>
+        <td>made in code</td>
+        <td class="feel">footstep, step, walk, grass, soft, leaves</td>
+        <td><label><input type="radio" name="v-move-step-grass" value="good"> good</label> <label><input type="radio" name="v-move-step-grass" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="move-step-metal">&#9654; move-step-metal</button></td>
+        <td>0.25 s, 4 takes</td>
+        <td>made in code</td>
+        <td class="feel">footstep, step, walk, metal, grate, clank</td>
+        <td><label><input type="radio" name="v-move-step-metal" value="good"> good</label> <label><input type="radio" name="v-move-step-metal" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="move-step-stone">&#9654; move-step-stone</button></td>
+        <td>0.12 s, 4 takes</td>
+        <td>made in code</td>
+        <td class="feel">footstep, step, walk, stone, concrete, hard floor</td>
+        <td><label><input type="radio" name="v-move-step-stone" value="good"> good</label> <label><input type="radio" name="v-move-step-stone" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="move-step-wood">&#9654; move-step-wood</button></td>
+        <td>0.14 s, 4 takes</td>
+        <td>made in code</td>
+        <td class="feel">footstep, step, walk, wood, floorboard, hollow</td>
+        <td><label><input type="radio" name="v-move-step-wood" value="good"> good</label> <label><input type="radio" name="v-move-step-wood" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-swish">&#9654; mt-swish</button></td>
+        <td>0.5 s</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">swish, dodge, roll, air, quick</td>
+        <td><label><input type="radio" name="v-mt-swish" value="good"> good</label> <label><input type="radio" name="v-mt-swish" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>impact</h2>
+<table>
+      <tr>
+        <td><button data-id="impact-break-glass">&#9654; impact-break-glass</button></td>
+        <td>0.9 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">break, glass, shatter, window, bottle, smash</td>
+        <td><label><input type="radio" name="v-impact-break-glass" value="good"> good</label> <label><input type="radio" name="v-impact-break-glass" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="impact-break-stone">&#9654; impact-break-stone</button></td>
+        <td>0.7 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">break, stone, rock, rubble, crumble, smash</td>
+        <td><label><input type="radio" name="v-impact-break-stone" value="good"> good</label> <label><input type="radio" name="v-impact-break-stone" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="impact-break-wood">&#9654; impact-break-wood</button></td>
+        <td>0.5 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">break, wood, crate, crack, splinter, smash</td>
+        <td><label><input type="radio" name="v-impact-break-wood" value="good"> good</label> <label><input type="radio" name="v-impact-break-wood" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="impact-explosion-large">&#9654; impact-explosion-large</button></td>
+        <td>2.2 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">explosion, boom, blast, big, huge, rumble</td>
+        <td><label><input type="radio" name="v-impact-explosion-large" value="good"> good</label> <label><input type="radio" name="v-impact-explosion-large" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="impact-explosion-small">&#9654; impact-explosion-small</button></td>
+        <td>0.9 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">explosion, boom, blast, bomb, small, pop</td>
+        <td><label><input type="radio" name="v-impact-explosion-small" value="good"> good</label> <label><input type="radio" name="v-impact-explosion-small" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="impact-hit-heavy">&#9654; impact-hit-heavy</button></td>
+        <td>0.4 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">hit, heavy, big, slam, damage, boss</td>
+        <td><label><input type="radio" name="v-impact-hit-heavy" value="good"> good</label> <label><input type="radio" name="v-impact-hit-heavy" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="impact-hit-light">&#9654; impact-hit-light</button></td>
+        <td>0.1 s, 4 takes</td>
+        <td>made in code</td>
+        <td class="feel">hit, light, tick, small, damage, tap</td>
+        <td><label><input type="radio" name="v-impact-hit-light" value="good"> good</label> <label><input type="radio" name="v-impact-hit-light" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="impact-punch">&#9654; impact-punch</button></td>
+        <td>0.18 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">punch, hit, fight, smack, melee</td>
+        <td><label><input type="radio" name="v-impact-punch" value="good"> good</label> <label><input type="radio" name="v-impact-punch" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="impact-thud">&#9654; impact-thud</button></td>
+        <td>0.3 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">thud, bump, dull, drop, low, body</td>
+        <td><label><input type="radio" name="v-impact-thud" value="good"> good</label> <label><input type="radio" name="v-impact-thud" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-brick">&#9654; mt-brick</button></td>
+        <td>0.7 s, 6 takes</td>
+        <td>from Topple</td>
+        <td class="feel">brick, rock, stone, hit, clatter, masonry</td>
+        <td><label><input type="radio" name="v-mt-brick" value="good"> good</label> <label><input type="radio" name="v-mt-brick" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-explosion">&#9654; mt-explosion</button></td>
+        <td>2 s, 3 takes</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">explosion, boom, blast, fire, recorded</td>
+        <td><label><input type="radio" name="v-mt-explosion" value="good"> good</label> <label><input type="radio" name="v-mt-explosion" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-marble-clack">&#9654; mt-marble-clack</button></td>
+        <td>0.22 s, 6 takes</td>
+        <td>from Lost Marbles</td>
+        <td class="feel">marble, glass, clack, click, ball, collide, recorded</td>
+        <td><label><input type="radio" name="v-mt-marble-clack" value="good"> good</label> <label><input type="radio" name="v-mt-marble-clack" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-marble-land">&#9654; mt-marble-land</button></td>
+        <td>0.32 s, 4 takes</td>
+        <td>from Lost Marbles</td>
+        <td class="feel">marble, drop, land, wood, bounce, small, recorded</td>
+        <td><label><input type="radio" name="v-mt-marble-land" value="good"> good</label> <label><input type="radio" name="v-mt-marble-land" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-pebbles">&#9654; mt-pebbles</button></td>
+        <td>2.2 s, 3 takes</td>
+        <td>from Topple</td>
+        <td class="feel">pebbles, gravel, debris, rubble, scatter, small stones</td>
+        <td><label><input type="radio" name="v-mt-pebbles" value="good"> good</label> <label><input type="radio" name="v-mt-pebbles" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-splash">&#9654; mt-splash</button></td>
+        <td>1.01 s, 3 takes</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">splash, water, dive, drop, wet</td>
+        <td><label><input type="radio" name="v-mt-splash" value="good"> good</label> <label><input type="radio" name="v-mt-splash" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-stamp">&#9654; mt-stamp</button></td>
+        <td>0.5 s</td>
+        <td>from Topple</td>
+        <td class="feel">stamp, thump, press, approve, hit</td>
+        <td><label><input type="radio" name="v-mt-stamp" value="good"> good</label> <label><input type="radio" name="v-mt-stamp" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-steel-hit">&#9654; mt-steel-hit</button></td>
+        <td>0.9 s, 2 takes</td>
+        <td>from Topple</td>
+        <td class="feel">steel, metal, hit, clang, beam</td>
+        <td><label><input type="radio" name="v-mt-steel-hit" value="good"> good</label> <label><input type="radio" name="v-mt-steel-hit" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>weapon</h2>
+<table>
+      <tr>
+        <td><button data-id="weapon-arrow-hit">&#9654; weapon-arrow-hit</button></td>
+        <td>0.24 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">arrow, hit, thunk, stick, wood, target</td>
+        <td><label><input type="radio" name="v-weapon-arrow-hit" value="good"> good</label> <label><input type="radio" name="v-weapon-arrow-hit" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="weapon-bow-release">&#9654; weapon-bow-release</button></td>
+        <td>0.3 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">bow, arrow, release, twang, string, shoot</td>
+        <td><label><input type="radio" name="v-weapon-bow-release" value="good"> good</label> <label><input type="radio" name="v-weapon-bow-release" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="weapon-laser">&#9654; weapon-laser</button></td>
+        <td>0.3 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">laser, beam, sci-fi, shoot, ray, space</td>
+        <td><label><input type="radio" name="v-weapon-laser" value="good"> good</label> <label><input type="radio" name="v-weapon-laser" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="weapon-pew">&#9654; weapon-pew</button></td>
+        <td>0.16 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">pew, shoot, blaster, arcade, retro, small gun</td>
+        <td><label><input type="radio" name="v-weapon-pew" value="good"> good</label> <label><input type="radio" name="v-weapon-pew" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="weapon-reload">&#9654; weapon-reload</button></td>
+        <td>0.55 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">reload, gun, click, clack, magazine, mechanical</td>
+        <td><label><input type="radio" name="v-weapon-reload" value="good"> good</label> <label><input type="radio" name="v-weapon-reload" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="weapon-swing">&#9654; weapon-swing</button></td>
+        <td>0.28 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">swing, sword, slash, swish, melee, air</td>
+        <td><label><input type="radio" name="v-weapon-swing" value="good"> good</label> <label><input type="radio" name="v-weapon-swing" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-fireball">&#9654; mt-fireball</button></td>
+        <td>1.43 s, 3 takes</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">fireball, fire, flame, launch, whoosh, spell</td>
+        <td><label><input type="radio" name="v-mt-fireball" value="good"> good</label> <label><input type="radio" name="v-mt-fireball" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>vehicle</h2>
+<table>
+      <tr>
+        <td><button data-id="vehicle-boost">&#9654; vehicle-boost</button></td>
+        <td>1 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">boost, nitro, turbo, rocket, speed, rush</td>
+        <td><label><input type="radio" name="v-vehicle-boost" value="good"> good</label> <label><input type="radio" name="v-vehicle-boost" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="vehicle-engine-loop">&#9654; vehicle-engine-loop</button></td>
+        <td>loop, 2 s</td>
+        <td>made in code</td>
+        <td class="feel">engine, motor, car, drive, hum, loop</td>
+        <td><label><input type="radio" name="v-vehicle-engine-loop" value="good"> good</label> <label><input type="radio" name="v-vehicle-engine-loop" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="vehicle-skid">&#9654; vehicle-skid</button></td>
+        <td>0.9 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">skid, tyre, tire, screech, brake, drift</td>
+        <td><label><input type="radio" name="v-vehicle-skid" value="good"> good</label> <label><input type="radio" name="v-vehicle-skid" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>feedback</h2>
+<table>
+      <tr>
+        <td><button data-id="feedback-alarm">&#9654; feedback-alarm</button></td>
+        <td>1.2 s</td>
+        <td>made in code</td>
+        <td class="feel">alarm, warning, danger, siren, alert, two-tone</td>
+        <td><label><input type="radio" name="v-feedback-alarm" value="good"> good</label> <label><input type="radio" name="v-feedback-alarm" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="feedback-countdown-beep">&#9654; feedback-countdown-beep</button></td>
+        <td>0.18 s</td>
+        <td>made in code</td>
+        <td class="feel">countdown, beep, timer, three two one, tick</td>
+        <td><label><input type="radio" name="v-feedback-countdown-beep" value="good"> good</label> <label><input type="radio" name="v-feedback-countdown-beep" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="feedback-countdown-go">&#9654; feedback-countdown-go</button></td>
+        <td>0.5 s</td>
+        <td>made in code</td>
+        <td class="feel">go, start, countdown end, beep, race start</td>
+        <td><label><input type="radio" name="v-feedback-countdown-go" value="good"> good</label> <label><input type="radio" name="v-feedback-countdown-go" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="feedback-level-up">&#9654; feedback-level-up</button></td>
+        <td>1.2 s</td>
+        <td>made in code</td>
+        <td class="feel">level up, rank, unlock, reward, rising, bright</td>
+        <td><label><input type="radio" name="v-feedback-level-up" value="good"> good</label> <label><input type="radio" name="v-feedback-level-up" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="feedback-lose-sting">&#9654; feedback-lose-sting</button></td>
+        <td>1.3 s</td>
+        <td>made in code</td>
+        <td class="feel">lose, fail, game over, sad, down, defeat</td>
+        <td><label><input type="radio" name="v-feedback-lose-sting" value="good"> good</label> <label><input type="radio" name="v-feedback-lose-sting" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="feedback-win-jingle">&#9654; feedback-win-jingle</button></td>
+        <td>1.7 s</td>
+        <td>made in code</td>
+        <td class="feel">win, victory, success, fanfare, level complete, happy</td>
+        <td><label><input type="radio" name="v-feedback-win-jingle" value="good"> good</label> <label><input type="radio" name="v-feedback-win-jingle" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-ding">&#9654; mt-ding</button></td>
+        <td>1.6 s</td>
+        <td>from Topple</td>
+        <td class="feel">ding, bell, done, success, ring</td>
+        <td><label><input type="radio" name="v-mt-ding" value="good"> good</label> <label><input type="radio" name="v-mt-ding" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-heartbeat">&#9654; mt-heartbeat</button></td>
+        <td>0.44 s</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">heartbeat, low health, tension, pulse, danger</td>
+        <td><label><input type="radio" name="v-mt-heartbeat" value="good"> good</label> <label><input type="radio" name="v-mt-heartbeat" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-overheat">&#9654; mt-overheat</button></td>
+        <td>0.7 s</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">overheat, warning, buzz, alert, too hot</td>
+        <td><label><input type="radio" name="v-mt-overheat" value="good"> good</label> <label><input type="radio" name="v-mt-overheat" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-streak-bell">&#9654; mt-streak-bell</button></td>
+        <td>1.5 s, 3 takes</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">bell, streak, combo, reward, rising, three steps</td>
+        <td><label><input type="radio" name="v-mt-streak-bell" value="good"> good</label> <label><input type="radio" name="v-mt-streak-bell" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-warn-incoming">&#9654; mt-warn-incoming</button></td>
+        <td>0.28 s</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">warning, incoming, missile, beep, alert</td>
+        <td><label><input type="radio" name="v-mt-warn-incoming" value="good"> good</label> <label><input type="radio" name="v-mt-warn-incoming" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-warn-lock">&#9654; mt-warn-lock</button></td>
+        <td>0.38 s</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">warning, lock-on, beep, alert, target</td>
+        <td><label><input type="radio" name="v-mt-warn-lock" value="good"> good</label> <label><input type="radio" name="v-mt-warn-lock" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>creature</h2>
+<table>
+      <tr>
+        <td><button data-id="creature-blip">&#9654; creature-blip</button></td>
+        <td>0.18 s, 4 takes</td>
+        <td>made in code</td>
+        <td class="feel">creature, blip, cute, talk, voice, pet, robot</td>
+        <td><label><input type="radio" name="v-creature-blip" value="good"> good</label> <label><input type="radio" name="v-creature-blip" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="creature-chirp">&#9654; creature-chirp</button></td>
+        <td>0.3 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">creature, chirp, bird, tweet, small, happy</td>
+        <td><label><input type="radio" name="v-creature-chirp" value="good"> good</label> <label><input type="radio" name="v-creature-chirp" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="creature-growl">&#9654; creature-growl</button></td>
+        <td>0.7 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">creature, growl, monster, enemy, low, angry</td>
+        <td><label><input type="radio" name="v-creature-growl" value="good"> good</label> <label><input type="radio" name="v-creature-growl" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-roar">&#9654; mt-roar</button></td>
+        <td>2.42 s, 3 takes</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">roar, monster, dragon, beast, big, growl</td>
+        <td><label><input type="radio" name="v-mt-roar" value="good"> good</label> <label><input type="radio" name="v-mt-roar" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-wing-flap">&#9654; mt-wing-flap</button></td>
+        <td>0.7 s, 3 takes</td>
+        <td>from Dragon Aces</td>
+        <td class="feel">wing, flap, bird, dragon, fly</td>
+        <td><label><input type="radio" name="v-mt-wing-flap" value="good"> good</label> <label><input type="radio" name="v-mt-wing-flap" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>magic</h2>
+<table>
+      <tr>
+        <td><button data-id="magic-charge">&#9654; magic-charge</button></td>
+        <td>1.4 s, 2 takes</td>
+        <td>made in code</td>
+        <td class="feel">charge, power up, build, spell, rising, wind-up</td>
+        <td><label><input type="radio" name="v-magic-charge" value="good"> good</label> <label><input type="radio" name="v-magic-charge" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="magic-sparkle">&#9654; magic-sparkle</button></td>
+        <td>1 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">sparkle, magic, twinkle, fairy, shine, stars</td>
+        <td><label><input type="radio" name="v-magic-sparkle" value="good"> good</label> <label><input type="radio" name="v-magic-sparkle" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="magic-whoosh">&#9654; magic-whoosh</button></td>
+        <td>0.7 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">whoosh, magic, spell, cast, wind, sweep</td>
+        <td><label><input type="radio" name="v-magic-whoosh" value="good"> good</label> <label><input type="radio" name="v-magic-whoosh" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="magic-zap">&#9654; magic-zap</button></td>
+        <td>0.3 s, 3 takes</td>
+        <td>made in code</td>
+        <td class="feel">zap, electric, lightning, shock, spark, spell</td>
+        <td><label><input type="radio" name="v-magic-zap" value="good"> good</label> <label><input type="radio" name="v-magic-zap" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>ambience</h2>
+<table>
+      <tr>
+        <td><button data-id="ambience-cave-drip">&#9654; ambience-cave-drip</button></td>
+        <td>loop, 12 s</td>
+        <td>made in code</td>
+        <td class="feel">cave, drip, water, echo, underground, dungeon, loop</td>
+        <td><label><input type="radio" name="v-ambience-cave-drip" value="good"> good</label> <label><input type="radio" name="v-ambience-cave-drip" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ambience-fire-crackle">&#9654; ambience-fire-crackle</button></td>
+        <td>loop, 8 s</td>
+        <td>made in code</td>
+        <td class="feel">fire, campfire, crackle, fireplace, warm, torch, loop</td>
+        <td><label><input type="radio" name="v-ambience-fire-crackle" value="good"> good</label> <label><input type="radio" name="v-ambience-fire-crackle" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ambience-night-insects">&#9654; ambience-night-insects</button></td>
+        <td>loop, 8 s</td>
+        <td>made in code</td>
+        <td class="feel">night, insects, crickets, summer, field, calm, loop</td>
+        <td><label><input type="radio" name="v-ambience-night-insects" value="good"> good</label> <label><input type="radio" name="v-ambience-night-insects" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ambience-rain">&#9654; ambience-rain</button></td>
+        <td>loop, 10 s</td>
+        <td>made in code</td>
+        <td class="feel">rain, weather, wet, storm, cosy, loop</td>
+        <td><label><input type="radio" name="v-ambience-rain" value="good"> good</label> <label><input type="radio" name="v-ambience-rain" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ambience-room-tone">&#9654; ambience-room-tone</button></td>
+        <td>loop, 8 s</td>
+        <td>made in code</td>
+        <td class="feel">room, indoor, quiet, hum, air, background, loop</td>
+        <td><label><input type="radio" name="v-ambience-room-tone" value="good"> good</label> <label><input type="radio" name="v-ambience-room-tone" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ambience-sea">&#9654; ambience-sea</button></td>
+        <td>loop, 16 s</td>
+        <td>made in code</td>
+        <td class="feel">sea, ocean, waves, beach, shore, water, loop</td>
+        <td><label><input type="radio" name="v-ambience-sea" value="good"> good</label> <label><input type="radio" name="v-ambience-sea" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="ambience-wind">&#9654; ambience-wind</button></td>
+        <td>loop, 12 s</td>
+        <td>made in code</td>
+        <td class="feel">wind, air, outdoor, breeze, mountain, open, loop</td>
+        <td><label><input type="radio" name="v-ambience-wind" value="good"> good</label> <label><input type="radio" name="v-ambience-wind" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-clock-tick">&#9654; mt-clock-tick</button></td>
+        <td>loop, 12 s</td>
+        <td>from Lost Marbles</td>
+        <td class="feel">clock, tick, room, night, time, recorded, loop</td>
+        <td><label><input type="radio" name="v-mt-clock-tick" value="good"> good</label> <label><input type="radio" name="v-mt-clock-tick" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-generator-loop">&#9654; mt-generator-loop</button></td>
+        <td>loop, 4 s</td>
+        <td>from Topple</td>
+        <td class="feel">generator, machine, hum, engine, industrial, loop</td>
+        <td><label><input type="radio" name="v-mt-generator-loop" value="good"> good</label> <label><input type="radio" name="v-mt-generator-loop" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="mt-rain-window">&#9654; mt-rain-window</button></td>
+        <td>loop, 22 s</td>
+        <td>from Lost Marbles</td>
+        <td class="feel">rain, window, night, light rain, cosy, recorded, loop</td>
+        <td><label><input type="radio" name="v-mt-rain-window" value="good"> good</label> <label><input type="radio" name="v-mt-rain-window" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>music</h2>
+<table>
+      <tr>
+        <td><button data-id="music-bouncy-loop">&#9654; music-bouncy-loop</button></td>
+        <td>loop, 8 s</td>
+        <td>made in code</td>
+        <td class="feel">music, happy, bouncy, arcade, chiptune, upbeat, fast, loop</td>
+        <td><label><input type="radio" name="v-music-bouncy-loop" value="good"> good</label> <label><input type="radio" name="v-music-bouncy-loop" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="music-calm-loop">&#9654; music-calm-loop</button></td>
+        <td>loop, 16 s</td>
+        <td>made in code</td>
+        <td class="feel">music, calm, slow, warm, pad, menu, peaceful, loop</td>
+        <td><label><input type="radio" name="v-music-calm-loop" value="good"> good</label> <label><input type="radio" name="v-music-calm-loop" value="bad"> not good</label></td>
+      </tr>
+      <tr>
+        <td><button data-id="music-tense-loop">&#9654; music-tense-loop</button></td>
+        <td>loop, 10 s</td>
+        <td>made in code</td>
+        <td class="feel">music, tense, danger, dark, pulse, chase, boss, loop</td>
+        <td><label><input type="radio" name="v-music-tense-loop" value="good"> good</label> <label><input type="radio" name="v-music-tense-loop" value="bad"> not good</label></td>
+      </tr>
+</table>
+<h2>Your verdicts</h2>
+<p>Tick "good" or "not good" as you listen, then copy this box and give it to your agent.</p>
+<textarea id="notes" readonly></textarea>
+<script>
+const SOUNDS = {"ui-back":{"files":["ui/ui-back-1.mp3","ui/ui-back-2.mp3"],"gain":1,"loop":null},"ui-click":{"files":["ui/ui-click-1.mp3","ui/ui-click-2.mp3","ui/ui-click-3.mp3"],"gain":1,"loop":null},"ui-confirm":{"files":["ui/ui-confirm-1.mp3","ui/ui-confirm-2.mp3"],"gain":1,"loop":null},"ui-error":{"files":["ui/ui-error-1.mp3","ui/ui-error-2.mp3"],"gain":1,"loop":null},"ui-hover":{"files":["ui/ui-hover-1.mp3","ui/ui-hover-2.mp3","ui/ui-hover-3.mp3"],"gain":1,"loop":null},"ui-toggle":{"files":["ui/ui-toggle-1.mp3","ui/ui-toggle-2.mp3"],"gain":1,"loop":null},"mt-beep":{"files":["ui/mt-beep.mp3"],"gain":0.47,"loop":null},"mt-click":{"files":["ui/mt-click-1.mp3","ui/mt-click-2.mp3","ui/mt-click-3.mp3"],"gain":0.47,"loop":null},"mt-select":{"files":["ui/mt-select.mp3"],"gain":0.47,"loop":null},"pickup-coin":{"files":["pickup/pickup-coin-1.mp3","pickup/pickup-coin-2.mp3","pickup/pickup-coin-3.mp3"],"gain":1,"loop":null},"pickup-gem":{"files":["pickup/pickup-gem-1.mp3","pickup/pickup-gem-2.mp3","pickup/pickup-gem-3.mp3"],"gain":1,"loop":null},"pickup-heal":{"files":["pickup/pickup-heal-1.mp3","pickup/pickup-heal-2.mp3"],"gain":1,"loop":null},"pickup-key":{"files":["pickup/pickup-key-1.mp3","pickup/pickup-key-2.mp3","pickup/pickup-key-3.mp3"],"gain":1,"loop":null},"pickup-powerup":{"files":["pickup/pickup-powerup-1.mp3","pickup/pickup-powerup-2.mp3"],"gain":1,"loop":null},"mt-heal-chime":{"files":["pickup/mt-heal-chime.mp3"],"gain":1.22,"loop":null},"move-dash":{"files":["move/move-dash-1.mp3","move/move-dash-2.mp3","move/move-dash-3.mp3"],"gain":1,"loop":null},"move-jump":{"files":["move/move-jump-1.mp3","move/move-jump-2.mp3","move/move-jump-3.mp3"],"gain":1,"loop":null},"move-land-hard":{"files":["move/move-land-hard-1.mp3","move/move-land-hard-2.mp3","move/move-land-hard-3.mp3"],"gain":1,"loop":null},"move-land-soft":{"files":["move/move-land-soft-1.mp3","move/move-land-soft-2.mp3","move/move-land-soft-3.mp3"],"gain":1,"loop":null},"move-slide":{"files":["move/move-slide-1.mp3","move/move-slide-2.mp3"],"gain":1,"loop":null},"move-step-grass":{"files":["move/move-step-grass-1.mp3","move/move-step-grass-2.mp3","move/move-step-grass-3.mp3","move/move-step-grass-4.mp3"],"gain":1,"loop":null},"move-step-metal":{"files":["move/move-step-metal-1.mp3","move/move-step-metal-2.mp3","move/move-step-metal-3.mp3","move/move-step-metal-4.mp3"],"gain":1,"loop":null},"move-step-stone":{"files":["move/move-step-stone-1.mp3","move/move-step-stone-2.mp3","move/move-step-stone-3.mp3","move/move-step-stone-4.mp3"],"gain":1,"loop":null},"move-step-wood":{"files":["move/move-step-wood-1.mp3","move/move-step-wood-2.mp3","move/move-step-wood-3.mp3","move/move-step-wood-4.mp3"],"gain":1,"loop":null},"mt-swish":{"files":["move/mt-swish.mp3"],"gain":1.12,"loop":null},"impact-break-glass":{"files":["impact/impact-break-glass-1.mp3","impact/impact-break-glass-2.mp3","impact/impact-break-glass-3.mp3"],"gain":1,"loop":null},"impact-break-stone":{"files":["impact/impact-break-stone-1.mp3","impact/impact-break-stone-2.mp3","impact/impact-break-stone-3.mp3"],"gain":1,"loop":null},"impact-break-wood":{"files":["impact/impact-break-wood-1.mp3","impact/impact-break-wood-2.mp3","impact/impact-break-wood-3.mp3"],"gain":1,"loop":null},"impact-explosion-large":{"files":["impact/impact-explosion-large-1.mp3","impact/impact-explosion-large-2.mp3"],"gain":1,"loop":null},"impact-explosion-small":{"files":["impact/impact-explosion-small-1.mp3","impact/impact-explosion-small-2.mp3","impact/impact-explosion-small-3.mp3"],"gain":1,"loop":null},"impact-hit-heavy":{"files":["impact/impact-hit-heavy-1.mp3","impact/impact-hit-heavy-2.mp3","impact/impact-hit-heavy-3.mp3"],"gain":1,"loop":null},"impact-hit-light":{"files":["impact/impact-hit-light-1.mp3","impact/impact-hit-light-2.mp3","impact/impact-hit-light-3.mp3","impact/impact-hit-light-4.mp3"],"gain":1,"loop":null},"impact-punch":{"files":["impact/impact-punch-1.mp3","impact/impact-punch-2.mp3","impact/impact-punch-3.mp3"],"gain":1,"loop":null},"impact-thud":{"files":["impact/impact-thud-1.mp3","impact/impact-thud-2.mp3","impact/impact-thud-3.mp3"],"gain":1,"loop":null},"mt-brick":{"files":["impact/mt-brick-1.mp3","impact/mt-brick-2.mp3","impact/mt-brick-3.mp3","impact/mt-brick-4.mp3","impact/mt-brick-5.mp3","impact/mt-brick-6.mp3"],"gain":0.71,"loop":null},"mt-explosion":{"files":["impact/mt-explosion-1.mp3","impact/mt-explosion-2.mp3","impact/mt-explosion-3.mp3"],"gain":0.79,"loop":null},"mt-marble-clack":{"files":["impact/mt-marble-clack-1.mp3","impact/mt-marble-clack-2.mp3","impact/mt-marble-clack-3.mp3","impact/mt-marble-clack-4.mp3","impact/mt-marble-clack-5.mp3","impact/mt-marble-clack-6.mp3"],"gain":0.45,"loop":null},"mt-marble-land":{"files":["impact/mt-marble-land-1.mp3","impact/mt-marble-land-2.mp3","impact/mt-marble-land-3.mp3","impact/mt-marble-land-4.mp3"],"gain":0.47,"loop":null},"mt-pebbles":{"files":["impact/mt-pebbles-1.mp3","impact/mt-pebbles-2.mp3","impact/mt-pebbles-3.mp3"],"gain":0.47,"loop":null},"mt-splash":{"files":["impact/mt-splash-1.mp3","impact/mt-splash-2.mp3","impact/mt-splash-3.mp3"],"gain":0.86,"loop":null},"mt-stamp":{"files":["impact/mt-stamp.mp3"],"gain":0.53,"loop":null},"mt-steel-hit":{"files":["impact/mt-steel-hit-1.mp3","impact/mt-steel-hit-2.mp3"],"gain":0.74,"loop":null},"weapon-arrow-hit":{"files":["weapon/weapon-arrow-hit-1.mp3","weapon/weapon-arrow-hit-2.mp3","weapon/weapon-arrow-hit-3.mp3"],"gain":1,"loop":null},"weapon-bow-release":{"files":["weapon/weapon-bow-release-1.mp3","weapon/weapon-bow-release-2.mp3","weapon/weapon-bow-release-3.mp3"],"gain":1,"loop":null},"weapon-laser":{"files":["weapon/weapon-laser-1.mp3","weapon/weapon-laser-2.mp3","weapon/weapon-laser-3.mp3"],"gain":1,"loop":null},"weapon-pew":{"files":["weapon/weapon-pew-1.mp3","weapon/weapon-pew-2.mp3","weapon/weapon-pew-3.mp3"],"gain":1,"loop":null},"weapon-reload":{"files":["weapon/weapon-reload-1.mp3","weapon/weapon-reload-2.mp3"],"gain":1,"loop":null},"weapon-swing":{"files":["weapon/weapon-swing-1.mp3","weapon/weapon-swing-2.mp3","weapon/weapon-swing-3.mp3"],"gain":1,"loop":null},"mt-fireball":{"files":["weapon/mt-fireball-1.mp3","weapon/mt-fireball-2.mp3","weapon/mt-fireball-3.mp3"],"gain":1.1,"loop":null},"vehicle-boost":{"files":["vehicle/vehicle-boost-1.mp3","vehicle/vehicle-boost-2.mp3"],"gain":1,"loop":null},"vehicle-engine-loop":{"files":["vehicle/vehicle-engine-loop.mp3"],"gain":1,"loop":[0.25,2.25]},"vehicle-skid":{"files":["vehicle/vehicle-skid-1.mp3","vehicle/vehicle-skid-2.mp3"],"gain":1,"loop":null},"feedback-alarm":{"files":["feedback/feedback-alarm.mp3"],"gain":1,"loop":null},"feedback-countdown-beep":{"files":["feedback/feedback-countdown-beep.mp3"],"gain":1,"loop":null},"feedback-countdown-go":{"files":["feedback/feedback-countdown-go.mp3"],"gain":1,"loop":null},"feedback-level-up":{"files":["feedback/feedback-level-up.mp3"],"gain":1,"loop":null},"feedback-lose-sting":{"files":["feedback/feedback-lose-sting.mp3"],"gain":1,"loop":null},"feedback-win-jingle":{"files":["feedback/feedback-win-jingle.mp3"],"gain":1,"loop":null},"mt-ding":{"files":["feedback/mt-ding.mp3"],"gain":0.68,"loop":null},"mt-heartbeat":{"files":["feedback/mt-heartbeat.mp3"],"gain":1.32,"loop":null},"mt-overheat":{"files":["feedback/mt-overheat.mp3"],"gain":0.97,"loop":null},"mt-streak-bell":{"files":["feedback/mt-streak-bell-1.mp3","feedback/mt-streak-bell-2.mp3","feedback/mt-streak-bell-3.mp3"],"gain":0.56,"loop":null},"mt-warn-incoming":{"files":["feedback/mt-warn-incoming.mp3"],"gain":2,"loop":null},"mt-warn-lock":{"files":["feedback/mt-warn-lock.mp3"],"gain":1.68,"loop":null},"creature-blip":{"files":["creature/creature-blip-1.mp3","creature/creature-blip-2.mp3","creature/creature-blip-3.mp3","creature/creature-blip-4.mp3"],"gain":1,"loop":null},"creature-chirp":{"files":["creature/creature-chirp-1.mp3","creature/creature-chirp-2.mp3","creature/creature-chirp-3.mp3"],"gain":1,"loop":null},"creature-growl":{"files":["creature/creature-growl-1.mp3","creature/creature-growl-2.mp3","creature/creature-growl-3.mp3"],"gain":1,"loop":null},"mt-roar":{"files":["creature/mt-roar-1.mp3","creature/mt-roar-2.mp3","creature/mt-roar-3.mp3"],"gain":0.81,"loop":null},"mt-wing-flap":{"files":["creature/mt-wing-flap-1.mp3","creature/mt-wing-flap-2.mp3","creature/mt-wing-flap-3.mp3"],"gain":1.45,"loop":null},"magic-charge":{"files":["magic/magic-charge-1.mp3","magic/magic-charge-2.mp3"],"gain":1,"loop":null},"magic-sparkle":{"files":["magic/magic-sparkle-1.mp3","magic/magic-sparkle-2.mp3","magic/magic-sparkle-3.mp3"],"gain":1,"loop":null},"magic-whoosh":{"files":["magic/magic-whoosh-1.mp3","magic/magic-whoosh-2.mp3","magic/magic-whoosh-3.mp3"],"gain":1,"loop":null},"magic-zap":{"files":["magic/magic-zap-1.mp3","magic/magic-zap-2.mp3","magic/magic-zap-3.mp3"],"gain":1,"loop":null},"ambience-cave-drip":{"files":["ambience/ambience-cave-drip.mp3"],"gain":1,"loop":[0.25,12.25]},"ambience-fire-crackle":{"files":["ambience/ambience-fire-crackle.mp3"],"gain":1,"loop":[0.25,8.25]},"ambience-night-insects":{"files":["ambience/ambience-night-insects.mp3"],"gain":1,"loop":[0.25,8.25]},"ambience-rain":{"files":["ambience/ambience-rain.mp3"],"gain":1,"loop":[0.25,10.25]},"ambience-room-tone":{"files":["ambience/ambience-room-tone.mp3"],"gain":1,"loop":[0.25,8.25]},"ambience-sea":{"files":["ambience/ambience-sea.mp3"],"gain":1,"loop":[0.25,16.25]},"ambience-wind":{"files":["ambience/ambience-wind.mp3"],"gain":1,"loop":[0.25,12.25]},"mt-clock-tick":{"files":["ambience/mt-clock-tick.mp3"],"gain":0.51,"loop":[0.25,12.25]},"mt-generator-loop":{"files":["ambience/mt-generator-loop.mp3"],"gain":0.29,"loop":[0.25,4.25]},"mt-rain-window":{"files":["ambience/mt-rain-window.mp3"],"gain":0.52,"loop":[0.25,22.25]},"music-bouncy-loop":{"files":["music/music-bouncy-loop.mp3"],"gain":1,"loop":[0.25,8.25]},"music-calm-loop":{"files":["music/music-calm-loop.mp3"],"gain":1,"loop":[0.25,16.25]},"music-tense-loop":{"files":["music/music-tense-loop.mp3"],"gain":1,"loop":[0.25,10.25]}};
+let ctx = null; const cache = new Map(); const playing = new Map(); const next = {};
+const vol = document.getElementById('vol'), even = document.getElementById('even');
+async function buffer(url) {
+  if (!cache.has(url)) cache.set(url, new Promise((res, rej) => {
+    // a plain file opened by double-click cannot use fetch(), so read it the old way
+    const x = new XMLHttpRequest(); x.open('GET', url); x.responseType = 'arraybuffer';
+    x.onload = () => ctx.decodeAudioData(x.response).then(res, rej); x.onerror = () => rej(new Error('could not read ' + url)); x.send();
+  }));
+  return cache.get(url);
+}
+function stop(id) {
+  const p = playing.get(id);
+  if (p) { try { p.src ? p.src.stop() : p.el.pause(); } catch {} playing.delete(id); }
+  document.querySelector('button[data-id="' + id + '"]')?.classList.remove('playing');
+}
+// Some browsers will not let a page opened by double-click read files into the sound engine.
+// Then a plain audio player is used instead: fine for listening, but a loop may tick where it joins.
+function playPlain(id, s, url, btn, level) {
+  const el = new Audio(url);
+  el.volume = Math.max(0, Math.min(1, level));
+  if (s.loop) {
+    el.currentTime = s.loop[0];
+    const watch = () => { if (playing.get(id)?.el !== el) return; if (el.currentTime >= s.loop[1] - 0.03) el.currentTime = s.loop[0]; requestAnimationFrame(watch); };
+    requestAnimationFrame(watch);
+    document.getElementById('plain').hidden = false;
+  }
+  el.onended = () => { if (playing.get(id)?.el === el) stop(id); };
+  el.onerror = () => { btn.textContent = '! could not play ' + id; stop(id); };
+  el.play().catch(() => {});
+  playing.set(id, { el }); btn.classList.add('playing');
+}
+async function play(id) {
+  ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+  await ctx.resume();
+  const s = SOUNDS[id], btn = document.querySelector('button[data-id="' + id + '"]');
+  if (playing.has(id) && s.loop) { stop(id); return; }
+  stop(id);
+  const i = (next[id] = ((next[id] ?? -1) + 1) % s.files.length);
+  const level = Number(vol.value) * (even.checked ? s.gain : 1);
+  let buf;
+  try { buf = await buffer(s.files[i]); } catch (e) { playPlain(id, s, s.files[i], btn, level); return; }
+  const src = ctx.createBufferSource(); src.buffer = buf;
+  if (s.loop) { src.loop = true; src.loopStart = s.loop[0]; src.loopEnd = s.loop[1]; }
+  const g = ctx.createGain(); g.gain.value = level;
+  src.connect(g).connect(ctx.destination); src.start(0, s.loop ? s.loop[0] : 0);
+  playing.set(id, { src }); btn.classList.add('playing');
+  src.onended = () => { if (playing.get(id)?.src === src) stop(id); };
+}
+document.querySelectorAll('button[data-id]').forEach((b) => b.addEventListener('click', () => play(b.dataset.id)));
+document.getElementById('stop').addEventListener('click', () => [...playing.keys()].forEach(stop));
+document.addEventListener('change', () => {
+  const good = [], bad = [];
+  document.querySelectorAll('input[type=radio]:checked').forEach((r) => (r.value === 'good' ? good : bad).push(r.name.slice(2)));
+  document.getElementById('notes').value = 'Sounds I listened to.\nGood: ' + (good.join(', ') || '-') + '\nNot good: ' + (bad.join(', ') || '-');
+});
+</script>
+</body></html>

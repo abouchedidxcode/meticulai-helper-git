@@ -1,0 +1,126 @@
+{
+  "id": "paper-diorama",
+  "name": "Paper diorama",
+  "order": 3,
+  "one_line": "Cut-paper layers under a warm desk lamp.",
+  "mood": [
+    "cosy",
+    "handmade",
+    "quiet"
+  ],
+  "look_words": "A little world cut from coloured paper and stood up on a desk. Kraft-brown and sand paper for the ground, sage green and cream for hills and buildings, with pink and bright blue kept for the things that matter. Everything is a flat layer with a clean cut edge and a thin real shadow under it; depth comes from layers stacked front to back, not from detail. One warm lamp lights it from above, and the room behind is dark and soft. Motion is like a pop-up book: things slide, fold, tilt and swing on tabs. Avoid gradients, gloss, thin lines, realistic textures and anything that looks rendered rather than cut.",
+  "palette": {
+    "name": "cut paper",
+    "colors": {
+      "base": [
+        "#d9b98a",
+        "#b89466",
+        "#7fa08a",
+        "#efe2c6"
+      ],
+      "accent": [
+        "#f25f8a",
+        "#1f6fb8"
+      ],
+      "danger": "#c8322f",
+      "player": "#2d4a7a",
+      "shadow": "#3a2a22",
+      "light": "#fff0cf",
+      "ink": "#fbf1dc"
+    },
+    "sky": {
+      "top": "#3b2c26",
+      "horizon": "#8a6a4c",
+      "below": "#2a1f1a",
+      "sun": "#ffe2a8"
+    },
+    "light": {
+      "sun": "#ffd9a0",
+      "sunStrength": 3.2,
+      "ambient": "#c9b6a0",
+      "ground": "#7a5a40",
+      "ambientStrength": 1.2,
+      "fog": "#4a382e",
+      "fogAmount": 0.35,
+      "exposure": 1.1,
+      "sunElevation": 50,
+      "sunAzimuth": 300
+    },
+    "notes": "The sky is the dim room behind the desk. Pink is pickups, bright blue the goal; red paper only for harm. The player is navy so it reads against every paper colour."
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {}
+  },
+  "look_wish": "flat fills with a soft drop shadow under each layer, tilt-shift blur",
+  "upgrade": [
+    {
+      "block": "meticulai-tilt-shift-macro",
+      "why": "the lens blur that makes it look like a real model photographed on a desk"
+    }
+  ],
+  "blocks": [
+    "meticulai-tilt-shift-macro",
+    "meticulai-anim-springs",
+    "coloured-pencil"
+  ],
+  "asset_search": [
+    "paper texture",
+    "cardboard",
+    "house",
+    "tree cutout"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "ambientcg",
+    "polyhaven",
+    "opengameart"
+  ],
+  "music": {
+    "mood": "slow, warm, music box and soft guitar",
+    "tempo": "slow",
+    "notes": "Paper rustle as percussion works well."
+  },
+  "sound_feel": "paper slides, soft thuds, scissors snip, a page turning",
+  "good_for": [
+    "platformer",
+    "grid-puzzle",
+    "top-down",
+    "island",
+    "story games",
+    "rhythm"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "A cosy paper-craft diorama game scene: layered cut-paper hills and a tiny house under a warm desk lamp, soft shadows between paper layers, visible paper grain, muted teal, cream and coral, a small round character on a path, gameplay screenshot from a stylised indie game, no text, no user interface",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cut-paper diorama on a desk under a warm lamp, seen from the front like a little stage: layered paper hills in kraft brown, sage and cream, a paper river with a folded paper boat, a paper bridge, paper trees on tabs and a small navy-blue paper figure walking toward a paper windmill. Each layer has a clean cut edge and a thin real shadow, visible paper grain, dark soft room behind. Handmade and quiet. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "toy-tilt-shift",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

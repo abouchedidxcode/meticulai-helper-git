@@ -1,0 +1,124 @@
+{
+  "id": "moonlit-storybook",
+  "name": "Moonlit storybook",
+  "order": 12,
+  "one_line": "A huge pale moon over indigo hills, and one small lantern.",
+  "mood": [
+    "dreamy",
+    "gentle",
+    "night"
+  ],
+  "look_words": "Night in a picture book, with a very large pale yellow moon. Hills and trees in deep indigo and teal, each shape edged with a thin line of creamy moonlight; long soft shadows; a sky full of small soft stars. It is dark but never frightening, and you can always see where to walk. Lantern gold marks things to find, soft mint the goal, a warm red is harm, and the player is white and seems to glow a little. Shapes are rounded and simple, painted in flat gouache with a little paper texture. Motion is slow and floating: drifting stars, an owl turning its head, lantern light swaying. Avoid horror, harsh contrast, pure black, cold blue-white light and bloom.",
+  "palette": {
+    "name": "moonlight",
+    "colors": {
+      "base": [
+        "#2f4f6a",
+        "#243d57",
+        "#4a5f86",
+        "#5f7f8f"
+      ],
+      "accent": [
+        "#ffd36b",
+        "#9fe8d8"
+      ],
+      "danger": "#ff5a5f",
+      "player": "#fbf7ee",
+      "shadow": "#101a33",
+      "light": "#fff3c4",
+      "ink": "#f6f1df"
+    },
+    "sky": {
+      "top": "#0f1d44",
+      "horizon": "#2f4f7a",
+      "below": "#0c1530",
+      "sun": "#fff1b8"
+    },
+    "light": {
+      "sun": "#e6e3c9",
+      "sunStrength": 1.6,
+      "ambient": "#5f78b0",
+      "ground": "#1c2a44",
+      "ambientStrength": 1.3,
+      "fog": "#22365a",
+      "fogAmount": 0.55,
+      "exposure": 1.2,
+      "sunElevation": 22,
+      "sunAzimuth": 140
+    },
+    "notes": "The \"sun\" is the moon: creamy, low and gentle. Raise exposure a little rather than adding more lights."
+  },
+  "look": {
+    "id": "painterly",
+    "options": {}
+  },
+  "look_wish": "flat gouache shading with a pale rim of light, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-firefly-swarm",
+      "why": "soft glowing things that drift and blink without blown-out bloom"
+    },
+    {
+      "block": "meticulai-painterly-styles",
+      "why": "its gouache style for a painted picture-book surface"
+    }
+  ],
+  "blocks": [
+    "meticulai-firefly-swarm",
+    "meticulai-painterly-styles",
+    "meticulai-haze"
+  ],
+  "asset_search": [
+    "lantern",
+    "owl",
+    "crooked house",
+    "bare tree",
+    "rowing boat"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kaykit",
+    "kenney",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "slow celesta and soft strings, a lullaby",
+    "tempo": "slow",
+    "notes": "Hushed."
+  },
+  "sound_feel": "night insects, an owl, soft footsteps, a lantern creak",
+  "good_for": [
+    "island",
+    "top-down",
+    "first-person",
+    "platformer",
+    "bedtime games",
+    "walking and collecting"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Storybook night with a huge pale yellow full moon low over rolling hills: a small child in a white nightgown carrying a lantern walks a winding path toward a tall crooked house with one lit window, an owl on a bare tree, soft stars. Deep indigo and teal night colours, creamy moonlight edging every shape, long soft shadows, gouache picture-book texture, gentle and dreamy, not scary. Side view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Storybook night with a huge pale yellow full moon reflected in a still lake: a small child in a white nightgown rows a little boat with a lantern toward an island with one round tree, sleeping swans, reeds, soft stars. Deep indigo and teal night colours, creamy moonlight edging every shape, gouache picture-book texture, gentle and dreamy, not scary. Wide side view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "painterly",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

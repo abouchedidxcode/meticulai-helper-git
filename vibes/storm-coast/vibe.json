@@ -1,0 +1,132 @@
+{
+  "id": "storm-coast",
+  "name": "Storm coast",
+  "order": 41,
+  "one_line": "Dark green waves, slate cloud and one lighthouse beam.",
+  "mood": [
+    "dramatic",
+    "cold",
+    "energetic"
+  ],
+  "look_words": "A rocky coast in a storm, painted in thick oil strokes. The sea is dark green-grey with white spray, the rocks are wet black-slate, the clouds are heavy with one pale break. A single warm yellow light, the lighthouse or a lantern, is the only warm colour and everything turns around it. Yellow marks safety and things to collect, sea-glass green marks the goal, orange-red is harm, and the player is pale so it shows against dark water. Shapes are big and simple so they read through rain. Motion is strong: waves heaving, spray, a sweeping beam, driving rain, a rocking boat. Avoid blue tropical water, flat calm, grey mush with no light source, and bloom on the beam.",
+  "palette": {
+    "name": "storm sea",
+    "colors": {
+      "base": [
+        "#2f4a44",
+        "#20332f",
+        "#3d4448",
+        "#5a6468"
+      ],
+      "accent": [
+        "#ffd66b",
+        "#6fd0c0"
+      ],
+      "danger": "#ff5533",
+      "player": "#f4f1e8",
+      "shadow": "#0c1414",
+      "light": "#eaf6f0",
+      "ink": "#e9f1ee"
+    },
+    "sky": {
+      "top": "#161c20",
+      "horizon": "#4a5a5c",
+      "below": "#0c1414",
+      "sun": "#cfdcd6"
+    },
+    "light": {
+      "sun": "#b8c8c8",
+      "sunStrength": 1.2,
+      "ambient": "#5a6f72",
+      "ground": "#1a2826",
+      "ambientStrength": 1.4,
+      "fog": "#2f3d3f",
+      "fogAmount": 0.75,
+      "exposure": 1.15,
+      "sunElevation": 35,
+      "sunAzimuth": 300
+    },
+    "notes": "The main \"ground\" is the sea. The sky light is weak and grey; the warm light should be one you place (the beam, a lantern)."
+  },
+  "look": {
+    "id": "painterly",
+    "options": {}
+  },
+  "look_wish": "thick oil-paint strokes, or none",
+  "upgrade": [
+    {
+      "block": "ultra-water",
+      "why": "a real stormy ocean with breakers and foam (a bigger job)"
+    },
+    {
+      "block": "oil-paint",
+      "why": "draws the world as thick dabs of oil paint that stay on things as the camera moves"
+    }
+  ],
+  "blocks": [
+    "oil-paint",
+    "ultra-water",
+    "meticulai-haze",
+    "meticulai-rope-cloth-chains"
+  ],
+  "asset_search": [
+    "lighthouse",
+    "fishing boat",
+    "sea rocks",
+    "sailing ship",
+    "harbour wall"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kenney",
+    "polyhaven",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "surging low strings and a far horn",
+    "tempo": "medium",
+    "notes": "Rises and falls like the swell."
+  },
+  "sound_feel": "crashing waves, wind howl, rain, creaking timber, a fog horn",
+  "good_for": [
+    "island",
+    "racer",
+    "flyer",
+    "first-person",
+    "sailing",
+    "rescue games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Stormy coast painted in thick oil-paint strokes, third-person view behind a small figure in a pale oilskin coat holding a lantern, climbing a wet cliff path toward a lighthouse whose beam cuts through the rain, dark green-grey waves smashing on black rocks below, heavy slate clouds with one pale break. Deep sea greens, slate greys, one warm yellow light, visible brush texture, dramatic but readable shapes. No signature. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Stormy coast painted in thick oil-paint strokes: a small fishing boat with a single lantern fights dark green-grey waves toward a harbour wall, a lighthouse beam cutting through rain, black rocks with white spray, heavy slate clouds with one pale break of light. Deep sea greens, slate greys, one warm yellow light, visible brush texture, dramatic but readable shapes. High three-quarter view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "painterly",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

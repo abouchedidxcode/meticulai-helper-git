@@ -82,7 +82,7 @@ h2 { margin: 0 0 12px; font-size: 26px; display: flex; gap: 10px; align-items: c
 .hint { margin: 10px 0 0; color: var(--ink-soft); font-size: 13px; opacity: 0.8; }
 .row { display: flex; gap: 10px; justify-content: center; }
 
-.ui button, .note-box button, .dev-panel button, .test-bar button {
+.ui button, .note-box button, .test-bar button {
   font: inherit; cursor: pointer;
   display: inline-flex; gap: 8px; align-items: center; justify-content: center;
   padding: 10px 18px; border-radius: 999px;
@@ -154,31 +154,7 @@ kbd {
 .note-box .row { justify-content: flex-start; margin-top: 12px; }
 .note-status { min-height: 1.2em; margin: 10px 0 0; color: var(--moss); }
 
-/* Dev panel (backquote key) ------------------------------------------------- */
-.dev-panel {
-  position: fixed; top: 0; right: 0; bottom: 0; z-index: 25;
-  width: 340px; display: flex; flex-direction: column;
-  background: rgba(24, 24, 36, 0.92); border-left: 1px solid var(--card-edge);
-  font-size: 13px; color: var(--ink);
-}
-.dev-panel[hidden] { display: none; }
-.dev-panel header { display: flex; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid var(--card-edge); }
-.dev-panel-hint { color: var(--ink-soft); }
-.dev-panel-body { flex: 1; overflow: auto; padding: 4px 10px; }
-.dev-panel summary { cursor: pointer; padding: 8px 2px; font-weight: 700; color: var(--accent); }
-.dev-row { display: grid; grid-template-columns: 1fr 110px 64px; gap: 6px; align-items: center; padding: 3px 4px; border-radius: 6px; }
-.dev-row input[type='checkbox'] { justify-self: start; }
-.dev-row.changed { background: rgba(242, 166, 90, 0.18); }
-.dev-row.changed .dev-name { color: var(--accent); cursor: pointer; text-decoration: underline dotted; }
-.dev-row input[type='range'] { width: 100%; accent-color: var(--accent); }
-.dev-row input[type='number'] {
-  width: 100%; font: inherit; padding: 2px 4px; border-radius: 4px;
-  border: 1px solid var(--card-edge); background: rgba(0, 0, 0, 0.3); color: var(--ink);
-}
-.dev-panel footer { padding: 10px 12px; border-top: 1px solid var(--card-edge); display: flex; flex-wrap: wrap; gap: 6px; }
-.dev-panel footer button { padding: 6px 12px; font-size: 13px; }
-.dev-panel footer button:first-child { background: var(--accent); color: var(--accent-ink); font-weight: 700; }
-.dev-status { flex-basis: 100%; margin: 4px 0 0; color: var(--moss); white-space: pre-wrap; user-select: text; }
+/* The dev menu (backquote key) brings its own styles: src/core/dev/panel-css.js */
 
 /* Test mode (?test=1) --------------------------------------------------------- */
 .test-bar {

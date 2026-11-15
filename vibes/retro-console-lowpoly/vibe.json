@@ -1,0 +1,120 @@
+{
+  "id": "retro-console-lowpoly",
+  "name": "Retro console low-poly",
+  "order": 40,
+  "one_line": "Wobbly low-res textures, hard polygons and close fog.",
+  "mood": [
+    "nostalgic",
+    "lo-fi",
+    "mysterious"
+  ],
+  "look_words": "Three-dimensional graphics as they looked on a late-1990s home console. Very few polygons with hard edges, small blurry textures that swim a little, no smooth shading, a low screen resolution with visible dithering, and fog that hides everything past a short distance. Colours are muted: dull greens, grey stone, brown dirt, a slate sky. Yellow and cyan mark pickups and the goal, red is harm, and the player wears a clear blue. Shapes are blocky; trees and small things can be flat cut-outs that turn to face the camera. Motion is slightly stiff and snappy. Avoid smooth shadows, high-resolution textures, soft lighting, bloom and anything too clean.",
+  "palette": {
+    "name": "retro console",
+    "colors": {
+      "base": [
+        "#6f7f5a",
+        "#55633f",
+        "#8a8478",
+        "#7a6a52"
+      ],
+      "accent": [
+        "#ffd84a",
+        "#4ad0e0"
+      ],
+      "danger": "#d93a2e",
+      "player": "#3f6fd8",
+      "shadow": "#1c1a2a",
+      "light": "#e8e0c8",
+      "ink": "#e9e4d2"
+    },
+    "sky": {
+      "top": "#3d4a66",
+      "horizon": "#8d94a6",
+      "below": "#2a2f3d",
+      "sun": "#e8dfc0"
+    },
+    "light": {
+      "sun": "#e6dcc0",
+      "sunStrength": 2,
+      "ambient": "#8f97b0",
+      "ground": "#4a4a44",
+      "ambientStrength": 1.6,
+      "fog": "#7d8494",
+      "fogAmount": 0.85,
+      "exposure": 1,
+      "sunElevation": 40,
+      "sunAzimuth": 210
+    },
+    "notes": "Close, thick fog is part of the look and also hides how small the world is. Keep the palette muted so the accents do the talking."
+  },
+  "look": {
+    "id": "retro-console",
+    "options": {}
+  },
+  "look_wish": "low resolution with dithering and wobbly vertices",
+  "upgrade": [
+    {
+      "block": "meticulai-ps1-look",
+      "why": "the full treatment: snapped vertices, warping textures, low resolution and dither"
+    }
+  ],
+  "blocks": [
+    "meticulai-ps1-look",
+    "meticulai-haze",
+    "dungeon-forge"
+  ],
+  "asset_search": [
+    "knight",
+    "castle",
+    "crate",
+    "character",
+    "retro texture"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "opengameart",
+    "itch-io-cc0"
+  ],
+  "music": {
+    "mood": "lo-fi sampled strings and a slow drum loop",
+    "tempo": "slow",
+    "notes": "Low sample rate, a little hiss."
+  },
+  "sound_feel": "crunchy, low sample rate; short reverb, chunky menu blips",
+  "good_for": [
+    "first-person",
+    "platformer",
+    "island",
+    "racer",
+    "exploring",
+    "spooky walks"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Late-1990s home console 3D look: a very low-polygon knight in a blue tunic stands in a blocky castle courtyard with a stone well, wooden crates and a portcullis, seen from a third-person camera. Small blurry low-resolution textures that warp slightly, hard polygon edges, visible dithering, no smooth shading, muted colours, dark distance fog close behind the walls, slightly jagged pixels. Nostalgic and a little mysterious. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Late-1990s home console 3D look: a very low-polygon explorer in a red jacket on a blocky grassy cliff path beside a lighthouse and the sea, third-person camera. Small blurry low-resolution textures that warp slightly, hard polygon edges, visible dithering, no smooth shading, flat sprite-like trees, short view distance fading into pale fog, slightly jagged pixels. Nostalgic and calm. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "retro-console",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

@@ -1,0 +1,2572 @@
+{
+  "version": 1,
+  "sounds": [
+    {
+      "id": "ui-back",
+      "group": "ui",
+      "files": [
+        "ui/ui-back-1.mp3",
+        "ui/ui-back-2.mp3"
+      ],
+      "feel": [
+        "back",
+        "cancel",
+        "close",
+        "no",
+        "two notes down"
+      ],
+      "seconds": 0.3,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 5661,
+      "numbers": {
+        "peakDb": -10,
+        "rmsDb": -24.9,
+        "activeRmsDb": -21.5
+      }
+    },
+    {
+      "id": "ui-click",
+      "group": "ui",
+      "files": [
+        "ui/ui-click-1.mp3",
+        "ui/ui-click-2.mp3",
+        "ui/ui-click-3.mp3"
+      ],
+      "feel": [
+        "click",
+        "tap",
+        "button",
+        "press",
+        "select",
+        "short",
+        "clean"
+      ],
+      "seconds": 0.06,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 3989,
+      "numbers": {
+        "peakDb": -10,
+        "rmsDb": -27.9,
+        "activeRmsDb": -23
+      }
+    },
+    {
+      "id": "ui-confirm",
+      "group": "ui",
+      "files": [
+        "ui/ui-confirm-1.mp3",
+        "ui/ui-confirm-2.mp3"
+      ],
+      "feel": [
+        "confirm",
+        "ok",
+        "yes",
+        "accept",
+        "start",
+        "positive",
+        "two notes up"
+      ],
+      "seconds": 0.34,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 6339,
+      "numbers": {
+        "peakDb": -10,
+        "rmsDb": -24.5,
+        "activeRmsDb": -22
+      }
+    },
+    {
+      "id": "ui-error",
+      "group": "ui",
+      "files": [
+        "ui/ui-error-1.mp3",
+        "ui/ui-error-2.mp3"
+      ],
+      "feel": [
+        "error",
+        "wrong",
+        "denied",
+        "cannot",
+        "buzz",
+        "negative"
+      ],
+      "seconds": 0.32,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 8166,
+      "numbers": {
+        "peakDb": -10,
+        "rmsDb": -15.4,
+        "activeRmsDb": -14.6
+      }
+    },
+    {
+      "id": "ui-hover",
+      "group": "ui",
+      "files": [
+        "ui/ui-hover-1.mp3",
+        "ui/ui-hover-2.mp3",
+        "ui/ui-hover-3.mp3"
+      ],
+      "feel": [
+        "hover",
+        "tick",
+        "soft",
+        "tiny",
+        "menu",
+        "move"
+      ],
+      "seconds": 0.05,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 3180,
+      "numbers": {
+        "peakDb": -15,
+        "rmsDb": -27.7,
+        "activeRmsDb": -25.5
+      }
+    },
+    {
+      "id": "ui-toggle",
+      "group": "ui",
+      "files": [
+        "ui/ui-toggle-1.mp3",
+        "ui/ui-toggle-2.mp3"
+      ],
+      "feel": [
+        "toggle",
+        "switch",
+        "tick",
+        "on",
+        "off",
+        "checkbox"
+      ],
+      "seconds": 0.09,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 2746,
+      "numbers": {
+        "peakDb": -10,
+        "rmsDb": -25.4,
+        "activeRmsDb": -21.1
+      }
+    },
+    {
+      "id": "mt-beep",
+      "group": "ui",
+      "files": [
+        "ui/mt-beep.mp3"
+      ],
+      "feel": [
+        "beep",
+        "signal",
+        "timer",
+        "short",
+        "electronic"
+      ],
+      "seconds": 0.18,
+      "loop": false,
+      "gain": 0.47,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Topple audio build (tools/audio-build.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 3405,
+      "numbers": {
+        "peakDb": -3.4,
+        "rmsDb": -6.6
+      }
+    },
+    {
+      "id": "mt-click",
+      "group": "ui",
+      "files": [
+        "ui/mt-click-1.mp3",
+        "ui/mt-click-2.mp3",
+        "ui/mt-click-3.mp3"
+      ],
+      "feel": [
+        "click",
+        "button",
+        "tap",
+        "metal",
+        "solid"
+      ],
+      "seconds": 0.18,
+      "loop": false,
+      "gain": 0.47,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Impact Sounds\" by Kenney (https://kenney.nl/assets/impact-sounds), CC0",
+        "\"Interface Sounds\" by Kenney (https://kenney.nl/assets/interface-sounds), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 10215,
+      "numbers": {
+        "peakDb": -3.4,
+        "rmsDb": -19.7
+      }
+    },
+    {
+      "id": "mt-select",
+      "group": "ui",
+      "files": [
+        "ui/mt-select.mp3"
+      ],
+      "feel": [
+        "select",
+        "pick",
+        "choose",
+        "click",
+        "metal"
+      ],
+      "seconds": 0.2,
+      "loop": false,
+      "gain": 0.47,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Impact Sounds\" by Kenney (https://kenney.nl/assets/impact-sounds), CC0",
+        "\"Interface Sounds\" by Kenney (https://kenney.nl/assets/interface-sounds), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 3741,
+      "numbers": {
+        "peakDb": -3.4,
+        "rmsDb": -19.0
+      }
+    },
+    {
+      "id": "pickup-coin",
+      "group": "pickup",
+      "files": [
+        "pickup/pickup-coin-1.mp3",
+        "pickup/pickup-coin-2.mp3",
+        "pickup/pickup-coin-3.mp3"
+      ],
+      "feel": [
+        "coin",
+        "collect",
+        "score",
+        "bright",
+        "classic",
+        "arcade",
+        "ring"
+      ],
+      "seconds": 0.45,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 13127,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -19.6,
+        "activeRmsDb": -16.8
+      }
+    },
+    {
+      "id": "pickup-gem",
+      "group": "pickup",
+      "files": [
+        "pickup/pickup-gem-1.mp3",
+        "pickup/pickup-gem-2.mp3",
+        "pickup/pickup-gem-3.mp3"
+      ],
+      "feel": [
+        "gem",
+        "crystal",
+        "jewel",
+        "bell",
+        "glassy",
+        "sparkly",
+        "treasure"
+      ],
+      "seconds": 0.8,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 19532,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -22.5,
+        "activeRmsDb": -19.3
+      }
+    },
+    {
+      "id": "pickup-heal",
+      "group": "pickup",
+      "files": [
+        "pickup/pickup-heal-1.mp3",
+        "pickup/pickup-heal-2.mp3"
+      ],
+      "feel": [
+        "heal",
+        "health",
+        "restore",
+        "soft",
+        "warm",
+        "gentle",
+        "rising"
+      ],
+      "seconds": 1.1,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 10596,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -19.5,
+        "activeRmsDb": -18.9
+      }
+    },
+    {
+      "id": "pickup-key",
+      "group": "pickup",
+      "files": [
+        "pickup/pickup-key-1.mp3",
+        "pickup/pickup-key-2.mp3",
+        "pickup/pickup-key-3.mp3"
+      ],
+      "feel": [
+        "key",
+        "keys",
+        "metal",
+        "jingle",
+        "unlock",
+        "small"
+      ],
+      "seconds": 0.5,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 14592,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -22.5,
+        "activeRmsDb": -19.5
+      }
+    },
+    {
+      "id": "pickup-powerup",
+      "group": "pickup",
+      "files": [
+        "pickup/pickup-powerup-1.mp3",
+        "pickup/pickup-powerup-2.mp3"
+      ],
+      "feel": [
+        "power-up",
+        "boost",
+        "upgrade",
+        "rising",
+        "energy",
+        "stronger"
+      ],
+      "seconds": 0.8,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 14910,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -20.5,
+        "activeRmsDb": -18.6
+      }
+    },
+    {
+      "id": "mt-heal-chime",
+      "group": "pickup",
+      "files": [
+        "pickup/mt-heal-chime.mp3"
+      ],
+      "feel": [
+        "heal",
+        "chime",
+        "shrine",
+        "restore",
+        "gentle",
+        "bell"
+      ],
+      "seconds": 2.1,
+      "loop": false,
+      "gain": 1.22,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Dragon Aces audio build (tools/audio_synth.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 21727,
+      "numbers": {
+        "peakDb": -8.7,
+        "rmsDb": -24.7
+      }
+    },
+    {
+      "id": "move-dash",
+      "group": "move",
+      "files": [
+        "move/move-dash-1.mp3",
+        "move/move-dash-2.mp3",
+        "move/move-dash-3.mp3"
+      ],
+      "feel": [
+        "dash",
+        "dodge",
+        "quick",
+        "air",
+        "swish",
+        "burst"
+      ],
+      "seconds": 0.3,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 10946,
+      "numbers": {
+        "peakDb": -8,
+        "rmsDb": -22.2,
+        "activeRmsDb": -21.2
+      }
+    },
+    {
+      "id": "move-jump",
+      "group": "move",
+      "files": [
+        "move/move-jump-1.mp3",
+        "move/move-jump-2.mp3",
+        "move/move-jump-3.mp3"
+      ],
+      "feel": [
+        "jump",
+        "hop",
+        "spring",
+        "up",
+        "light"
+      ],
+      "seconds": 0.22,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 6979,
+      "numbers": {
+        "peakDb": -8,
+        "rmsDb": -22.9,
+        "activeRmsDb": -20.3
+      }
+    },
+    {
+      "id": "move-land-hard",
+      "group": "move",
+      "files": [
+        "move/move-land-hard-1.mp3",
+        "move/move-land-hard-2.mp3",
+        "move/move-land-hard-3.mp3"
+      ],
+      "feel": [
+        "land",
+        "hard",
+        "heavy landing",
+        "fall",
+        "stomp"
+      ],
+      "seconds": 0.32,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 7109,
+      "numbers": {
+        "peakDb": -6,
+        "rmsDb": -20,
+        "activeRmsDb": -17.1
+      }
+    },
+    {
+      "id": "move-land-soft",
+      "group": "move",
+      "files": [
+        "move/move-land-soft-1.mp3",
+        "move/move-land-soft-2.mp3",
+        "move/move-land-soft-3.mp3"
+      ],
+      "feel": [
+        "land",
+        "soft",
+        "step down",
+        "grass",
+        "light landing"
+      ],
+      "seconds": 0.16,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 4688,
+      "numbers": {
+        "peakDb": -11,
+        "rmsDb": -25.6,
+        "activeRmsDb": -21.5
+      }
+    },
+    {
+      "id": "move-slide",
+      "group": "move",
+      "files": [
+        "move/move-slide-1.mp3",
+        "move/move-slide-2.mp3"
+      ],
+      "feel": [
+        "slide",
+        "skid",
+        "scrape",
+        "ground",
+        "friction"
+      ],
+      "seconds": 0.6,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 12509,
+      "numbers": {
+        "peakDb": -11,
+        "rmsDb": -25.3,
+        "activeRmsDb": -25.1
+      }
+    },
+    {
+      "id": "move-step-grass",
+      "group": "move",
+      "files": [
+        "move/move-step-grass-1.mp3",
+        "move/move-step-grass-2.mp3",
+        "move/move-step-grass-3.mp3",
+        "move/move-step-grass-4.mp3"
+      ],
+      "feel": [
+        "footstep",
+        "step",
+        "walk",
+        "grass",
+        "soft",
+        "leaves"
+      ],
+      "seconds": 0.16,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 8593,
+      "numbers": {
+        "peakDb": -14,
+        "rmsDb": -30.4,
+        "activeRmsDb": -28.1
+      }
+    },
+    {
+      "id": "move-step-metal",
+      "group": "move",
+      "files": [
+        "move/move-step-metal-1.mp3",
+        "move/move-step-metal-2.mp3",
+        "move/move-step-metal-3.mp3",
+        "move/move-step-metal-4.mp3"
+      ],
+      "feel": [
+        "footstep",
+        "step",
+        "walk",
+        "metal",
+        "grate",
+        "clank"
+      ],
+      "seconds": 0.25,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 9240,
+      "numbers": {
+        "peakDb": -12,
+        "rmsDb": -29.5,
+        "activeRmsDb": -25.3
+      }
+    },
+    {
+      "id": "move-step-stone",
+      "group": "move",
+      "files": [
+        "move/move-step-stone-1.mp3",
+        "move/move-step-stone-2.mp3",
+        "move/move-step-stone-3.mp3",
+        "move/move-step-stone-4.mp3"
+      ],
+      "feel": [
+        "footstep",
+        "step",
+        "walk",
+        "stone",
+        "concrete",
+        "hard floor"
+      ],
+      "seconds": 0.12,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 6483,
+      "numbers": {
+        "peakDb": -12,
+        "rmsDb": -31.7,
+        "activeRmsDb": -24
+      }
+    },
+    {
+      "id": "move-step-wood",
+      "group": "move",
+      "files": [
+        "move/move-step-wood-1.mp3",
+        "move/move-step-wood-2.mp3",
+        "move/move-step-wood-3.mp3",
+        "move/move-step-wood-4.mp3"
+      ],
+      "feel": [
+        "footstep",
+        "step",
+        "walk",
+        "wood",
+        "floorboard",
+        "hollow"
+      ],
+      "seconds": 0.14,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 6818,
+      "numbers": {
+        "peakDb": -12,
+        "rmsDb": -28.5,
+        "activeRmsDb": -23.1
+      }
+    },
+    {
+      "id": "mt-swish",
+      "group": "move",
+      "files": [
+        "move/mt-swish.mp3"
+      ],
+      "feel": [
+        "swish",
+        "dodge",
+        "roll",
+        "air",
+        "quick"
+      ],
+      "seconds": 0.5,
+      "loop": false,
+      "gain": 1.12,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Swishes Sound Pack\" by artisticdude (OpenGameArt), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 6941,
+      "numbers": {
+        "peakDb": -9.0,
+        "rmsDb": -24.7
+      }
+    },
+    {
+      "id": "impact-break-glass",
+      "group": "impact",
+      "files": [
+        "impact/impact-break-glass-1.mp3",
+        "impact/impact-break-glass-2.mp3",
+        "impact/impact-break-glass-3.mp3"
+      ],
+      "feel": [
+        "break",
+        "glass",
+        "shatter",
+        "window",
+        "bottle",
+        "smash"
+      ],
+      "seconds": 0.9,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 18584,
+      "numbers": {
+        "peakDb": -6,
+        "rmsDb": -26.3,
+        "activeRmsDb": -23.3
+      }
+    },
+    {
+      "id": "impact-break-stone",
+      "group": "impact",
+      "files": [
+        "impact/impact-break-stone-1.mp3",
+        "impact/impact-break-stone-2.mp3",
+        "impact/impact-break-stone-3.mp3"
+      ],
+      "feel": [
+        "break",
+        "stone",
+        "rock",
+        "rubble",
+        "crumble",
+        "smash"
+      ],
+      "seconds": 0.7,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 18388,
+      "numbers": {
+        "peakDb": -5,
+        "rmsDb": -23.3,
+        "activeRmsDb": -18.7
+      }
+    },
+    {
+      "id": "impact-break-wood",
+      "group": "impact",
+      "files": [
+        "impact/impact-break-wood-1.mp3",
+        "impact/impact-break-wood-2.mp3",
+        "impact/impact-break-wood-3.mp3"
+      ],
+      "feel": [
+        "break",
+        "wood",
+        "crate",
+        "crack",
+        "splinter",
+        "smash"
+      ],
+      "seconds": 0.5,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 15007,
+      "numbers": {
+        "peakDb": -6,
+        "rmsDb": -27,
+        "activeRmsDb": -21.2
+      }
+    },
+    {
+      "id": "impact-explosion-large",
+      "group": "impact",
+      "files": [
+        "impact/impact-explosion-large-1.mp3",
+        "impact/impact-explosion-large-2.mp3"
+      ],
+      "feel": [
+        "explosion",
+        "boom",
+        "blast",
+        "big",
+        "huge",
+        "rumble"
+      ],
+      "seconds": 2.2,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 31599,
+      "numbers": {
+        "peakDb": -3,
+        "rmsDb": -17.1,
+        "activeRmsDb": -14.5
+      }
+    },
+    {
+      "id": "impact-explosion-small",
+      "group": "impact",
+      "files": [
+        "impact/impact-explosion-small-1.mp3",
+        "impact/impact-explosion-small-2.mp3",
+        "impact/impact-explosion-small-3.mp3"
+      ],
+      "feel": [
+        "explosion",
+        "boom",
+        "blast",
+        "bomb",
+        "small",
+        "pop"
+      ],
+      "seconds": 0.9,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 17513,
+      "numbers": {
+        "peakDb": -4,
+        "rmsDb": -18,
+        "activeRmsDb": -15
+      }
+    },
+    {
+      "id": "impact-hit-heavy",
+      "group": "impact",
+      "files": [
+        "impact/impact-hit-heavy-1.mp3",
+        "impact/impact-hit-heavy-2.mp3",
+        "impact/impact-hit-heavy-3.mp3"
+      ],
+      "feel": [
+        "hit",
+        "heavy",
+        "big",
+        "slam",
+        "damage",
+        "boss"
+      ],
+      "seconds": 0.4,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 8851,
+      "numbers": {
+        "peakDb": -4,
+        "rmsDb": -16.5,
+        "activeRmsDb": -14.5
+      }
+    },
+    {
+      "id": "impact-hit-light",
+      "group": "impact",
+      "files": [
+        "impact/impact-hit-light-1.mp3",
+        "impact/impact-hit-light-2.mp3",
+        "impact/impact-hit-light-3.mp3",
+        "impact/impact-hit-light-4.mp3"
+      ],
+      "feel": [
+        "hit",
+        "light",
+        "tick",
+        "small",
+        "damage",
+        "tap"
+      ],
+      "seconds": 0.1,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 6120,
+      "numbers": {
+        "peakDb": -9,
+        "rmsDb": -28.3,
+        "activeRmsDb": -21.4
+      }
+    },
+    {
+      "id": "impact-punch",
+      "group": "impact",
+      "files": [
+        "impact/impact-punch-1.mp3",
+        "impact/impact-punch-2.mp3",
+        "impact/impact-punch-3.mp3"
+      ],
+      "feel": [
+        "punch",
+        "hit",
+        "fight",
+        "smack",
+        "melee"
+      ],
+      "seconds": 0.18,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 5576,
+      "numbers": {
+        "peakDb": -4,
+        "rmsDb": -16.9,
+        "activeRmsDb": -13.9
+      }
+    },
+    {
+      "id": "impact-thud",
+      "group": "impact",
+      "files": [
+        "impact/impact-thud-1.mp3",
+        "impact/impact-thud-2.mp3",
+        "impact/impact-thud-3.mp3"
+      ],
+      "feel": [
+        "thud",
+        "bump",
+        "dull",
+        "drop",
+        "low",
+        "body"
+      ],
+      "seconds": 0.3,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 6456,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -20.1,
+        "activeRmsDb": -18
+      }
+    },
+    {
+      "id": "mt-brick",
+      "group": "impact",
+      "files": [
+        "impact/mt-brick-1.mp3",
+        "impact/mt-brick-2.mp3",
+        "impact/mt-brick-3.mp3",
+        "impact/mt-brick-4.mp3",
+        "impact/mt-brick-5.mp3",
+        "impact/mt-brick-6.mp3"
+      ],
+      "feel": [
+        "brick",
+        "rock",
+        "stone",
+        "hit",
+        "clatter",
+        "masonry"
+      ],
+      "seconds": 0.7,
+      "loop": false,
+      "gain": 0.71,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Impact Sounds\" by Kenney (https://kenney.nl/assets/impact-sounds), CC0",
+        "\"75 CC0 breaking / falling / hit SFX\" by rubberduck (https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 64782,
+      "numbers": {
+        "peakDb": -1.0,
+        "rmsDb": -21.5
+      }
+    },
+    {
+      "id": "mt-explosion",
+      "group": "impact",
+      "files": [
+        "impact/mt-explosion-1.mp3",
+        "impact/mt-explosion-2.mp3",
+        "impact/mt-explosion-3.mp3"
+      ],
+      "feel": [
+        "explosion",
+        "boom",
+        "blast",
+        "fire",
+        "recorded"
+      ],
+      "seconds": 2.0,
+      "loop": false,
+      "gain": 0.79,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Sci-fi Sounds\" by Kenney (https://kenney.nl/assets/sci-fi-sounds), CC0",
+        "\"Impact Sounds\" by Kenney (https://kenney.nl/assets/impact-sounds), CC0",
+        "\"25 CC0 bang / firework SFX\" by rubberduck (https://opengameart.org/content/25-cc0-bang-firework-sfx), CC0",
+        "\"Synthesized explosion\" by qubodup (OpenGameArt), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 83880,
+      "numbers": {
+        "peakDb": -1.9,
+        "rmsDb": -17.0
+      }
+    },
+    {
+      "id": "mt-marble-clack",
+      "group": "impact",
+      "files": [
+        "impact/mt-marble-clack-1.mp3",
+        "impact/mt-marble-clack-2.mp3",
+        "impact/mt-marble-clack-3.mp3",
+        "impact/mt-marble-clack-4.mp3",
+        "impact/mt-marble-clack-5.mp3",
+        "impact/mt-marble-clack-6.mp3"
+      ],
+      "feel": [
+        "marble",
+        "glass",
+        "clack",
+        "click",
+        "ball",
+        "collide",
+        "recorded"
+      ],
+      "seconds": 0.22,
+      "loop": false,
+      "gain": 0.45,
+      "source": "meticulai",
+      "from_game": "Lost Marbles",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Marbles_Hitting each other\" by KaleidacousticsAudio (https://freesound.org/s/628997/), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 21006,
+      "numbers": {
+        "peakDb": -1.1,
+        "rmsDb": -27.3
+      }
+    },
+    {
+      "id": "mt-marble-land",
+      "group": "impact",
+      "files": [
+        "impact/mt-marble-land-1.mp3",
+        "impact/mt-marble-land-2.mp3",
+        "impact/mt-marble-land-3.mp3",
+        "impact/mt-marble-land-4.mp3"
+      ],
+      "feel": [
+        "marble",
+        "drop",
+        "land",
+        "wood",
+        "bounce",
+        "small",
+        "recorded"
+      ],
+      "seconds": 0.32,
+      "loop": false,
+      "gain": 0.47,
+      "source": "meticulai",
+      "from_game": "Lost Marbles",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Marbles_Bouncing on wooden floor 2\" by KaleidacousticsAudio (https://freesound.org/s/628995/), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 18612,
+      "numbers": {
+        "peakDb": -1.4,
+        "rmsDb": -34.5
+      }
+    },
+    {
+      "id": "mt-pebbles",
+      "group": "impact",
+      "files": [
+        "impact/mt-pebbles-1.mp3",
+        "impact/mt-pebbles-2.mp3",
+        "impact/mt-pebbles-3.mp3"
+      ],
+      "feel": [
+        "pebbles",
+        "gravel",
+        "debris",
+        "rubble",
+        "scatter",
+        "small stones"
+      ],
+      "seconds": 2.2,
+      "loop": false,
+      "gain": 0.47,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Topple audio build (tools/audio-build.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 94887,
+      "numbers": {
+        "peakDb": -1.5,
+        "rmsDb": -26.0
+      }
+    },
+    {
+      "id": "mt-splash",
+      "group": "impact",
+      "files": [
+        "impact/mt-splash-1.mp3",
+        "impact/mt-splash-2.mp3",
+        "impact/mt-splash-3.mp3"
+      ],
+      "feel": [
+        "splash",
+        "water",
+        "dive",
+        "drop",
+        "wet"
+      ],
+      "seconds": 1.01,
+      "loop": false,
+      "gain": 0.86,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"40 CC0 water / splash / slime SFX\" by rubberduck (https://opengameart.org/content/40-cc0-water-splash-slime-sfx), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 39317,
+      "numbers": {
+        "peakDb": -4.7,
+        "rmsDb": -23.1
+      }
+    },
+    {
+      "id": "mt-stamp",
+      "group": "impact",
+      "files": [
+        "impact/mt-stamp.mp3"
+      ],
+      "feel": [
+        "stamp",
+        "thump",
+        "press",
+        "approve",
+        "hit"
+      ],
+      "seconds": 0.5,
+      "loop": false,
+      "gain": 0.53,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Topple audio build (tools/audio-build.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 7773,
+      "numbers": {
+        "peakDb": -1.5,
+        "rmsDb": -21.8
+      }
+    },
+    {
+      "id": "mt-steel-hit",
+      "group": "impact",
+      "files": [
+        "impact/mt-steel-hit-1.mp3",
+        "impact/mt-steel-hit-2.mp3"
+      ],
+      "feel": [
+        "steel",
+        "metal",
+        "hit",
+        "clang",
+        "beam"
+      ],
+      "seconds": 0.9,
+      "loop": false,
+      "gain": 0.74,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Impact Sounds\" by Kenney (https://kenney.nl/assets/impact-sounds), CC0",
+        "\"75 CC0 breaking / falling / hit SFX\" by rubberduck (https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 26970,
+      "numbers": {
+        "peakDb": -1.4,
+        "rmsDb": -24.3
+      }
+    },
+    {
+      "id": "weapon-arrow-hit",
+      "group": "weapon",
+      "files": [
+        "weapon/weapon-arrow-hit-1.mp3",
+        "weapon/weapon-arrow-hit-2.mp3",
+        "weapon/weapon-arrow-hit-3.mp3"
+      ],
+      "feel": [
+        "arrow",
+        "hit",
+        "thunk",
+        "stick",
+        "wood",
+        "target"
+      ],
+      "seconds": 0.24,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 6513,
+      "numbers": {
+        "peakDb": -5,
+        "rmsDb": -23.5,
+        "activeRmsDb": -18.7
+      }
+    },
+    {
+      "id": "weapon-bow-release",
+      "group": "weapon",
+      "files": [
+        "weapon/weapon-bow-release-1.mp3",
+        "weapon/weapon-bow-release-2.mp3",
+        "weapon/weapon-bow-release-3.mp3"
+      ],
+      "feel": [
+        "bow",
+        "arrow",
+        "release",
+        "twang",
+        "string",
+        "shoot"
+      ],
+      "seconds": 0.3,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 8465,
+      "numbers": {
+        "peakDb": -5,
+        "rmsDb": -23,
+        "activeRmsDb": -18.7
+      }
+    },
+    {
+      "id": "weapon-laser",
+      "group": "weapon",
+      "files": [
+        "weapon/weapon-laser-1.mp3",
+        "weapon/weapon-laser-2.mp3",
+        "weapon/weapon-laser-3.mp3"
+      ],
+      "feel": [
+        "laser",
+        "beam",
+        "sci-fi",
+        "shoot",
+        "ray",
+        "space"
+      ],
+      "seconds": 0.3,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 10291,
+      "numbers": {
+        "peakDb": -5,
+        "rmsDb": -21.4,
+        "activeRmsDb": -19.1
+      }
+    },
+    {
+      "id": "weapon-pew",
+      "group": "weapon",
+      "files": [
+        "weapon/weapon-pew-1.mp3",
+        "weapon/weapon-pew-2.mp3",
+        "weapon/weapon-pew-3.mp3"
+      ],
+      "feel": [
+        "pew",
+        "shoot",
+        "blaster",
+        "arcade",
+        "retro",
+        "small gun"
+      ],
+      "seconds": 0.16,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 7090,
+      "numbers": {
+        "peakDb": -5,
+        "rmsDb": -20.3,
+        "activeRmsDb": -17.3
+      }
+    },
+    {
+      "id": "weapon-reload",
+      "group": "weapon",
+      "files": [
+        "weapon/weapon-reload-1.mp3",
+        "weapon/weapon-reload-2.mp3"
+      ],
+      "feel": [
+        "reload",
+        "gun",
+        "click",
+        "clack",
+        "magazine",
+        "mechanical"
+      ],
+      "seconds": 0.55,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 9150,
+      "numbers": {
+        "peakDb": -8,
+        "rmsDb": -32.1,
+        "activeRmsDb": -26.7
+      }
+    },
+    {
+      "id": "weapon-swing",
+      "group": "weapon",
+      "files": [
+        "weapon/weapon-swing-1.mp3",
+        "weapon/weapon-swing-2.mp3",
+        "weapon/weapon-swing-3.mp3"
+      ],
+      "feel": [
+        "swing",
+        "sword",
+        "slash",
+        "swish",
+        "melee",
+        "air"
+      ],
+      "seconds": 0.28,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 10583,
+      "numbers": {
+        "peakDb": -5,
+        "rmsDb": -20.4,
+        "activeRmsDb": -18.7
+      }
+    },
+    {
+      "id": "mt-fireball",
+      "group": "weapon",
+      "files": [
+        "weapon/mt-fireball-1.mp3",
+        "weapon/mt-fireball-2.mp3",
+        "weapon/mt-fireball-3.mp3"
+      ],
+      "feel": [
+        "fireball",
+        "fire",
+        "flame",
+        "launch",
+        "whoosh",
+        "spell"
+      ],
+      "seconds": 1.43,
+      "loop": false,
+      "gain": 1.1,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Fireball\" by Julien Matthey (https://opengameart.org/content/fireball-1), CC0",
+        "\"Swishes Sound Pack\" by artisticdude (OpenGameArt), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 54364,
+      "numbers": {
+        "peakDb": -5.8,
+        "rmsDb": -20.3
+      }
+    },
+    {
+      "id": "vehicle-boost",
+      "group": "vehicle",
+      "files": [
+        "vehicle/vehicle-boost-1.mp3",
+        "vehicle/vehicle-boost-2.mp3"
+      ],
+      "feel": [
+        "boost",
+        "nitro",
+        "turbo",
+        "rocket",
+        "speed",
+        "rush"
+      ],
+      "seconds": 1,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 18623,
+      "numbers": {
+        "peakDb": -6,
+        "rmsDb": -17.6,
+        "activeRmsDb": -17.1
+      }
+    },
+    {
+      "id": "vehicle-engine-loop",
+      "group": "vehicle",
+      "files": [
+        "vehicle/vehicle-engine-loop.mp3"
+      ],
+      "feel": [
+        "engine",
+        "motor",
+        "car",
+        "drive",
+        "hum",
+        "loop"
+      ],
+      "seconds": 2,
+      "loop": [
+        0.25,
+        2.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 22075,
+      "numbers": {
+        "peakDb": -10.9,
+        "rmsDb": -21,
+        "activeRmsDb": -21,
+        "seam": {
+          "jump": 0.00033,
+          "typical": 0.00761,
+          "ratio": 0.04,
+          "levelDb": -1.8
+        }
+      }
+    },
+    {
+      "id": "vehicle-skid",
+      "group": "vehicle",
+      "files": [
+        "vehicle/vehicle-skid-1.mp3",
+        "vehicle/vehicle-skid-2.mp3"
+      ],
+      "feel": [
+        "skid",
+        "tyre",
+        "tire",
+        "screech",
+        "brake",
+        "drift"
+      ],
+      "seconds": 0.9,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 17215,
+      "numbers": {
+        "peakDb": -6,
+        "rmsDb": -19.5,
+        "activeRmsDb": -19.3
+      }
+    },
+    {
+      "id": "feedback-alarm",
+      "group": "feedback",
+      "files": [
+        "feedback/feedback-alarm.mp3"
+      ],
+      "feel": [
+        "alarm",
+        "warning",
+        "danger",
+        "siren",
+        "alert",
+        "two-tone"
+      ],
+      "seconds": 1.2,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 13056,
+      "numbers": {
+        "peakDb": -10.6,
+        "rmsDb": -13.3,
+        "activeRmsDb": -13
+      }
+    },
+    {
+      "id": "feedback-countdown-beep",
+      "group": "feedback",
+      "files": [
+        "feedback/feedback-countdown-beep.mp3"
+      ],
+      "feel": [
+        "countdown",
+        "beep",
+        "timer",
+        "three two one",
+        "tick"
+      ],
+      "seconds": 0.18,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 1580,
+      "numbers": {
+        "peakDb": -9.3,
+        "rmsDb": -13.8,
+        "activeRmsDb": -13
+      }
+    },
+    {
+      "id": "feedback-countdown-go",
+      "group": "feedback",
+      "files": [
+        "feedback/feedback-countdown-go.mp3"
+      ],
+      "feel": [
+        "go",
+        "start",
+        "countdown end",
+        "beep",
+        "race start"
+      ],
+      "seconds": 0.5,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 2984,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -13.8,
+        "activeRmsDb": -13.2
+      }
+    },
+    {
+      "id": "feedback-level-up",
+      "group": "feedback",
+      "files": [
+        "feedback/feedback-level-up.mp3"
+      ],
+      "feel": [
+        "level up",
+        "rank",
+        "unlock",
+        "reward",
+        "rising",
+        "bright"
+      ],
+      "seconds": 1.2,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 10147,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -24.5,
+        "activeRmsDb": -23.1
+      }
+    },
+    {
+      "id": "feedback-lose-sting",
+      "group": "feedback",
+      "files": [
+        "feedback/feedback-lose-sting.mp3"
+      ],
+      "feel": [
+        "lose",
+        "fail",
+        "game over",
+        "sad",
+        "down",
+        "defeat"
+      ],
+      "seconds": 1.3,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 7924,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -21.7,
+        "activeRmsDb": -21.1
+      }
+    },
+    {
+      "id": "feedback-win-jingle",
+      "group": "feedback",
+      "files": [
+        "feedback/feedback-win-jingle.mp3"
+      ],
+      "feel": [
+        "win",
+        "victory",
+        "success",
+        "fanfare",
+        "level complete",
+        "happy"
+      ],
+      "seconds": 1.7,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 12923,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -23.8,
+        "activeRmsDb": -22.7
+      }
+    },
+    {
+      "id": "mt-ding",
+      "group": "feedback",
+      "files": [
+        "feedback/mt-ding.mp3"
+      ],
+      "feel": [
+        "ding",
+        "bell",
+        "done",
+        "success",
+        "ring"
+      ],
+      "seconds": 1.6,
+      "loop": false,
+      "gain": 0.68,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Topple audio build (tools/audio-build.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 23229,
+      "numbers": {
+        "peakDb": -3.6,
+        "rmsDb": -16.1
+      }
+    },
+    {
+      "id": "mt-heartbeat",
+      "group": "feedback",
+      "files": [
+        "feedback/mt-heartbeat.mp3"
+      ],
+      "feel": [
+        "heartbeat",
+        "low health",
+        "tension",
+        "pulse",
+        "danger"
+      ],
+      "seconds": 0.44,
+      "loop": false,
+      "gain": 1.32,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Dragon Aces audio build (tools/audio_synth.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 4014,
+      "numbers": {
+        "peakDb": -9.4,
+        "rmsDb": -20.8
+      }
+    },
+    {
+      "id": "mt-overheat",
+      "group": "feedback",
+      "files": [
+        "feedback/mt-overheat.mp3"
+      ],
+      "feel": [
+        "overheat",
+        "warning",
+        "buzz",
+        "alert",
+        "too hot"
+      ],
+      "seconds": 0.7,
+      "loop": false,
+      "gain": 0.97,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Dragon Aces audio build (tools/audio_synth.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 6104,
+      "numbers": {
+        "peakDb": -6.7,
+        "rmsDb": -22.9
+      }
+    },
+    {
+      "id": "mt-streak-bell",
+      "group": "feedback",
+      "files": [
+        "feedback/mt-streak-bell-1.mp3",
+        "feedback/mt-streak-bell-2.mp3",
+        "feedback/mt-streak-bell-3.mp3"
+      ],
+      "feel": [
+        "bell",
+        "streak",
+        "combo",
+        "reward",
+        "rising",
+        "three steps"
+      ],
+      "seconds": 1.5,
+      "loop": false,
+      "gain": 0.56,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Interface Sounds\" by Kenney (https://kenney.nl/assets/interface-sounds), CC0",
+        "\"Impact Sounds\" by Kenney (https://kenney.nl/assets/impact-sounds), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 56559,
+      "numbers": {
+        "peakDb": -1.9,
+        "rmsDb": -17.4
+      }
+    },
+    {
+      "id": "mt-warn-incoming",
+      "group": "feedback",
+      "files": [
+        "feedback/mt-warn-incoming.mp3"
+      ],
+      "feel": [
+        "warning",
+        "incoming",
+        "missile",
+        "beep",
+        "alert"
+      ],
+      "seconds": 0.28,
+      "loop": false,
+      "gain": 2.0,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Dragon Aces audio build (tools/audio_synth.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 2760,
+      "numbers": {
+        "peakDb": -19.4,
+        "rmsDb": -25.0
+      }
+    },
+    {
+      "id": "mt-warn-lock",
+      "group": "feedback",
+      "files": [
+        "feedback/mt-warn-lock.mp3"
+      ],
+      "feel": [
+        "warning",
+        "lock-on",
+        "beep",
+        "alert",
+        "target"
+      ],
+      "seconds": 0.38,
+      "loop": false,
+      "gain": 1.68,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Dragon Aces audio build (tools/audio_synth.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 3596,
+      "numbers": {
+        "peakDb": -11.5,
+        "rmsDb": -24.5
+      }
+    },
+    {
+      "id": "creature-blip",
+      "group": "creature",
+      "files": [
+        "creature/creature-blip-1.mp3",
+        "creature/creature-blip-2.mp3",
+        "creature/creature-blip-3.mp3",
+        "creature/creature-blip-4.mp3"
+      ],
+      "feel": [
+        "creature",
+        "blip",
+        "cute",
+        "talk",
+        "voice",
+        "pet",
+        "robot"
+      ],
+      "seconds": 0.18,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 9269,
+      "numbers": {
+        "peakDb": -8,
+        "rmsDb": -20.9,
+        "activeRmsDb": -19.7
+      }
+    },
+    {
+      "id": "creature-chirp",
+      "group": "creature",
+      "files": [
+        "creature/creature-chirp-1.mp3",
+        "creature/creature-chirp-2.mp3",
+        "creature/creature-chirp-3.mp3"
+      ],
+      "feel": [
+        "creature",
+        "chirp",
+        "bird",
+        "tweet",
+        "small",
+        "happy"
+      ],
+      "seconds": 0.3,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 6560,
+      "numbers": {
+        "peakDb": -8,
+        "rmsDb": -19.7,
+        "activeRmsDb": -16.7
+      }
+    },
+    {
+      "id": "creature-growl",
+      "group": "creature",
+      "files": [
+        "creature/creature-growl-1.mp3",
+        "creature/creature-growl-2.mp3",
+        "creature/creature-growl-3.mp3"
+      ],
+      "feel": [
+        "creature",
+        "growl",
+        "monster",
+        "enemy",
+        "low",
+        "angry"
+      ],
+      "seconds": 0.7,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 22838,
+      "numbers": {
+        "peakDb": -8,
+        "rmsDb": -22.6,
+        "activeRmsDb": -22
+      }
+    },
+    {
+      "id": "mt-roar",
+      "group": "creature",
+      "files": [
+        "creature/mt-roar-1.mp3",
+        "creature/mt-roar-2.mp3",
+        "creature/mt-roar-3.mp3"
+      ],
+      "feel": [
+        "roar",
+        "monster",
+        "dragon",
+        "beast",
+        "big",
+        "growl"
+      ],
+      "seconds": 2.42,
+      "loop": false,
+      "gain": 0.81,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Big scary troll sounds\" by Darsycho (https://opengameart.org/content/big-scary-troll-sounds), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 104726,
+      "numbers": {
+        "peakDb": -3.2,
+        "rmsDb": -19.8
+      }
+    },
+    {
+      "id": "mt-wing-flap",
+      "group": "creature",
+      "files": [
+        "creature/mt-wing-flap-1.mp3",
+        "creature/mt-wing-flap-2.mp3",
+        "creature/mt-wing-flap-3.mp3"
+      ],
+      "feel": [
+        "wing",
+        "flap",
+        "bird",
+        "dragon",
+        "fly"
+      ],
+      "seconds": 0.7,
+      "loop": false,
+      "gain": 1.45,
+      "source": "meticulai",
+      "from_game": "Dragon Aces",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Large Wings Flap\" by AntumDeluge (https://opengameart.org/content/large-wings-flap), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 23646,
+      "numbers": {
+        "peakDb": -11.2,
+        "rmsDb": -26.8
+      }
+    },
+    {
+      "id": "magic-charge",
+      "group": "magic",
+      "files": [
+        "magic/magic-charge-1.mp3",
+        "magic/magic-charge-2.mp3"
+      ],
+      "feel": [
+        "charge",
+        "power up",
+        "build",
+        "spell",
+        "rising",
+        "wind-up"
+      ],
+      "seconds": 1.4,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 21535,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -21.2,
+        "activeRmsDb": -19.8
+      }
+    },
+    {
+      "id": "magic-sparkle",
+      "group": "magic",
+      "files": [
+        "magic/magic-sparkle-1.mp3",
+        "magic/magic-sparkle-2.mp3",
+        "magic/magic-sparkle-3.mp3"
+      ],
+      "feel": [
+        "sparkle",
+        "magic",
+        "twinkle",
+        "fairy",
+        "shine",
+        "stars"
+      ],
+      "seconds": 1,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 17899,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -23.8,
+        "activeRmsDb": -21.9
+      }
+    },
+    {
+      "id": "magic-whoosh",
+      "group": "magic",
+      "files": [
+        "magic/magic-whoosh-1.mp3",
+        "magic/magic-whoosh-2.mp3",
+        "magic/magic-whoosh-3.mp3"
+      ],
+      "feel": [
+        "whoosh",
+        "magic",
+        "spell",
+        "cast",
+        "wind",
+        "sweep"
+      ],
+      "seconds": 0.7,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 19291,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -20.6,
+        "activeRmsDb": -20.2
+      }
+    },
+    {
+      "id": "magic-zap",
+      "group": "magic",
+      "files": [
+        "magic/magic-zap-1.mp3",
+        "magic/magic-zap-2.mp3",
+        "magic/magic-zap-3.mp3"
+      ],
+      "feel": [
+        "zap",
+        "electric",
+        "lightning",
+        "shock",
+        "spark",
+        "spell"
+      ],
+      "seconds": 0.3,
+      "loop": false,
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 12881,
+      "numbers": {
+        "peakDb": -7,
+        "rmsDb": -22.1,
+        "activeRmsDb": -20
+      }
+    },
+    {
+      "id": "ambience-cave-drip",
+      "group": "ambience",
+      "files": [
+        "ambience/ambience-cave-drip.mp3"
+      ],
+      "feel": [
+        "cave",
+        "drip",
+        "water",
+        "echo",
+        "underground",
+        "dungeon",
+        "loop"
+      ],
+      "seconds": 12,
+      "loop": [
+        0.25,
+        12.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 54829,
+      "numbers": {
+        "peakDb": -6,
+        "rmsDb": -32.9,
+        "activeRmsDb": -26,
+        "seam": {
+          "jump": 9e-05,
+          "typical": 0.01731,
+          "ratio": 0.01,
+          "levelDb": 5.6
+        }
+      }
+    },
+    {
+      "id": "ambience-fire-crackle",
+      "group": "ambience",
+      "files": [
+        "ambience/ambience-fire-crackle.mp3"
+      ],
+      "feel": [
+        "fire",
+        "campfire",
+        "crackle",
+        "fireplace",
+        "warm",
+        "torch",
+        "loop"
+      ],
+      "seconds": 8,
+      "loop": [
+        0.25,
+        8.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 82428,
+      "numbers": {
+        "peakDb": -8.6,
+        "rmsDb": -25,
+        "activeRmsDb": -25,
+        "seam": {
+          "jump": 0.00439,
+          "typical": 0.02937,
+          "ratio": 0.15,
+          "levelDb": -0.2
+        }
+      }
+    },
+    {
+      "id": "ambience-night-insects",
+      "group": "ambience",
+      "files": [
+        "ambience/ambience-night-insects.mp3"
+      ],
+      "feel": [
+        "night",
+        "insects",
+        "crickets",
+        "summer",
+        "field",
+        "calm",
+        "loop"
+      ],
+      "seconds": 8,
+      "loop": [
+        0.25,
+        8.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 82949,
+      "numbers": {
+        "peakDb": -8.8,
+        "rmsDb": -25,
+        "activeRmsDb": -25,
+        "seam": {
+          "jump": 0.00347,
+          "typical": 0.13056,
+          "ratio": 0.03,
+          "levelDb": 0.1
+        }
+      }
+    },
+    {
+      "id": "ambience-rain",
+      "group": "ambience",
+      "files": [
+        "ambience/ambience-rain.mp3"
+      ],
+      "feel": [
+        "rain",
+        "weather",
+        "wet",
+        "storm",
+        "cosy",
+        "loop"
+      ],
+      "seconds": 10,
+      "loop": [
+        0.25,
+        10.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 90005,
+      "numbers": {
+        "peakDb": -10.1,
+        "rmsDb": -25,
+        "activeRmsDb": -25,
+        "seam": {
+          "jump": 0.01142,
+          "typical": 0.11806,
+          "ratio": 0.1,
+          "levelDb": 0.1
+        }
+      }
+    },
+    {
+      "id": "ambience-room-tone",
+      "group": "ambience",
+      "files": [
+        "ambience/ambience-room-tone.mp3"
+      ],
+      "feel": [
+        "room",
+        "indoor",
+        "quiet",
+        "hum",
+        "air",
+        "background",
+        "loop"
+      ],
+      "seconds": 8,
+      "loop": [
+        0.25,
+        8.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 66322,
+      "numbers": {
+        "peakDb": -20.8,
+        "rmsDb": -33,
+        "activeRmsDb": -33,
+        "seam": {
+          "jump": 0.00089,
+          "typical": 0.00282,
+          "ratio": 0.31,
+          "levelDb": 1
+        }
+      }
+    },
+    {
+      "id": "ambience-sea",
+      "group": "ambience",
+      "files": [
+        "ambience/ambience-sea.mp3"
+      ],
+      "feel": [
+        "sea",
+        "ocean",
+        "waves",
+        "beach",
+        "shore",
+        "water",
+        "loop"
+      ],
+      "seconds": 16,
+      "loop": [
+        0.25,
+        16.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 133751,
+      "numbers": {
+        "peakDb": -9,
+        "rmsDb": -25,
+        "activeRmsDb": -25,
+        "seam": {
+          "jump": 0.0034,
+          "typical": 0.02014,
+          "ratio": 0.17,
+          "levelDb": 1.3
+        }
+      }
+    },
+    {
+      "id": "ambience-wind",
+      "group": "ambience",
+      "files": [
+        "ambience/ambience-wind.mp3"
+      ],
+      "feel": [
+        "wind",
+        "air",
+        "outdoor",
+        "breeze",
+        "mountain",
+        "open",
+        "loop"
+      ],
+      "seconds": 12,
+      "loop": [
+        0.25,
+        12.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 104805,
+      "numbers": {
+        "peakDb": -9,
+        "rmsDb": -25,
+        "activeRmsDb": -25,
+        "seam": {
+          "jump": 0.00413,
+          "typical": 0.0225,
+          "ratio": 0.18,
+          "levelDb": 0.1
+        }
+      }
+    },
+    {
+      "id": "mt-clock-tick",
+      "group": "ambience",
+      "files": [
+        "ambience/mt-clock-tick.mp3"
+      ],
+      "feel": [
+        "clock",
+        "tick",
+        "room",
+        "night",
+        "time",
+        "recorded",
+        "loop"
+      ],
+      "seconds": 12.0,
+      "loop": [
+        0.25,
+        12.25
+      ],
+      "gain": 0.51,
+      "source": "meticulai",
+      "from_game": "Lost Marbles",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Tick2\" by Marble Toast (https://commons.wikimedia.org/wiki/File:Tick2.ogg), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 100460,
+      "numbers": {
+        "peakDb": -2.2,
+        "rmsDb": -29.5
+      }
+    },
+    {
+      "id": "mt-generator-loop",
+      "group": "ambience",
+      "files": [
+        "ambience/mt-generator-loop.mp3"
+      ],
+      "feel": [
+        "generator",
+        "machine",
+        "hum",
+        "engine",
+        "industrial",
+        "loop"
+      ],
+      "seconds": 4.0,
+      "loop": [
+        0.25,
+        4.25
+      ],
+      "gain": 0.29,
+      "source": "meticulai",
+      "from_game": "Topple",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "Synthesised by the Topple audio build (tools/audio-build.py); own work"
+      ],
+      "kind": "made in code for the game",
+      "bytes": 63885,
+      "numbers": {
+        "peakDb": -1.5,
+        "rmsDb": -14.3
+      }
+    },
+    {
+      "id": "mt-rain-window",
+      "group": "ambience",
+      "files": [
+        "ambience/mt-rain-window.mp3"
+      ],
+      "feel": [
+        "rain",
+        "window",
+        "night",
+        "light rain",
+        "cosy",
+        "recorded",
+        "loop"
+      ],
+      "seconds": 22.0,
+      "loop": [
+        0.25,
+        22.25
+      ],
+      "gain": 0.52,
+      "source": "meticulai",
+      "from_game": "Lost Marbles",
+      "licence": "CC0-1.0",
+      "made_from": [
+        "\"Rain (loopable)\" take 4 by Ylmir (https://opengameart.org/content/rain-loopable), CC0"
+      ],
+      "kind": "made for the game from CC0 recordings (trimmed, layered, filtered)",
+      "bytes": 180601,
+      "numbers": {
+        "peakDb": -2.4,
+        "rmsDb": -20.1
+      }
+    },
+    {
+      "id": "music-bouncy-loop",
+      "group": "music",
+      "files": [
+        "music/music-bouncy-loop.mp3"
+      ],
+      "feel": [
+        "music",
+        "happy",
+        "bouncy",
+        "arcade",
+        "chiptune",
+        "upbeat",
+        "fast",
+        "loop"
+      ],
+      "seconds": 8,
+      "loop": [
+        0.25,
+        8.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 62112,
+      "numbers": {
+        "peakDb": -6,
+        "rmsDb": -24.9,
+        "activeRmsDb": -21.8,
+        "seam": {
+          "jump": 0,
+          "typical": 0.03766,
+          "ratio": 0,
+          "levelDb": -7.7
+        }
+      }
+    },
+    {
+      "id": "music-calm-loop",
+      "group": "music",
+      "files": [
+        "music/music-calm-loop.mp3"
+      ],
+      "feel": [
+        "music",
+        "calm",
+        "slow",
+        "warm",
+        "pad",
+        "menu",
+        "peaceful",
+        "loop"
+      ],
+      "seconds": 16,
+      "loop": [
+        0.25,
+        16.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 82129,
+      "numbers": {
+        "peakDb": -9,
+        "rmsDb": -21,
+        "activeRmsDb": -21,
+        "seam": {
+          "jump": 0.00276,
+          "typical": 0.00876,
+          "ratio": 0.32,
+          "levelDb": 1.8
+        }
+      }
+    },
+    {
+      "id": "music-tense-loop",
+      "group": "music",
+      "files": [
+        "music/music-tense-loop.mp3"
+      ],
+      "feel": [
+        "music",
+        "tense",
+        "danger",
+        "dark",
+        "pulse",
+        "chase",
+        "boss",
+        "loop"
+      ],
+      "seconds": 10,
+      "loop": [
+        0.25,
+        10.25
+      ],
+      "gain": 1,
+      "source": "synth",
+      "licence": "CC0-1.0",
+      "bytes": 67231,
+      "numbers": {
+        "peakDb": -6,
+        "rmsDb": -21.5,
+        "activeRmsDb": -21.5,
+        "seam": {
+          "jump": 0.00125,
+          "typical": 0.00907,
+          "ratio": 0.14,
+          "levelDb": -8
+        }
+      }
+    }
+  ],
+  "updated": "2026-11-14",
+  "about": "The kit's starter sounds. source \"synth\" = made in code by tools/sounds/synth.mjs (CC0). source \"meticulai\" = from a finished Meticulai game (see CREDITS.md). loop is false or [start, end] in seconds. gain is a suggested volume so the pack mixes evenly. Nobody has listened to every file: see README.md."
+}

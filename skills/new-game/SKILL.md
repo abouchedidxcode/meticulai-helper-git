@@ -46,9 +46,14 @@ Example: "The plane dives down the stairwell and just barely clears the banister
 collect the last light. Gliding out the open window into the night at the end."
 Not sure? Offer three based on answers 1-2 and let them edit.
 
-**5. The look, in words.**
-"What should it look like? Describe it in words. You can also show me pictures or videos right after this."
-Example: "Like an old photo. Warm lamp light, dark corners, dust in the air. Not cartoony."
+**5. The look.**
+"What should it look like? You can point at pictures instead of finding words: I'll open a gallery of about 45 looks,
+each with mood pictures and a picture of a real game drawn that way. Say a name you like, or describe it in words."
+Example: "The Paper diorama one." Or: "Like an old photo. Warm lamp light, dark corners, dust in the air."
+Open the gallery for them with `node tools/vibes/open.mjs` (it opens in their normal browser; nothing to install).
+If they describe it in words, run `node tools/vibes/list.mjs --for "<their words>"` and offer the top two or three by
+name. A vibe is a starting point for the look (colours, light, an optional drawing style, words for GREAT.md), never a
+picture the game has to match. Remember their pick; you put it on after the read-back.
 
 **6. Controls.**
 "How do people play it: keyboard and mouse, a game controller, touch on a phone, or hand gestures in front of a
@@ -120,6 +125,23 @@ set `falCapUSD` (their budget, default 0) and `maxAgents` (default 4; lower it t
 if they mention running out of usage) in `my-game/helper.json`. Rename `gameName` if they gave a name. Log the main
 choices in `DECISIONS.md`. Commit.
 
+## Pick the starter and put on the vibe
+
+Right after the yes:
+
+1. **Starter.** `node tools/starters/list.mjs --for "<the game in a few words: the verb, the camera, the vehicle>"`.
+   The starters are ready-to-play games, one per kind of game (island: third-person run and jump; platformer: 2D
+   side-on; top-down: aim and shoot from above; racer: vehicles; first-person: through your own eyes). Each already
+   has the feel of its kind tuned (see its `STARTER.md`). If one fits better than the island the user is on now,
+   switch: `node tools/starters/switch.mjs <id>` (keeps GREAT.md, palette, refs and notes; replaces only the game
+   code). Tell them in one plain line: "I'm starting from the racing starter: it already drives and drifts well."
+   Read `my-game/STARTER.md` before you plan anything: it says what is tuned and why, and how to reshape it.
+2. **Vibe.** If they picked one: `node tools/vibes/apply.mjs <id>`. It writes `my-game/palette.json` (every colour in
+   the game comes from it, by role), puts on the drawing style if the vibe has one, and writes the look in words into
+   GREAT.md if that section is still empty. If they described their own look, write palette.json yourself from
+   GREAT.md (roles: read the top of `my-game/src/core/look.js`), or start from the closest vibe and adjust.
+3. Hand back so they see their idea's starter in their vibe within minutes, before any building.
+
 ## Look for ready-made blocks
 
 Right after the yes, run `node tools/blocks/suggest.mjs`. It reads GREAT.md and points at blocks (systems from
@@ -138,8 +160,9 @@ me. Or say 'skip'." (Tell them where the folder is, click by click.) Then [refer
 
 ## Done means
 
-GREAT.md is written, the user said yes, `helper.json` is set, `suggest.mjs` was run and the promising blocks are in
-ASSETS.md, committed, and the turn ended with the card.
+GREAT.md is written, the user said yes, `helper.json` is set, the best starter is in place, the vibe (or their own
+palette) is on, `suggest.mjs` was run and the promising blocks are in ASSETS.md, committed, and the turn ended with
+the card.
 
 ## Common mistakes
 

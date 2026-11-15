@@ -1,0 +1,122 @@
+{
+  "id": "cosy-lamplit-room",
+  "name": "Cosy lamp-lit room",
+  "order": 5,
+  "one_line": "Wood, books, a rug and one warm lamp against the night.",
+  "mood": [
+    "cosy",
+    "warm",
+    "indoor"
+  ],
+  "look_words": "A small room at night, lit by one or two warm lamps. Honey and chestnut wood, a worn patterned rug, shelves of books and plants, a dark blue window. The light pools in amber circles and falls off into soft brown shadow; nothing is ever fully black. Shapes are chunky and slightly oversized, like a doll's house, with hand-painted textures. Gold is kept for things to pick up and mint green for the thing to do next; red is for harm only. The player is pale cream so it reads in lamp light and in shadow. Motion is small and domestic: a cat's tail, steam, a swinging lamp. Avoid cold light, clutter that hides the floor, gloss and bloom.",
+  "palette": {
+    "name": "lamp light",
+    "colors": {
+      "base": [
+        "#8f5f3f",
+        "#6b4530",
+        "#b08a6a",
+        "#7a5f78"
+      ],
+      "accent": [
+        "#ffd27a",
+        "#7fd0b0"
+      ],
+      "danger": "#ff4a3d",
+      "player": "#fbf0dc",
+      "shadow": "#2a1c22",
+      "light": "#ffd9a0",
+      "ink": "#fbeed6"
+    },
+    "sky": {
+      "top": "#141a33",
+      "horizon": "#27304f",
+      "below": "#120f18",
+      "sun": "#ffcf8a"
+    },
+    "light": {
+      "sun": "#ffc98a",
+      "sunStrength": 2.4,
+      "ambient": "#8a7aa8",
+      "ground": "#5a3a2a",
+      "ambientStrength": 1,
+      "fog": "#2a1e26",
+      "fogAmount": 0.4,
+      "exposure": 1.15,
+      "sunElevation": 55,
+      "sunAzimuth": 30
+    },
+    "notes": "The \"sun\" here is the lamp: warm, fairly high, not too strong. The sky is the night outside the window. Keep ambient low so the pools of light matter."
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {
+      "blur": 0.8
+    }
+  },
+  "look_wish": "soft tilt-shift blur, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-tilt-shift-macro",
+      "why": "makes the room read as a miniature and softens the edges of the frame"
+    }
+  ],
+  "blocks": [
+    "meticulai-tilt-shift-macro",
+    "fire",
+    "meticulai-anim-springs"
+  ],
+  "asset_search": [
+    "furniture",
+    "bookshelf",
+    "lamp",
+    "rug",
+    "house plant"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "kaykit",
+    "quaternius",
+    "polyhaven"
+  ],
+  "music": {
+    "mood": "slow lo-fi piano with vinyl crackle",
+    "tempo": "slow",
+    "notes": "Rain on the window as a bed."
+  },
+  "sound_feel": "close and warm; a clock, pages, a kettle, soft wooden knocks",
+  "good_for": [
+    "top-down",
+    "grid-puzzle",
+    "first-person",
+    "tidying and decorating",
+    "hidden object",
+    "escape room"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cosy lamp-lit attic room at night, seen from a high corner like an isometric room game: a small character in a green jumper sits at a wooden desk under a warm table lamp, shelves of books and plants, a patterned rug, a sleeping cat on an armchair, a round window showing dark blue night. Warm amber lamp light pooling on wood, soft brown shadows, stylised chunky shapes, hand-painted textures. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cosy little kitchen at night seen from a high corner like an isometric room game: a small character in a green jumper stirs a pot on an old stove, one hanging lamp casts warm amber light over a wooden table with bread and a teapot, herbs drying on the wall, a dog asleep on the rug, dark blue window with rain. Soft brown shadows, stylised chunky shapes, hand-painted textures. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "toy-tilt-shift",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

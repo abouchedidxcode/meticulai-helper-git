@@ -1,0 +1,7 @@
+{
+  "name": "test: two-ink print",
+  "colors": { "base": ["#efe6d2", "#d9cdb4", "#2f5d8a", "#7fa3c4"], "accent": ["#f2c230", "#e08e1b"], "danger": "#e8456b", "player": "#1c2f4a", "shadow": "#1c2f4a", "light": "#fff7e2", "ink": "#1c2f4a" },
+  "sky": { "top": "#efe6d2", "horizon": "#f6efdf", "below": "#d9cdb4", "sun": "#fff7e2" },
+  "light": { "sun": "#ffffff", "sunStrength": 2.4, "ambient": "#ffffff", "ground": "#d9cdb4", "ambientStrength": 2.2, "fog": "#efe6d2", "fogAmount": 0.45, "exposure": 1.0, "sunElevation": 55, "sunAzimuth": 300 },
+  "notes": "Kit test palette: cream paper and blue ink, yellow for what matters, pink for danger. Flat and graphic."
+}

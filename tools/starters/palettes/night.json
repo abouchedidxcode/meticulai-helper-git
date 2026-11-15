@@ -1,0 +1,7 @@
+{
+  "name": "test: cold night",
+  "colors": { "base": ["#27405a", "#1b2c42", "#4c5a73", "#3a4a66"], "accent": ["#7df0d0", "#3fb7c9"], "danger": "#ff4f6d", "player": "#f2f6ff", "shadow": "#0b1220", "light": "#cfe6ff", "ink": "#e8f1ff" },
+  "sky": { "top": "#070b18", "horizon": "#1d3050", "below": "#05080f", "sun": "#bcd4ff" },
+  "light": { "sun": "#9fbcf5", "sunStrength": 1.4, "ambient": "#5a76b0", "ground": "#141c2c", "ambientStrength": 1.1, "fog": "#101a2e", "fogAmount": 0.7, "exposure": 1.15, "sunElevation": 48, "sunAzimuth": 130 },
+  "notes": "Kit test palette: a dark, cool night. A starter must stay readable in it."
+}

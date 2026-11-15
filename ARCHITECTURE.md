@@ -28,7 +28,11 @@ meticulai-helper-git/          <- the kit (workspace root)
   tools/                       Node scripts (no build step)
     assets/                    find, get (and promote), look, restyle, palette-from
     blocks/                    list, add
-  starter/                     the starter game (copied to my-game/ by tools/init.mjs)
+  starter/                     the shared base game (copied to my-game/ by tools/init.mjs) + the island demo
+  starters/<id>/               genre starters: overlays on the base (src/game/, src/tuning.json, STARTER.md, starter.json)
+  vibes/<id>/                  ready-made looks: vibe.json (palette, light, look, words) + frames/ + in-kit-<starter>.jpg
+  looks/<id>/                  drawing styles over any game (becomes my-game/src/look/index.js)
+  sounds/                      free game sounds (catalog.json) made by tools/sounds/synth.mjs, plus a few from the games
 
   my-game/                     <- created by `node tools/init.mjs`; EVERYTHING the user makes
     helper.json                project settings (see below)
@@ -80,6 +84,23 @@ Blocks named `meticulai-*` are systems taken from the games at meticulai.com; ea
 }
 ```
 
+## Starters, vibes and looks
+
+- A starter is an overlay on `starter/`: `init.mjs --starter <id>` copies the base, then the starter's `src/game/`,
+  `src/tuning.json`, `public/`, `scripts/` and `STARTER.md`, and adds the blocks listed in its `starter.json`.
+  `switch.mjs` does the same later under an existing game. Starters may not change base files; anything they need from
+  the base is proposed as a base change. `tools/starters/test.mjs <id>` is the bar a starter must pass.
+- Every colour and the light come from `my-game/palette.json`, read by `src/core/look.js` by ROLE (`look.base[0..3]`,
+  `accent[0..1]`, `danger`, `player`, `shadow`, `light`, `ink`, `sky`, `lighting`); games get it as `ctx.look`, and
+  `render/atmosphere.js` builds sky, sun, ambient and fog from it. Missing fields are worked out; UI colours are
+  chosen so text stays readable (`uiColors()`). A vibe is a palette plus a look id plus words.
+- A look is `src/look/index.js` exporting `lookInfo` and `installLook(ctx)`; it may return `{ render(renderer, scene,
+  camera), resize?(w, h, pixelRatio), update?(dt), dispose?() }`, which main.js hands to `view.setPost()`. Looks never
+  touch game code; `look.json` says whether one works with orthographic (2D) cameras.
+- Mouse-look games set `info.pointerLock: true`; main.js captures the mouse while playing and pauses when it is
+  freed. Input has `input.look()` (mouse movement plus right stick) and `input.aim()` (right stick), and bots drive
+  them with `input.virtual.look(dx, dy)` / `setAim(x, y)`.
+
 ## `my-game/helper.json`
 
 ```json
@@ -115,14 +136,36 @@ window.__game = {
 ```
 
 URL switches: `?seed=42` (deterministic random), `?autostart=1` (skip the title), `?bot=1` (a simple built-in bot
-plays), `?test=1` (show skip buttons + controls card), `?mute=1`.
+plays), `?test=1` (show skip buttons + controls card), `?mute=1`, `?dev=1` / `?dev=open` (the dev menu in a shipped
+build / opened at once).
 
 ## Dev-server endpoints (added by the starter's Vite plugin; dev only, never in a shipped build)
 
 - `POST /__helper/notes` body `{ text, screenshot, state, url }` -> appends to `playtest-notes/NOTES.md`, saves the
   screenshot as `playtest-notes/shots/<stamp>.png`. The in-game note box (key **N**) uses it.
-- `POST /__helper/tuning` body `{ values }` -> writes `src/tuning.json`. The dev panel's "Save for my agent" button
+- `POST /__helper/tuning` body `{ values }` -> writes `src/tuning.json`. The dev menu's "Save for my agent" button
   uses it. The game reads its default tuning from `src/tuning.json`.
+- `POST /__helper/palette` body `{ palette }` -> checks it (colours `#rrggbb`, numbers numbers, known fields only),
+  keeps the old `palette.json` in `.helper/`, writes the new one. The dev menu's "Save palette for my agent" uses it,
+  then reloads the page.
+- `POST /__helper/shot` body `{ png }` -> saves `playtest-notes/shots/shot-<stamp>.png` (the dev menu's Screenshot).
+- `GET /__helper/vibes` -> the kit's ready vibes (`../vibes/catalog.json` if there, else every `../vibes/*/vibe.json`)
+  with a colour swatch each, and which one is on. `POST /__helper/vibe` body `{ id }` -> runs
+  `tools/vibes/apply.mjs <id>` if the kit has it, else writes the vibe's palette. The dev menu then reloads.
+
+## The dev menu (`starter/src/core/dev/`)
+
+Every game made from the starter has it (backquote or F2). On in the dev server and with `?test=1`; in a shipped
+build only with `?dev=1`. In a hidden test browser it stays invisible unless the address says `?dev` (so recordings,
+previews and `__game.capture()` never show it); `?dev=open` opens it at once. Its code is loaded with a dynamic
+import only when it is on, so players never download it. `settings.js` is the adapter: `tune`, `define`, `set`,
+`changedValues`, `installSettingsPanel` and the `tuning.json` format are as before, plus `dev` (also `ctx.dev`):
+`button`, `toggle`, `readout`, `pick`, `slider`, `essentials`, `presets`, all no-ops when the menu is off.
+`dev.view(camera)` gives main.js the camera to draw with (the free camera never moves the game's own);
+`loop.speed` and `loop.freeze()` give Speed and Freeze. Maker's changes are kept in localStorage under
+`<game name>.tuning`. Tests: `node --test tools/starters/dev-menu.test.mjs` (no browser) and
+`node tools/starters/dev-menu-check.mjs --dir <game>` (one hidden browser, under a minute). The same registry and
+panel, for games not made from the starter, is the block `meticulai-tuning-panel`.
 - `GET /__helper/ping` -> `{ ok: true, game: "<gameName>" }` (used by `tools/serve.mjs` to know the server is ours).
 
 ## Browsers

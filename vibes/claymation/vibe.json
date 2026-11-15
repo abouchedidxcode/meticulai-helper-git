@@ -1,0 +1,131 @@
+{
+  "id": "claymation",
+  "name": "Claymation",
+  "order": 20,
+  "one_line": "Lumpy modelling clay with thumbprints, on a tabletop set.",
+  "mood": [
+    "handmade",
+    "funny",
+    "warm"
+  ],
+  "look_words": "A stop-motion world made of modelling clay. Grass green, terracotta and pale putty-coloured clay for the land and buildings, a painted backdrop for the sky. Every shape is rounded and slightly lumpy, with thumbprints and tool marks left in; nothing is perfectly straight or symmetrical. Surfaces are matte with a soft sheen, lit by warm studio lamps that give gentle shadows. Bright yellow and blue clay mark pickups and the goal, red clay is harm, and the player is deep violet-blue. Motion is the heart of it: animate at a low frame rate, on twos, with squash and stretch and the odd wobble. Avoid clean edges, smooth interpolation, shiny plastic, thin parts and bloom.",
+  "palette": {
+    "name": "modelling clay",
+    "colors": {
+      "base": [
+        "#8fbf6a",
+        "#6f9e58",
+        "#d98f5f",
+        "#dfe3d0"
+      ],
+      "accent": [
+        "#ffd000",
+        "#3f7fe0"
+      ],
+      "danger": "#d6303a",
+      "player": "#3a2f8a",
+      "shadow": "#4a3a4f",
+      "light": "#fff2d8",
+      "ink": "#fbf3e2"
+    },
+    "sky": {
+      "top": "#8fc7dc",
+      "horizon": "#f6c9a8",
+      "below": "#6f9e58",
+      "sun": "#fff0c9"
+    },
+    "light": {
+      "sun": "#fff0d6",
+      "sunStrength": 3,
+      "ambient": "#d9e3f0",
+      "ground": "#b98f6a",
+      "ambientStrength": 1.8,
+      "fog": "#e9d9c9",
+      "fogAmount": 0.3,
+      "exposure": 1.05,
+      "sunElevation": 48,
+      "sunAzimuth": 60
+    },
+    "notes": "The sky is a painted backdrop: a simple fade from blue to peach. The player is the darkest clay on the table, so it reads on grass, terracotta and path alike."
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {}
+  },
+  "look_wish": "tilt-shift blur and a low animation frame rate",
+  "upgrade": [
+    {
+      "block": "meticulai-tilt-shift-macro",
+      "why": "photographs the scene like a small set on a table, with real depth of field"
+    },
+    {
+      "block": "meticulai-sdf-meshes",
+      "why": "smooth blobby shapes modelled in code, good for clay characters"
+    }
+  ],
+  "blocks": [
+    "meticulai-tilt-shift-macro",
+    "meticulai-sdf-meshes",
+    "meticulai-anim-springs"
+  ],
+  "asset_search": [
+    "cute character",
+    "garden shed",
+    "vegetable",
+    "picket fence",
+    "clay texture"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "kaykit",
+    "poly-pizza",
+    "ambientcg"
+  ],
+  "music": {
+    "mood": "bouncy tuba, ukulele and a slide whistle",
+    "tempo": "medium",
+    "notes": "A little clumsy on purpose."
+  },
+  "sound_feel": "squelches, soft thuds, pops, a kazoo",
+  "good_for": [
+    "platformer",
+    "top-down",
+    "marble",
+    "grid-puzzle",
+    "farming",
+    "comedy games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Claymation stop-motion scene on a tabletop set: a small clay character in deep violet-blue dungarees crosses a wobbly clay bridge over a blue clay river toward a lumpy clay windmill, clay sheep on green clay hills, clay clouds on wires. Visible thumbprints and tool marks, slightly lumpy rounded shapes, matte modelling clay, warm soft studio light, painted pale blue backdrop, gentle shadows, cheerful and handmade. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Claymation stop-motion scene on a tabletop set: a small clay character in a striped orange jumper pushes a wheelbarrow of clay carrots through a garden with a wonky clay shed, a picket fence and clay sunflowers. Visible thumbprints and tool marks, slightly lumpy rounded shapes, matte modelling clay, warm soft studio light, painted sky backdrop in pale blue, gentle shadows, cheerful and handmade. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "toy-tilt-shift",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

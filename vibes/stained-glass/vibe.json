@@ -1,0 +1,125 @@
+{
+  "id": "stained-glass",
+  "name": "Stained glass",
+  "order": 33,
+  "one_line": "Jewel-coloured panes held by dark lead, lit from behind.",
+  "mood": [
+    "rich",
+    "glowing",
+    "solemn"
+  ],
+  "look_words": "A world made of stained glass with the light behind it. Every surface is a flat pane of coloured glass, emerald, sapphire and violet, separated by thick dark lead lines; there is no shading inside a pane, only slight streaks in the glass. Colours are deep and jewel-like and seem to glow because the background is bright. Amber and aqua panes mark what to collect and where to go, ruby red is harm, and the player is pale clear glass. Shapes are bold and simple, built from a few straight or gently curved cuts. Motion is slow, with light shifting across the panes and coloured light falling on the ground. Avoid gradients, thin lines, small detail, realistic lighting and bloom.",
+  "palette": {
+    "name": "stained glass",
+    "colors": {
+      "base": [
+        "#2f8f5a",
+        "#1f6f4a",
+        "#3a5fb0",
+        "#7a4fb0"
+      ],
+      "accent": [
+        "#ffc233",
+        "#6fe3ff"
+      ],
+      "danger": "#e0203a",
+      "player": "#fff6e6",
+      "shadow": "#14121c",
+      "light": "#fff3cf",
+      "ink": "#fbf3df"
+    },
+    "sky": {
+      "top": "#2f4fa8",
+      "horizon": "#f2a25a",
+      "below": "#1b1730",
+      "sun": "#ffe08a"
+    },
+    "light": {
+      "sun": "#ffe6b0",
+      "sunStrength": 3,
+      "ambient": "#b9a8e8",
+      "ground": "#3a3050",
+      "ambientStrength": 1.5,
+      "fog": "#3a2f5a",
+      "fogAmount": 0.3,
+      "exposure": 1.15,
+      "sunElevation": 30,
+      "sunAzimuth": 180
+    },
+    "notes": "The dark end is the lead: use it for thick outlines between everything. The kit has no stained-glass look yet, so this starts as flat jewel colours."
+  },
+  "look": {
+    "id": "ink",
+    "options": {
+      "lines": 1,
+      "hatching": 0,
+      "wobble": 0.5,
+      "paper": 0,
+      "grain": 0.3
+    }
+  },
+  "look_wish": "thick dark outlines and flat glowing fills",
+  "upgrade": [
+    {
+      "block": "meticulai-ink-illustration",
+      "why": "supplies the outlines between shapes; make them thick and near-black for the lead"
+    }
+  ],
+  "blocks": [
+    "meticulai-ink-illustration",
+    "meticulai-painterly-styles"
+  ],
+  "asset_search": [
+    "cathedral",
+    "knight",
+    "tower",
+    "tree",
+    "gothic window"
+  ],
+  "asset_families": [
+    "kaykit",
+    "polyfork",
+    "quaternius",
+    "kenney",
+    "polyhaven"
+  ],
+  "music": {
+    "mood": "slow choir pads and a small pipe organ",
+    "tempo": "slow",
+    "notes": "Long notes, lots of echo."
+  },
+  "sound_feel": "glass chimes, soft taps on glass, a big echoing room",
+  "good_for": [
+    "platformer",
+    "grid-puzzle",
+    "top-down",
+    "marble",
+    "light puzzles",
+    "story games"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "A game world made of stained glass: a small knight in ruby red walks a path through a garden of glass trees toward a glass tower, everything built from flat panes of jewel-coloured glass in sapphire blue, emerald, amber and violet held by thick dark lead lines. Light shines through from behind so the colours glow softly, simple bold shapes, a round amber sun, side view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "A game world made of stained glass: a small boat with a ruby red sail crosses sapphire blue glass waves toward an island with an amber lighthouse, emerald hills, a violet evening sky with a round pale moon, everything built from flat panes of jewel-coloured glass held by thick dark lead lines. Light shines through from behind so colours glow softly, simple bold shapes, side view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "ink",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

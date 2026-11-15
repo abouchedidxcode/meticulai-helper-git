@@ -44,9 +44,12 @@ with the starter game, the doc templates and `helper.json`. A working title is f
 Details: [skills/setup/SKILL.md](skills/setup/SKILL.md). End with a hand-back: the starter already runs, so they can
 play something within minutes.
 
-**1. Interview.** Eight short questions, one at a time, each with an example answer. You write `my-game/GREAT.md`
-(what great means for this game), read it back in plain words and get a yes. This is the yardstick for every later
-decision. [skills/new-game/SKILL.md](skills/new-game/SKILL.md)
+**1. Interview.** Eight short questions, one at a time, each with an example answer. For the look, the user can
+point at a gallery of ready-made vibes instead of finding words. You write `my-game/GREAT.md` (what great means for
+this game), read it back in plain words and get a yes. This is the yardstick for every later decision. Then you
+switch to the starter that fits (a ready-to-play racer, platformer, top-down, first-person or island game with its
+feel already tuned) and put on the vibe, so they play their idea's skeleton in their look within minutes.
+[skills/new-game/SKILL.md](skills/new-game/SKILL.md)
 
 **2. References (optional).** The user drops pictures and videos into `my-game/refs/`. You process them, write what
 each one is FOR and what to ignore, play the look back in words, and lock it into GREAT.md. References guide the look;
@@ -160,10 +163,14 @@ from the recording and GREAT.md, as if you'd never seen the code. It's slower, b
 | `templates/` | Starting versions of GREAT, HANDOVER, DECISIONS, DEVLOG, CREDITS, paid-ledger, CONTRACTS, REFS, ASSETS, palette.json. |
 | `sources/` | The free asset libraries: what each has, its licence duties, how to search it. [sources/README.md](sources/README.md) |
 | `blocks/` | Ready-made effects and systems as code (fire, ocean, sky, trees...), with credits. [blocks/README.md](blocks/README.md) |
+| `starters/` | Ready-to-play starting games, one per kind of game, each with a `STARTER.md` guide. `node tools/starters/list.mjs` |
+| `vibes/` | About 45 ready-made looks (palette, light, optional drawing style, words), with mood pictures and a picture of a real game drawn that way. `node tools/vibes/open.mjs` |
+| `looks/` | Drawing styles that go over any game (print, pixels, ink, painterly, tilt-shift, film, haze, retro console). `node tools/looks/list.mjs` |
+| `sounds/` | About 90 free sounds made for games, and the code that makes them. `node tools/sounds/list.mjs` |
 | `playbook/` | What makes games good, learned the hard way. Read [playbook/README.md](playbook/README.md) when unsure. |
 | `case-studies/` | Real games that worked and failed, and why. |
 | `recipes/` | Tested code snippets for common game pieces. |
 | `guides/` | Short guides for the human: testing, costs, autopilot, a glossary. |
 | `tools/` | Node scripts: doctor, init, serve, ship, play (record, notes, fps, loud), refs, assets (find, get, look, restyle), blocks, fal. |
-| `starter/` | The starter game. `init` copies it into `my-game/`. |
+| `starter/` | The shared base every starter is built on (engine bits, UI, sound, the dev menu), plus the island demo. |
 | `my-game/` | Everything the user makes. Created by `node tools/init.mjs`. |

@@ -1,0 +1,132 @@
+{
+  "id": "red-dune-dusk",
+  "name": "Red dunes at dusk",
+  "order": 42,
+  "one_line": "Rust dunes, two low suns and a huge pale planet.",
+  "mood": [
+    "warm",
+    "strange",
+    "wide"
+  ],
+  "look_words": "A desert on another world at sunset, painted like the cover of an old science-fiction paperback. Dunes in rust, maroon and ochre with smooth airbrushed fades; a burnt-orange sky with two small low suns and a huge pale ringed planet. Shadows are long and deep maroon. Shapes are bold and smooth with clean edges and very little detail. Because the whole world is red and orange, harm is a vivid violet, and the things that matter are bright yellow and teal; the player is cream. Motion is wind and speed: sand streaming off dune crests, long dust trails, sails filling. Avoid green, grey, gritty realism, lens flares, and bloom on the suns.",
+  "palette": {
+    "name": "red dunes",
+    "colors": {
+      "base": [
+        "#b5482a",
+        "#7a2a22",
+        "#d98a3a",
+        "#e0a060"
+      ],
+      "accent": [
+        "#ffe14a",
+        "#4fe0d0"
+      ],
+      "danger": "#9a3cff",
+      "player": "#f6efe0",
+      "shadow": "#3a1420",
+      "light": "#ffe0a8",
+      "ink": "#ffeed8"
+    },
+    "sky": {
+      "top": "#7a2a1f",
+      "horizon": "#ffa64a",
+      "below": "#3a1420",
+      "sun": "#fff0c9"
+    },
+    "light": {
+      "sun": "#ffb060",
+      "sunStrength": 3.2,
+      "ambient": "#c97a6a",
+      "ground": "#8a3a22",
+      "ambientStrength": 1.2,
+      "fog": "#d9703a",
+      "fogAmount": 0.45,
+      "exposure": 1.05,
+      "sunElevation": 10,
+      "sunAzimuth": 265
+    },
+    "notes": "In a red world, red cannot mean harm: violet does. The sun is very low, so shadows are long."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "smooth airbrushed shading, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-sand-trails",
+      "why": "sand that keeps grooves, berms and craters where things move over it"
+    },
+    {
+      "block": "procedural-terrains",
+      "why": "dunes and canyons from a seed (a bigger job)"
+    }
+  ],
+  "blocks": [
+    "meticulai-sand-trails",
+    "procedural-terrains",
+    "meticulai-haze",
+    "meticulai-procedural-songs"
+  ],
+  "asset_search": [
+    "desert rocks",
+    "sand dune",
+    "space outpost",
+    "land yacht",
+    "planet"
+  ],
+  "asset_families": [
+    "quaternius",
+    "polyfork",
+    "kenney",
+    "nasa-3d",
+    "solar-system-scope"
+  ],
+  "music": {
+    "mood": "slow analogue synth, a lonely lead over a drone",
+    "tempo": "slow",
+    "notes": "Wide and a bit eerie."
+  },
+  "sound_feel": "wind, sand hiss, sail snap, a low hum",
+  "good_for": [
+    "racer",
+    "rider",
+    "flyer",
+    "island",
+    "sailing on sand",
+    "exploring"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Retro science-fiction paperback cover style painting filling the whole picture: a slim land yacht with a bright yellow sail races along the crest of a rust-red dune toward tall wind-carved stone arches, a long dust trail behind it, two small suns low in a burnt-orange sky, a huge pale ringed planet, deep maroon shadows. Smooth airbrushed gradients, bold simple shapes, rust, ochre and maroon. Chase view from behind. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Retro science-fiction paperback cover style painting of a desert planet at dusk: a small pilot in a cream suit stands beside a slim land yacht with an orange sail on a dark red dune, looking toward a far domed outpost, two small suns low in a burnt-orange sky, a huge pale ringed planet rising, long shadows. Smooth airbrushed gradients, bold simple shapes, rust, ochre and deep maroon. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-island.jpg",
+      "starter": "island",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

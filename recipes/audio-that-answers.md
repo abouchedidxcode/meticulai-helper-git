@@ -64,6 +64,10 @@ export function createVoice(audio) {
 Use it: `const voice = createVoice(audio);` then `voice.land(Math.min(1, fallSpeed / 16))`,
 `voice.at(enemy.position.distanceTo(player.pos), (v) => audio.whoosh({ vol: 0.3 * v }))`.
 
+**With sound files:** the same five habits apply. `audio.play('impact-thud', { vol, vary, pan })` from the starter
+pack (`node tools/sounds/add.mjs`, see [sound-files](sound-files.md)) already does the variance, the rate limit and
+the voice cap; scale `vol` and `rate` by intensity yourself.
+
 **Check it works:** no agent can listen, so measure: `node tools/play/loud.mjs --seconds 20` while the bot
 plays. Peaks should not clip and a quiet stretch should not be silent. Then ask the user to play with sound on.
 

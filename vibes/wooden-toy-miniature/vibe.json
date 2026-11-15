@@ -1,0 +1,127 @@
+{
+  "id": "wooden-toy-miniature",
+  "name": "Wooden toy miniature",
+  "order": 14,
+  "one_line": "Painted wooden blocks and peg people on a little stage.",
+  "mood": [
+    "charming",
+    "tidy",
+    "nostalgic"
+  ],
+  "look_words": "A toy world of turned and painted wood, seen close up like a model on a table or a puppet stage. Bare beech and darker wood for the ground and buildings, simple painted greens for hills and round trees, a painted backdrop behind. Shapes are blocks, cylinders, cones and pegs with rounded edges; the grain shows and the paint is a little worn at the corners. Light is warm, from a window or a row of small stage lamps. White and blue paint mark what to collect and the goal, red is harm, and the player is painted navy. Motion is toy-like: things roll, tip, swing on strings and click into place. Avoid fine detail, realistic people, metal, dark scenes and bloom.",
+  "palette": {
+    "name": "painted wood",
+    "colors": {
+      "base": [
+        "#8fc27a",
+        "#6fa560",
+        "#d9b382",
+        "#c58f5c"
+      ],
+      "accent": [
+        "#ffffff",
+        "#3f8fe0"
+      ],
+      "danger": "#d9342b",
+      "player": "#1f2f5a",
+      "shadow": "#3f2f2a",
+      "light": "#fff3d6",
+      "ink": "#fbf2df"
+    },
+    "sky": {
+      "top": "#bcd6e6",
+      "horizon": "#f3e3c8",
+      "below": "#8a6a4a",
+      "sun": "#fff1c9"
+    },
+    "light": {
+      "sun": "#fff0cf",
+      "sunStrength": 3,
+      "ambient": "#dfe6ee",
+      "ground": "#b08a60",
+      "ambientStrength": 1.7,
+      "fog": "#e9dcc6",
+      "fogAmount": 0.3,
+      "exposure": 1.05,
+      "sunElevation": 38,
+      "sunAzimuth": 70
+    },
+    "notes": "Below the horizon is the table top. Yellow paint looks lovely on wood but is too close to it to mark pickups: white and blue do that job."
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {}
+  },
+  "look_wish": "tilt-shift blur",
+  "upgrade": [
+    {
+      "block": "meticulai-tilt-shift-macro",
+      "why": "the macro lens that turns a scene into a photographed miniature"
+    }
+  ],
+  "blocks": [
+    "meticulai-tilt-shift-macro",
+    "meticulai-marble-physics",
+    "meticulai-rope-cloth-chains"
+  ],
+  "asset_search": [
+    "toy train",
+    "wooden blocks",
+    "toy house",
+    "wood texture",
+    "round tree"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "polyhaven",
+    "ambientcg",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "music box and pizzicato strings",
+    "tempo": "medium",
+    "notes": "Neat and ticking."
+  },
+  "sound_feel": "wooden clacks, rolling, a wind-up ratchet, small bells",
+  "good_for": [
+    "marble",
+    "grid-puzzle",
+    "platformer",
+    "racer",
+    "train sets",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Miniature wooden toy world on a table: a painted wooden castle made of blocks and arches with a navy peg-doll knight on the drawbridge, round wooden trees in green, a little wooden cart on wheels, wooden sheep, a marble resting on a wooden ramp. Smooth turned wood with visible grain and slightly worn paint, warm soft window light, close high camera like a photograph of a model, cheerful and calm. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Miniature wooden toy world on a table: a small painted wooden train with a red engine crosses a wooden bridge between toy-block hills, round wooden trees in green, tiny wooden houses with painted roofs, a peg-doll station master. Smooth turned wood with visible grain and slightly worn paint, warm soft window light, close high camera like a photograph of a model, cheerful and calm. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "toy-tilt-shift",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

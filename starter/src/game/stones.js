@@ -2,12 +2,13 @@
 
 import * as THREE from 'three';
 import { createRandom } from '../core/random.js';
+import { PALETTE } from './world.js';
 
 export const STONE_RADIUS = 0.9;
 
 export function createStones({ scene, lanes, tune, audio }) {
   const rand = createRandom(99);
-  const mat = new THREE.MeshStandardMaterial({ color: '#8d7a6c', roughness: 0.95, flatShading: true });
+  const mat = new THREE.MeshStandardMaterial({ color: PALETTE.stone, roughness: 0.95, flatShading: true });
 
   const stones = lanes.map((lane, i) => {
     const geo = new THREE.IcosahedronGeometry(STONE_RADIUS, 1);

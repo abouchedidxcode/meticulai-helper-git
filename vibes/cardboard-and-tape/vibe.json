@@ -1,0 +1,124 @@
+{
+  "id": "cardboard-and-tape",
+  "name": "Cardboard and tape",
+  "order": 23,
+  "one_line": "Box buildings, masking tape and marker pen on a workbench.",
+  "mood": [
+    "playful",
+    "handmade",
+    "scrappy"
+  ],
+  "look_words": "A world built by a child from boxes. Raw brown corrugated cardboard for the ground and walls, paler board and strips of masking tape for paths and joins, windows cut out with scissors, details drawn in black marker. Edges are torn or wobbly, the corrugation shows, and things are held up with tape, string and lolly sticks. Light is warm daylight from one side of a workbench. A few patches of poster paint do the signalling: teal and lime green for the things that matter, red for harm, and the player is painted dark blue. Motion is stiff and hinged: flaps, sliding tabs, things on strings. Avoid clean geometry, smooth plastic, gradients, glow and bloom.",
+  "palette": {
+    "name": "cardboard",
+    "colors": {
+      "base": [
+        "#c39a67",
+        "#a37d4f",
+        "#dcc299",
+        "#ece1c8"
+      ],
+      "accent": [
+        "#1fa3a3",
+        "#8fd13c"
+      ],
+      "danger": "#e0312b",
+      "player": "#2a3f6b",
+      "shadow": "#3b2a1e",
+      "light": "#fff4dc",
+      "ink": "#fbf1dd"
+    },
+    "sky": {
+      "top": "#b9cdd6",
+      "horizon": "#efe6d2",
+      "below": "#a37d4f",
+      "sun": "#fff3d0"
+    },
+    "light": {
+      "sun": "#fff0d0",
+      "sunStrength": 2.8,
+      "ambient": "#e6e3da",
+      "ground": "#b08a5a",
+      "ambientStrength": 1.8,
+      "fog": "#e6dccb",
+      "fogAmount": 0.3,
+      "exposure": 1.05,
+      "sunElevation": 45,
+      "sunAzimuth": 280
+    },
+    "notes": "Nearly everything is brown, so the three paints carry all the meaning. Keep paint off scenery."
+  },
+  "look": {
+    "id": "toy-tilt-shift",
+    "options": {}
+  },
+  "look_wish": "marker outlines on textured board, tilt-shift blur",
+  "upgrade": [
+    {
+      "block": "meticulai-tilt-shift-macro",
+      "why": "makes it look like a real model on a workbench"
+    },
+    {
+      "block": "meticulai-ink-illustration",
+      "why": "wobbly pen lines for the marker details"
+    }
+  ],
+  "blocks": [
+    "meticulai-tilt-shift-macro",
+    "meticulai-ink-illustration",
+    "meticulai-rope-cloth-chains"
+  ],
+  "asset_search": [
+    "cardboard texture",
+    "cardboard box",
+    "robot",
+    "paper texture",
+    "tape"
+  ],
+  "asset_families": [
+    "ambientcg",
+    "polyfork",
+    "polyhaven",
+    "kenney",
+    "sharetextures"
+  ],
+  "music": {
+    "mood": "toy piano, shakers and a cardboard-box drum",
+    "tempo": "medium",
+    "notes": "Homemade percussion."
+  },
+  "sound_feel": "cardboard thumps, tape ripping, scissors, a marker squeak",
+  "good_for": [
+    "platformer",
+    "top-down",
+    "grid-puzzle",
+    "marble",
+    "building games",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cardboard and tape craft world on a workbench: a small cardboard robot with bottle-cap eyes walks a corrugated cardboard ramp through a town of box buildings held together with masking tape, with cut-out windows, paper-straw lamp posts and a string washing line. Raw brown cardboard, torn edges, visible corrugation, marker-pen details, a few painted patches in red and teal, warm soft daylight from one side, handmade. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cardboard and tape craft world: a small cardboard robot with bottle-cap eyes stands on a cardboard castle wall made of boxes and tubes, looking over a drawbridge of lolly sticks and string, paper flags in red and teal, a cardboard sun hanging on a thread. Raw brown corrugated cardboard, masking tape joins, torn edges, marker-pen details, warm soft daylight from one side, handmade and playful. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "toy-tilt-shift",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

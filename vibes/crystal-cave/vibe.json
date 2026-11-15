@@ -1,0 +1,125 @@
+{
+  "id": "crystal-cave",
+  "name": "Crystal cave",
+  "order": 29,
+  "one_line": "Slate-blue rock lit by teal and violet crystals.",
+  "mood": [
+    "cool",
+    "quiet",
+    "wonder"
+  ],
+  "look_words": "A cave lit by its own crystals. Slate-blue rock in big faceted planes, darker in the distance, with still black pools that mirror the light. Clusters of large angular crystals in teal and pink-violet give a cool, quiet glow that reaches a little way up the walls and no further. The crystals are what the player is here for, so teal and violet are the reward colours; orange-red marks harm, and the player carries a warm cream lamp that stands apart from all the cool light. Shapes are angular and simple. Motion is small: slow glints moving across facets, drips, ripples, drifting dust in the lamp beam. Avoid rainbow colours, glow on everything, thick fog, bloom and pure black where the player walks.",
+  "palette": {
+    "name": "crystal cave",
+    "colors": {
+      "base": [
+        "#2f3f5a",
+        "#222f46",
+        "#44506e",
+        "#3a5a6a"
+      ],
+      "accent": [
+        "#5ff5e0",
+        "#f08cff"
+      ],
+      "danger": "#ff5a3a",
+      "player": "#ffe9a8",
+      "shadow": "#0d1420",
+      "light": "#dffcff",
+      "ink": "#e9f6ff"
+    },
+    "sky": {
+      "top": "#0d1420",
+      "horizon": "#1f2f4a",
+      "below": "#080c14",
+      "sun": "#bfeaff"
+    },
+    "light": {
+      "sun": "#a8d8ff",
+      "sunStrength": 1.4,
+      "ambient": "#4f5f9a",
+      "ground": "#1a2a3a",
+      "ambientStrength": 1.3,
+      "fog": "#16223a",
+      "fogAmount": 0.6,
+      "exposure": 1.2,
+      "sunElevation": 65,
+      "sunAzimuth": 45
+    },
+    "notes": "There is no sky in a cave: the sky colours are the dark roof. The weak cool \"sun\" stands in for the general glow; add small coloured lights at the crystals."
+  },
+  "look": {
+    "id": "none",
+    "options": {}
+  },
+  "look_wish": "faceted flat shading with soft drawn glows, or none",
+  "upgrade": [
+    {
+      "block": "meticulai-firefly-swarm",
+      "why": "soft glowing motes that drift and react, without blown-out bloom"
+    },
+    {
+      "block": "geometry-painter",
+      "why": "grows quartz crystals along a surface (reference only: read it, then build your own)"
+    }
+  ],
+  "blocks": [
+    "meticulai-firefly-swarm",
+    "geometry-painter",
+    "meticulai-sonar-sketch",
+    "meticulai-ripple-water"
+  ],
+  "asset_search": [
+    "crystal",
+    "cave rocks",
+    "mine cart",
+    "stalactite",
+    "gem"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "quaternius",
+    "kaykit",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "slow glassy bells and a deep pad",
+    "tempo": "slow",
+    "notes": "Echoing and spacious."
+  },
+  "sound_feel": "drips, crystal chimes, footsteps with echo, a far rumble",
+  "good_for": [
+    "platformer",
+    "top-down",
+    "first-person",
+    "marble",
+    "mining",
+    "exploring"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cave with crystals, third-person camera behind a small miner with a headlamp and an orange helmet walking a rocky path past clusters of big angular crystals in soft teal, violet and pale pink that light the cave walls gently, a still underground pool reflecting them, hanging stalactites, a wooden mine cart on rails. Dark slate-blue rock, cool quiet glow, faceted simple shapes. Stylised 3D. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Cave with crystals, wide side view like a 2D adventure: a small miner with a headlamp and an orange helmet crosses a rope bridge over a deep chasm, huge angular crystals in soft teal, violet and pale pink growing from the walls and ceiling, a waterfall falling into the dark, glowing moss. Dark slate-blue rock, cool quiet glow, faceted simple shapes. Stylised 3D. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-platformer.jpg",
+      "starter": "platformer",
+      "look": "none",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

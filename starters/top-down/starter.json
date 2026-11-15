@@ -1,0 +1,51 @@
+{
+  "id": "top-down",
+  "order": 4,
+  "name": "Top-down action (move, aim, shoot)",
+  "pitch": "A small garden robot hoses down thorn creatures that creep into a walled garden in waves, then faces a large final creature.",
+  "you": [
+    "move",
+    "aim",
+    "shoot",
+    "dash"
+  ],
+  "camera": "from above, tilted, follows the player",
+  "controls": "WASD or arrows to move, mouse to aim, hold the left button to fire, Space to dash. Gamepad: sticks move and aim, RT fires, A dashes.",
+  "session": "about 2 minutes",
+  "use_when": "any game where you look down on a character: twin-stick shooters, arena survival, dungeon crawlers, tower defence seen from above, top-down adventure, herding or cleaning games.",
+  "not_for": "first-person games, side-on platformers, racing, flying, games with jumping between heights",
+  "tags": [
+    "3d",
+    "top-down",
+    "twin-stick",
+    "shooter",
+    "arena",
+    "waves",
+    "survival",
+    "dungeon",
+    "tower defence",
+    "boss",
+    "dash",
+    "aim"
+  ],
+  "blocks": [],
+  "skips": [
+    "win",
+    "lose",
+    "wave2",
+    "wave3",
+    "boss",
+    "last-heart",
+    "invincible"
+  ],
+  "already_good": [
+    "Movement that starts and stops at once, with mouse or right-stick aiming",
+    "Forgiving shooting: wide hit radius, aim magnetism, shots that land where you point",
+    "A short dash with safe frames, buffering and a cooldown shown at your feet",
+    "Three enemy kinds, each warning on the ground before it can hurt, plus a boss with four readable attacks",
+    "Waves as a table and the arena as a text map, with collision and path-finding",
+    "Pickups that fly to you with a rising chime, and an end card that says what got you"
+  ],
+  "preview": "starters/top-down/preview.jpg",
+  "status": "ready"
+}

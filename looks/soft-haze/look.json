@@ -1,0 +1,70 @@
+{
+  "id": "soft-haze",
+  "order": 7,
+  "name": "Soft haze",
+  "one_line": "Calm and airy: a faint glow, soft sun shafts, gentle contrast. Never glares.",
+  "kind": "post",
+  "block": "meticulai-haze",
+  "options": {
+    "glow": {
+      "default": 0.55,
+      "min": 0,
+      "max": 1,
+      "help": "The halo round bright things. Keep it low: this look is restrained on purpose.",
+      "label": "Glow"
+    },
+    "glowFrom": {
+      "default": 0.75,
+      "min": 0.4,
+      "max": 3,
+      "help": "How bright something must be before it glows. Lower = more of the picture glows.",
+      "label": "Glow from",
+      "step": 0.05
+    },
+    "shafts": {
+      "default": 0.2,
+      "min": 0,
+      "max": 0.6,
+      "help": "Soft rays when the sun is in or near the frame.",
+      "label": "Sun shafts"
+    },
+    "softness": {
+      "default": 0.6,
+      "min": 0,
+      "max": 1,
+      "help": "Lower contrast and lifted shadows. 0 = crisp.",
+      "label": "Softness"
+    },
+    "grain": {
+      "default": 0.02,
+      "min": 0,
+      "max": 0.1,
+      "help": "Grain",
+      "label": "Grain",
+      "step": 0.002
+    },
+    "vignette": {
+      "default": 0.3,
+      "min": 0,
+      "max": 1,
+      "help": "Dark corners",
+      "label": "Dark corners"
+    }
+  },
+  "cost": "medium",
+  "preview": "looks/soft-haze/preview.jpg",
+  "orthographic": {
+    "works": true,
+    "note": "Checked on the platformer starter."
+  },
+  "measured": {
+    "starter": "island",
+    "size": "1280x720",
+    "frame_ms": 6.1,
+    "plain_frame_ms": 2.8,
+    "added_ms": 3.3,
+    "fps": 60.2,
+    "date": "2026-11-14",
+    "how": "hidden Chromium on the kit's test laptop, whole frame read back from the graphics chip; machine load changes it"
+  }
+}

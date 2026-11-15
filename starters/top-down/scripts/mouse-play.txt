@@ -1,0 +1,23 @@
+# A short human-style play with mouse and keyboard (the bot uses the gamepad sticks instead).
+# node tools/play/record.mjs --script scripts/mouse-play.txt --seconds 16 --url-extra "autostart=1"
+wait 400
+move 900 250
+mousedown
+hold KeyD 700
+shot aim-right-up
+move 300 500
+hold KeyA 900
+press Space
+wait 300
+shot after-dash
+move 640 150
+hold KeyW 800
+move 1000 400
+hold KeyS 1200
+press Space
+wait 2500
+shot mid
+move 400 300
+wait 3000
+mouseup
+shot end

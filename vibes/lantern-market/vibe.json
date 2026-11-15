@@ -1,0 +1,132 @@
+{
+  "id": "lantern-market",
+  "name": "Lantern market night",
+  "order": 17,
+  "one_line": "Strings of orange lanterns over dark water at dusk.",
+  "mood": [
+    "warm",
+    "lively",
+    "night"
+  ],
+  "look_words": "A floating market on a warm evening. The sky and water are deep dusk blue and violet; boats, stalls and boardwalks are dark wood in plum, red and teal. Strings of round orange paper lanterns hang everywhere, and their light ripples on the water and warms every face and plank near them. It is busy but gentle: steam from cooking pots, striped awnings, people chatting. Lantern orange marks places to visit and things to collect, jade marks the goal, pink-red is harm, and the player is pale cream. Shapes are soft and painted with a clean outline. Motion is lively: lanterns swaying, steam rising, reflections breaking up, boats nudging each other. Avoid cold white light, neon colours, empty streets and bloom that blurs the lanterns.",
+  "palette": {
+    "name": "lantern dusk",
+    "colors": {
+      "base": [
+        "#5a4a5f",
+        "#40344a",
+        "#7a3f3a",
+        "#2f5a60"
+      ],
+      "accent": [
+        "#ffb347",
+        "#7fe0c9"
+      ],
+      "danger": "#ff3d5a",
+      "player": "#fff4dc",
+      "shadow": "#16142e",
+      "light": "#ffd9a0",
+      "ink": "#fbeed8"
+    },
+    "sky": {
+      "top": "#161a44",
+      "horizon": "#8a4a7a",
+      "below": "#101530",
+      "sun": "#ffc27a"
+    },
+    "light": {
+      "sun": "#ffb060",
+      "sunStrength": 2,
+      "ambient": "#5a5aa0",
+      "ground": "#2a2440",
+      "ambientStrength": 1.3,
+      "fog": "#3a2a55",
+      "fogAmount": 0.5,
+      "exposure": 1.2,
+      "sunElevation": 25,
+      "sunAzimuth": 270
+    },
+    "notes": "The main light is warm lantern light against cool violet air: that contrast is the whole look. Add small warm lights at the lanterns you place."
+  },
+  "look": {
+    "id": "soft-haze",
+    "options": {}
+  },
+  "look_wish": "soft painted shading with clean outlines, or none",
+  "upgrade": [
+    {
+      "block": "fire",
+      "why": "real little flames for stoves and lanterns"
+    },
+    {
+      "block": "meticulai-ripple-water",
+      "why": "water that carries the lantern reflections and ripples when touched"
+    }
+  ],
+  "blocks": [
+    "fire",
+    "meticulai-ripple-water",
+    "crowds",
+    "meticulai-painterly-styles"
+  ],
+  "asset_search": [
+    "paper lantern",
+    "market stall",
+    "wooden boat",
+    "food cart",
+    "awning"
+  ],
+  "asset_families": [
+    "kenney",
+    "polyfork",
+    "kaykit",
+    "quaternius",
+    "poly-pizza"
+  ],
+  "music": {
+    "mood": "warm plucked strings, hand percussion and a soft flute",
+    "tempo": "medium",
+    "notes": "A crowd murmur underneath."
+  },
+  "sound_feel": "sizzling, chatter, water lapping, wooden creaks, a small bell",
+  "good_for": [
+    "top-down",
+    "first-person",
+    "island",
+    "grid-puzzle",
+    "cooking and trading",
+    "delivery"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Warm lantern festival on a narrow old street at dusk, hand-painted animation background style: a small child in a cream coat holding a round orange paper lantern walks under strings of glowing orange lanterns between wooden stalls with striped awnings, steam from a dumpling stall, a cat on a barrel, a canal with a small arched bridge behind, deep dusk-blue and violet sky. Warm orange against deep blue, soft painted shapes, lively but gentle. No signs or writing. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Warm night market on a canal, hand-painted animation background style: a small child with a paper lantern walks a wooden boardwalk between stalls with striped awnings, strings of round orange paper lanterns overhead, steam rising from a food stall, moored boats, lantern light rippling on dark teal water, a deep dusk-blue sky. Warm orange against deep blue, soft painted shapes, lively but gentle. Third-person view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/03.jpg",
+      "source": "reused",
+      "model": "kling/v4/text-to-video",
+      "date": "2026-11-08",
+      "note": "A still from a short AI-generated concept clip made earlier."
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "soft-haze",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

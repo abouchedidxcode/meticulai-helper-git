@@ -5,9 +5,10 @@
 // - resizes with the window, and ignores 0x0 sizes (hidden tabs, headless start-up)
 // - `ready` turns true only after a few real frames are drawn, so tests and screenshots
 //   never catch a black first frame while shaders are still compiling.
-// No post-processing on purpose: add it later only if the look truly needs it.
+// No post-processing by default. A look (src/look/index.js) can take over drawing with view.setPost().
 
 import * as THREE from 'three';
+import { look } from '../core/look.js';
 
 export function createRenderer({ container = document.body, framesBeforeReady = 3 } = {}) {
   const renderer = new THREE.WebGLRenderer({
@@ -16,7 +17,7 @@ export function createRenderer({ container = document.body, framesBeforeReady = 
   });
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.1;
+  renderer.toneMappingExposure = look.lighting.exposure;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFShadowMap;
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
@@ -25,6 +26,7 @@ export function createRenderer({ container = document.body, framesBeforeReady = 
   container.appendChild(renderer.domElement);
 
   const cameras = new Set();
+  let post = null; // an optional look that draws the frame itself (see setPost)
   let width = 0;
   let height = 0;
 
@@ -39,6 +41,7 @@ export function createRenderer({ container = document.body, framesBeforeReady = 
     renderer.domElement.style.width = `${w}px`;
     renderer.domElement.style.height = `${h}px`;
     for (const cam of cameras) fitCamera(cam);
+    post?.resize?.(w, h, renderer.getPixelRatio());
   }
 
   function fitCamera(cam) {
@@ -82,14 +85,26 @@ export function createRenderer({ container = document.body, framesBeforeReady = 
     warmUp(scene, camera) {
       renderer.compile(scene, camera);
     },
+    // Hand the drawing of every frame to a look: { render(renderer, scene, camera), resize?(w, h, pixelRatio),
+    // update?(dt), dispose?() }. Pass null to go back to plain drawing.
+    setPost(next) {
+      if (post && post !== next) post.dispose?.();
+      post = next ?? null;
+      if (post && width && height) post.resize?.(width, height, renderer.getPixelRatio());
+    },
+    get post() {
+      return post;
+    },
     draw(scene, camera) {
       if (!width || !height) resize();
-      renderer.render(scene, camera);
+      if (post?.render) post.render(renderer, scene, camera);
+      else renderer.render(scene, camera);
       drawn++;
     },
     // A PNG of the current frame. Draws first, because WebGL clears the picture after showing it.
     capture(scene, camera) {
-      renderer.render(scene, camera);
+      if (post?.render) post.render(renderer, scene, camera);
+      else renderer.render(scene, camera);
       return renderer.domElement.toDataURL('image/png');
     },
   };

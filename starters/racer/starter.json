@@ -1,0 +1,47 @@
+{
+  "id": "racer",
+  "order": 5,
+  "name": "Racing (drive, drift)",
+  "pitch": "A three-lap race against three rivals on a low-poly island circuit: steer, drift the corners for a boost, cross the line first.",
+  "you": [
+    "drive",
+    "drift",
+    "race"
+  ],
+  "camera": "third person, a chase camera behind the vehicle",
+  "controls": "WASD or arrows to drive, Space to drift (handbrake), R to get back on the road. Gamepad works (stick, triggers).",
+  "session": "about 2 minutes",
+  "use_when": "car, kart, boat, hover or bike racing, time trials, delivery driving: anything where you steer a vehicle along a route and see it from behind. The track is a list of points, so new circuits are quick.",
+  "not_for": "open-world driving off the road, realistic car simulation (see the car block), on-foot characters, first-person games",
+  "tags": [
+    "3d",
+    "racing",
+    "driving",
+    "car",
+    "kart",
+    "drift",
+    "vehicle",
+    "time trial",
+    "laps",
+    "third person"
+  ],
+  "blocks": [],
+  "skips": [
+    "win",
+    "lose",
+    "go",
+    "final-lap",
+    "hairpin",
+    "time-trial"
+  ],
+  "already_good": [
+    "Arcade handling in plain maths: immediate, speed-sensitive steering that works on a keyboard",
+    "Drifts you can hold and catch, that charge a boost and can never spin out",
+    "Speed you can see: widening view, speed lines, striped road, skid marks, smoke, engine and wind",
+    "Rails that scrape instead of stopping you, and a reset that always faces forward",
+    "Rivals with a racing line, overtakes, mistakes and gentle rubber-banding",
+    "Tracks as data (two included), checkpoints, lap times and a best-lap ghost hook"
+  ],
+  "preview": "starters/racer/preview.jpg",
+  "status": "ready"
+}

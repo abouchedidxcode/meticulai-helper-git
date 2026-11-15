@@ -1,0 +1,122 @@
+{
+  "id": "one-bit-dither",
+  "name": "One-bit dither",
+  "order": 39,
+  "one_line": "Two colours only; every shade is made of dots.",
+  "mood": [
+    "stark",
+    "graphic",
+    "old"
+  ],
+  "look_words": "Everything in two colours: a warm off-white and a near-black. There is no grey; every in-between shade is a pattern of dots, so a wall in shadow is a dense stipple and a sky is a sparse one. Shapes need strong silhouettes and clear light and dark sides, because colour cannot help. What matters is marked by brightness and shape instead: pickups are solid white and blink, hazards are solid black with a jagged edge, the player is solid white with a black outline. Light is one hard source. Motion is crisp, and the dot patterns stay fixed to the world so they do not crawl. Avoid fine detail, soft gradients, thin text and any third colour.",
+  "palette": {
+    "name": "one-bit",
+    "colors": {
+      "base": [
+        "#8f8c84",
+        "#74716b",
+        "#5d5a55",
+        "#a39f96"
+      ],
+      "accent": [
+        "#fdfaf0",
+        "#dedacd"
+      ],
+      "danger": "#161513",
+      "player": "#ffffff",
+      "shadow": "#0f0e0d",
+      "light": "#fdfaf0",
+      "ink": "#fdfaf0"
+    },
+    "sky": {
+      "top": "#55524d",
+      "horizon": "#c9c5ba",
+      "below": "#2a2826",
+      "sun": "#fdfaf0"
+    },
+    "light": {
+      "sun": "#ffffff",
+      "sunStrength": 3.2,
+      "ambient": "#ffffff",
+      "ground": "#55524d",
+      "ambientStrength": 1.2,
+      "fog": "#b5b1a7",
+      "fogAmount": 0.3,
+      "exposure": 1,
+      "sunElevation": 35,
+      "sunAzimuth": 290
+    },
+    "notes": "These are greys on purpose: a dither look turns each grey into a dot pattern of the two colours, so the roles differ by brightness. Without the dither look installed the game is plain greyscale. Player and pickups are both white: tell them apart by shape and movement."
+  },
+  "look": {
+    "id": "pixel",
+    "options": {
+      "rows": 200,
+      "dither": 1.2
+    }
+  },
+  "look_wish": "two-colour dither",
+  "upgrade": [
+    {
+      "block": "meticulai-pixel-3d",
+      "why": "a small exact-palette render is the right base for a two-colour dither"
+    }
+  ],
+  "blocks": [
+    "meticulai-pixel-3d",
+    "pixelfx",
+    "meticulai-ink-illustration"
+  ],
+  "asset_search": [
+    "windmill",
+    "lighthouse",
+    "lantern",
+    "house",
+    "pixel font"
+  ],
+  "asset_families": [
+    "kenney",
+    "quaternius",
+    "opengameart",
+    "google-fonts"
+  ],
+  "music": {
+    "mood": "a single reedy organ or accordion line",
+    "tempo": "slow",
+    "notes": "One voice, like a one-bit speaker."
+  },
+  "sound_feel": "clicks, ticks and short beeps; nothing lush",
+  "good_for": [
+    "first-person",
+    "grid-puzzle",
+    "top-down",
+    "platformer",
+    "detective",
+    "puzzle"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "One-bit black and white dithered image, high three-quarter view of a tiny island: a cottage with a smoking chimney, a windmill, a vegetable patch, a wooden pier with a small figure fishing, a rowing boat, calm sea with a few gulls. Only two colours, pure off-white and near-black, all shading made of dither patterns and stippled dots, crisp chunky pixels, strong light and dark shapes, no grey, no colour. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "One-bit black and white dithered image of a small figure with a lantern walking a hillside path toward a lone house under a big moon, bare trees, a fence, drifting clouds. Only two colours, pure off-white and near-black, all shading made of dither patterns and stippled dots, crisp chunky pixels, strong light and dark shapes, no grey, no colour. Side view. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "pixel",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

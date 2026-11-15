@@ -42,14 +42,20 @@ Never used an AI agent? Read [guides/getting-started.md](guides/getting-started.
 
 1. **Setup.** The agent installs what it needs. Within minutes you're playing a small starter game from a link.
 2. **Interview.** About eight short questions, one at a time: what game, what the player does, the best moments, the
-   look, the controls, your budget. Each has an example answer. You can always say "you pick".
-3. **Pictures (optional).** Drop in images or videos of the look you like. The agent describes the look back to you.
-4. **Building.** Several AI helpers build different parts at the same time: controls, levels, sound, menus.
-5. **Playing.** Every time the agent hands back, you get a link that says "Play it now". You play, and press N in the
-   game to leave a note.
-6. **Improving.** The agent records the game being played, fresh AI reviewers watch the recording, and the agent fixes
+   look, the controls, your budget. Each has an example answer. You can always say "you pick". For the look you can
+   just point: a gallery of about 45 looks opens, each with pictures.
+3. **Your game's starting point.** The agent picks the ready-made game closest to yours (a racer, a 2D platformer, a
+   top-down shooter, a first-person explorer, a 3D run-and-jump) and dresses it in your chosen look. These already
+   feel right to play, so you start from something good instead of from nothing.
+4. **Pictures (optional).** Drop in images or videos of the look you like. The agent describes the look back to you.
+5. **Building.** Several AI helpers build different parts at the same time: controls, levels, sound, menus.
+6. **Playing.** Every time the agent hands back, you get a link that says "Play it now". You play, and press N in the
+   game to leave a note. Press the backquote key (`) for the dev menu: sliders for every number that shapes how it
+   feels, colours and looks you can flip through, slow motion, a free camera, and a button that hands your settings
+   to the agent.
+7. **Improving.** The agent records the game being played, fresh AI reviewers watch the recording, and the agent fixes
    the biggest problem. Round after round.
-7. **Sharing.** When you're happy, it packs the game into one file and walks you through putting it on itch.io or a
+8. **Sharing.** When you're happy, it packs the game into one file and walks you through putting it on itch.io or a
    free web page. Only when you say yes.
 
 ## What's inside
@@ -65,7 +71,11 @@ Never used an AI agent? Read [guides/getting-started.md](guides/getting-started.
 | `tools/` | Small programs the agent runs: check your computer, run the game, record it, pack it. |
 | `sources/` | Where free models, textures, sounds and music come from, and what each licence asks. |
 | `blocks/` | Ready-made effects and systems (fire, ocean, sky, trees...), with credits to their authors. |
-| `starter/` | The starter game your game grows from. |
+| `starters/` | Ready-to-play starting games, one per kind of game. |
+| `vibes/` | Ready-made looks to pick from by pictures. Open `vibes/gallery.html` to browse them. |
+| `looks/` | Drawing styles that go over any game: print, pixels, ink, painterly, toy miniature, film. |
+| `sounds/` | Free sounds made for games. Open `sounds/audition.html` to listen. |
+| `starter/` | The shared base every starting game is built on. |
 | `my-game/` | Your game. Created during setup. Everything you make lives here. |
 
 ## Autopilot and swarms

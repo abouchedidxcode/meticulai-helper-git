@@ -1,0 +1,125 @@
+{
+  "id": "gothic-candlelit",
+  "name": "Gothic candlelight",
+  "order": 43,
+  "one_line": "Cold stone, tall arches and small pools of candle flame.",
+  "mood": [
+    "dark",
+    "solemn",
+    "atmospheric"
+  ],
+  "look_words": "A great stone hall at night, lit by candles. Blue-grey and brown-black stone, dark wood, worn plum carpet, tall pointed arches that vanish into shadow. Light comes in small warm pools around candles and in cold blue shafts of moonlight from high windows, and most of the room is dark. Candle gold marks what to take and where to go, moonlight blue marks the goal, red is harm, and the player is pale so it shows in both lights. Shapes are tall, narrow and heavy. Motion is slight: flames leaning, dust in a shaft of light, a cloak moving. Sound echoes. Avoid gore, flat even lighting, coloured fog, crushed black where the player must walk, and bloom.",
+  "palette": {
+    "name": "candle and stone",
+    "colors": {
+      "base": [
+        "#3a3f4a",
+        "#2a2e38",
+        "#4f4a48",
+        "#4a3040"
+      ],
+      "accent": [
+        "#ffc66b",
+        "#8fb8ff"
+      ],
+      "danger": "#e0263a",
+      "player": "#e9e4d6",
+      "shadow": "#0e0d12",
+      "light": "#ffd9a0",
+      "ink": "#efe7d6"
+    },
+    "sky": {
+      "top": "#0b0e1a",
+      "horizon": "#1f2a44",
+      "below": "#08080c",
+      "sun": "#bcd0ff"
+    },
+    "light": {
+      "sun": "#ffb870",
+      "sunStrength": 1.6,
+      "ambient": "#4a5a8a",
+      "ground": "#1a1716",
+      "ambientStrength": 0.9,
+      "fog": "#14141c",
+      "fogAmount": 0.7,
+      "exposure": 1.25,
+      "sunElevation": 50,
+      "sunAzimuth": 190
+    },
+    "notes": "Low ambient on purpose: place candles (warm point lights) where the player needs to see. Exposure is raised so the floor never goes fully black."
+  },
+  "look": {
+    "id": "film",
+    "options": {}
+  },
+  "look_wish": "soft painterly shading, or none",
+  "upgrade": [
+    {
+      "block": "realistic-procedural-dungeons",
+      "why": "seeded crypts with vaulted halls, columns, candlelight and deep shadow to walk in"
+    },
+    {
+      "block": "fire",
+      "why": "real candle and torch flames"
+    }
+  ],
+  "blocks": [
+    "fire",
+    "realistic-procedural-dungeons",
+    "dungeon-forge",
+    "meticulai-haze"
+  ],
+  "asset_search": [
+    "gothic arch",
+    "candelabra",
+    "stone pillar",
+    "dungeon kit",
+    "bookshelf"
+  ],
+  "asset_families": [
+    "kaykit",
+    "polyfork",
+    "quaternius",
+    "kenney",
+    "polyhaven"
+  ],
+  "music": {
+    "mood": "slow low strings, a far choir, a single bell",
+    "tempo": "slow",
+    "notes": "Mostly silence and room echo."
+  },
+  "sound_feel": "big echo; footsteps on stone, a door groan, candle crackle",
+  "good_for": [
+    "first-person",
+    "top-down",
+    "grid-puzzle",
+    "platformer",
+    "dungeon crawling",
+    "mystery"
+  ],
+  "frames": [
+    {
+      "file": "frames/01.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Gothic candlelit hall, third-person camera behind a small cloaked figure holding a candle, walking a long stone nave with tall pointed arches, iron candelabra, a worn dark red carpet, heavy wooden doors and a rose window letting in cold blue moonlight. Small pools of warm candle light in deep shadow, dark stone in blue-grey and brown-black, dust in the air, solemn and quiet. Stylised painterly 3D, no gore. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    },
+    {
+      "file": "frames/02.jpg",
+      "source": "generated",
+      "model": "fal-ai/nano-banana-pro",
+      "prompt": "Gothic candlelit library, high corner view: a small cloaked figure holding a candle climbs a spiral iron stair between towering dark bookshelves, a writing desk with melted candles, a raven on a globe, a tall pointed window with cold blue moonlight. Small pools of warm candle light in deep shadow, dark wood and stone in brown-black and blue-grey, solemn and quiet. Stylised painterly 3D, no gore. Gameplay view of a stylised indie video game, no text, no user interface, no logos, no watermark.",
+      "date": "2026-11-14"
+    }
+  ],
+  "renders": [
+    {
+      "file": "in-kit-top-down.jpg",
+      "starter": "top-down",
+      "look": "film",
+      "date": "2026-11-14"
+    }
+  ],
+  "status": "ready"
+}

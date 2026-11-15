@@ -1,0 +1,7 @@
+{
+  "name": "test: pastel noon",
+  "colors": { "base": ["#bfe3c0", "#9fd0b0", "#f4e3c8", "#f7cfd0"], "accent": ["#ff8fa8", "#ffb347"], "danger": "#d7263d", "player": "#5b6ee1", "shadow": "#7a86b8", "light": "#fffaf0", "ink": "#2f3350" },
+  "sky": { "top": "#8fc7f2", "horizon": "#e9f4fb", "below": "#cfe6f5", "sun": "#fffbe6" },
+  "light": { "sun": "#fff4d8", "sunStrength": 3.4, "ambient": "#d8e8ff", "ground": "#e8d9c4", "ambientStrength": 2.0, "fog": "#e3f0fa", "fogAmount": 0.3, "exposure": 1.0, "sunElevation": 62, "sunAzimuth": 40 },
+  "notes": "Kit test palette: bright, pale, high sun. A starter must stay readable in it (pale ground, dark ink)."
+}
