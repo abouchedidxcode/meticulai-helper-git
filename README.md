@@ -19,7 +19,7 @@ Pick one.
 **1. Paste one sentence into your AI agent.** Open your agent and paste:
 
 ```
-Read https://github.com/OWNER/meticulai-helper-git/blob/main/START.md and help me make a game.
+Read https://github.com/abouchedidxcode/meticulai-helper-git/blob/main/START.md and help me make a game.
 ```
 
 It downloads the kit, installs what's missing, and starts asking you questions.
@@ -27,7 +27,7 @@ It downloads the kit, installs what's missing, and starts asking you questions.
 **2. Claude Code plugin.** In Claude Code, type these one at a time:
 
 ```
-/plugin marketplace add OWNER/meticulai-helper-git
+/plugin marketplace add abouchedidxcode/meticulai-helper-git
 /plugin install meticulai-helper-git@meticulai-helper-git
 ```
 
@@ -130,3 +130,7 @@ including Patch ([patch.gg](https://patch.gg)), whose open-source blocks are inc
 
 The tools and starter game are under the [MIT licence](LICENSE). The written guides are under
 [CC BY 4.0](LICENSE-docs.md). The game you make is yours.
+
+The vibe pictures (`vibes/*/frames/`) and the sound pack (`sounds/`) are released as CC0, free to use with no credit:
+see [vibes/LICENSE-NOTE.md](vibes/LICENSE-NOTE.md) and [sounds/CREDITS.md](sounds/CREDITS.md). Code and models in
+`blocks/` keep their own licences, listed in [blocks/CREDITS.md](blocks/CREDITS.md).

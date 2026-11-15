@@ -32,7 +32,7 @@ programs to build and test your game.
 Paste this into the agent and press Enter:
 
 ```
-Read https://github.com/OWNER/meticulai-helper-git/blob/main/START.md and help me make a game.
+Read https://github.com/abouchedidxcode/meticulai-helper-git/blob/main/START.md and help me make a game.
 ```
 
 If you use Claude Code with the plugin installed, you can type `/new-game` instead.

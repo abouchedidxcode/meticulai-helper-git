@@ -27,8 +27,8 @@ says. Don't interview them again.
 Otherwise, get a copy. One game = one copy of the kit.
 - Pick the folder: `~/Games/<short-game-name>` (on Windows `%USERPROFILE%\Games\<short-game-name>`). No name yet? Use
   `game-1` (or the next free number) and tell the user.
-- If `git --version` works: `git clone https://github.com/OWNER/meticulai-helper-git.git ~/Games/<name>`.
-- No git: download it yourself: `curl -L -o /tmp/kit.zip https://github.com/OWNER/meticulai-helper-git/archive/refs/heads/main.zip`,
+- If `git --version` works: `git clone https://github.com/abouchedidxcode/meticulai-helper-git.git ~/Games/<name>`.
+- No git: download it yourself: `curl -L -o /tmp/kit.zip https://github.com/abouchedidxcode/meticulai-helper-git/archive/refs/heads/main.zip`,
   unzip it, move the inner folder to `~/Games/<name>`. (Windows: `Invoke-WebRequest` and `Expand-Archive`.)
 - Only if you can't download anything: walk the user through it click by click (open the GitHub page, green **Code**
   button, **Download ZIP**, open the Downloads folder, double-click the zip, drag the folder into a folder called Games
